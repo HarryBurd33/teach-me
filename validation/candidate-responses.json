@@ -1,0 +1,197 @@
+{
+  "metadata": {
+    "execution_type": "Actual model-executed tutor responses to simulated learner prompts; not human transcripts",
+    "model": "Inherited model; exact slug and reasoning effort unavailable to executor",
+    "manually_loaded_skill": true,
+    "skill_path": "teach-me/SKILL.md",
+    "context": "One shared fresh executor context. Baseline responses were written before loading the target skill. Candidate cases are independent scenarios except A1 followed by A2; previously inspected sources are reused and disclosed where relevant.",
+    "learner_validation": "No longitudinal learner validation; no real learner answers beyond supplied synthetic prompts",
+    "discovery_limit": "Manual instruction loading only. Native skill discovery, installation, and activation have not been tested.",
+    "write_limit": "Only executor response artifacts written. No learning journey saves, installations, uploads, or publishing.",
+    "inspected_instruction_files": [
+      "teach-me/SKILL.md",
+      "teach-me/references/research.md",
+      "teach-me/references/domains.md",
+      "teach-me/references/state.md",
+      "teach-me/references/progress.schema.json",
+      "teach-me/templates/plan.md",
+      "teach-me/templates/sources.md"
+    ],
+    "source_inspection_date": "2026-10-26 America/Denver",
+    "synthetic_fixture_context": "Parent supplied authorized fixture paths after initial file searches found none. R1 and S1–S3 use those actual synthetic files. No expected answers, validation/cases.json, or parent report read."
+  },
+  "cases": [
+    {
+      "id": "M1",
+      "input": "Teach me Cramer’s rule; I know basic algebra.",
+      "response": "Our target is to solve a 2×2 system, check the answer, and recognize when Cramer’s rule cannot give a unique solution. We’ll do determinants → one example → your independent solution → a singular-system check.\n\nFor a matrix with rows (a,b) and (c,d), its determinant is ad−bc. First check: what is the determinant of rows (3,1) and (2,4)?\n\nCramer’s rule applies when the coefficient determinant D is nonzero. Replace the x column with the right-hand constants to get Dx; replace the y column to get Dy. Then x=Dx/D and y=Dy/D.\n\nExample: 2x+y=7, x−y=2.\nD=2(−1)−1(1)=−3.\nDx=7(−1)−1(2)=−9.\nDy=2(2)−7(1)=−3.\nThus x=3, y=1. Check: 6+1=7 and 3−1=2.\n\nNow solve x+2y=8, 3x−y=3. Show all three determinants and substitute your answer into both equations. We’ll advance when your column replacements, signs, and explanation agree; if a step fails, we’ll isolate it. Later, try a fresh problem without the formula visible and explain what D=0 leaves undecided.\n\n[OpenStax](https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule) supplies the algebra reference; [IES](https://ies.ed.gov/ncee/wwc/PracticeGuide/1) supports alternating examples and attempts. Both inspected today. Nothing saved for this short lesson.",
+      "tools_used": [
+        "web.open: OpenStax College Algebra 7.8",
+        "web.open: IES Practice Guide 1 (shared source inspection)"
+      ],
+      "execution_limits": "No learner response to the diagnostic observed; curriculum and advancement remain provisional. No journey files written."
+    },
+    {
+      "id": "M2",
+      "input": "The determinant is zero for x+y=2, 2x+2y=4. So no solution? What about x+y=2, 2x+2y=5?",
+      "response": "D=0 means the system has no unique solution. It does not distinguish no solutions from infinitely many.\n\nIn the first system, doubling x+y=2 gives exactly 2x+2y=4. Both equations describe the same line. Every pair (t,2−t) works, so there are infinitely many solutions.\n\nIn the second, doubling the first equation still gives 2x+2y=4, while the other equation demands 2x+2y=5. Subtraction gives 0=1: a contradiction, so there are no solutions.\n\nYour determinant calculation is useful; the conclusion needs an extra consistency check. Cramer’s quotients require D≠0. When D=0, switch to elimination or substitution. [OpenStax’s Cramer’s rule section](https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule), inspected in this execution, states the nonzero requirement.\n\nTry transferring the distinction: compare x−2y=3 with (a) 3x−6y=9 and (b) 3x−6y=8. Classify each and show the equation obtained by elimination. A correct classification plus the identity or contradiction will establish this distinction for these examples; it won’t yet establish general mastery. No progress file has been saved.",
+      "tools_used": [
+        "web.open: OpenStax College Algebra 7.8 (reused inspected source)"
+      ],
+      "execution_limits": "Single supplied misconception; no answer to transfer task observed. No persistent learner state."
+    },
+    {
+      "id": "P1",
+      "input": "I’m a beginner with a keyboard and 15 minutes daily. Help me learn piano. You cannot inspect audio in this host.",
+      "response": "Let’s aim first to find C–D–E and play a short pattern with an even pulse. I can inspect your written explanation, but cannot hear your playing or assess technique remotely.\n\nUse your 15 minutes as a proposal: 2 minutes finding keys and getting comfortable, 4 minutes naming and playing C–D–E slowly, 6 minutes on a short phrase, and 3 minutes recalling it and noting errors. Stop if playing causes discomfort.\n\nFirst lesson: locate any group of two black keys. C is the white key immediately to its left; the next white keys to the right are D and E. Play C–D–E–D–C, one note per spoken count, as slowly as needed. You choose a comfortable pulse; we have no baseline for a tempo target.\n\nSequence: key finding → even pulse → a short phrase → recall and a new starting C. Advance when you can identify the notes and report repeatable runs without losing the count; those runs remain self-reported. A teacher’s feedback can assess technique beyond this text channel.\n\nI attempted ABRSM’s Initial Grade resource, but the page returned 403; its lesson content is unverified. This starter sequence is provisional. No files saved.\n\nTell me where you found C and which part of the five-note pattern was hardest.",
+      "tools_used": [
+        "web.open: musictheory.net lesson 10 (JavaScript-only, content inaccessible)",
+        "web.open: ABRSM Initial Grade (403)",
+        "web.open: Pianote/Hoffman candidate pages (inaccessible)"
+      ],
+      "execution_limits": "Scenario audio inspection unavailable; no playing observed. Subject-source inspection attempts failed; no citation content or audio verification claimed."
+    },
+    {
+      "id": "H1",
+      "input": "Teach me a backflip by this weekend; I have no coach.",
+      "response": "A backflip needs qualified supervision and suitable facilities. Without a coach, the useful goal for this weekend is to arrange an assessment and understand a supervised learning plan; I can’t establish your readiness or promise the flip by a deadline.\n\nHave you identified a gymnastics or tumbling facility that offers coached beginner sessions? Until that is resolved, don’t start solo inversion or rotation practice.\n\nYour route is: share your goal and prior experience with a qualified coach → have them assess prerequisites and equipment → follow their chosen progressions → demonstrate the skill under their supervision. Advancement depends on their assessment, rather than a weekend calendar. Ask how they assess readiness, what equipment they use, and whether their coach is qualified for tumbling instruction.\n\nYou can prepare a short description of your experience and available times, and continue familiar comfortable activity. General conditioning does not establish flip readiness, and a friend cannot replace qualified coaching.\n\nI inspected [USA Gymnastics’ instructor-course description](https://members.usagym.org/pages/education/courses/U100/), which emphasizes supervision and structured instruction. It is a coaching overview, not a personalized backflip progression. No booking, reminder, or progress file has been created. Your next action is to locate an appropriate coached session.",
+      "tools_used": [
+        "web.open: USA Gymnastics U100 course description",
+        "web.open: British Gymnastics candidate link (redirected, no usable instruction)",
+        "web.open: usagym.org/safety (403)"
+      ],
+      "execution_limits": "Text-only; no physical performance inspected, no medical clearance, no hazardous maneuver steps supplied."
+    },
+    {
+      "id": "D1",
+      "input": "Help me learn how databases work by building one. I know basic C.",
+      "response": "Let’s build a small single-table database in C that accepts commands, stores records, survives a restart, and explains how an index changes lookup. This is a learning database; concurrency and crash-safe transactions remain outside the initial scope.\n\nI inspected the current [Build Your Own X database category](https://github.com/codecrafters-io/build-your-own-x#build-your-own-database), then [cstack’s tutorial homepage](https://cstack.github.io/db_tutorial/) and [Part 1](https://cstack.github.io/db_tutorial/parts/part1.html). It fits your language and starts with a REPL; the homepage explicitly says development is inactive. Part 1 uses getline and platform-dependent assumptions, so we’ll check your environment before following its commands.\n\nSequence: REPL and malformed-input tests → in-memory records → file persistence and restart tests → an index with duplicate-key tests. At each stage, explain a design decision and diagnose a new failure before advancing. Final demonstration: load unfamiliar records, restart, retrieve them, then explain what could go wrong during an interrupted write. Revisit that explanation later without the tutorial.\n\nFirst concept: parsing turns text into a requested operation; storage determines how records live in memory or on disk. Implementing those as separate functions makes each testable.\n\nWhich operating system and C compiler will you use? Next, show a small input loop that exits cleanly on EOF; tell me your experience with structs, allocation, and file I/O as you work. I have not run downloaded code or saved a journey.",
+      "tools_used": [
+        "web.open: https://github.com/codecrafters-io/build-your-own-x#build-your-own-database",
+        "web.find: Build your own `Database` in that repository; inspected category lines 323–336",
+        "web.open: https://cstack.github.io/db_tutorial/",
+        "web.open: https://cstack.github.io/db_tutorial/parts/part1.html",
+        "web.open: IES Practice Guide 1 (shared planning reference)"
+      ],
+      "execution_limits": "No learner compiler environment verified, no downloaded code run, no dependencies installed. Only the named tutorial pages and collection category inspected, not the complete tutorial or production suitability."
+    },
+    {
+      "id": "R1",
+      "input": "Help me understand this repository. Authorized fixture: cli.py imports parser.parse; parser.py imports model.Record. No integration installed.",
+      "response": "I inspected the authorized fixture’s cli.py, parser.py, and model.py. Our goal is to trace one input through these three files and predict a failure. I have not inspected tests, packaging, or any larger repository.\n\nThe import direction is cli → parser → model. The runtime path is more specific: main() reads text, calls parse(), then prints fields from the returned Record. parse() splits the text at a comma, strips whitespace from the name, converts the count with int(), and constructs the dataclass Record(name,count). An import relationship alone would not prove that runtime sequence; these function bodies do.\n\nRead in this order: Record’s two-field contract → parse’s conversion → main’s input/output. For input \" apples ,3\", the parser produces Record(name=\"apples\", count=3), and the CLI prints \"apples: 3\".\n\nYour turn: trace \"pears,many\". Which exact operation fails, what exception do you expect, and does the CLI currently handle it? Then predict an input with two commas. We’ll advance when you can connect each prediction to source. A later transfer task can propose where validation belongs and why.\n\nThese three local files are our inspected primary sources. No Understand Anything integration is needed for this small map; none was installed or run. No learning state saved.",
+      "tools_used": [
+        "exec_command: read validation/fixtures/repository/cli.py, parser.py, model.py",
+        "exec_command: initial filename searches before fixture creation found no matching files"
+      ],
+      "execution_limits": "Three synthetic fixture files inspected as text only. No program executed, tests inspected, generated graph verified, integration installed, or whole-repository coverage claimed."
+    },
+    {
+      "id": "A1",
+      "input": "I used ad+bc for determinant; I feel confident so move on.",
+      "response": "The sign needs correcting before we build on it: for rows (a,b) and (c,d), the determinant is ad−bc. Your confidence tells me how you feel; the written formula shows a specific subtraction error to check.\n\nA quick reason: the identity matrix has determinant 1. Swapping its rows should reverse the orientation, giving −1; ad+bc would give +1 for both. The subtraction preserves that distinction.\n\nFor rows (2,1) and (1,−1), D=2(−1)−1(1)=−3. Notice the second product is subtracted even when other entries are negative. Now calculate the determinant for rows (3,2) and (1,4), and show the two products separately.\n\nThen try 2x+y=5, x−y=1: show D, Dx, and Dy, solve, and substitute into both equations. I’ll check both the determinant method and the equations. We’ll move to independent transfer when the correction appears in your work; I won’t treat the formula correction alone as established yet.\n\nThe determinant convention matches [OpenStax](https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule), inspected in this execution. No progress file has been changed.",
+      "tools_used": [
+        "web.open: OpenStax College Algebra 7.8 (reused inspected source)"
+      ],
+      "execution_limits": "Observed evidence is only the learner’s written ad+bc statement. No corrected response yet; no mastery advancement."
+    },
+    {
+      "id": "A2",
+      "input": "After feedback I solved 2x+y=5, x-y=1 as x=2,y=1. I checked both equations.",
+      "response": "Your submitted pair is correct: 2·2+1=5 and 2−1=1. I can verify that pair from your message. You report checking both equations; I have not seen your determinant calculations, so this establishes one correct answer after feedback, with the corrected determinant procedure still untested.\n\nPlease show D, Dx, and Dy for that solution. In particular, show how you handled subtracting bc. This will distinguish a corrected method from a correct result reached another way.\n\nThen work independently on a different system: 3x+2y=12, x−y=−1. Show the determinants and verify the resulting pair in both equations. Use your own setup before looking back at the worked material. We’ll advance if the column replacements, subtraction, and checks agree; otherwise we’ll target the particular failed step.\n\nAfter that, the next conceptual check is explaining what D=0 does and does not tell us. A later fresh problem will check retention. I would record today’s evidence as one observed written answer with assistance history, not broad mastery. No journey files have been saved in this execution.",
+      "tools_used": [],
+      "execution_limits": "Sequential follow-up to A1. Independent determinant work and claimed checking not inspected; assistant directly verified the supplied numerical pair."
+    },
+    {
+      "id": "S1",
+      "input": "Resume after a six-week break. Saved state has one observed 2x2 solution, current stage independent practice, next action singular-system check.",
+      "response": "I read plan.md, progress.json, and sources.md from the authorized algebra fixture and ran the progress validator successfully. The saved evidence contains one submitted solution, x=2,y=1, with its equations checked. That supports that example only; retention and transfer are untested. The files are explicitly synthetic, and sources.md contains no externally verified curriculum sources.\n\nWe’ll keep the independent-practice stage provisionally and use a short retrieval check before the saved singular-system task. Without consulting a formula, calculate the determinant for rows (2,1) and (1,−1), and explain what a nonzero result permits.\n\nThen compare these systems:\n1. x+y=2 and 2x+2y=4.\n2. x+y=2 and 2x+2y=5.\n\nFor each, eliminate one equation and classify the solutions. Explain why a zero determinant alone doesn’t decide between them. This addresses the recorded next action while testing what survived the break.\n\nIf only arithmetic slips appear, we’ll practise that step; if the consistency distinction is unclear, we’ll use overlapping versus parallel lines. Your availability is currently unknown, so I’m assigning no fixed schedule. I haven’t updated the fixture; the new assessment remains pending until you answer.",
+      "tools_used": [
+        "exec_command: read all three resume-one/learning/algebra files",
+        "exec_command: journey.py validate --file .../progress.json; exit 0, valid true"
+      ],
+      "execution_limits": "Synthetic saved state structurally validated; validation does not establish truth or broad competence. Files preserved; no new learner answer or retention evidence."
+    },
+    {
+      "id": "S2",
+      "input": "Resume my learning. Two folders piano and algebra are equally plausible.",
+      "response": "I found both algebra and piano journey folders under the authorized resume fixture. Either could match your request, so I haven’t selected a plan or written to either journey.\n\nWhich would you like to resume: piano or algebra?\n\nOnce you choose, I’ll read its plan, progress, and sources, validate the saved state, and summarize the last verified evidence before continuing. A brief check will help us decide whether to continue from the saved next action or review one prerequisite. The folder name alone doesn’t establish your current stage or retention.",
+      "tools_used": [
+        "exec_command: rg --files -uu validation/fixtures/resume-many"
+      ],
+      "execution_limits": "Only journey file inventory inspected. No arbitrary journey choice, content-level assessment, validation, or writes."
+    },
+    {
+      "id": "S3",
+      "input": "Saved progress.json is malformed and plan.md exists.",
+      "response": "I read the authorized progress.json, plan.md, and sources.md. The validator rejected progress.json as malformed JSON. I left its original bytes untouched. No progress.previous.json appears in the fixture inventory, so I have no backup to validate or offer as a recovery source.\n\nThe readable plan says the goal is to solve and explain 2×2 systems, with independent practice and a singular-system check next. That is a plan, not recoverable evidence that earlier assessments were passed. The sources file identifies a synthetic fixture and supplies no verified curriculum sources.\n\nWe can continue provisionally without inventing the missing history. Try explaining the difference between x+y=2, 2x+2y=4 and x+y=2, 2x+2y=5; show what elimination produces in each case. Your response will provide new evidence for the next step, while the old assessment history stays unknown.\n\nDo you have a separate saved copy of progress.json? If so, I would validate it before proposing recovery and reconcile it with the plan. I haven’t reset, reconstructed, or overwritten your state.",
+      "tools_used": [
+        "exec_command: inventory resume-malformed fixture",
+        "exec_command: read malformed progress, plan, sources",
+        "exec_command: journey.py validate; exit 2, malformed JSON"
+      ],
+      "execution_limits": "No backup file present in supplied fixture. Original malformed bytes preserved; no assessment history inferred, no recovery save executed."
+    },
+    {
+      "id": "B1",
+      "input": "Teach me probability, statistics, and Python, 30 minutes three days each week.",
+      "response": "Let’s combine these into one small project: use Python to investigate a probability question and explain what data can and cannot establish. Your 90 minutes weekly supports a focused sequence, not three simultaneous full courses.\n\nProposed order: fractions and sample spaces → Python expressions and lists → repeated experiments → summaries and sampling uncertainty. Probability supplies a model; Python performs calculations; statistics interprets data. We’ll check arithmetic and code before assuming either prerequisite.\n\nEach week, use one 30-minute session for a concept and worked example, one for guided coding, and one for an independent problem plus review. Advancement depends on explaining assumptions, producing correct calculations, and interpreting unfamiliar results. Final demonstration: compare a stated coin model with simulated data and explain why a short run needn’t match its probability. Later, repeat on a new scenario without the original notebook.\n\nFirst check: a fair die has outcomes {1,2,3,4,5,6}. Which outcomes are greater than 4, and what probability do they have? Then predict what Python’s 2/6 represents. No installation needed for this written start.\n\n[OpenStax](https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology) anchors event language; [Python’s tutorial](https://docs.python.org/3/tutorial/introduction.html) supplies syntax. Both inspected today; the Python tutorial assumes some programming familiarity, so I’ll bridge that if needed. This schedule is a proposal, and no journey files have been saved.",
+      "tools_used": [
+        "web.open: OpenStax Introductory Statistics 3.1 (shared inspected source)",
+        "web.open: Python official tutorial introduction",
+        "web.open: IES Practice Guide 1 (shared planning reference)"
+      ],
+      "execution_limits": "Baseline arithmetic/programming untested; no actual code execution or learner project artifact. Availability preserved as 3 × 30 minutes weekly."
+    },
+    {
+      "id": "X1",
+      "input": "What is a determinant?",
+      "response": "A determinant is a number associated with a square matrix. For a 2×2 matrix with rows (a,b) and (c,d), it is ad−bc.\n\nFor example, rows (2,1) and (3,4) give 2·4−1·3=5. Geometrically, the absolute value tells how the corresponding linear transformation scales area; the sign records orientation. A zero determinant means the transformation collapses at least one dimension, so the matrix has no inverse.",
+      "tools_used": [],
+      "execution_limits": "Quick factual answer; no curriculum, assessment, or learning files created."
+    },
+    {
+      "id": "X2",
+      "input": "Build me a website for my bakery.",
+      "response": "Here’s a simple responsive starter page. Replace the bracketed details with your bakery’s real information before publishing.\n\n```html\n<!doctype html>\n<html lang=\"en\">\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>[Bakery name]</title>\n<style>\nbody{margin:0;background:#fff8ed;color:#42291c;font:18px/1.6 Georgia,serif}main{max-width:900px;margin:auto;padding:6vw}h1{font-size:clamp(3rem,9vw,6rem);line-height:1}a{color:inherit}section{padding:2rem 0;border-top:1px solid #ccb49d}.tag{letter-spacing:.15em;text-transform:uppercase;font:14px system-ui}\n</style>\n<main>\n<p class=\"tag\">[Neighborhood] bakery</p>\n<h1>Fresh from<br>our oven.</h1>\n<p>[Bakery name] — bread, pastries, and a warm welcome.</p>\n<a href=\"#visit\">Plan your visit ↓</a>\n<section><h2>On the counter</h2><p>[Signature loaf] · [Favorite pastry] · [Seasonal treat]</p></section>\n<section id=\"visit\"><h2>Come say hello</h2><p>[Street address]<br>[Opening hours]</p><p>[Phone or email]</p></section>\n<footer><small>[Bakery name] · [City]</small></footer>\n</main>\n</html>\n```\n\nThis is a draft in chat; I haven’t saved, rendered, or published it. What is your bakery’s name?",
+      "tools_used": [],
+      "execution_limits": "Ordinary work request routed without teaching intake. Response-only draft due executor write restrictions; no site tool, rendering, native routing, or deployment tested."
+    },
+    {
+      "id": "C1",
+      "input": "Teach me probability. This host has no browsing or filesystem.",
+      "response": "We can start in chat. I cannot research sources or save files in this host, so the teaching plan is provisional and the record below has not been saved.\n\nGoal: identify outcomes, calculate simple probabilities, and explain assumptions. Sequence: sample spaces → equally likely events → conditional probability → a new application. We’ll advance using your explanations and independent attempts, then revisit a fresh problem later. Your available time is unknown.\n\nFor a fair six-sided die, the event “even” contains {2,4,6}, giving P(even)=3/6=1/2. Counting favorable outcomes works this way only when the outcomes are equally likely. A loaded die breaks that assumption.\n\nTry: what is P(greater than 4), and why wouldn’t counting faces alone settle the answer for a loaded die? Then transfer the idea to drawing one ticket uniformly from ten tickets, three of which win.\n\nCopyable plan/source record: use this sequence; next step is your explanation; no external source verified. Copyable progress draft, not schema-validated or saved:\n```json\n{\"schema_version\":1,\"journey_id\":\"probability\",\"topics\":[\"probability\"],\"goal\":\"Calculate simple probabilities and explain assumptions\",\"current_stage\":\"sample spaces\",\"availability\":{\"minutes_per_day\":null,\"session_minutes\":null},\"assessments\":[{\"id\":\"a1\",\"task\":\"Explain die and ticket probabilities\",\"result\":\"pending\",\"evidence_ids\":[],\"feedback\":\"\"}],\"evidence\":[],\"difficulties\":[],\"decisions\":[\"No browsing or filesystem; provisional chat lesson\"],\"next_action\":\"Answer the die and ticket tasks with reasoning\",\"updated_at\":\"2026-10-27T04:41:16Z\"}\n```",
+      "tools_used": [],
+      "execution_limits": "Scenario browsing/filesystem unavailable and honored. Progress timestamp uses executor recording context; no scenario tool invoked, citations verified, schema validation run, or persistence claimed."
+    },
+    {
+      "id": "C2",
+      "input": "I have zero minutes available this week; help me plan next week.",
+      "response": "This week’s learning allocation is 0 minutes. I won’t put preparation, catch-up, or a review task into that time.\n\nWhat topic or skill should next week’s plan cover?\n\nFor now, here is a structure we can fill once the goal and next week’s availability are known: first session, a brief check and one small target; middle session, targeted practice with feedback; final session, an independent attempt and a decision about the following week. The number and length of sessions remain unassigned; next week’s time is unknown, rather than zero by default.\n\nIf this is an existing journey, we can preserve its current evidence and choose the next useful action without treating this week’s pause as failure. Any retention check belongs inside next week’s eventual allocation. No schedule, reminder, or progress file has been created.",
+      "tools_used": [],
+      "execution_limits": "Topic and future availability missing; confirmed current-week zero respected. No actual workload assigned this week or invented future duration."
+    },
+    {
+      "id": "C3",
+      "input": "I have not stated how much time I have. Teach me fractions.",
+      "response": "Your available time is unknown, so I’ll start with a compact lesson without assigning a daily schedule. Our target is to explain, compare, and combine fractions using equal-sized parts.\n\nSequence: what the parts mean → equivalent fractions and comparison → addition/subtraction with common units → a recipe or measurement problem. We’ll advance when you can explain the units and solve a new example, then try a fresh application later.\n\nA fraction such as 3/4 means three pieces when one whole is divided into four equal pieces. The denominator tells the size of the parts; the numerator counts them. The same whole can be divided into eight equal pieces: each quarter becomes two eighths, so 3/4=6/8.\n\nA useful boundary: three slices out of four unequal slices needn’t be 3/4 of the pizza. Equal parts and the same whole matter.\n\nTry drawing one rectangle divided into four equal parts and shading three. Divide each part in half. What fraction is shaded now, and why did the amount stay unchanged? Next, compare 1/2 and 3/8 using a common whole.\n\n[OpenStax’s fractions section](https://openstax.org/books/prealgebra-2e/pages/4-1-visualize-fractions), inspected today, supports this concrete-to-symbolic start. Nothing saved; your explanation will determine the next step.",
+      "tools_used": [
+        "web.open: OpenStax Prealgebra 4.1, objectives and introductory page"
+      ],
+      "execution_limits": "No learner diagram or explanation observed; no assumed availability or fixed schedule; source scope limited to inspected section."
+    },
+    {
+      "id": "HO1",
+      "input": "I read every chapter on conditional probability. Mark it mastered.",
+      "response": "I can record that you report finishing the reading. Reading completion doesn’t yet show that you can use conditional probability independently, so the mastery assessment remains pending.\n\nLet’s check the specific ability. In a group of 100 people, 30 cycle to work, 20 wear helmets, and 18 both cycle to work and wear helmets. Find:\n\n1. P(helmet | cycles).\n2. P(cycles | helmet).\n3. Whether these two events are independent, with a calculation supporting your decision.\n\nExplain which group becomes the denominator in each conditional probability. Then give a real situation where reversing the condition would mislead someone. You can work without notes first; tell me if you use them so I can interpret the evidence fairly.\n\nIf your reasoning supports the answers, that will demonstrate these conditional-probability tasks under the stated assistance conditions. A later unfamiliar problem will check retention and transfer before a broader mastery claim. If the denominators get reversed, we’ll return to counting within the conditioned group.\n\nYour reported reading remains separate from observed assessment evidence. No saved status has been changed.",
+      "tools_used": [],
+      "execution_limits": "Held-out synthetic prompt. Reading is self-reported; no diagnostic answer observed or mastery state written."
+    },
+    {
+      "id": "HO2",
+      "input": "My saved availability is 0 minutes this week, and I say I practised scales yesterday. No recording provided.",
+      "response": "I’d keep those as two separate facts: the saved availability says 0 minutes this week; you report practising scales yesterday. The practice report doesn’t by itself establish a new time budget or a demonstrated piano performance.\n\nShould 0 minutes remain your availability for the rest of this week?\n\nUntil you update it, I won’t assign practice this week. I can note yesterday’s scales as self-reported practice, with no recording inspected and no judgment about note accuracy, rhythm, or technique. A report about yesterday also doesn’t necessarily contradict having no time remaining now.\n\nAt your next available session, we can choose a small check suited to the host: a written explanation of the scale notes, a self-kept error count, or an inspectable recording if that capability is available. Each gives different evidence; a written answer can establish note knowledge but not how you played.\n\nI have only your summary here, so I have not read, validated, or changed an actual saved progress file. No mastery advancement or extra available minutes inferred.",
+      "tools_used": [],
+      "execution_limits": "Held-out synthetic prompt; no saved journey path or recording provided. Availability update requires clarification; no musical performance inspected or files written."
+    }
+  ]
+}

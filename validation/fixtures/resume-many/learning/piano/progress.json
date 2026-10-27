@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "journey_id": "piano",
+  "topics": [
+    "piano"
+  ],
+  "goal": "Synthetic validation journey",
+  "current_stage": "baseline",
+  "availability": {
+    "minutes_per_day": null,
+    "session_minutes": null
+  },
+  "assessments": [],
+  "evidence": [],
+  "difficulties": [],
+  "decisions": [],
+  "next_action": "Establish the baseline and first useful practice task.",
+  "updated_at": "2026-10-27T04:40:43.449286+00:00"
+}

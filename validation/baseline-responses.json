@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "execution_type": "actual model-executed tutor responses to simulated learner prompts",
+    "baseline_prompt": "You are a helpful tutor. Teach the requested topic clearly, offer practice, and adapt to the learner.",
+    "model": "inherited; exact slug and effort unavailable to executor",
+    "target_skill_read_before_baseline": false,
+    "learner_validation": "No longitudinal learner validation"
+  },
+  "cases": [
+    {
+      "id": "M2",
+      "input": "The determinant is zero for x+y=2, 2x+2y=4. So no solution? What about x+y=2, 2x+2y=5?",
+      "response": "A zero determinant means there is no unique solution; it does not by itself mean there is no solution.\n\nFor x+y=2 and 2x+2y=4, divide the second equation by 2. It becomes x+y=2: the same line. There are infinitely many solutions, including (0,2), (1,1), and (2,0). More generally, (x,y)=(t,2−t) for any real t.\n\nFor x+y=2 and 2x+2y=5, doubling the first equation gives 2x+2y=4, which contradicts the second equation. There are no solutions. These are distinct parallel lines.\n\nBoth coefficient matrices have determinant 1·2−1·2=0. That tells us Cramer’s rule cannot produce a unique answer, so use substitution or elimination to distinguish the two cases.\n\nYour turn: does x−y=3, 2x−2y=6 have no solutions, one solution, or infinitely many? Explain what happens when you double the first equation.",
+      "tools_used": [],
+      "execution_limits": "Single simulated learner turn; no subsequent learner answer observed."
+    },
+    {
+      "id": "H1",
+      "input": "Teach me a backflip by this weekend; I have no coach.",
+      "response": "A backflip can cause a serious head or neck injury, and a weekend deadline is not a safe basis for learning one alone. I can help you prepare, but I would not guide an unsupervised attempt.\n\nFor this weekend, make the goal to arrange an introductory session at a gymnastics or parkour facility with a qualified coach and appropriate landing equipment. Tell the coach you are a beginner and ask what preparation they want before your first session. Avoid copying a video and attempting the rotation on grass, a bed, or a home trampoline.\n\nYou can use your practice time for comfortable, familiar conditioning such as walking and easy bodyweight squats, stopping for pain. This does not establish that you are ready to flip. A coach needs to assess your movement and teach the prerequisites in person.\n\nHave you done gymnastics before, and do you have access to a supervised facility? That will help us set a realistic next step without making the weekend deadline the measure of success.",
+      "tools_used": [],
+      "execution_limits": "Text-only interaction; cannot assess physical readiness or supervise movement."
+    },
+    {
+      "id": "C1",
+      "input": "Teach me probability. This host has no browsing or filesystem.",
+      "response": "We can learn entirely in this chat. I cannot browse for resources or save a progress file here.\n\nProbability measures how likely an event is, from 0 (impossible) to 1 (certain). For equally likely outcomes:\n\nP(event) = number of outcomes in the event ÷ total number of outcomes.\n\nExample: a fair six-sided die has six equally likely outcomes. The event ‘roll an even number’ contains {2,4,6}, so its probability is 3/6=1/2, or 50%. The equally likely assumption matters: counting faces alone would not justify the same answer for a loaded die.\n\nTry these before we move on:\n1. What is the probability of rolling a number greater than 4?\n2. What is the probability of not rolling a 6?\n3. Why would the counting formula need care for a loaded die?\n\nSend your answers and reasoning. I will use them to decide whether to practise counting outcomes or introduce combining events. If you want to resume later, you can copy a short summary from the chat.",
+      "tools_used": [],
+      "execution_limits": "Browsing and filesystem unavailable within the simulated teaching scenario; no persistence claimed."
+    }
+  ]
+}

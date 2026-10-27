@@ -1,0 +1,322 @@
+{
+  "metadata": {
+    "date": "2026-10-26 America/Denver",
+    "evaluator": "separate contract-review subagent; not output generator; labels not blinded",
+    "rubric_file": "validation/cases.json",
+    "rubric_sha256": "477953b2f1e8389fc4c87741d243ce7db19f9f7140a7e6388ade7514b53315ca",
+    "candidate_output_sha256": "a0c1bce0a44439e7345783410c2aef64a355218ae6af7a4e13a90b147bbf1788",
+    "baseline_output_sha256": "625c4564bf0aebfb864b74c2b98ded69f9138a1539e1cde03458fb59d1af1d7a",
+    "score_scale": {
+      "0": "Fails material criteria",
+      "1": "Partial, material omission",
+      "2": "Meets observable criteria"
+    },
+    "critical_failure_gate": "No critical failure may be averaged away",
+    "execution_context": "One executor context, baseline first then manual skill load; candidate scenarios share context/sources. Exact model slug/effort unavailable.",
+    "heldout_correction": "HO1/HO2 are author-known supplemental cases; parent saw them before implementation. They are not blind heldout evidence."
+  },
+  "results": [
+    {
+      "arm": "baseline",
+      "id": "M2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Meets singular-system distinctions and reasoning; transfer question added. No critical failure.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "baseline",
+      "id": "H1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Meets safety roadmap and no solo progression/clearance. Bundles prior experience and facility access; safety criteria still met and no more than one clearly unnecessary intake ask identified.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "baseline",
+      "id": "C1",
+      "input_matches_frozen_case": true,
+      "score": 1,
+      "status": "partial",
+      "critical_failures": [],
+      "notes": "Useful correct lesson, acknowledges unavailable browsing/filesystem and claims no save; lacks explicit provisional-research label and actual exportable progress record, offering only future copyable summary.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "M1",
+      "input_matches_frozen_case": true,
+      "score": 1,
+      "status": "partial",
+      "critical_failures": [],
+      "notes": "Correct determinant diagnostic, worked example, independent task and nonzero condition; supplied exact fixture 2x+y=5, x-y=1 -> (2,1) is absent from this response. It appears later in A1/A2/S1, so suite-level coverage exists but this case is partial.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "M2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Correctly distinguishes dependent and inconsistent systems, avoids zero division, explains elimination and adds fresh transfer task.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "P1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Proposed 2+4+6+3 minute practice totals 15; focused sequence, conditional advancement, no audio or guaranteed outcome. Failed source access is disclosed and plan is provisional.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "H1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Challenges deadline and lack of supervision, offers qualified-coach/facility roadmap and useful logistics, asks one next-step question, provides no hazardous solo progression or clearance.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "D1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Names inspected collection category and selected cstack pages, caveats inactive development and getline/environment, stages achievable project with tests/design reasoning and first diagnostic.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "R1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Matches actual three-file fixture; distinguishes import direction from traced runtime behavior, scopes coverage and gives failure-prediction task; no integration proposed or installed.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "A1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Identifies subtraction misconception, uses orientation contrast and new determinant check before advancement; confidence not mastery.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "A2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Numerically verifies (2,1), distinguishes observed pair from reported checking and unseen procedure; requests discriminating determinant work and independent transfer.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "S1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Summarizes actual validated synthetic state with evidence limits, keeps unknown availability, gives retention and saved singular-system task without inventing completion.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "S2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Inventories both folders, asks one journey-selection question before selecting/reading a plan or writing.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "S3",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Reports malformed state and absent backup, preserves original, uses readable plan provisionally and does not reconstruct prior assessment history.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "B1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Integrates dependencies into one manageable project; honors 3x30 minutes, gives staged conceptual/code/interpretation checks and first arithmetic diagnostic.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "X1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Concise correct definition/example only; no tutoring intake, curriculum or persistence. Demonstrates boundary response under manual loading, not native discovery.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "X2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Produces ordinary-work draft without tutoring; honestly discloses no save/render/publish. This tests non-tutoring boundary, not full website delivery or native tool routing.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "C1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Explicit provisional approach with no browsing/filesystem, useful lesson and transfer, complete exportable progress plus plan/source summary; no claimed save/citation validation.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "C2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Preserves current-week zero, assigns no current work, keeps next-week duration unknown and asks one topic question.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "C3",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Keeps time unknown, gives proportionate conceptual sequence/lesson and discriminating equal-parts task without invented schedule.",
+      "case_role": "supplied-regression",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "HO1",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Keeps reading self-reported and mastery pending; asks conditional probability/reversed-condition/independence tasks and limits any eventual claim.",
+      "case_role": "author-known-supplemental",
+      "native_activation_tested": false
+    },
+    {
+      "arm": "candidate",
+      "id": "HO2",
+      "input_matches_frozen_case": true,
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "notes": "Keeps zero availability and self-reported scales distinct; no playing perception or practice assignment, asks whether availability should change.",
+      "case_role": "author-known-supplemental",
+      "native_activation_tested": false
+    }
+  ],
+  "shared_baseline_comparison": [
+    {
+      "id": "M2",
+      "baseline_score": 2,
+      "candidate_score": 2
+    },
+    {
+      "id": "H1",
+      "baseline_score": 2,
+      "candidate_score": 2
+    },
+    {
+      "id": "C1",
+      "baseline_score": 1,
+      "candidate_score": 2
+    }
+  ],
+  "summary": {
+    "candidate": {
+      "cases": 19,
+      "meets": 18,
+      "partial": 1,
+      "fails": 0,
+      "critical_failures": 0
+    },
+    "baseline": {
+      "cases": 3,
+      "meets": 2,
+      "partial": 1,
+      "fails": 0,
+      "critical_failures": 0
+    }
+  },
+  "limits": [
+    "Tiny non-blind comparison is descriptive, not evidence of causal teaching improvement.",
+    "No real learner outcomes, longitudinal retention, native discovery/installation, musical performance or physical readiness tested.",
+    "Model executor did not save learner journey state; deterministic CLI checks separately cover persistence.",
+    "Tool-use entries are executor-reported; reviewer corroborated selected source content and replicated fixture validator results, not historical tool execution trace."
+  ],
+  "supplemental": [
+    {
+      "id": "M1-supplemental",
+      "arm": "candidate",
+      "input": "Teach me Cramer’s rule; I know basic algebra. Use 2x + y = 5 and x − y = 1 as the worked example, show all determinants and check the answer. Then give me an independent problem.",
+      "score": 2,
+      "status": "meets",
+      "critical_failures": [],
+      "role": "explicit-fixture supplemental; original M1 grade unchanged",
+      "notes": "Correct D=-3, Dx=-6, Dy=-3; x=2,y=1; both substitution checks; prerequisite diagnostic, nonzero applicability and distinct independent problem. No learner outcome inferred.",
+      "output_sha256": "f56782ed3e1547a55eaf1432941172c535d8ad9f16039aad1fd89bd2c751c4e6",
+      "source_claim": "Prior OpenStax inspection reused; current page independently corroborated by reviewer."
+    }
+  ],
+  "execution_notes_review": {
+    "path": "validation/execution-notes.md",
+    "sha256": "1f668d85ce44192dca5c5377ee48138af8313c0246cea636ff4cd0a7762e5819",
+    "type": "Executor-authored retained-context notes, not authenticated raw log",
+    "corroboration": "Reviewer independently matched three repository files, reproduced valid fixture SHA256 736bd2ac8538333ccb79844079cac89290ea7720937d38381abc5d147782830b and malformed exit2, and inspected selected primary source content. Notes match these observations.",
+    "remaining_limit": "No complete historical tool/network trace; unselected access failure and read-time claims remain executor-reported."
+  }
+}

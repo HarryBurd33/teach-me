@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "journey_id": "algebra",
+  "topics": [
+    "algebra"
+  ],
+  "goal": "Synthetic validation journey",
+  "current_stage": "independent practice",
+  "availability": {
+    "minutes_per_day": null,
+    "session_minutes": null
+  },
+  "assessments": [
+    {
+      "id": "a1",
+      "task": "Solve 2x+y=5, x-y=1 and check both equations",
+      "result": "demonstrated",
+      "evidence_ids": [
+        "e1"
+      ],
+      "feedback": "One worked example verified; retention and transfer untested"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "e1",
+      "kind": "observed",
+      "summary": "Synthetic fixture: submitted x=2,y=1 and verified both supplied equations; one scoped solution only",
+      "recorded_at": "2026-09-14T18:00:00-06:00"
+    }
+  ],
+  "difficulties": [],
+  "decisions": [],
+  "next_action": "Distinguish singular consistent and inconsistent systems",
+  "updated_at": "2026-10-27T04:40:43.411984+00:00"
+}

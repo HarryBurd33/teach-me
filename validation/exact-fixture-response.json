@@ -1,0 +1,17 @@
+{
+  "metadata": {
+    "execution_type": "Actual supplemental model-executed tutor response to a simulated learner prompt; not a human transcript",
+    "model": "Inherited model; exact slug and reasoning effort unavailable to executor",
+    "manually_loaded_skill": true,
+    "context": "Same shared executor context as candidate-responses.json. Original M1 unchanged.",
+    "sources": "Previously inspected sources reused; no new research call for this narrow explanation.",
+    "execution_limits": "No learner answer observed; no native skill discovery/installation test, no learner state write, and no self-grading."
+  },
+  "id": "M1-supplemental",
+  "input": "Teach me Cramer’s rule; I know basic algebra. Use 2x + y = 5 and x − y = 1 as the worked example, show all determinants and check the answer. Then give me an independent problem.",
+  "response": "Our goal is to solve a 2×2 system with Cramer’s rule, verify the result, and recognize when the rule applies. We’ll check the determinant idea, work your example, then use a different problem.\n\nFor rows (a,b) and (c,d), the determinant is ad−bc. Quick prerequisite check: for rows (3,2) and (1,4), what are ad and bc, and what is their difference?\n\nFor 2x+y=5 and x−y=1, the coefficient matrix has rows (2,1) and (1,−1):\n\nD = 2(−1)−1(1) = −3.\n\nReplace the x column with the constants (5,1):\nDx = 5(−1)−1(1) = −6.\n\nReplace the y column with those constants:\nDy = 2(1)−5(1) = −3.\n\nSince D≠0, Cramer’s rule gives the unique solution:\nx=Dx/D=(−6)/(−3)=2;\ny=Dy/D=(−3)/(−3)=1.\n\nCheck both equations: 2·2+1=5 and 2−1=1.\n\nIf D=0, do not divide: use elimination to distinguish no solutions from infinitely many. This applicability condition and column replacement procedure match [OpenStax’s Cramer’s rule section](https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule), previously inspected in this execution.\n\nNow independently solve x+2y=8, 3x−y=3. Show D, Dx, Dy, and both substitution checks. We’ll advance when your signs, replacements, and explanation agree; a fresh problem later will check retention. Nothing saved as learner progress.",
+  "tools_used": [
+    "Previously inspected web source: https://openstax.org/books/college-algebra-2e/pages/7-8-solving-systems-with-cramers-rule"
+  ],
+  "execution_limits": "Response-only supplemental execution. Prior source inspection reused; no assessment outcome inferred."
+}
