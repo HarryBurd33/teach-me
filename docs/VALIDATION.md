@@ -12,6 +12,10 @@ The three shared direct-prompt baseline cases yielded two ties and stronger prov
 
 See the [frozen cases](../validation/cases.json), [baseline](../validation/baseline-responses.json), [candidate](../validation/candidate-responses.json), [exact fixture](../validation/exact-fixture-response.json), [grades](../validation/model-grades.json), [review](../validation/model-review.md), [executor notes](../validation/execution-notes.md), and [independent artifact review](../validation/independent-review.md). Older hashes and statements in these files describe their original review snapshot; current release structure is checked by CI. No teaching instructions or helper behavior changed for publication; installation documentation and the schema identifier were clarified.
 
+## Local installation and public CI
+
+Global installation, exact file integrity, native user-scope discovery from two directories, installed-helper tests, and four public CI jobs were verified separately after publication. See [release verification](INSTALLATION-VERIFICATION.md). These new checks do not retroactively alter the original model-trial grades.
+
 ## What is not established
 
 No real learner outcome, longitudinal retention, physical or musical execution/readiness, cross-device synchronization, full Understand Anything integration, or model-driven state-saving behavior was validated. Actual helper saving/resuming is tested separately. Explicitly loaded response boundaries do not prove automatic host selection. Native discovery/installation is host-specific and should be checked on the target machine. Python and tests cannot certify instructional quality, citation truth, evidence sufficiency, or mastery.
