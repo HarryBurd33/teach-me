@@ -1,3 +1,7 @@
+# v0.6.0 installation verification
+
+The rollback-preserving update passed238 tests against the global skill. All38 files match the reviewed candidate; native enabled user-scope discovery passed from two directories without a model turn. Discovery does not establish automatic selection. Final immutable-source and release-download checks are recorded with the tagged release. Historical records below retain their original results and limits.
+
 # v0.5.0 installation verification
 
 The rollback-preserving local update passed all 178 tests against the installed skill. Native user-scope discovery succeeded from two directories; all 34 noncache files match the accepted candidate manifest. Discovery does not establish automatic instruction selection. Public immutable-source and release-download checks are recorded with the tagged release.

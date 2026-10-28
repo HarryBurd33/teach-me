@@ -1,0 +1,83 @@
+{
+  "execution": {
+    "kind": "Actual literal response generation within this fresh delegated model context after reading each version; no separate hidden executor or API calls",
+    "context": "Fresh delegated task with sanitized brief; baseline and candidate responses share this context and expected outcomes; evaluator self-generates and self-grades, nonblind",
+    "effective_model": null,
+    "effective_effort": null,
+    "date": "2026-10-28T23:51:30.071369+00:00"
+  },
+  "cases": [
+    {
+      "id": "W01",
+      "baseline": {
+        "activation": "correct",
+        "boundary_judgment": 2,
+        "requested_native_capability": 0,
+        "task_quality": 1,
+        "critical_failures": []
+      },
+      "candidate": {
+        "activation": "correct",
+        "boundary_judgment": 2,
+        "requested_native_capability": 2,
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "notes": "Candidate distinguishes retained original stale receipts from current-only append; does not falsely backfill stale history. Exact entry extraction is concretely available and deterministically verified."
+    },
+    {
+      "id": "W02",
+      "baseline": {
+        "activation": "correct",
+        "boundary_judgment": 2,
+        "requested_native_capability": 0,
+        "task_quality": 1,
+        "critical_failures": []
+      },
+      "candidate": {
+        "activation": "correct",
+        "boundary_judgment": 2,
+        "requested_native_capability": 2,
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "notes": "Candidate gives plan/hash/apply/archive-first recovery workflow; baseline honestly names missing CLI. File operations are not claimed from generated instructions."
+    },
+    {
+      "id": "W03",
+      "baseline": {
+        "activation": "correct exclusion",
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "candidate": {
+        "activation": "correct exclusion",
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "notes": "Both keep direct typo correction separate from teaching and disclose absent actual README."
+    },
+    {
+      "id": "W04",
+      "baseline": {
+        "activation": "correct",
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "candidate": {
+        "activation": "correct",
+        "task_quality": 2,
+        "critical_failures": []
+      },
+      "notes": "Both provide a small stationary observation exercise, label unknown video/model-specific manual and bike access, separate self-report and tested performance, avoid suspect-brake riding and remote safety certification. No source inspection or file save claimed."
+    }
+  ],
+  "limits": [
+    "Small sample of four synthetic user cases; no actual learner participated.",
+    "Responses generated and graded by same delegated evaluator; not blind or separately executed matched model arms.",
+    "Model/effort not verifiably identified; no claim that model changed or was qualified by measured cost.",
+    "Outputs establish concrete workflow examples and preserved boundaries in this context; they cannot establish general compliance rates or causal learner efficacy.",
+    "W04 is a provisional first observation task, not a researched or model-specific bicycle repair lesson.",
+    "Frozen manifest wording inherited shared context is corrected: model settings inherited but unverified, task context fresh; both comparison arms share this evaluator context."
+  ]
+}

@@ -1,0 +1,13 @@
+test_H01_exact_history (__main__.Cases.test_H01_exact_history) ... ok
+test_H02_stale_and_foreign (__main__.Cases.test_H02_stale_and_foreign) ... ok
+test_H03_corruption (__main__.Cases.test_H03_corruption) ... ok
+test_H03_orphans_locks (__main__.Cases.test_H03_orphans_locks) ... ok
+test_H04_outputs_bounds (__main__.Cases.test_H04_outputs_bounds) ... ok
+test_M01_selection_and_hashes (__main__.Cases.test_M01_selection_and_hashes) ... ok
+test_M02_valid_retirement (__main__.Cases.test_M02_valid_retirement) ... ok
+test_M03_refusals (__main__.Cases.test_M03_refusals) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.054s
+
+OK

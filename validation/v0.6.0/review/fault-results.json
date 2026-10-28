@@ -1,0 +1,35 @@
+[
+  {
+    "id": "M04-copy-failure",
+    "status": "pass",
+    "injection": "snapshot_maintenance.copy_revision second call",
+    "selected_unlink_calls": [],
+    "sources_preserved": true,
+    "fixture": "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-djx0mtya",
+    "message": "Retirement stopped: independent frozen copy fault. Inspect the archive and actual store, then create a fresh plan; do not automatically replay this plan."
+  },
+  {
+    "id": "M04-verification-failure",
+    "status": "pass",
+    "injection": "snapshot_maintenance.verify_backup first stage check",
+    "selected_unlink_calls": [],
+    "sources_preserved": true,
+    "fixture": "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-3w79b4z3",
+    "message": "Retirement stopped: independent frozen verify fault. Inspect the archive and actual store, then create a fresh plan; do not automatically replay this plan."
+  },
+  {
+    "id": "M05-partial-unlink",
+    "status": "pass",
+    "injection": "snapshot_maintenance.remove_revision second call",
+    "selected_unlink_calls": [
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-lwfvzgpl/snapshots/8cf6a8a9e1d632aa79212e335c77d6605ab8e91249fc99d0cb9c1a8053b5b5d7.zip",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-lwfvzgpl/snapshots/c235cce347dfcf8c392ca43fd31ddb396dcc99342eb58bf005b9a2efebc04c89.zip"
+    ],
+    "complete_backup_verified": true,
+    "both_archives_restored": true,
+    "protected_bytes_preserved": true,
+    "old_plan_replay_refused": true,
+    "fixture": "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-lwfvzgpl",
+    "message": "Retirement stopped: independent frozen second-source-unlink fault. Inspect the archive and actual store, then create a fresh plan; do not automatically replay this plan."
+  }
+]

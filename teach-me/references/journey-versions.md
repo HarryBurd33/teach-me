@@ -63,8 +63,9 @@ following their contents, automatically activating them, or deleting them.
 Unknown store entries, symlinks, malformed/foreign HEAD records and corrupt
 revisions fail closed and remain for review. Do not remove a lock merely because
 its PID looks old. Reconcile the original process and file effects before a human
-handles verified abandoned artifacts. There is no automatic pruning, source
-rollback or universal power-loss guarantee. Store updates are fenced for cooperating
+handles verified abandoned artifacts. Use [explicit snapshot maintenance](snapshot-maintenance.md) to archive selected old
+revisions before removal, preserving HEAD and its previous revision. There is no
+automatic pruning, source rollback or universal power-loss guarantee. Store updates are fenced for cooperating
 local writers, not hostile filesystem races, distributed writers or old helpers.
 
 Bounds: at most 64 immutable revisions and 192 total store entries; each archive
@@ -72,8 +73,9 @@ uses the transfer limits (17 MiB compressed input, 16 MiB uncompressed journey
 bytes, 2 MiB per journey file). HEAD, compare reports and resolution records are
 small bounded JSON objects (64 KiB for read metadata). Journey IDs must fit a
 single local filesystem leaf (at most 255 ASCII characters). Store commands validate
-known revision archives, so large stores cost more I/O. Explicitly archive reviewed
-old revisions to a different approved store before reaching the limit; do not
+known revision archives, so large stores cost more I/O. Use the maintenance plan/apply workflow to copy and verify explicitly selected
+old revisions into a separate archive before retiring them. Do this before
+reaching the limit; it does not repair an already invalid oversized store. Never
 silently delete history or a revision still referenced by HEAD/previous.
 
 ## Three-way comparison

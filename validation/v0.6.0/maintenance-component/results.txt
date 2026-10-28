@@ -1,0 +1,6 @@
+Observed component runs:
+Pass 1: Ran 19 tests in 1.258s; OK; process exit 0.
+Pass 2 (final): Ran 21 tests in 1.392s; OK; process exit 0.
+Command for both: python3 -B -m unittest discover -s .forge/teach-me-v0.6.0/maintenance-component -p test_*.py -v
+Python 3.9 grammar: module and tests parse with feature_version=(3, 9).
+No test failures occurred. Detailed test names are in test_snapshot_maintenance.py.

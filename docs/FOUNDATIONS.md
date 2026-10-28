@@ -78,3 +78,7 @@ The graph workbench and journey versions reuse this project’s MIT normalized d
 ## v0.5.0 original extension
 
 Typed asset transport and hash-bound consistency review extend this repository’s MIT modules. The prior pinned foundation inspection remains applicable. No new upstream code, reader or prompt is bundled; proposal validation reuses this skill’s original quote/hash checks. Recorded judgments do not automate semantic truth or learning efficacy.
+
+## v0.6.0 original extension
+
+The review-history and snapshot-maintenance tools extend this repository’s MIT receipt, storage and snapshot validators using Python standard-library code. Prior pinned foundation findings remain applicable. No upstream prompt, reader or AGPL implementation is bundled. Hash chains record local integrity, not authenticated identity or semantic truth.

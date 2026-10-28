@@ -1,0 +1,17 @@
+{
+  "command": "python3 .forge/teach-me-v0.6.0/history-component/test_review_history.py -v",
+  "passes": [
+    {"pass": 1, "tests": 26, "failures": 0, "errors": 26, "cause": "Test-only setup used macOS /var symlink from TemporaryDirectory; shared checked_path correctly refused it."},
+    {"pass": 2, "tests": 26, "failures": 0, "errors": 0, "reported_seconds": 0.268, "result": "OK", "correction": "Resolve the test temporary root before journey initialization; production code unchanged."}
+  ],
+  "runtime": "system python3; Python 3.9+ compatible syntax and standard library only",
+  "limits_tested": {
+    "receipt_2MiB": "actual oversized file",
+    "entry_3MiB": "actual oversized stage",
+    "entries_64": "actual complete 64-entry chain then append refusal",
+    "directory_192": "actual 192 stages plus operation lock",
+    "total_64MiB": "configured constant asserted; smaller injected limit tests read and append boundary branches"
+  },
+  "unexecuted": ["Parent frozen independent evaluator", "Full existing regression suite", "Installed copy and public release checks", "Actual 64MiB total-byte fixture"],
+  "external_state": "Only temporary synthetic journeys; no real learner stores, global skill, public repository, or checkpoint changes"
+}

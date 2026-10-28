@@ -1,0 +1,11 @@
+{
+  "assertions": "unchanged",
+  "adaptations": [
+    "TEACH_ME_SKILL default publicpath",
+    "Independentfixturehelpers use byte-identical current modules in CI instead of privatebaselinepath",
+    "Disposablefixture root andcleanup",
+    "Three retained faultfunctions wrapped as unittestmethods"
+  ],
+  "existing_fixture_modules": "byte-identical to v0.5.0; asserted before adoption",
+  "actual_limits": "postinspection supplement, actual64MiB stagebytes/validselectedarchivebytes"
+}

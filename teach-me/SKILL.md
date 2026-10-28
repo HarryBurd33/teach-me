@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.5.0"
+  version: "0.6.0"
 ---
 
 # Teach me
@@ -76,6 +76,10 @@ For a source-grounded concept-map draft or explicit graph edit, read [graph work
 For consistent journey snapshots or reconciling diverged copies, read [journey versions](references/journey-versions.md). Use digest-bound snapshots and three-way archive reports; preserve all originals, resolve conflicts explicitly and create a new merged archive or fresh restored destination. A snapshot HEAD provides a consistent stored generation; it does not make arbitrary live editors transactional or enable background/distributed sync. Snapshots and transfers also preserve the documented typed graph, proposal, source and review-receipt files when present, validating source bindings without applying drafts.
 
 After merging, restoring or noticing contradictory records, read [content consistency review](references/coherence-review.md). Inspect the actual plan, progress, sources and relevant optional files. Prepare a hash-bound packet, record all four review decisions with concrete rationales, and verify the receipt before relying on that review. Use `needs_changes` when claims contradict or evidence is insufficient; resolve the content and repeat the review. A current all-consistent receipt records operator judgment, not permission, semantic truth or learner mastery. Stale receipts remain history. This review is useful when reconciling records; do not impose it on every small lesson.
+
+For a requested durable history of consistency judgments, read [review history](references/review-history.md). Append only a receipt checked against the current journey, with the exact expected store tip. Preserve `needs_changes` judgments as unresolved history. The separate hash-linked store retains exact receipt bytes but does not authenticate the reviewer, preserve an external trust anchor or enter journey transfers automatically.
+
+When a snapshot store approaches its finite limit, read [snapshot maintenance](references/snapshot-maintenance.md). Select explicit older revision hashes, inspect the plan and protected HEAD/previous revisions, and apply only within current authorization. The helper verifies a complete separate archive before removing selected source revisions. Keep that archive; after any interrupted removal inspect both locations and make a fresh plan. Never prune by guessing which digest is newest or delete a lock/stage automatically.
 
 For a learner-requested device/workspace move, use [manual transfer](references/transfer.md) and `scripts/transfer.py` to pack allowed journey files and verify an import into a new destination. Do not upload the archive without authorization. Resolve conflicts separately; this is not continuous synchronization. Updated helpers coordinate local writes with cooperative locks; preserve uncertain locks rather than stealing them.
 

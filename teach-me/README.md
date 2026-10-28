@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.5.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.6.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -59,3 +59,9 @@ Original material is MIT licensed; see [LICENSE](LICENSE). External references k
 Transfers and snapshots now preserve explicit `knowledge-graph.json`, `knowledge-proposal.json`, `knowledge-source.txt` and `journey-review.json` alongside the original records. Proposals must match the selected source hash and exact quotes; draft references remain drafts. See [transfer rules](references/transfer.md).
 
 After reconciling divergent journeys, ask: `$teach-me Review this journey for contradictions, record concrete decisions and verify that the review matches the current files.` The [review helper](references/coherence-review.md) binds four operator decisions to exact file bytes and detects stale receipts. It cannot judge meaning, authenticate the reviewer, certify mastery or supply authorization. Typed archives use format v2; v0.4.0 and older helpers cannot read them. The new helper still reads valid legacy format v1 archives.
+
+## Review history and snapshot maintenance
+
+Ask `$teach-me Keep an immutable local history of these consistency reviews.` The [history helper](references/review-history.md) stores exact receipt bytes in a validated hash chain with expected-tip appends. Historical reviews can become stale; hashes do not authenticate identity or semantic truth. This optional store is separate from the journey ZIP.
+
+Ask `$teach-me Plan which explicitly selected old snapshots can be archived, preserving HEAD and its previous revision.` [Snapshot maintenance](references/snapshot-maintenance.md) verifies a complete archive before any selected source removal. It has no automatic retention policy or background process. Archive/history stores need their own reviewed private transport.

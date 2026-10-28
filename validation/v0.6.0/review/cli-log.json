@@ -1,0 +1,1300 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a\", \"sha256\": \"d72a1d1b657da45fa58cd72df4305acd7dc597c7f890bea774ac24b6e0bba4f4\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/one-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d72a1d1b657da45fa58cd72df4305acd7dc597c7f890bea774ac24b6e0bba4f4\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"3a12fae5aa232361c381138a7050addb18c6ff1d8f7c88af7388b28b4e8de8b1\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/one-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/one-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/one-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d72a1d1b657da45fa58cd72df4305acd7dc597c7f890bea774ac24b6e0bba4f4\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"3a12fae5aa232361c381138a7050addb18c6ff1d8f7c88af7388b28b4e8de8b1\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:49.842417+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/one-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0\", \"sequence\": 1, \"journey_id\": \"calculus-a\", \"receipt_sha256\": \"364c07d366d9bc15259d2348a5664f78cec4b170a578a33255aaf20a839268bc\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/two-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d72a1d1b657da45fa58cd72df4305acd7dc597c7f890bea774ac24b6e0bba4f4\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"3a12fae5aa232361c381138a7050addb18c6ff1d8f7c88af7388b28b4e8de8b1\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/two-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/two-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/two-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d72a1d1b657da45fa58cd72df4305acd7dc597c7f890bea774ac24b6e0bba4f4\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"3a12fae5aa232361c381138a7050addb18c6ff1d8f7c88af7388b28b4e8de8b1\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"needs_changes\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:49.956304+00:00\", \"resume_ready\": false, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/two-receipt.json",
+      "--expected-tip",
+      "b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0"
+    ],
+    "exit": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4\", \"sequence\": 2, \"journey_id\": \"calculus-a\", \"receipt_sha256\": \"a68e6dc4cb0748d7d0add2e927ae5712cd1c25cd3c52ea6379d8bc640721bf66\", \"resume_ready\": false, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/history",
+      "--entry",
+      "b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/000001-b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0-extracted.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/000001-b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0-extracted.json\", \"receipt_sha256\": \"364c07d366d9bc15259d2348a5664f78cec4b170a578a33255aaf20a839268bc\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/history",
+      "--entry",
+      "b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/000002-b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4-extracted.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/000002-b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4-extracted.json\", \"receipt_sha256\": \"a68e6dc4cb0748d7d0add2e927ae5712cd1c25cd3c52ea6379d8bc640721bf66\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-swd32mvb/history"
+    ],
+    "exit": 0,
+    "stdout": "{\"tip\": \"b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4\", \"sequence\": 2, \"journey_id\": \"calculus-a\", \"entries\": [{\"sha256\": \"b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0\", \"filename\": \"000001-b3ca251fb8bbedf3c32c3bbe21ac382d64c6e578fe99601643b9a0b914000ce0.json\", \"sequence\": 1, \"receipt_sha256\": \"364c07d366d9bc15259d2348a5664f78cec4b170a578a33255aaf20a839268bc\", \"resume_ready\": true}, {\"sha256\": \"b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4\", \"filename\": \"000002-b28abcf0157966916b35c73680e62fa768971a8724381b634577bd3838267ad4.json\", \"sequence\": 2, \"receipt_sha256\": \"a68e6dc4cb0748d7d0add2e927ae5712cd1c25cd3c52ea6379d8bc640721bf66\", \"resume_ready\": false}], \"staging_entries\": [], \"receipt_freshness_checked\": false, \"semantic_correctness_verified\": false, \"automatic_recovery\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a\", \"sha256\": \"8a9bf41a2e96a6cd7094dc5df8c20a8371b40e9a2279fe7fd4fd860637391010\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"8a9bf41a2e96a6cd7094dc5df8c20a8371b40e9a2279fe7fd4fd860637391010\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"e8f43e9491bb789ed3e39d43ff9fa257b3947ed89dfd7857ba8d9b1ab363be92\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"8a9bf41a2e96a6cd7094dc5df8c20a8371b40e9a2279fe7fd4fd860637391010\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"e8f43e9491bb789ed3e39d43ff9fa257b3947ed89dfd7857ba8d9b1ab363be92\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:50.218123+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"4dfc6e7f1091b031af6638e2662533d3f678f946fe81de76430c435b3dc0a77d\", \"sequence\": 1, \"journey_id\": \"calculus-a\", \"receipt_sha256\": \"32591b39ec82defd4da4bfc1b7e2929111af1a6dad532269bcc5b82bd4683d25\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Stale expected tip; inspect history before appending\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/r-receipt.json",
+      "--expected-tip",
+      "4dfc6e7f1091b031af6638e2662533d3f678f946fe81de76430c435b3dc0a77d"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Receipt is stale or belongs to another journey\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace",
+      "--id",
+      "algebra-b",
+      "--topic",
+      "Algebra",
+      "--goal",
+      "Solve linear equations."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/algebra-b\", \"sha256\": \"85011b92f062f6caf64886b24bccb82c009c0c5f7042dc06884dbe4f77b70b48\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/algebra-b",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/foreign-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"algebra-b\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"85011b92f062f6caf64886b24bccb82c009c0c5f7042dc06884dbe4f77b70b48\", \"size\": 445}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Solve linear equations.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"87a31493ebd1a9e6c39995e9c34736f6614eab925574d077810dc04340ce73bb\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/algebra-b",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/foreign-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/foreign-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/foreign-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"algebra-b\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"85011b92f062f6caf64886b24bccb82c009c0c5f7042dc06884dbe4f77b70b48\", \"size\": 445}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"87a31493ebd1a9e6c39995e9c34736f6614eab925574d077810dc04340ce73bb\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:50.436131+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-fk78v6j7/foreign-receipt.json",
+      "--expected-tip",
+      "4dfc6e7f1091b031af6638e2662533d3f678f946fe81de76430c435b3dc0a77d"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Receipt is stale or belongs to another journey\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/workspace/learning/calculus-a\", \"sha256\": \"4ac53639ff1c5616bd8e5c00bcf9ad3b881b0aa54b11520f61e61db911d99eec\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/r-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"4ac53639ff1c5616bd8e5c00bcf9ad3b881b0aa54b11520f61e61db911d99eec\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"7d3181a73a869c21ec3eb1c1cbdcddffa7a399703e475b21f9b442089e0def25\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/r-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/r-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/r-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"4ac53639ff1c5616bd8e5c00bcf9ad3b881b0aa54b11520f61e61db911d99eec\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"7d3181a73a869c21ec3eb1c1cbdcddffa7a399703e475b21f9b442089e0def25\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:50.585754+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"85b0c3cd7f48032d8f36d3493f353b85a4e8db09f8acfdfaba670fdc40c1eed7\", \"sequence\": 1, \"journey_id\": \"calculus-a\", \"receipt_sha256\": \"957de525e6f4b119980ab9330fc1f1f1cddd0f1ddcac52c1d4c9a130fb7a2f20\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/receipt_hash"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Embedded receipt digest mismatch\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/base64_invalid"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: receipt_base64 must be canonical base64 text\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/base64_noncanonical"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: receipt_base64 must be canonical base64 text\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/sequence_bool"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: History sequence must be an exact integer from 1 through 64\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/sequence_gap"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: History sequence or previous hash chain is broken\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/wrong_previous"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: History sequence or previous hash chain is broken\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/filename"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: History entry bytes are not canonical or filename digest differs\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/unknown"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Unknown history entry; preserve and reconcile: notes.txt\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/symlink"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Refusing symlink: BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-5b7o9szz/symlink/elsewhere\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace/learning/calculus-a\", \"sha256\": \"3dd05483d2b4e440107473b103dfdea2d0e7233beb1a52cc239f2527a8c60e75\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"3dd05483d2b4e440107473b103dfdea2d0e7233beb1a52cc239f2527a8c60e75\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"b52a090c4b5115c219a6e306f88c109bc6d4ed01f0619dfde33dc5b1816a1c4d\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"3dd05483d2b4e440107473b103dfdea2d0e7233beb1a52cc239f2527a8c60e75\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"b52a090c4b5115c219a6e306f88c109bc6d4ed01f0619dfde33dc5b1816a1c4d\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:51.057941+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/history"
+    ],
+    "exit": 0,
+    "stdout": "{\"tip\": null, \"sequence\": 0, \"journey_id\": null, \"entries\": [], \"staging_entries\": [\".teach-me-history-stage-orphan\"], \"receipt_freshness_checked\": false, \"semantic_correctness_verified\": false, \"automatic_recovery\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: History has staging entries; preserve and reconcile before appending\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-7epkzv9a/history/.teach-me-review-history.lock\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace/learning/calculus-a\", \"sha256\": \"d63ba616a3d28e71f164ec5d485885e6eaf45242b903bfe55e8f6f18c759eaf6\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace/learning/calculus-a",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/r-packet.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d63ba616a3d28e71f164ec5d485885e6eaf45242b903bfe55e8f6f18c759eaf6\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Explain derivative using slope.\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"4d6c85c53fd7e4f1f163b30ad71ea20cc795edf7e9883a11b59daaf570c53236\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace/learning/calculus-a",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/r-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/r-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/r-receipt.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"calculus-a\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"d63ba616a3d28e71f164ec5d485885e6eaf45242b903bfe55e8f6f18c759eaf6\", \"size\": 455}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"4d6c85c53fd7e4f1f163b30ad71ea20cc795edf7e9883a11b59daaf570c53236\", \"reviewer_role\": \"other\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Explicit evaluator fixture judgment 0\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Explicit evaluator fixture judgment 1\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Explicit evaluator fixture judgment 2\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Explicit evaluator fixture judgment 3\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-28T23:48:51.279624+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/r-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"997230099b7d1266541590cfb348115d46b3425132426f2b127f68564dc09485\", \"sequence\": 1, \"journey_id\": \"calculus-a\", \"receipt_sha256\": \"f79f6e6dc781ec2ce95b30c25a8e95fde91b9b6d809cfd2f2a053ac1b0784683\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history",
+      "--entry",
+      "997230099b7d1266541590cfb348115d46b3425132426f2b127f68564dc09485",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/existing.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Extract output must be new with an existing parent\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history",
+      "--entry",
+      "997230099b7d1266541590cfb348115d46b3425132426f2b127f68564dc09485",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history/illegal.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Extract output must be outside the history store\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/workspace/learning/calculus-a",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/huge.json",
+      "--expected-tip",
+      "997230099b7d1266541590cfb348115d46b3425132426f2b127f68564dc09485"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Not a bounded regular file: huge.json\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-2wjcc2fw/history"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Not a bounded regular file: 000001-997230099b7d1266541590cfb348115d46b3425132426f2b127f68564dc09485.json\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace/learning/calculus-a\", \"sha256\": \"16279bc7ad7bd7c3a8231982946ec4dcee126a04f363d99fedb42059688bc0f8\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace/learning/calculus-a",
+      "--expected-head",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17\", \"journey_id\": \"calculus-a\", \"previous\": null}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace/learning/calculus-a",
+      "--expected-head",
+      "07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"37d4443bdb7d3170bf4255783cc9c763ba24560e66ae118112c7be375e798a17\", \"journey_id\": \"calculus-a\", \"previous\": \"07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace/learning/calculus-a",
+      "--expected-head",
+      "37d4443bdb7d3170bf4255783cc9c763ba24560e66ae118112c7be375e798a17"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811\", \"journey_id\": \"calculus-a\", \"previous\": \"37d4443bdb7d3170bf4255783cc9c763ba24560e66ae118112c7be375e798a17\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/workspace/learning/calculus-a",
+      "--expected-head",
+      "2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"3d35644866e24e10daf2464e96fd40f3d2dd266262b44b49d0b9da327a99b637\", \"journey_id\": \"calculus-a\", \"previous\": \"2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "3d35644866e24e10daf2464e96fd40f3d2dd266262b44b49d0b9da327a99b637",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/bad-0.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: HEAD and previous revisions are protected\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/bad-1.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: HEAD and previous revisions are protected\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17",
+      "07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/bad-2.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Duplicate selected revision\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "0000000000000000000000000000000000000000000000000000000000000000",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/bad-3.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Unknown selected revision\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/bad-4.json"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "usage: snapshot_maintenance.py plan [-h] --store STORE\n                                    --revisions REVISIONS [REVISIONS ...]\n                                    --output OUTPUT\nsnapshot_maintenance.py plan: error: argument --revisions: expected at least one argument\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/snapshots",
+      "--revisions",
+      "37d4443bdb7d3170bf4255783cc9c763ba24560e66ae118112c7be375e798a17",
+      "07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/retire.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"head\": {\"journey_id\": \"calculus-a\", \"previous\": \"2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811\", \"revision\": \"3d35644866e24e10daf2464e96fd40f3d2dd266262b44b49d0b9da327a99b637\", \"version\": 1}, \"journey_id\": \"calculus-a\", \"plan_sha256\": \"4e2be5a9f6b28571e921ab9f0c5975b77714c9fcc965a8619ec136eac8b9c11a\", \"protected\": [\"2a361e1c3bdd87cf932fcc809cb95e61e54d540d3f38d96eb445e87fa2dae811\", \"3d35644866e24e10daf2464e96fd40f3d2dd266262b44b49d0b9da327a99b637\"], \"revisions\": [\"07de2a44e5e66f1b7f56b625a149c77909145cb6205749841aa0346b7a40ce17\", \"37d4443bdb7d3170bf4255783cc9c763ba24560e66ae118112c7be375e798a17\"], \"store_sha256\": \"0243a0760e43772a78a8dbd396d51fd7a446c3ce0672bf51e0e01cac06420908\", \"version\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace/learning/calculus-a\", \"sha256\": \"e52ce67e00ce9f6880be1c238764daadd538f70b49f83a10219db45723a41033\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace/learning/calculus-a",
+      "--expected-head",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990\", \"journey_id\": \"calculus-a\", \"previous\": null}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace/learning/calculus-a",
+      "--expected-head",
+      "731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8\", \"journey_id\": \"calculus-a\", \"previous\": \"731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace/learning/calculus-a",
+      "--expected-head",
+      "f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"ccf184e7497872a055d5dbec8856c9bfa30520da3290413dd548f04ce0e83c35\", \"journey_id\": \"calculus-a\", \"previous\": \"f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/workspace/learning/calculus-a",
+      "--expected-head",
+      "ccf184e7497872a055d5dbec8856c9bfa30520da3290413dd548f04ce0e83c35"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"c15bf3ac118825ed71489793660b2d2da3429b287b17e8ef97d03a9177a0cb78\", \"journey_id\": \"calculus-a\", \"previous\": \"ccf184e7497872a055d5dbec8856c9bfa30520da3290413dd548f04ce0e83c35\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--revisions",
+      "731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990",
+      "f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/retire.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"head\": {\"journey_id\": \"calculus-a\", \"previous\": \"ccf184e7497872a055d5dbec8856c9bfa30520da3290413dd548f04ce0e83c35\", \"revision\": \"c15bf3ac118825ed71489793660b2d2da3429b287b17e8ef97d03a9177a0cb78\", \"version\": 1}, \"journey_id\": \"calculus-a\", \"plan_sha256\": \"3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b\", \"protected\": [\"c15bf3ac118825ed71489793660b2d2da3429b287b17e8ef97d03a9177a0cb78\", \"ccf184e7497872a055d5dbec8856c9bfa30520da3290413dd548f04ce0e83c35\"], \"revisions\": [\"731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990\", \"f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8\"], \"store_sha256\": \"de6da5a25540c899a891b0b136bb102cc7bb4c1c1ab520f0cd308ec9c09ca4a5\", \"version\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/archives",
+      "--expected-plan-sha256",
+      "3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b",
+      "--approve"
+    ],
+    "exit": 0,
+    "stdout": "{\"archive\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/archives/3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b\", \"automatic_replay\": false, \"head_changed\": false, \"plan_sha256\": \"3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b\", \"retired\": [\"731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990\", \"f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8\"]}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/transfer.py",
+      "unpack",
+      "--archive",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/archives/3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b/731552e0915f290c06ae82b4be0e053ac77d81606283648abbb61d715aaf2990.zip",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/restore-0",
+      "--id",
+      "calculus-a"
+    ],
+    "exit": 0,
+    "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/restore-0/learning/calculus-a\", \"files\": 3, \"automatic_resume\": false, \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/transfer.py",
+      "unpack",
+      "--archive",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/archives/3a339a7c05e839a3ce30950f75e549d83ebf291966fa9c22de77e449b4af1c4b/f4078f875f0da9119249a78dc1ea348cf7988278e9a94ee9ab85f6979247bce8.zip",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/restore-1",
+      "--id",
+      "calculus-a"
+    ],
+    "exit": 0,
+    "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-utw4rj59/restore-1/learning/calculus-a\", \"files\": 3, \"automatic_resume\": false, \"warnings\": []}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace",
+      "--id",
+      "calculus-a",
+      "--topic",
+      "Calculus",
+      "--goal",
+      "Explain derivative using slope."
+    ],
+    "exit": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace/learning/calculus-a\", \"sha256\": \"944065f84d914f467766837409067d20bc0a88e910e000c359e3196e65efaf92\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace/learning/calculus-a",
+      "--expected-head",
+      "none"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"7132ccb13074240d45fde8a1b4350b3ab89b61dbe8c3cf124a55283f65922cc0\", \"journey_id\": \"calculus-a\", \"previous\": null}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace/learning/calculus-a",
+      "--expected-head",
+      "7132ccb13074240d45fde8a1b4350b3ab89b61dbe8c3cf124a55283f65922cc0"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"d979f9a64bedee37e15eb770b230d1e89cedf18ff9a9cce2a69e48ddb8ec22f8\", \"journey_id\": \"calculus-a\", \"previous\": \"7132ccb13074240d45fde8a1b4350b3ab89b61dbe8c3cf124a55283f65922cc0\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace/learning/calculus-a",
+      "--expected-head",
+      "d979f9a64bedee37e15eb770b230d1e89cedf18ff9a9cce2a69e48ddb8ec22f8"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"b625b92eb7bf6b633160a0f4bb2850bd5fa46f860d480ae7a89247192c7af28b\", \"journey_id\": \"calculus-a\", \"previous\": \"d979f9a64bedee37e15eb770b230d1e89cedf18ff9a9cce2a69e48ddb8ec22f8\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/baseline/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/workspace/learning/calculus-a",
+      "--expected-head",
+      "b625b92eb7bf6b633160a0f4bb2850bd5fa46f860d480ae7a89247192c7af28b"
+    ],
+    "exit": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"561ae5b3e6cc5946aa8ec2432a196f83a3a35d348c3c5924a91ca8cb7c382d3e\", \"journey_id\": \"calculus-a\", \"previous\": \"b625b92eb7bf6b633160a0f4bb2850bd5fa46f860d480ae7a89247192c7af28b\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--revisions",
+      "7132ccb13074240d45fde8a1b4350b3ab89b61dbe8c3cf124a55283f65922cc0",
+      "d979f9a64bedee37e15eb770b230d1e89cedf18ff9a9cce2a69e48ddb8ec22f8",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json"
+    ],
+    "exit": 0,
+    "stdout": "{\"head\": {\"journey_id\": \"calculus-a\", \"previous\": \"b625b92eb7bf6b633160a0f4bb2850bd5fa46f860d480ae7a89247192c7af28b\", \"revision\": \"561ae5b3e6cc5946aa8ec2432a196f83a3a35d348c3c5924a91ca8cb7c382d3e\", \"version\": 1}, \"journey_id\": \"calculus-a\", \"plan_sha256\": \"0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2\", \"protected\": [\"561ae5b3e6cc5946aa8ec2432a196f83a3a35d348c3c5924a91ca8cb7c382d3e\", \"b625b92eb7bf6b633160a0f4bb2850bd5fa46f860d480ae7a89247192c7af28b\"], \"revisions\": [\"7132ccb13074240d45fde8a1b4350b3ab89b61dbe8c3cf124a55283f65922cc0\", \"d979f9a64bedee37e15eb770b230d1e89cedf18ff9a9cce2a69e48ddb8ec22f8\"], \"store_sha256\": \"7b4c6b9f548a162fa2626896288ba1c1b40e9cda6050393e07903400f0a69221\", \"version\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/archives",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Applying a reviewed retirement plan requires --approve\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/archives",
+      "--expected-plan-sha256",
+      "0000000000000000000000000000000000000000000000000000000000000000",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Expected plan SHA256 does not match the reviewed plan\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/edited-plan.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/archives",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Malformed plan HEAD or journey identity\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots/nested",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Paths must be disjoint in both ancestry directions\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Paths must be disjoint in both ancestry directions\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/archives",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Archive destination exists; nothing was overwritten. Inspect the archive and actual store, then create a fresh plan; do not automatically replay this plan.\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/snapshots",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-90mvz72v/archive-other",
+      "--expected-plan-sha256",
+      "0f8f193930d39329fb114c25018ce7be4470a2004aeaf378ce27591b3adaacb2",
+      "--approve"
+    ],
+    "exit": 2,
+    "stdout": "",
+    "stderr": "Error: Store changed; create and review a fresh maintenance plan\n"
+  }
+]

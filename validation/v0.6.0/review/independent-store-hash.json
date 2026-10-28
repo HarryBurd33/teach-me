@@ -1,0 +1,8 @@
+[
+  {
+    "plan": "BUILD_WORKSPACE/.forge/teach-me-v0.6.0/review/runs/heldout-04uy2f5s/retire.json",
+    "independent_store_sha256": "0243a0760e43772a78a8dbd396d51fd7a446c3ce0672bf51e0e01cac06420908",
+    "matches": true,
+    "head_raw_hash": "bbefc6160ce7ab91a61d456703144d6601d7b46445ccf0a19065edba7729f482"
+  }
+]

@@ -1,0 +1,104 @@
+{
+  "version": "0.6.0",
+  "baseline_commit": "e65b9e67ea9ac2b6de9ff4a430c24b30359ce79d",
+  "purpose": "Immutable review history and explicit recoverable snapshot retirement",
+  "activation": "Optional local tools for existing learning journeys; preserve teach-me learning intent and exclusions",
+  "delivery": [
+    "global userscope skill with rollback",
+    "existing public MIT repository,versionedZIP/tag/release"
+  ],
+  "constraints": [
+    "Python3.9+ stdlib",
+    "no services or API spend",
+    "no actual learner stores mutated during build",
+    "cooperative locks, no hostilefilesystem or universalpowerloss claims",
+    "no authenticatedreviewer/semantictruth/mastery claims",
+    "existing11file journeytransfer v1/v2 andprogressv1 unchanged"
+  ],
+  "history": {
+    "module": "scripts/review_history.py",
+    "guide": "references/review-history.md",
+    "commands": [
+      "append --store EXISTING --journey JOURNEY --receipt PATH --expected-tip SHA|none",
+      "status --store EXISTING",
+      "extract --store EXISTING --entry SHA --output NEW.json"
+    ],
+    "entry_keys": [
+      "version",
+      "journey_id",
+      "sequence",
+      "previous",
+      "receipt_sha256",
+      "receipt_base64"
+    ],
+    "entry_version": 1,
+    "sequence": "1-based contiguous exactint, no bool",
+    "previous": "null forfirst, previousentrySHA thereafter",
+    "entry_filename": "six-digitsequence-SHA256.json; SHA256 of canonicalentrybytes",
+    "canonical": "sortedkeys compactJSON UTF8 with finalnewline, allow_nan false",
+    "receipt": "strict existingreceipt schema; exactbytes retained as canonicalbase64; receiptUTF8, <=2MiB; validneeds_changes is recordable but never promoted",
+    "append": "expectedtiprequired, samejourneyidentity; selectedjourneyreceipthashes+currentpacket mustmatch whileholdingstorethenjourneylocks; store outsidejourney; only appendnew entry atomically",
+    "bounds": {
+      "max_entries": 64,
+      "entry_bytes": 3145728,
+      "total_bytes": 67108864,
+      "directory_entries": 192
+    },
+    "lock": ".teach-me-review-history.lock",
+    "stage_prefix": ".teach-me-history-stage-",
+    "stage_behavior": "status reports boundedregularorphanstages;appendrefuseswhileanyexists; noautomaticcleanup/locksteal",
+    "status": "chain/receipt identities/hashes fullyvalidated, tip or null, sequence, journey_id, entries and stagingreported; oldreceiptfreshness notclaimed",
+    "extract": "exactreceiptbytes tocreate-new outsidehistorydirectory, nooverwrite; anyentrydigest explicit",
+    "tampering": "detect corruption/hash/chainbreaks, cannotdefend maliciouscompletechainrewrite orauthenticateidentity; noexternalpermissiontransfer"
+  },
+  "maintenance": {
+    "module": "scripts/snapshot_maintenance.py",
+    "guide": "references/snapshot-maintenance.md",
+    "commands": [
+      "plan --store EXISTING --revisions SHA [SHA...] --output NEW.json",
+      "apply --store EXISTING --plan PATH --archive-root EXISTING --expected-plan-sha256 SHA --approve"
+    ],
+    "plan_keys": [
+      "version",
+      "journey_id",
+      "store_sha256",
+      "head",
+      "protected",
+      "revisions",
+      "plan_sha256"
+    ],
+    "version": 1,
+    "store_sha256": "canonical map of HEAD rawbytehash plus allrevisionfilehashes (exclude ownlock), samealgorithm documented",
+    "plan_sha256": "canonicalJSON excluding ownhash, sortedkeys compactUTF8 finalnewline",
+    "selection": "explicitknownunique revision hashes; sorted; nonempty; initializedvalidstore; refuseanyorphans/staging; protecthead.revision and head.previous; no date/automatic selection",
+    "apply": "exactclosedcurrentplan and expectedplanhash; requires --approve; no livejourneyedit; holdexistingstorelock plusarchive lock; archive-root disjoint inbothancestrydirections fromstore; newchilddirectorynamedplan_sha256; nooverwrite orreuseexistingarchive",
+    "archive": "stage allselected originalZIPs plus archive-manifest.json {version:1,plan,files:{filename:{sha256,size}}}; verifyallcopies beforepublishcompletebackup then removal; cap selectedbytes64MiB; protectHEADrawbytes andprevious at alltimes",
+    "failure": "beforecompleteverifiedbackup, nosourcedeletions; laterpartialremoval leavescompletebackup andprotectedrevisions; inspectactualstore/createfreshplan ratherthanautomaticreplay; neverdeletebackup onfailure",
+    "existinghelpers": "journey_versions.read_store/archive/file_lock and transferbounds; no versionsmodule edits needed",
+    "restore": "retiredZIP canbe verified/imported using transfer.py unpack into freshworkspace; archive isnotfullsnapshotstore/noHEAD"
+  },
+  "acceptance": [
+    "exacttwo-entryhistoryappend/extract including receiptwhitespace",
+    "stale tip/stale receipt/crossjourney/invalidhash/base64/sequence refuse withoutvalidhistorymutation",
+    "needs_changesrecorded withoutreadinesspromotion",
+    "historyentry/outputsizebounds, orphan andlockhandling, create-new preservation",
+    "validexplicitretirement archives exactZIPs andpreservesHEAD/previousbytes",
+    "protectedrevision/duplicate/unknownselection refused",
+    "changedstore invalidatesplan; malformed/alteredexpectedhash denied",
+    "archivecopy/verificationfailure deletesnosource",
+    "partialremovalfailure leavescompletebackup andrestorablearchives",
+    "all178existingregressions unchanged plus new component/frozen cases",
+    "independentstatic+actualmodelworkflowchecks; no causal efficacyclaim",
+    "installedsuite/nativediscovery/all4CIjobs/pinnedsource+actualreleasedownloadhashes"
+  ],
+  "routing": {
+    "assignment": "inherited current context/model/effort unknown",
+    "reason": "No qualified configuredrouter; retain suitablecurrentcontext, noAPIroute ormodelselectionclaim",
+    "workers": 3,
+    "attempts_per_component": 2,
+    "wall_minutes": 30,
+    "api_usd": null,
+    "review": "independentfrozenCLI/faultcases andstaticreview beforeadoption"
+  },
+  "frozen_at": "2026-10-28T23:44:44.366127+00:00"
+}

@@ -20,13 +20,16 @@ REQUIRED = [
     'teach-me/references/local-runtime.md', 'teach-me/references/host-integration.md',
     'teach-me/templates/harness-plan.json', 'teach-me/templates/learning-pilot.md',
     'tests/test_learning_data.py', 'tests/test_transfer.py', 'tests/test_harness.py',
-    'docs/V0.3.0.md', 'docs/V0.4.0.md', 'docs/V0.5.0.md',
+    'docs/V0.3.0.md', 'docs/V0.4.0.md', 'docs/V0.5.0.md', 'docs/V0.6.0.md',
+    'teach-me/scripts/review_history.py', 'teach-me/scripts/snapshot_maintenance.py',
+    'teach-me/references/review-history.md', 'teach-me/references/snapshot-maintenance.md',
     'teach-me/scripts/journey_assets.py', 'teach-me/scripts/coherence_review.py',
     'teach-me/references/coherence-review.md', 'teach-me/templates/coherence-decisions.json',
     'teach-me/scripts/graph_workbench.py', 'teach-me/scripts/journey_versions.py',
     'teach-me/references/graph-workbench.md', 'teach-me/references/journey-versions.md',
     'teach-me/templates/graph-proposal.json', 'tests/test_graph_workbench.py',
-    'tests/test_journey_versions.py', 'tests/test_typed_assets.py', 'tests/test_coherence_review.py', 'tests/test_v5_contract.py', 'tests/test_v5_output_limit.py', 'tests/test_report_publication.py',
+    'tests/test_journey_versions.py', 'tests/test_typed_assets.py', 'tests/test_coherence_review.py', 'tests/test_v5_contract.py', 'tests/test_v5_output_limit.py', 'tests/test_review_history.py', 'tests/test_snapshot_maintenance.py',
+    'tests/test_v6_actual_limits.py', 'tests/test_v6_contract.py', 'tests/test_v6_faults.py', 'tests/test_report_publication.py',
     'tests/test_v4_contract.py', 'tests/test_v4_failure_paths.py', 'tests/test_v4_atomic.py',
     'validation/fixtures/resume-one/learning/algebra/progress.json',
     'validation/fixtures/resume-many/learning/algebra/progress.json',
@@ -45,7 +48,7 @@ def check():
     skill = (ROOT / 'teach-me/SKILL.md').read_text(encoding='utf-8')
     assert skill.startswith('---\nname: teach-me\n'), 'Skill metadata/name mismatch'
     assert 'license: MIT\n' in skill.split('---', 2)[1]
-    assert 'version: "0.5.0"' in skill.split('---', 2)[1], 'Release version mismatch'
+    assert 'version: "0.6.0"' in skill.split('---', 2)[1], 'Release version mismatch'
     schema = json.loads((ROOT / 'teach-me/references/progress.schema.json').read_text())
     assert schema['$id'] == 'urn:teach-me:progress:v1'
     links = 0

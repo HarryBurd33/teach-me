@@ -1,0 +1,50 @@
+{
+  "attempts": [
+    {
+      "command": "python3 -B -m unittest discover -s .forge/teach-me-v0.6.0/maintenance-component -p 'test_*.py' -v",
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "seconds": 1.258,
+      "tests": 19
+    },
+    {
+      "command": "python3 -B -m unittest discover -s .forge/teach-me-v0.6.0/maintenance-component -p 'test_*.py' -v",
+      "errors": 0,
+      "exit_code": 0,
+      "failures": 0,
+      "seconds": 1.392,
+      "tests": 21
+    }
+  ],
+  "candidate_version": "0.6.0",
+  "component": "snapshot-maintenance",
+  "limitations": [
+    "Cooperative local filesystem, no hostile path race or universal power-loss guarantee",
+    "Directory publication uses exclusive directory reservation plus manifest-last completion, not atomic directory rename",
+    "Partial failure may preserve stage and incomplete destination; manual inspection and fresh planning required",
+    "64 MiB refusal branch tested with injected lower limit; actual 64 MiB payload boundary remains for independent acceptance",
+    "No original 178-regression suite, installed suite, native discovery, CI, source release download, or actual-model workflow check run by this worker"
+  ],
+  "paid_services_or_api_calls": false,
+  "python39_grammar": "pass: ast.parse feature_version=(3,9), not execution on a Python 3.9 interpreter",
+  "real_learner_stores_mutated": false,
+  "resource_observation": {
+    "guard_denials": 0,
+    "observed_at": "2026-10-28T23:48:28.003121+00:00",
+    "owner": "codex-teach-me-harness-upgrade",
+    "remaining_percent": 25,
+    "reserve_percent": 20,
+    "source": "existing .checkpoint/signals.json"
+  },
+  "source_sha256": {
+    ".forge/teach-me-v0.6.0/candidate/teach-me/references/snapshot-maintenance.md": "5f3e7b35bcc33eb25ab3cfb874609d128a7b865005492416ec4747e2b32453ea",
+    ".forge/teach-me-v0.6.0/candidate/teach-me/scripts/snapshot_maintenance.py": "8dd17b843f5064d03d600f5f407885fb9e0d9fb02401cb1fe1b8c9c2e7146cb4",
+    ".forge/teach-me-v0.6.0/maintenance-component/test_snapshot_maintenance.py": "dbf470a4eefcebcadada6c72814bd6405ef83d1f2cd71007143f48a0f3259241"
+  },
+  "write_scope": [
+    "candidate/teach-me/scripts/snapshot_maintenance.py",
+    "candidate/teach-me/references/snapshot-maintenance.md",
+    "maintenance-component/"
+  ]
+}

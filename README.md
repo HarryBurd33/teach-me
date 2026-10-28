@@ -1,6 +1,6 @@
 # Teach-me
 
-A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.5.0**. See [capabilities, validation and remaining work](docs/V0.5.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.6.0**. See [capabilities, validation and remaining work](docs/V0.6.0.md).
 
 ## Install and use
 
@@ -20,6 +20,8 @@ $teach-me Draft a source-grounded map from this text, check its quotes and edit 
 $teach-me Snapshot this journey and compare its diverged copies before merging.
 $teach-me Preserve my graph/proposal/source files when exporting this journey.
 $teach-me Review the merged journey for contradictions and record a current review receipt.
+$teach-me Keep a local immutable history of my consistency reviews.
+$teach-me Plan retirement of these explicit old snapshots, preserving HEAD and previous.
 $teach-me Resume the algebra journey at /path/to/workspace/learning/algebra.
 ```
 
@@ -37,6 +39,8 @@ Only a topic is needed. The tutor starts with useful teaching or a small diagnos
 | Journey snapshots and manual merge | Immutable revisions, atomic HEAD, explicit fresh restore and three-way file comparison/resolution | Fixed archive allowlist; no live-file transaction, automatic sync or cross-file semantic validation |
 | Typed journey assets | Preserve the documented graph/proposal/source/review files; validate proposal quote and source bindings | Explicit names only; typed archives require v2-capable helpers; no automatic graph application |
 | Consistency review | Hash-bound packet, four decisions with rationales, stale/needs-changes verification | Meaning is judged by the operator; no authenticated reviewer, truth, permission or mastery certification |
+| Review history | Exact receipt bytes in bounded numbered/hash-linked entries; expected-tip append and explicit extraction | Separate optional store; current validation at append does not make historical receipts permanently fresh or authenticate a reviewer |
+| Snapshot maintenance | Plan explicit old revisions; verify a separate archive before removing selected source ZIPs; protect HEAD/previous | Manual, bounded, no automatic retention policy or interrupted-operation replay |
 | Manual transfer | Hash-verified allowlisted ZIP and new-destination import | No upload, encryption, continuous sync, conflict merge or transferred permissions |
 | Cooperative writes | Exclusive local locks, stale-hash checks and preserved progress backups | Old helpers/manual editors do not cooperate; no distributed lock or multi-file edit transaction |
 | Local harness experiments | Validated argv DAG, dry run, dependencies, retries, time/output bounds, gates and actual logs | Explicit execution; inherits host permissions; no sandbox, autonomous agent, scheduler or paid provider client |
@@ -52,6 +56,8 @@ The optional tools use **Python 3.9+ and the standard library**. The map opens i
 - [Source-grounded graph workbench](teach-me/references/graph-workbench.md)
 - [Journey snapshots and three-way merge](teach-me/references/journey-versions.md)
 - [Content consistency review](teach-me/references/coherence-review.md)
+- [Immutable review history](teach-me/references/review-history.md)
+- [Recoverable snapshot maintenance](teach-me/references/snapshot-maintenance.md)
 - [Bounded local command runner](teach-me/references/local-runtime.md)
 - [Host integrations and real-learner pilots](teach-me/references/host-integration.md)
 
@@ -64,7 +70,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_release.py
 ```
 
-The v0.5.0 suite adds typed archive/source-binding and consistency-review freshness/failure checks to all prior regressions. The expanded suite covers original progress behavior, native data semantics, hostile markup, archive attacks, competing writers, failure recovery and bounded process execution. [Current results and limitations](docs/V0.5.0.md) distinguish software tests, browser checks, model examples and real human outcomes. [Historical v0.3.0](docs/V0.3.0.md), [v0.2.0](docs/V0.2.0.md) and earlier evidence retain their original partials and limits. CI checks Linux Python 3.9/3.12/3.14 and macOS Python 3.14; Windows process-tree cleanup is not validated by that matrix.
+The v0.6.0 suite adds immutable history and recoverable maintenance failures to all prior regressions. The expanded suite covers original progress behavior, native data semantics, hostile markup, archive attacks, competing writers, failure recovery and bounded process execution. [Current results and limitations](docs/V0.6.0.md) distinguish software tests, browser checks, model examples and real human outcomes. [Historical v0.5.0](docs/V0.5.0.md), [v0.4.0](docs/V0.4.0.md), [v0.3.0](docs/V0.3.0.md), [v0.2.0](docs/V0.2.0.md) and earlier evidence retain their original partials and limits. CI checks Linux Python 3.9/3.12/3.14 and macOS Python 3.14; Windows process-tree cleanup is not validated by that matrix.
 
 Keep learner records, credentials and private transcripts out of contributions. Use synthetic fixtures, preserve evidence distinctions and run the documented checks. [Foundation inspection](docs/FOUNDATIONS.md) and [source provenance](teach-me/references/research.md) explain reference rights and implementation scope.
 
