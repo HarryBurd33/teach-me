@@ -1,3 +1,7 @@
+# v0.5.0 installation verification
+
+The rollback-preserving local update passed all 178 tests against the installed skill. Native user-scope discovery succeeded from two directories; all 34 noncache files match the accepted candidate manifest. Discovery does not establish automatic instruction selection. Public immutable-source and release-download checks are recorded with the tagged release.
+
 # Current v0.4.0 installation
 
 All 30 global files match the accepted candidate. The installed 125-test suite and native enabled user-scope discovery from two directories passed on 2026-10-28. See [current release evidence](V0.4.0.md) and [hash record](../validation/v0.4.0/installation.json). Earlier records below remain historical.

@@ -14,13 +14,18 @@ import zipfile
 import zlib
 
 import journey
+import journey_assets as assets
 from storage import StorageError, checked_path, destination_lock, journey_lock
 
-REQUIRED = {'plan.md', 'progress.json', 'sources.md'}
-OPTIONAL = {'knowledge.md', 'practice.md', 'harness-project.md', 'learning-pilot.md'}
-ALLOWED = REQUIRED | OPTIONAL
-FILE_LIMIT = 2 * 1024 * 1024
-TOTAL_LIMIT = 16 * 1024 * 1024
+REQUIRED = assets.REQUIRED
+# Preserve the legacy exported constants for callers that produce Markdown
+# records. Current complete asset selection is journey_assets.ALLOWED.
+ALLOWED = assets.LEGACY_ALLOWED
+OPTIONAL = ALLOWED - REQUIRED
+TYPED_ALLOWED = assets.TYPED_ALLOWED
+ASSET_ALLOWED = assets.ALLOWED
+FILE_LIMIT = assets.FILE_LIMIT
+TOTAL_LIMIT = assets.TOTAL_LIMIT
 MANIFEST_LIMIT = 65536
 ARCHIVE_LIMIT = TOTAL_LIMIT + 1024 * 1024
 
@@ -71,7 +76,7 @@ def pack(journey_path, output):
         fail('Output exists; nothing was overwritten')
     with journey_lock(source):
         files = {}
-        for name in sorted(ALLOWED):
+        for name in sorted(ASSET_ALLOWED):
             path = source / name
             # Check symlinks even for otherwise optional or dangling paths.
             checked_path(path)
@@ -82,12 +87,14 @@ def pack(journey_path, output):
         if sum(map(len, files.values())) > TOTAL_LIMIT:
             fail('Journey exceeds transfer size limit')
         validate_progress(files['progress.json'], source.name)
+        asset_warnings = assets.validate_assets(files)
         # Cooperative writers hold the same lock. This second pass detects
         # ordinary uncoordinated changes, but is not an adversarial snapshot.
         for name, raw in files.items():
             if read_regular(source / name, FILE_LIMIT) != raw:
                 fail('Journey changed while packing: ' + name)
-        manifest = {'version': 1, 'files': {name: {'sha256': sha(raw), 'size': len(raw)}
+        manifest = {'version': 2 if set(files) & TYPED_ALLOWED else 1,
+                    'files': {name: {'sha256': sha(raw), 'size': len(raw)}
                                           for name, raw in files.items()}}
         fd, temp = tempfile.mkstemp(prefix='.teach-me-pack-', dir=str(output.parent))
         try:
@@ -110,7 +117,7 @@ def pack(journey_path, output):
             if os.path.exists(temp):
                 os.unlink(temp)
     return {'packed': True, 'archive': str(output), 'files': len(files),
-            'sha256': sha(read_regular(output, ARCHIVE_LIMIT))}
+            'sha256': sha(read_regular(output, ARCHIVE_LIMIT)), 'warnings': asset_warnings}
 
 
 def inspect_archive(path):
@@ -120,7 +127,7 @@ def inspect_archive(path):
         names = [i.filename for i in infos]
         if len(names) != len(set(names)):
             fail('Duplicate ZIP member')
-        if set(names) - (ALLOWED | {'manifest.json'}):
+        if set(names) - (ASSET_ALLOWED | {'manifest.json'}):
             fail('Unknown or unsafe ZIP member')
         if not (REQUIRED | {'manifest.json'}) <= set(names):
             fail('Archive is missing required files')
@@ -141,10 +148,12 @@ def inspect_archive(path):
             fail('Archive exceeds uncompressed size limit')
         manifest = strict_json(archive.read('manifest.json'))
         if (not isinstance(manifest, dict) or set(manifest) != {'version', 'files'} or
-                type(manifest['version']) is not int or manifest['version'] != 1 or
+                type(manifest['version']) is not int or manifest['version'] not in (1, 2) or
                 not isinstance(manifest['files'], dict)):
             fail('Unsupported or malformed transfer manifest')
         entries = manifest['files']
+        if manifest['version'] == 1 and set(names) & TYPED_ALLOWED:
+            fail('Transfer version 1 may not contain typed journey assets')
         if set(entries) != set(names) - {'manifest.json'}:
             fail('Manifest and ZIP members differ')
         files = {}
@@ -157,6 +166,7 @@ def inspect_archive(path):
             if len(content) != record['size'] or sha(content) != record['sha256']:
                 fail('Archive hash or size mismatch: ' + name)
             files[name] = content
+    assets.validate_assets(files)
     return files
 
 
@@ -192,7 +202,7 @@ def unpack(archive_path, root, journey_id):
             if temp.exists():
                 shutil.rmtree(temp)
     return {'unpacked': True, 'journey': str(target), 'files': len(files),
-            'automatic_resume': False}
+            'automatic_resume': False, 'warnings': assets.validate_assets(files)}
 
 
 def main(argv=None):

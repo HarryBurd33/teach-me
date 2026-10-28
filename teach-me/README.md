@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.4.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.5.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -38,7 +38,7 @@ The optional tools use original Python 3.9+ standard-library code:
 - [Bounded local harness runner](references/local-runtime.md): explicit argv plans, dry run, dependencies, retries, time/output limits and human-gated nodes. Commands inherit host access; this is not a sandbox, autonomous agent, scheduler or provider service.
 - [Host integration and real-learner pilot](references/host-integration.md): capability-aware dictation/media/reminder/provider workflow and a pending baseline/retention/transfer record. Real outcomes require actual learner participation.
 
-Version 0.4.0 adds [source-grounded graph proposals and edits](references/graph-workbench.md), [immutable journey snapshots and conflict-aware manual merging](references/journey-versions.md), and atomic JSON/HTML report publication. The tutor drafts a proposal; exact quotes and input hashes are validated, while semantic correctness remains a review judgment. Snapshots activate a stored generation through HEAD, and merges preserve originals and bind conflict choices to a report hash. Even a clean file-level merge needs review for meaning across plan/progress/source records. Snapshots contain the seven-file transfer allowlist; graph/proposal JSON and arbitrary attachments need separate handling. These are optional workflows, not a prerequisite questionnaire for ordinary lessons.
+Version 0.4.0 adds [source-grounded graph proposals and edits](references/graph-workbench.md), [immutable journey snapshots and conflict-aware manual merging](references/journey-versions.md), and atomic JSON/HTML report publication. The tutor drafts a proposal; exact quotes and input hashes are validated, while semantic correctness remains a review judgment. Snapshots activate a stored generation through HEAD, and merges preserve originals and bind conflict choices to a report hash. Even a clean file-level merge needs review for meaning across plan/progress/source records. Current snapshots preserve the eleven documented files when present, including the typed graph/proposal/source/review records. Arbitrary attachments still need separate handling. These are optional workflows, not a prerequisite questionnaire for ordinary lessons.
 
 Facts remain scoped to the current learner/journey. Equipment, software or time in an example is not supplied information about another learner. Unknown resources stay unknown unless a reasonable assumption is explicitly labeled.
 
@@ -53,3 +53,9 @@ See [state usage and recovery](references/state.md). Validation evidence is deli
 ## License
 
 Original material is MIT licensed; see [LICENSE](LICENSE). External references keep their own rights; see [provenance](references/research.md).
+
+## Typed records and consistency review
+
+Transfers and snapshots now preserve explicit `knowledge-graph.json`, `knowledge-proposal.json`, `knowledge-source.txt` and `journey-review.json` alongside the original records. Proposals must match the selected source hash and exact quotes; draft references remain drafts. See [transfer rules](references/transfer.md).
+
+After reconciling divergent journeys, ask: `$teach-me Review this journey for contradictions, record concrete decisions and verify that the review matches the current files.` The [review helper](references/coherence-review.md) binds four operator decisions to exact file bytes and detects stale receipts. It cannot judge meaning, authenticate the reviewer, certify mastery or supply authorization. Typed archives use format v2; v0.4.0 and older helpers cannot read them. The new helper still reads valid legacy format v1 archives.

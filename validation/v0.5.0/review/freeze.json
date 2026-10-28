@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-10-28T23:29:26.542722+00:00",
+  "candidate_inspected": false,
+  "files": {
+    "frozen/model-cases.json": "1143f8776bd831ca9f81aab7a0d4a665ee0d8ff31cc1881da54b007cbc014437",
+    "frozen/test_v5_contract.py": "1ee42cb63cab13e7e4832c1f9f02f53a29f169d2b98616bf340eb8dbc3629d33"
+  },
+  "criteria_sha256": "5c591516401d92ea7ad49181afcb8ca0e238048ffbf52d9c7f27e35fff759b82"
+}

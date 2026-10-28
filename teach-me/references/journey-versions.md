@@ -27,9 +27,14 @@ Locks have no expiry or automatic theft. Old/manual editors do not cooperate.
 Each immutable `<sha256>.zip` contains exactly the transfer allowlist when present:
 required `plan.md`, `progress.json`, `sources.md`, and optional `knowledge.md`,
 `practice.md`, `harness-project.md`, `learning-pilot.md`. Every archive and progress
-record is validated. No arbitrary attachment, raw export, source code, credential,
-lock or command log enters the snapshot automatically. Graph/proposal JSON, media, source code and arbitrary attachments are outside
-this seven-file snapshot allowlist and need separate reviewed handling.
+record is validated. Optional typed `knowledge-graph.json`, `knowledge-proposal.json`,
+`knowledge-source.txt` and `journey-review.json` are also preserved when present.
+A proposal requires its matching UTF-8 source and exact quotes; graphs remain
+structured assertions, not truth or learner evidence. These archives use transfer
+format v2; legacy-only journeys still write v1. New helpers read both, while older
+helpers refuse v2. No arbitrary attachment, raw export, source code, credential,
+lock or command log enters the snapshot automatically. Media and arbitrary
+attachments need separate reviewed handling.
 The finite allowlist is not
 a secret scanner; review selected prose and use an authorized private transport.
 
@@ -104,7 +109,11 @@ the actual learner history before choosing one conflicting progress record.
 Even a conflict-free byte/file merge can contain semantic contradictions across
 plan, progress, sources or other records. Inspect the combined content before
 resuming teaching or changing evidence; this tool does not validate cross-file
-meaning or domain truth.
+meaning or domain truth. Use the [consistency review packet](coherence-review.md)
+to record a review of the resulting live files and detect later changes. Valid stale
+receipts may be retained in archives as history; they cannot establish current
+review status. A file-clean merge still validates typed source/proposal bindings
+and refuses mismatched combinations.
 
 ## Resolve conflicts explicitly
 

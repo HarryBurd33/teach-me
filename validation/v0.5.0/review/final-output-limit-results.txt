@@ -1,0 +1,6 @@
+test_record_refuses_oversize_receipt_without_publishing (test_review_output_limit.ReviewOutputLimit.test_record_refuses_oversize_receipt_without_publishing) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.124s
+
+OK

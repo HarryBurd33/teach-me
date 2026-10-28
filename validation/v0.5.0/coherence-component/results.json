@@ -1,0 +1,8 @@
+{
+  "command": "python3 -B -m unittest discover -s .forge/teach-me-v0.5.0/coherence-component -v",
+  "returncode": 0,
+  "tests": 25,
+  "failures": 0,
+  "observed_at": "2026-10-28T23:31:33.396390+00:00",
+  "prior_test_authoring_error": "New test patch misplaced two existing lines; NameError in test only, corrected by moving lines back; no candidate acceptance relaxed"
+}

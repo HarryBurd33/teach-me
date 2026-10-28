@@ -1,0 +1,19 @@
+test_clean_file_merge_rejects_new_crossfile_source_mismatch (test_v5_contract.V5Contract.test_clean_file_merge_rejects_new_crossfile_source_mismatch) ... ok
+test_existing_foreign_output_and_content_overwrite_protected (test_v5_contract.V5Contract.test_existing_foreign_output_and_content_overwrite_protected) ... ok
+test_incomplete_blank_duplicate_decisions_write_nothing (test_v5_contract.V5Contract.test_incomplete_blank_duplicate_decisions_write_nothing) ... ok
+test_legacy_v1_roundtrip (test_v5_contract.V5Contract.test_legacy_v1_roundtrip) ... ok
+test_malformed_graph_sessions_and_duplicate_json_rejected (test_v5_contract.V5Contract.test_malformed_graph_sessions_and_duplicate_json_rejected) ... ok
+test_needs_changes_is_recorded_but_not_ready (test_v5_contract.V5Contract.test_needs_changes_is_recorded_but_not_ready) ... ok
+test_optional_addition_and_deletion_stale_a_receipt (test_v5_contract.V5Contract.test_optional_addition_and_deletion_stale_a_receipt) ... ok
+test_packet_closed_keys_and_source_digest_freshness (test_v5_contract.V5Contract.test_packet_closed_keys_and_source_digest_freshness) ... ok
+test_proposal_stale_hash_quote_and_missing_source_rejected (test_v5_contract.V5Contract.test_proposal_stale_hash_quote_and_missing_source_rejected) ... ok
+test_receipt_derived_ready_boolean_and_unknown_fields_rejected (test_v5_contract.V5Contract.test_receipt_derived_ready_boolean_and_unknown_fields_rejected) ... ok
+test_stale_receipt_preserved_as_history_through_transfer (test_v5_contract.V5Contract.test_stale_receipt_preserved_as_history_through_transfer) ... ok
+test_typed_archive_and_snapshot_restore_exact_bytes (test_v5_contract.V5Contract.test_typed_archive_and_snapshot_restore_exact_bytes) ... ok
+test_v1_cannot_smuggle_typed_member (test_v5_contract.V5Contract.test_v1_cannot_smuggle_typed_member) ... ok
+test_wrong_replacement_hash_preserves_existing_receipt (test_v5_contract.V5Contract.test_wrong_replacement_hash_preserves_existing_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 3.310s
+
+OK

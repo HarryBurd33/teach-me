@@ -1,0 +1,30 @@
+test_all_exact_decisions_and_rationales_required (test_coherence_review.CoherenceReviewCLI.test_all_exact_decisions_and_rationales_required) ... ok
+test_altered_packet_summary_is_rejected (test_coherence_review.CoherenceReviewCLI.test_altered_packet_summary_is_rejected) ... ok
+test_bounded_decisions_cannot_publish_oversized_receipt (test_coherence_review.CoherenceReviewCLI.test_bounded_decisions_cannot_publish_oversized_receipt) ... ok
+test_bounded_progress_cannot_publish_oversized_packet (test_coherence_review.CoherenceReviewCLI.test_bounded_progress_cannot_publish_oversized_packet) ... ok
+test_change_after_staging_prevents_publication (test_coherence_review.CoherenceReviewCLI.test_change_after_staging_prevents_publication) ... ok
+test_changed_plan_stales_packet_before_record (test_coherence_review.CoherenceReviewCLI.test_changed_plan_stales_packet_before_record) ... ok
+test_changed_plan_stales_receipt (test_coherence_review.CoherenceReviewCLI.test_changed_plan_stales_receipt) ... ok
+test_current_review_and_literal_summary (test_coherence_review.CoherenceReviewCLI.test_current_review_and_literal_summary) ... ok
+test_decision_digest_and_closed_shape (test_coherence_review.CoherenceReviewCLI.test_decision_digest_and_closed_shape) ... ok
+test_deleted_optional_file_stales_receipt (test_coherence_review.CoherenceReviewCLI.test_deleted_optional_file_stales_receipt) ... ok
+test_duplicate_json_and_nonfinite_input_rejected (test_coherence_review.CoherenceReviewCLI.test_duplicate_json_and_nonfinite_input_rejected) ... ok
+test_existing_outputs_preserve_exact_bytes (test_coherence_review.CoherenceReviewCLI.test_existing_outputs_preserve_exact_bytes) ... ok
+test_foreign_previous_receipt_preserved (test_coherence_review.CoherenceReviewCLI.test_foreign_previous_receipt_preserved) ... ok
+test_foreign_publication_race_preserves_exact_foreign_bytes (test_coherence_review.CoherenceReviewCLI.test_foreign_publication_race_preserves_exact_foreign_bytes) ... ok
+test_forged_ready_truth_bool_and_timestamp_receipts_rejected (test_coherence_review.CoherenceReviewCLI.test_forged_ready_truth_bool_and_timestamp_receipts_rejected) ... ok
+test_mixed_judgments_not_ready (test_coherence_review.CoherenceReviewCLI.test_mixed_judgments_not_ready) ... ok
+test_needs_changes_is_recorded_but_verify_exit_one (test_coherence_review.CoherenceReviewCLI.test_needs_changes_is_recorded_but_verify_exit_one) ... ok
+test_new_optional_file_stales_receipt (test_coherence_review.CoherenceReviewCLI.test_new_optional_file_stales_receipt) ... ok
+test_oversized_or_nonregular_source_refused (test_coherence_review.CoherenceReviewCLI.test_oversized_or_nonregular_source_refused) ... ok
+test_protected_missing_content_output_is_refused (test_coherence_review.CoherenceReviewCLI.test_protected_missing_content_output_is_refused) ... ok
+test_receipt_manifest_and_journey_identity_rejected (test_coherence_review.CoherenceReviewCLI.test_receipt_manifest_and_journey_identity_rejected) ... ok
+test_rehashed_substituted_packet_still_rejected (test_coherence_review.CoherenceReviewCLI.test_rehashed_substituted_packet_still_rejected) ... ok
+test_replacement_expected_digest_backup_and_refusal (test_coherence_review.CoherenceReviewCLI.test_replacement_expected_digest_backup_and_refusal) ... ok
+test_source_proposal_binding_and_draft_warning (test_coherence_review.CoherenceReviewCLI.test_source_proposal_binding_and_draft_warning) ... ok
+test_symlink_and_writer_lock_refused (test_coherence_review.CoherenceReviewCLI.test_symlink_and_writer_lock_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.757s
+
+OK

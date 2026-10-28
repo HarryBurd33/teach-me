@@ -1,0 +1,7 @@
+{
+  "observed_at": "2026-10-28T23:33:10.396427+00:00",
+  "tests_run": 14,
+  "passed": true,
+  "frozen_hashes_verified": true,
+  "command": "TEACH_ME_SKILL=CANDIDATE python3 -B -m unittest discover -s review/frozen -p test_v5_contract.py -v"
+}

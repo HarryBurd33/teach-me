@@ -1,0 +1,8 @@
+{
+  "reason": "Parent static review identified promised metadata output bound requiring explicit enforcement; supplements frozen checks without relaxing any case",
+  "checks": [
+    "preparedpacket and recordedreceipt exceeding2MiB refused before stage/finalpublication",
+    "packet reports unresolved proposal endpoint warnings from asset validation"
+  ],
+  "status": "constructor repair requested"
+}

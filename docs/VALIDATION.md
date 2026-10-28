@@ -1,3 +1,7 @@
+# Current v0.5.0 validation
+
+See [the current release report](V0.5.0.md): 178 candidate/installed checks, independent failure review and scoped simulated responses. The following sections retain historical results and limitations.
+
 # Current v0.4.0 validation
 
 See [the current release report](V0.4.0.md). Prior sections preserve historical v0.3.0 and older results, partials and limits.

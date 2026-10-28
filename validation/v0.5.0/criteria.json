@@ -1,0 +1,128 @@
+{
+  "version": "0.5.0",
+  "baseline_commit": "bc93789b9645b0ed4b917b461d4f2feb6978c8f8",
+  "purpose": "Typed journey transport and explicit content-consistency review, without automatic semantic or mastery certification",
+  "activation": "Existing teach-me learning journey; no activation for ordinary execution or quick facts",
+  "delivery": [
+    "candidate folder/ZIP",
+    "global userscope skill",
+    "existing public MIT GitHub repository and release"
+  ],
+  "files": {
+    "typed": [
+      "knowledge-graph.json",
+      "knowledge-proposal.json",
+      "knowledge-source.txt",
+      "journey-review.json"
+    ],
+    "content_files": "legacy seven plus first three typed files; exclude receipt from own fingerprint",
+    "modules": [
+      "scripts/journey_assets.py",
+      "scripts/coherence_review.py"
+    ],
+    "guides": [
+      "references/coherence-review.md",
+      "templates/coherence-decisions.json"
+    ]
+  },
+  "transport": {
+    "legacy_version": 1,
+    "typed_version": 2,
+    "file_limit": 2097152,
+    "total_limit": 16777216,
+    "proposal": "matching UTF-8 source hash and exact quote spans required; unresolved draft references allowed; never auto apply",
+    "graph": "existing normalized graph validation, graph-only; unresolved endpoints may remain with warnings",
+    "receipt": "strict shape accepted as historical data even if stale; freshness verified separately"
+  },
+  "review": {
+    "checks": [
+      "goal-stage-next-action",
+      "evidence-scope",
+      "sources-and-claims",
+      "merge-consistency"
+    ],
+    "decision_results": [
+      "consistent",
+      "needs_changes"
+    ],
+    "decision_keys": [
+      "version",
+      "packet_sha256",
+      "reviewer_role",
+      "decisions"
+    ],
+    "reviewer_roles": [
+      "tutor",
+      "learner",
+      "other"
+    ],
+    "decision_record_keys": [
+      "check_id",
+      "result",
+      "rationale"
+    ],
+    "packet_keys": [
+      "version",
+      "journey_id",
+      "files",
+      "checks",
+      "summary",
+      "packet_sha256"
+    ],
+    "receipt_keys": [
+      "version",
+      "journey_id",
+      "files",
+      "packet_sha256",
+      "reviewer_role",
+      "decisions",
+      "recorded_at",
+      "resume_ready",
+      "semantic_correctness_verified"
+    ],
+    "summary": "Literal progress goal/current_stage/next_action and assessment/evidence counts plus typed presence/warnings; false semantic_correctness_verified",
+    "freshness": "sha256 plus size for every present allowlisted content file, required core three; canonical packet digest excluding own hash",
+    "commands": [
+      "prepare --journey DIR --output NEW.json",
+      "record --journey DIR --packet PACKET --decisions DECISIONS --output RECEIPT [--expected-output-sha256 HASH]",
+      "verify --journey DIR --receipt RECEIPT"
+    ],
+    "replacement": "create-new by default; expected digest replacement only canonical journey-review.json, preserve exact previous bytes in journey-review.previous.json; never overwrite other journey content",
+    "verify_exit": {
+      "0": "current and all consistent",
+      "1": "current with needs_changes",
+      "2": "invalid or stale"
+    },
+    "semantics": "Operator judgment recorded, no authenticated human/permission/truth/mastery assertion"
+  },
+  "checks": [
+    "exact typed pack/unpack and snapshot/restore bytes",
+    "v1 still readable; typed smuggling under v1 refused",
+    "proposal hash and quote mismatch rejected including merged combinations",
+    "receipt schema and derived readiness validation",
+    "stale packet/receipt detected after content edit; stale receipt transported unchanged",
+    "all four exact nonempty decisions; needs_changes exit1",
+    "existing output and wrong replacement hash preserve foreign bytes",
+    "legacy125tests unchanged plus independent frozen failures",
+    "actual model workflow cases and independent review; no real efficacy claims",
+    "all4CIplatformjobs; installed suite; native userscope discovery; pinned source and actual release downloads/hash verification"
+  ],
+  "constraints": [
+    "Python3.9+ stdlib",
+    "no provider/API spending",
+    "no background services",
+    "bounded explicit files only",
+    "no upstream AGPL code copied",
+    "no universal sandbox/powerloss/semantic correctness claim"
+  ],
+  "routing": {
+    "model": "inherited current context, effective setting unknown",
+    "router": "No qualified configured task route; planner status missing linked/oversized input; no weakening",
+    "review": "separate independent reviewer + frozen cases",
+    "workers": 3,
+    "time_bound_minutes": 30,
+    "attempts_per_component": 2,
+    "api_usd": null
+  },
+  "frozen_at": "2026-10-28T23:27:29.662660+00:00"
+}

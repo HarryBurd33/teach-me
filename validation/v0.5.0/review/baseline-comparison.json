@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-28T23:29:45.060839+00:00",
+  "baseline_version": "0.4.0",
+  "baseline_commit": "bc93789b9645b0ed4b917b461d4f2feb6978c8f8",
+  "input_files": [
+    "knowledge-graph.json",
+    "knowledge-proposal.json",
+    "knowledge-source.txt",
+    "plan.md",
+    "progress.json",
+    "sources.md"
+  ],
+  "archive_files": [
+    "plan.md",
+    "progress.json",
+    "sources.md"
+  ],
+  "manifest_version": 1,
+  "typed_assets_silently_omitted": [
+    "knowledge-graph.json",
+    "knowledge-proposal.json",
+    "knowledge-source.txt"
+  ],
+  "coherence_review_script_present": false,
+  "finding": "Current v0.4 transport succeeds while omitting all three typed graph/source/proposal files; explicit consistency review tool absent. This is a concrete local capability gap, not evidence of learning efficacy."
+}

@@ -74,3 +74,7 @@ The [targeted source-format inspection](../validation/v0.3.0/foundation-update.m
 ## v0.4.0 original local extensions
 
 The graph workbench and journey versions reuse this project’s MIT normalized data, safe publishing, archive and lock helpers. [Graph foundation inspection](../validation/v0.4.0/graph-component/component-report.md) and [versions foundation inspection](../validation/v0.4.0/versions-component/component-report.md) record actual reused files and scope. No new upstream dependency, model/dataset license, copied AGPL reader or paid runtime is introduced. Exact source spans do not establish semantic truth.
+
+## v0.5.0 original extension
+
+Typed asset transport and hash-bound consistency review extend this repository’s MIT modules. The prior pinned foundation inspection remains applicable. No new upstream code, reader or prompt is bundled; proposal validation reuses this skill’s original quote/hash checks. Recorded judgments do not automate semantic truth or learning efficacy.
