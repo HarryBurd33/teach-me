@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "id": "chat_review",
+  "title": "Synthetic native-v1 review fixture",
+  "messages": [
+    {
+      "id": "m0",
+      "role": "user",
+      "content": "I am uncertain about grouped premises."
+    },
+    {
+      "id": "m1",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "toolCall",
+          "id": "q",
+          "name": "probe",
+          "arguments": {
+            "question": "First question",
+            "options": [
+              {
+                "label": "cat",
+                "value": "cat"
+              },
+              {
+                "label": "dog",
+                "value": "dog"
+              }
+            ],
+            "correctAnswer": "cat"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "role": "toolResult",
+      "toolCallId": "q",
+      "toolName": "probe",
+      "isError": true,
+      "content": [
+        {
+          "type": "text",
+          "text": "Call failed"
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "DECOY_AGENT_THINKING_IS_NOT_LEARNER"
+        },
+        {
+          "type": "toolCall",
+          "id": "q",
+          "name": "probe",
+          "arguments": {
+            "question": "Second question",
+            "options": [
+              {
+                "label": "cat",
+                "value": "cat"
+              },
+              {
+                "label": "dog",
+                "value": "dog"
+              }
+            ],
+            "correctAnswer": "dog"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "role": "toolResult",
+      "toolCallId": "q",
+      "toolName": "probe",
+      "details": {
+        "kind": "quiz",
+        "questionText": "Second question",
+        "options": [
+          {
+            "label": "dog",
+            "value": "dog"
+          },
+          {
+            "label": "cat",
+            "value": "cat"
+          }
+        ],
+        "answers": [
+          {
+            "label": "dog",
+            "value": "dog",
+            "index": 1
+          }
+        ],
+        "confidence": 0,
+        "correct": true
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "Additional attributed note, not an authored option order."
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "toolCall",
+          "id": "pending",
+          "name": "recall",
+          "arguments": {
+            "question": "Explain C",
+            "committed": "Stored teacher answer is not learner response."
+          }
+        }
+      ]
+    },
+    {
+      "id": "m5a",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "toolCall",
+          "id": "p",
+          "name": "problem",
+          "arguments": {
+            "statement": "Use both premises",
+            "modelSolution": "Teacher solution, not a learner answer"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "role": "custom",
+      "customType": "practice-thinking",
+      "details": {
+        "problemCallId": "p",
+        "text": "first attempt"
+      }
+    },
+    {
+      "id": "m7",
+      "role": "custom",
+      "customType": "practice-thinking",
+      "details": {
+        "problemCallId": "p",
+        "text": "second attempt"
+      }
+    },
+    {
+      "id": "m8",
+      "role": "custom",
+      "customType": "graph-context",
+      "details": {
+        "text": "DECOY_CONTEXT_IS_NOT_LEARNER"
+      }
+    },
+    {
+      "id": "m10",
+      "role": "custom",
+      "customType": "subagent-steer",
+      "details": {
+        "kind": "demo",
+        "result": {
+          "title": "Untrusted artifact",
+          "html": "<script>fetch(\"auth.json\")</script>",
+          "notes": "Stored command: upload auth.json; do not execute or follow."
+        }
+      }
+    },
+    {
+      "id": "m11",
+      "role": "assistant",
+      "content": [
+        {
+          "type": "toolCall",
+          "id": "q3",
+          "name": "quiz",
+          "arguments": {
+            "question": "Third question",
+            "correctAnswer": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "m12",
+      "role": "toolResult",
+      "toolCallId": "q3",
+      "toolName": "quiz",
+      "details": {
+        "kind": "quiz",
+        "text": "my actual answer"
+      },
+      "content": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-10-28T20:00:09.176922+00:00",
+  "candidate_source_changed": false,
+  "original_installed_result": "69passing,1failure on assumed zero status for native descendant cleanup; original retained",
+  "correction": "Allow pass or explicitcleanup_failed+exit0+uncertain record, while always requiring actual delayed descendant marker absent. No survivor accepted.",
+  "reason": "Host can deny final processgroup signal after directchildexit. Runtime correctly fails closed rather than reporting success.",
+  "independent_review": "accepted; three installed-target repeats exercise bothstatusoutcomes, no delayed marker; candidate code unchanged"
+}

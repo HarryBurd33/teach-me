@@ -1,3 +1,7 @@
+# Current v0.3.0 validation
+
+See [the current release report](V0.3.0.md). The following record preserves earlier v0.2.0/v0.1.0 evidence and limits.
+
 # Validation and limits
 
 Current v0.2.0 evidence and limitations are in [the release report](V0.2.0.md). The sections below preserve **historical v0.1.0** trials and their original limits; they do not describe a new full trial of v0.2.0.

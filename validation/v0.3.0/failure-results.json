@@ -1,0 +1,25 @@
+{
+  "method": "Independent reviewer actual executions with explicitly labeled injected failures; source files not edited",
+  "checks": [
+    {
+      "id": "save-replacement-failure",
+      "method": "In-process mock injects OSError only when replacing progress.json after actual backup",
+      "status": "pass",
+      "original_progress_and_backup_valid": true,
+      "own_lock_released": true
+    },
+    {
+      "id": "lock-replacement-preserved",
+      "method": "Own test replaces lock with distinct bytes during context; leaving context must not delete foreign replacement",
+      "status": "pass"
+    },
+    {
+      "id": "unpack-publication-failure",
+      "method": "Mock OSError at directory publication after verified staging; this is fault injection, not actual disk loss",
+      "status": "pass",
+      "no_partial_destination": true,
+      "staging_cleaned": true,
+      "original_archive_and_source_unchanged": true
+    }
+  ]
+}

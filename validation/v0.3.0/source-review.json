@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-10-28T19:44:10.711292+00:00",
+  "source": "https://github.com/amosblomqvist/learnharness/blob/3dc88472eea41eed0d5e5f29c2f16f8d063c415b/skills/learnharness/references/data-format.md",
+  "method": "Independent reviewer fetched actual pinned format reference through connected GitHub; no upstream code execution",
+  "facts": [
+    "Native format1; absentversion means1; legacy pre-native parts dialect unsupported",
+    "Nearest preceding repeated call joins; learner toolResult.details versus teacher committed call args",
+    "Displayed answer snapshots; confidence0 versus absent; agent thinking not learner speech",
+    "Node first-assertion fields and alias/provenance union; chain merge by sorted premises plus conclusion; joint premises grouped",
+    "Missing endpoints disclosed; graph coverage is not mastery; referenced paths/URLs/artifacts not followed"
+  ],
+  "rights_scope": "Prior same-day file-level root/skill AGPL observation retained; original format adapter may not copy upstream readers/prompts. Reviewer code inspection does not provide legal certification."
+}

@@ -1,0 +1,7 @@
+{
+  "tests_run": 70,
+  "returncode": 1,
+  "successful": false,
+  "target": "global installed Teach-me0.3.0",
+  "native_process_access": true
+}

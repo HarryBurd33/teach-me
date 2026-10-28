@@ -1,0 +1,142 @@
+{
+  "method": "Independent reviewer manually loaded candidate and executed actual fixed scratch tools. Original negative fixture retained; separate fully joined native-v1 positive fixture added explicitly. Same reviewer authors/interprets response, non-blind simulated learner evidence; no real learning outcome claim.",
+  "recorded_at": "2026-10-28T19:50:12.291664+00:00",
+  "actions": [
+    {
+      "script": "learning_data.py",
+      "args": [
+        "session",
+        "--input",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/session.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/negative.json"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Practice attempt lacks preceding problem call\n"
+    },
+    {
+      "script": "learning_data.py",
+      "args": [
+        "session",
+        "--input",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/session-complete.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/session.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/session.json\", \"sha256\": \"280ba8143cf96b57ba1b287a5c631eaefa147e463cfefd834a3b4872b5ffc9b7\", \"source_files\": 1}\n",
+      "stderr": ""
+    },
+    {
+      "script": "learning_data.py",
+      "args": [
+        "graph",
+        "--nodes",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/nodes.jsonl",
+        "--chains",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/chains.jsonl",
+        "--format",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/format.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/graph.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/graph.json\", \"sha256\": \"639cdd164e05930624bfca858f6a16ca0683270d747aaee5e63c176073a1466e\", \"source_files\": 3}\n",
+      "stderr": ""
+    },
+    {
+      "script": "learning_data.py",
+      "args": [
+        "view",
+        "--input",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/graph.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/map.html"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/map.html\", \"sha256\": \"cdf90e78fb94a87df30361eb12462f82b0f101e10820726719f595b4c31f524b\", \"source_files\": 1}\n",
+      "stderr": ""
+    },
+    {
+      "script": "transfer.py",
+      "args": [
+        "pack",
+        "--journey",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/baseline-workspace/learning/review",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/journey.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"packed\": true, \"archive\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/journey.zip\", \"files\": 3, \"sha256\": \"a6f49f02c2e828b48fec7f0a51d103aef1be46740d13896506c8a421ea979ff9\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "transfer.py",
+      "args": [
+        "unpack",
+        "--archive",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/journey.zip",
+        "--root",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/receiving",
+        "--id",
+        "review"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/receiving/learning/review\", \"files\": 3, \"automatic_resume\": false}\n",
+      "stderr": ""
+    },
+    {
+      "script": "harness.py",
+      "args": [
+        "validate",
+        "--plan",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"valid\": true, \"nodes\": 1, \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "harness.py",
+      "args": [
+        "run",
+        "--plan",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json",
+        "--root",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/run.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"dry_run\", \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\", \"nodes\": [{\"id\": \"one\", \"argv\": [\"python3\", \"-c\", \"from pathlib import Path; Path(\\\"review-marker.txt\\\").write_text(\\\"executed\\\")\"], \"depends_on\": [], \"timeout_seconds\": 2, \"max_attempts\": 1, \"human_gate\": false}], \"notice\": \"No commands executed or output written. Review local commands and current authorization.\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "harness.py",
+      "args": [
+        "run",
+        "--plan",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json",
+        "--root",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow/run.json",
+        "--execute"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"version\": 1, \"status\": \"passed\", \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\", \"root\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/tool-flow\", \"nodes\": [{\"id\": \"one\", \"status\": \"passed\", \"attempts\": [{\"number\": 1, \"argv\": [\"python3\", \"-c\", \"from pathlib import Path; Path(\\\"review-marker.txt\\\").write_text(\\\"executed\\\")\"], \"status\": \"passed\", \"exit_code\": 0, \"stdout\": \"\", \"stdout_truncated\": false, \"stderr\": \"\", \"stderr_truncated\": false, \"elapsed_seconds\": 0.015819}]}], \"permissions\": \"Commands inherit host permissions; this is not a sandbox.\", \"process_cleanup\": \"POSIX owned process group; detached descendants and Windows child trees are not contained.\", \"elapsed_seconds\": 0.017459, \"uncertain_cleanup_nodes\": []}\n",
+      "stderr": ""
+    }
+  ],
+  "source_hashes_unchanged": true,
+  "legacy_journey_source_unchanged": true,
+  "transfer_exact_bytes": true,
+  "graph_nodes": 4,
+  "separate_arguments": 3,
+  "grouped_and_preserved": true,
+  "source_missing_endpoint_reported": true,
+  "html_source_escape_check": true,
+  "browser_execution": "Parent owns actual browser QA; this record is Python/static HTML plus executed tools.",
+  "result": "pass"
+}

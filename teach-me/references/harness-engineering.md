@@ -92,8 +92,10 @@ learner wants the extension.
   failure and interruption. This graph describes execution; it is different
   from the proposition/argument map in `knowledge.md`.
 
-Teach-me does not supply a scheduler, background worker, graph runner, paid
-provider integration, or enforcement of a written budget. Do not translate
+Teach-me now supplies an optional [local DAG/retry runner](local-runtime.md)
+with enforced command-attempt/time limits and explicit gates. It does not supply
+a scheduler, background agent, arbitrary graph routing, paid provider integration,
+or account-allowance enforcement. Do not translate
 example `/goal` or `/loop` text into a claim that those commands work in this
 host. Dependencies, recurring jobs, external writes, deployment, and paid use
 require applicable authorization and actual tool support. Record a design as

@@ -1,0 +1,4 @@
+{"id": "ab", "premises": ["A", "B"], "conclusion": "C", "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "ab2", "premises": ["B", "A"], "conclusion": "C", "createdAt": "2026-10-28T00:00:01Z", "provenance": [{"chatId": "chat_review", "messageId": "m4"}]}
+{"id": "d", "premises": ["D"], "conclusion": "C", "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "z", "premises": ["Z"], "conclusion": "C", "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}

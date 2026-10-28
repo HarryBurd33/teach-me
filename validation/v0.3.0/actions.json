@@ -1,0 +1,229 @@
+[
+  {
+    "action": "native_session",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/learning_data.py",
+      "session",
+      "--input",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/session-complete.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/session-report.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/session-report.json\", \"sha256\": \"280ba8143cf96b57ba1b287a5c631eaefa147e463cfefd834a3b4872b5ffc9b7\", \"source_files\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "action": "native_graph",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/learning_data.py",
+      "graph",
+      "--nodes",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/nodes.jsonl",
+      "--chains",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/chains.jsonl",
+      "--format",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/format.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/graph-report.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/graph-report.json\", \"sha256\": \"639cdd164e05930624bfca858f6a16ca0683270d747aaee5e63c176073a1466e\", \"source_files\": 3}\n",
+    "stderr": ""
+  },
+  {
+    "action": "local_viewer",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/learning_data.py",
+      "view",
+      "--input",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/graph-report.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/map.html"
+    ],
+    "returncode": 0,
+    "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/map.html\", \"sha256\": \"cdf90e78fb94a87df30361eb12462f82b0f101e10820726719f595b4c31f524b\", \"source_files\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "action": "journey_init",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch",
+      "--id",
+      "tool-trial",
+      "--topic",
+      "Evidence-aware harness use",
+      "--goal",
+      "Explain an imported record and inspect a bounded local execution"
+    ],
+    "returncode": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch/learning/tool-trial\", \"sha256\": \"31d0cfd8cbf6075e327a5f059643e317137f86852481e841fdd0185e6f703243\"}\n",
+    "stderr": ""
+  },
+  {
+    "action": "journey_pack",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/transfer.py",
+      "pack",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch/learning/tool-trial",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/journey.zip"
+    ],
+    "returncode": 0,
+    "stdout": "{\"packed\": true, \"archive\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/journey.zip\", \"files\": 4, \"sha256\": \"3a6fa0b5bc6d65938caa88d5b89477c29b8e071ef61d3c90be6d84540815d567\"}\n",
+    "stderr": ""
+  },
+  {
+    "action": "journey_unpack",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/transfer.py",
+      "unpack",
+      "--archive",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/journey.zip",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/receiving-workspace",
+      "--id",
+      "tool-trial"
+    ],
+    "returncode": 0,
+    "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/receiving-workspace/learning/tool-trial\", \"files\": 4, \"automatic_resume\": false}\n",
+    "stderr": ""
+  },
+  {
+    "action": "review_command_plan",
+    "observed_plan": {
+      "version": 1,
+      "max_seconds": 5,
+      "nodes": [
+        {
+          "id": "one",
+          "argv": [
+            "python3",
+            "-c",
+            "from pathlib import Path; Path(\"review-marker.txt\").write_text(\"executed\")"
+          ],
+          "depends_on": [],
+          "timeout_seconds": 2,
+          "max_attempts": 1,
+          "human_gate": false
+        }
+      ]
+    },
+    "scope_review": "The one command only writes review-marker.txt with literal executed in the supplied scratch cwd; no network, imports, source-data command or secret path. Execute under explicit tool-flow request."
+  },
+  {
+    "action": "plan_validate",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/harness.py",
+      "validate",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"valid\": true, \"nodes\": 1, \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\"}\n",
+    "stderr": ""
+  },
+  {
+    "action": "plan_dry_run",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/harness.py",
+      "run",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/harmless-run.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"status\": \"dry_run\", \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\", \"nodes\": [{\"id\": \"one\", \"argv\": [\"python3\", \"-c\", \"from pathlib import Path; Path(\\\"review-marker.txt\\\").write_text(\\\"executed\\\")\"], \"depends_on\": [], \"timeout_seconds\": 2, \"max_attempts\": 1, \"human_gate\": false}], \"notice\": \"No commands executed or output written. Review local commands and current authorization.\"}\n",
+    "stderr": ""
+  },
+  {
+    "action": "after_dry_run",
+    "marker_exists": false,
+    "result_file_exists": false
+  },
+  {
+    "action": "plan_explicit_execution",
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "-B",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/candidate/teach-me/scripts/harness.py",
+      "run",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/review/fixtures/plan.json",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/harmless-run.json",
+      "--execute"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"status\": \"passed\", \"plan_sha256\": \"7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa\", \"root\": \"BUILD_WORKSPACE/.forge/teach-me-v0.3.0/execution/scratch\", \"nodes\": [{\"id\": \"one\", \"status\": \"passed\", \"attempts\": [{\"number\": 1, \"argv\": [\"python3\", \"-c\", \"from pathlib import Path; Path(\\\"review-marker.txt\\\").write_text(\\\"executed\\\")\"], \"status\": \"passed\", \"exit_code\": 0, \"stdout\": \"\", \"stdout_truncated\": false, \"stderr\": \"\", \"stderr_truncated\": false, \"elapsed_seconds\": 0.015719}]}], \"permissions\": \"Commands inherit host permissions; this is not a sandbox.\", \"process_cleanup\": \"POSIX owned process group; detached descendants and Windows child trees are not contained.\", \"elapsed_seconds\": 0.017328, \"uncertain_cleanup_nodes\": []}\n",
+    "stderr": ""
+  },
+  {
+    "action": "after_execution",
+    "marker_text": "executed"
+  },
+  {
+    "action": "source_integrity",
+    "before": {
+      "session-complete.json": "369c140ae93b9c1fd7aba143c1bb059969db6e1cb88204961b045015922bbe95",
+      "nodes.jsonl": "ec05aed91c792cdf715715f1946c2c7afd5c067677a8187512aa1545271729d6",
+      "chains.jsonl": "30ca06a5415e2456fef5e80b6c5f25924a8456ea7ffb61e811e257b527aeef84",
+      "format.json": "50208d78350a7a160dec59a82df1499b6ca7da33e54c5eb11c97e342118e68bb",
+      "plan.json": "7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa"
+    },
+    "after": {
+      "session-complete.json": "369c140ae93b9c1fd7aba143c1bb059969db6e1cb88204961b045015922bbe95",
+      "nodes.jsonl": "ec05aed91c792cdf715715f1946c2c7afd5c067677a8187512aa1545271729d6",
+      "chains.jsonl": "30ca06a5415e2456fef5e80b6c5f25924a8456ea7ffb61e811e257b527aeef84",
+      "format.json": "50208d78350a7a160dec59a82df1499b6ca7da33e54c5eb11c97e342118e68bb",
+      "plan.json": "7a1cc6e7937c5541ab8c60e8a11caa95d1b86739e9e3cabc31e3f215365b0aaa"
+    },
+    "same_bytes": true
+  },
+  {
+    "action": "transferred_bytes_observed",
+    "source": {
+      "plan.md": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+      "progress.json": "31d0cfd8cbf6075e327a5f059643e317137f86852481e841fdd0185e6f703243",
+      "sources.md": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91",
+      "knowledge.md": "34b40148e8b8a06e94968a3a0630d4cb1021d8d40f4eaf435a664679e829fe1f"
+    },
+    "destination": {
+      "plan.md": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+      "progress.json": "31d0cfd8cbf6075e327a5f059643e317137f86852481e841fdd0185e6f703243",
+      "sources.md": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91",
+      "knowledge.md": "34b40148e8b8a06e94968a3a0630d4cb1021d8d40f4eaf435a664679e829fe1f"
+    },
+    "same_bytes": true
+  },
+  {
+    "action": "web_source_inspection",
+    "url": "https://www.welshgymnastics.org/wp-content/uploads/2023/01/HS-guidance-safe-coaching-1-Dec-2021.pdf",
+    "scope": "Opened primary British Gymnastics coaching health/safety PDF hosted by Welsh Gymnastics; pages3-5 text inspected for qualified supervision and suitable equipment/facilities."
+  }
+]

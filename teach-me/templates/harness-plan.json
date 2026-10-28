@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "max_seconds": 30,
+  "nodes": [
+    {
+      "id": "parser-check",
+      "argv": ["python3", "-m", "unittest", "test_parser.TestParser.test_rejects_trailing_operator", "-v"],
+      "depends_on": [],
+      "timeout_seconds": 10,
+      "max_attempts": 1,
+      "human_gate": false
+    }
+  ]
+}

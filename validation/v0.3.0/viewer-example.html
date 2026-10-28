@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src 'none'; connect-src 'none'">
+<title>Teach-me knowledge map</title>
+<style>body{font:16px system-ui;margin:2rem;max-width:1000px;color:#192435;background:#f6f8fc}input{padding:.6rem;width:90%}.card{background:white;border:1px solid #bcc9dd;border-radius:.5rem;padding:1rem;margin:1rem 0}.chain{border-left:5px solid #6950a1}.warning{color:#8b2b1b}small{display:block;white-space:pre-wrap}h2{font-size:1.2rem}.and{font-weight:bold;color:#60399c}.arrow{font-size:1.4rem}#summary{margin-top:1rem}</style>
+<h1>Knowledge and argument map</h1><p>Claims and provenance, not mastery. All premises in each AND group are jointly required. This local viewer sends no network requests.</p>
+<label>Filter claims, IDs, aliases and provenance <input id="query" type="search"></label>
+<p id="summary"></p><section id="warnings" aria-label="Warnings"></section><main id="map"></main>
+<script id="data" type="application/json">{"format": "teach-me-learning-v1", "source_files": [{"name": "nodes.jsonl", "sha256": "bb317c20d847de33ccf0ac4d90bea6b8361cb2111e5064b90513ae2901c41c86"}, {"name": "chains.jsonl", "sha256": "bc0815b4cf04a7874d857d21308d139edc439cc9f7c44230b7bc889a88158aa6"}, {"name": "format.json", "sha256": "cedb60dfefb0ead1fa5a3ccb3c68e0ceaf4bb3415df80c79863092f362bd5ab9"}], "sessions": [], "nodes": [{"id": "A", "name": "A: prerequisite", "statement": "First proposition", "aliases": ["Alternate wording", "A alias"], "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m1"}, {"chatId": "chat_demo", "messageId": "m4"}]}, {"id": "B", "name": "B: second premise", "statement": "B claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}, {"id": "C", "name": "C: conclusion", "statement": "C claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}, {"id": "D", "name": "\u003c/script\u003e\u003cimg src=x onerror=\"alert(1)\"\u003e", "statement": "D claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}], "chains": [{"id": "joint", "premises": ["A", "B"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m1"}, {"chatId": "chat_demo", "messageId": "m4"}]}, {"id": "other", "premises": ["D"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": []}, {"id": "gap", "premises": ["X"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": []}], "warnings": ["Missing graph endpoint: X in chain gap"]}</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('data').textContent);
+const map=document.getElementById('map'), summary=document.getElementById('summary');
+function el(tag,value,cls){const n=document.createElement(tag);if(value!==undefined)n.textContent=value;if(cls)n.className=cls;return n;}
+for(const w of data.warnings)document.getElementById('warnings').appendChild(el('p',w,'warning'));
+const names=new Map(data.nodes.map(n=>[n.id,n.name||n.id]));
+function draw(){map.replaceChildren();const q=document.getElementById('query').value.toLowerCase();let count=0;
+for(const n of data.nodes){if(q&&!JSON.stringify(n).toLowerCase().includes(q))continue;const c=el('article',undefined,'card');c.append(el('h2',n.name||n.id),el('p',n.statement),el('small','ID: '+n.id+' | Aliases: '+n.aliases.join('; ')),el('small','Sources: '+JSON.stringify(n.provenance)));map.append(c);count++;}
+for(const chain of data.chains){const combined=JSON.stringify(chain)+' '+chain.premises.map(id=>names.get(id)||id).join(' ')+' '+(names.get(chain.conclusion)||chain.conclusion);if(q&&!combined.toLowerCase().includes(q))continue;const c=el('article',undefined,'card chain');c.append(el('h2','Argument '+chain.id));chain.premises.forEach((id,i)=>{if(i)c.append(el('span',' AND ','and'));c.append(el('span',(names.get(id)||'[missing]')+' ('+id+')'));});c.append(el('span',' ⇒ ','arrow'),el('strong',(names.get(chain.conclusion)||'[missing]')+' ('+chain.conclusion+')'),el('small','Sources: '+JSON.stringify(chain.provenance)));map.append(c);count++;}
+summary.textContent=count+' visible cards; '+data.nodes.length+' propositions, '+data.chains.length+' separate arguments. No mastery score.';}
+document.getElementById('query').addEventListener('input',draw);draw();
+</script></html>

@@ -1,0 +1,16 @@
+{
+  "method": "Real Codex in-app browser via CUA; temporary localhost synthetic fixture",
+  "initial_cards": 7,
+  "propositions": 4,
+  "separate_arguments": 3,
+  "joint_search_visible_cards": 1,
+  "and_group_preserved": true,
+  "missing_endpoint_warning": "X in chain gap",
+  "malicious_label_literal": true,
+  "injected_images": 0,
+  "external_scripts": 0,
+  "screenshot_visually_inspected": true,
+  "temporary_tab_closed": true,
+  "temporary_server_stopped": true,
+  "limits": "Browser check uses generated synthetic fixture; no upstream app or learner outcomes tested"
+}

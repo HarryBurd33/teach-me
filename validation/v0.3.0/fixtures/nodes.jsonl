@@ -1,0 +1,5 @@
+{"id": "A", "name": "same label", "statement": "Premise A", "aliases": [], "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "B", "name": "same label", "statement": "Premise B", "aliases": [], "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "C", "name": "Conclusion", "statement": "Claim C", "aliases": [], "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "D", "name": "</script><script>document.body.dataset.pwned=1</script> & <img src=x onerror=alert(1)>", "statement": "Alternative premise", "aliases": [], "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m0"}]}
+{"id": "A", "name": "ignored replacement name", "statement": "A later assertion", "aliases": [], "createdAt": "2026-10-28T00:00:00Z", "provenance": [{"chatId": "chat_review", "messageId": "m4"}]}

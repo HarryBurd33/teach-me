@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-10-28T19:52:25.274859+00:00",
+  "id": "pilot-transfer-candidate2",
+  "change": "Add learning-pilot.md to the finite journey archive allowlist, preserve all other archive rules",
+  "input": "Schema-v1 journey plus UTF-8 learning-pilot.md containing confidence0, pending baseline and unknown delayed result",
+  "expected": "Pack includes exact pilot bytes; fresh import preserves pilot/progress bytes; source unchanged; no permissions/automaticresume or learning result inferred",
+  "original_criteria": "All original archive/concurrency/unsafe-file checks remain unchanged. pilot.md and arbitrary attachments remain unlisted.",
+  "test_sha256": "aaae3bdd2117ae105be12e7146b5e5560b6bf5df45d40168680eb10a9d3ec12c",
+  "status": "frozen unexecuted before candidate2 patch"
+}

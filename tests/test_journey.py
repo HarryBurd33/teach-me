@@ -1,5 +1,6 @@
 """Executed CLI checks for persistence and evidence invariants."""
 import copy
+import os
 import json
 from pathlib import Path
 import subprocess
@@ -7,7 +8,7 @@ import sys
 import tempfile
 import unittest
 
-SCRIPT = Path(__file__).resolve().parents[1] / 'teach-me' / 'scripts' / 'journey.py'
+SCRIPT = Path(os.environ.get('TEACH_ME_SKILL', str(Path(__file__).resolve().parents[1] / 'teach-me'))) / 'scripts' / 'journey.py'
 
 
 class JourneyCLI(unittest.TestCase):

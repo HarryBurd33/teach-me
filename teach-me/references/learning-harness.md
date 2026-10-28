@@ -61,8 +61,10 @@ Use a fresh discriminating task to test uncertain understanding.
 ## Selected LearnHarness exports: read-only inspection
 
 Teach-me can inspect relevant supplied JSON/JSONL or readable excerpts through
-the host's file tools. It does not bundle the LearnHarness application, its
-readers, a native importer, a format validator, or graph extraction. Before a
+the host's file tools. Its optional original [data adapter](data-tools.md) validates
+a documented subset of native v1 sessions/graphs and creates separate reports
+and an offline map viewer. It does not bundle the upstream application/readers,
+provide full native import/export compatibility, or extract new graphs from prose. Before a
 format-sensitive inference, consult the pinned upstream
 [format guide](https://github.com/amosblomqvist/learnharness/blob/3dc88472eea41eed0d5e5f29c2f16f8d063c415b/skills/learnharness/references/data-format.md)
 and check the selected record's shape/version. An unfamiliar version, legacy

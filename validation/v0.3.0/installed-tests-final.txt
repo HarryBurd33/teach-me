@@ -1,0 +1,77 @@
+test_cooperative_held_lock_refuses_save_without_mutation (test_adversarial.HeldOutCLI.test_cooperative_held_lock_refuses_save_without_mutation) ... ok
+test_explicit_forbidden_source_and_symlink_are_refused (test_adversarial.HeldOutCLI.test_explicit_forbidden_source_and_symlink_are_refused) ... ok
+test_native_unknown_and_duplicate_version_refused_before_output (test_adversarial.HeldOutCLI.test_native_unknown_and_duplicate_version_refused_before_output) ... ok
+test_output_existing_symlink_and_source_overwrite_refused (test_adversarial.HeldOutCLI.test_output_existing_symlink_and_source_overwrite_refused) ... ok
+test_transfer_never_includes_unlisted_source_file (test_adversarial.HeldOutCLI.test_transfer_never_includes_unlisted_source_file) ... ok
+test_transfer_refuses_tamper_duplicate_traversal_and_symlink_member (test_adversarial.HeldOutCLI.test_transfer_refuses_tamper_duplicate_traversal_and_symlink_member) ... /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/lib/python3.15/zipfile/__init__.py:1755: UserWarning: Duplicate name: 'progress.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_transfer_roundtrip_omits_unlisted_file_and_preserves_companions (test_adversarial.HeldOutCLI.test_transfer_roundtrip_omits_unlisted_file_and_preserves_companions) ... ok
+test_transfer_wrong_requested_id_and_unknown_file_refused (test_adversarial.HeldOutCLI.test_transfer_wrong_requested_id_and_unknown_file_refused) ... ok
+test_two_real_save_processes_same_expected_hash_at_most_one_success (test_adversarial.HeldOutCLI.test_two_real_save_processes_same_expected_hash_at_most_one_success) ... ok
+test_background_same_group_descendant_does_not_survive (test_harness.HarnessCLI.test_background_same_group_descendant_does_not_survive) ... ok
+test_cleanup_denial_is_not_a_launch_failure_and_blocks_followup (test_harness.HarnessCLI.test_cleanup_denial_is_not_a_launch_failure_and_blocks_followup) ... ok
+test_cycles_unknown_dependencies_and_boolean_limits_refused (test_harness.HarnessCLI.test_cycles_unknown_dependencies_and_boolean_limits_refused) ... ok
+test_dry_run_creates_nothing (test_harness.HarnessCLI.test_dry_run_creates_nothing) ... ok
+test_existing_output_and_lock_preserved (test_harness.HarnessCLI.test_existing_output_and_lock_preserved) ... ok
+test_failure_blocks_dependency_and_bounds_retries (test_harness.HarnessCLI.test_failure_blocks_dependency_and_bounds_retries) ... ok
+test_human_gate_requires_explicit_node (test_harness.HarnessCLI.test_human_gate_requires_explicit_node) ... ok
+test_no_shell_expansion_and_missing_executable (test_harness.HarnessCLI.test_no_shell_expansion_and_missing_executable) ... ok
+test_output_limit_marks_failure_and_truncates (test_harness.HarnessCLI.test_output_limit_marks_failure_and_truncates) ... ok
+test_sigterm_records_interruption_and_kills_child (test_harness.HarnessCLI.test_sigterm_records_interruption_and_kills_child) ... ok
+test_success_orders_dependencies (test_harness.HarnessCLI.test_success_orders_dependencies) ... ok
+test_symlink_output_and_source_refused (test_harness.HarnessCLI.test_symlink_output_and_source_refused) ... ok
+test_timeout_and_total_budget_stop_followup (test_harness.HarnessCLI.test_timeout_and_total_budget_stop_followup) ... ok
+test_unknown_approval_and_duplicate_json_rejected (test_harness.HarnessCLI.test_unknown_approval_and_duplicate_json_rejected) ... ok
+test_boolean_or_negative_minutes_fail (test_journey.JourneyCLI.test_boolean_or_negative_minutes_fail) ... ok
+test_corrupt_state_cannot_be_silently_reset (test_journey.JourneyCLI.test_corrupt_state_cannot_be_silently_reset) ... ok
+test_create_save_resume_and_backup (test_journey.JourneyCLI.test_create_save_resume_and_backup) ... ok
+test_duplicate_ids_and_naive_timestamp_fail (test_journey.JourneyCLI.test_duplicate_ids_and_naive_timestamp_fail) ... ok
+test_duplicate_json_members_are_rejected_without_writes (test_journey.JourneyCLI.test_duplicate_json_members_are_rejected_without_writes) ... ok
+test_id_immutable_and_traversal_refused (test_journey.JourneyCLI.test_id_immutable_and_traversal_refused) ... ok
+test_missing_field_not_treated_as_zero (test_journey.JourneyCLI.test_missing_field_not_treated_as_zero) ... ok
+test_refuses_existing_journey (test_journey.JourneyCLI.test_refuses_existing_journey) ... ok
+test_renamed_folder_cannot_resume_as_another_journey (test_journey.JourneyCLI.test_renamed_folder_cannot_resume_as_another_journey) ... ok
+test_self_report_cannot_certify_and_ids_must_resolve (test_journey.JourneyCLI.test_self_report_cannot_certify_and_ids_must_resolve) ... ok
+test_stale_save_preserves_both_files (test_journey.JourneyCLI.test_stale_save_preserves_both_files) ... ok
+test_symlink_state_backup_or_lock_refused (test_journey.JourneyCLI.test_symlink_state_backup_or_lock_refused) ... ok
+test_symlinked_learning_directory_refused (test_journey.JourneyCLI.test_symlinked_learning_directory_refused) ... ok
+test_unknown_version_and_unknown_keys_fail (test_journey.JourneyCLI.test_unknown_version_and_unknown_keys_fail) ... ok
+test_validate_is_read_only_and_missing_progress_fails (test_journey.JourneyCLI.test_validate_is_read_only_and_missing_progress_fails) ... ok
+test_zero_null_and_empty_arrays_preserved (test_journey.JourneyCLI.test_zero_null_and_empty_arrays_preserved) ... ok
+test_conflicting_display_snapshot_is_retained_without_remapping (test_learning_data.LearningData.test_conflicting_display_snapshot_is_retained_without_remapping) ... ok
+test_custom_practice_order_and_artifacts_not_executed (test_learning_data.LearningData.test_custom_practice_order_and_artifacts_not_executed) ... ok
+test_graph_merge_joint_premises_distinct_arguments (test_learning_data.LearningData.test_graph_merge_joint_premises_distinct_arguments) ... ok
+test_graph_version_and_malformed_line (test_learning_data.LearningData.test_graph_version_and_malformed_line) ... ok
+test_missing_endpoint_warned_no_fake_node (test_learning_data.LearningData.test_missing_endpoint_warned_no_fake_node) ... ok
+test_nearest_preceding_call_and_confidence (test_learning_data.LearningData.test_nearest_preceding_call_and_confidence) ... ok
+test_nonfinite_and_invalid_confidence_rejected (test_learning_data.LearningData.test_nonfinite_and_invalid_confidence_rejected) ... ok
+test_overflow_numeric_and_malformed_answer_rejected (test_learning_data.LearningData.test_overflow_numeric_and_malformed_answer_rejected) ... ok
+test_pending_teacher_key_and_failed_result (test_learning_data.LearningData.test_pending_teacher_key_and_failed_result) ... ok
+test_publish_detects_changed_source (test_learning_data.LearningData.test_publish_detects_changed_source) ... ok
+test_sensitive_source_symlink_output_and_overwrite_rejected (test_learning_data.LearningData.test_sensitive_source_symlink_output_and_overwrite_rejected) ... ok
+test_size_bound_and_empty_graph (test_learning_data.LearningData.test_size_bound_and_empty_graph) ... ok
+test_teacher_only_result_or_problem_delivery_is_not_learner_answer (test_learning_data.LearningData.test_teacher_only_result_or_problem_delivery_is_not_learner_answer) ... ok
+test_unknown_version_legacy_duplicate_and_orphan_rejected (test_learning_data.LearningData.test_unknown_version_legacy_duplicate_and_orphan_rejected) ... ok
+test_view_rejects_unknown_normalized_format (test_learning_data.LearningData.test_view_rejects_unknown_normalized_format) ... ok
+test_viewer_html_injection_escaped_and_no_network (test_learning_data.LearningData.test_viewer_html_injection_escaped_and_no_network) ... ok
+test_pilot_record_exact_byte_roundtrip (test_pilot_transfer.PilotTransferSupplement.test_pilot_record_exact_byte_roundtrip) ... ok
+test_archive_symlink_oversize_encryption_refused (test_transfer.TransferCLI.test_archive_symlink_oversize_encryption_refused) ... ok
+test_archive_tamper_missing_file_and_bad_crc_refused (test_transfer.TransferCLI.test_archive_tamper_missing_file_and_bad_crc_refused) ... ok
+test_failed_progress_replacement_preserves_current_and_backup (test_transfer.TransferCLI.test_failed_progress_replacement_preserves_current_and_backup) ... ok
+test_held_writer_lock_refuses_save_and_foreign_replacement_survives (test_transfer.TransferCLI.test_held_writer_lock_refuses_save_and_foreign_replacement_survives) ... ok
+test_manifest_version_types_duplicates_and_progress_validation (test_transfer.TransferCLI.test_manifest_version_types_duplicates_and_progress_validation) ... ok
+test_missing_or_invalid_source_progress_refused (test_transfer.TransferCLI.test_missing_or_invalid_source_progress_refused) ... ok
+test_pack_held_lock_and_fifo_refused (test_transfer.TransferCLI.test_pack_held_lock_and_fifo_refused) ... ok
+test_pack_no_overwrite_or_output_inside_source (test_transfer.TransferCLI.test_pack_no_overwrite_or_output_inside_source) ... ok
+test_roundtrip_preserves_optional_bytes_ignores_nonallowlisted (test_transfer.TransferCLI.test_roundtrip_preserves_optional_bytes_ignores_nonallowlisted) ... ok
+test_same_hash_saves_have_one_winner (test_transfer.TransferCLI.test_same_hash_saves_have_one_winner) ... ok
+test_symlink_inputs_outputs_ancestors_refused (test_transfer.TransferCLI.test_symlink_inputs_outputs_ancestors_refused) ... ok
+test_two_unpackers_publish_at_most_once (test_transfer.TransferCLI.test_two_unpackers_publish_at_most_once) ... ok
+test_unknown_paths_and_duplicate_members_refused (test_transfer.TransferCLI.test_unknown_paths_and_duplicate_members_refused) ... ok
+test_unpack_no_overwrite_and_id_not_migrated (test_transfer.TransferCLI.test_unpack_no_overwrite_and_id_not_migrated) ... ok
+
+----------------------------------------------------------------------
+Ran 70 tests in 8.046s
+
+OK

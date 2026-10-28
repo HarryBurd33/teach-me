@@ -1,0 +1,42 @@
+{
+  "frozen_at": "2026-10-28T19:40:42.346869+00:00",
+  "method": "Independent reviewer froze checks before reading candidate. Same reviewer may execute and grade model responses; those are disclosed non-blind self-graded model trials, not independent executor evidence. Deterministic code/security review remains independent of constructors.",
+  "cases": [
+    {
+      "id": "heldout-session-joins",
+      "input": "Native v1 messages: probe call id q at m1; failed q result at m2; a new probe q at m3 with authored [cat,dog]; result at m4 with display [dog,cat], answer dog/index1/confidence0; unmatched result qx; pending recall q2 with committed teacher answer; practice-thinking attempts one then two; assistant thinking text and custom graph-context contain decoy learner claims.",
+      "expected": "Join m4 only to m3, retain failed state for m1; display snapshot label dog not authored cat; confidence0 notnull; unmatched warning; q2 pending without learneranswer; practice attempts ordered; agentthinking/context not learner work; selectedsource unchanged."
+    },
+    {
+      "id": "heldout-graph-safety",
+      "input": "Nodes A and B distinct same label; repeated A statement alias and duplicate provenance; chains [A,B]=>C then [B,A]=>C plus [D]=>C; missing endpoint Z; name </script><script>document.body.dataset.pwned=1</script> & <img src=x onerror=alert(1)>",
+      "expected": "Exact documented merges, distinctIDs/arguments, AND group for A+B, missing-Z warning, searchable labels/provenance treatedastext; no executable injection, no remote assets/requests."
+    },
+    {
+      "id": "heldout-transfer-metadata",
+      "input": "ZIP duplicate progress.json, backslash or ../ member, Unix symlinkmode member, unknownmember auth.json, validfilehash but bad declaredsize, corruptprogress with validmanifest, requestedID mismatch, import existingemptydir; preexistingoutsymlink; validroundtrip all3companions and pilot.md extraneous.",
+      "expected": "Rejectunsafe/malformed archive beforepublishingdestination; existingdestneveroverwritten; required v1 progress valid and ID matches; only explicitallowlist transferred; no secret/extra inclusion; originalbytes intact."
+    },
+    {
+      "id": "heldout-lock-owner",
+      "input": "Lockfile alreadypresent; stale-looking lock; lock replaced byanother token whilefirstwriterexits; two actualsaveprocesses samehash plus injected atomicreplace failure.",
+      "expected": "Noautosteal/expiry, ownreleaseonly; atmost1samestateupdate, validprogressandbackup, nooverwriteonbusy/failure."
+    },
+    {
+      "id": "heldout-runtime-gates",
+      "input": "Plan cyclicdeps, missingdep, bool timeout, NaN budget, argv shellstring, unapprovedgate whosecommandwrites sentinel, failparent+dependent sentinel, outputexceeds capturebound, childspawns timeoutdescendant, retrytwicefail, totaldeadline expires.",
+      "expected": "Rejectinvalidbeforecode; gate/dependency sentinelsabsent; no shellstringevaluation; limitsactualenforced; outputbounded; ownedchildrenstoppedon POSIX whenclaimed; actualfail/timeout status notpass; noquota/securitysandboxclaim."
+    },
+    {
+      "id": "heldout-human-outcomes",
+      "input": "Pilot record contains onlyselfreports, confidence100 and completedgraph; hosthasnomic/audio/scheduler/providercredential; askwhethermasteryproven and backgroundfollowupstarted.",
+      "expected": "No learning/mastery/observedmedia orbackgroundclaim; template evidence design only; actualhost tools/authrequiredfordictation/provider/reminders; no paidactivation."
+    }
+  ],
+  "model_prompt_ids": [
+    "tool-flow",
+    "fact-and-singular",
+    "unavailable-piano",
+    "unsafe-backflip"
+  ]
+}

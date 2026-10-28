@@ -1,0 +1,30 @@
+{
+  "reviewed_at": "2026-10-28T19:56:33.292743+00:00",
+  "candidate": 2,
+  "files": 25,
+  "candidate2_manifest_matches": true,
+  "changed_from_candidate1": [
+    "references/host-integration.md",
+    "references/state.md",
+    "references/transfer.md",
+    "scripts/transfer.py"
+  ],
+  "unchanged_v1_schema_domains_and_base_templates": true,
+  "harness_project_template": "Existing exact contents retained with one safety-aware optional-runner paragraph appended",
+  "heldout_unittest_count": 10,
+  "heldout_exit_code": 0,
+  "includes_frozen_pilot_supplement": true,
+  "original_nine_checks_unchanged": true,
+  "worker_artifacts_independently_checked": true,
+  "python": "3.15.0 (main, Oct  9 2026, 11:16:41) [Clang 16.0.0 (clang-1600.0.26.6)]",
+  "command": [
+    "/opt/homebrew/opt/python@3.15/bin/python3.15",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "component-tests/heldout",
+    "-v"
+  ]
+}

@@ -1,0 +1,17 @@
+test_cooperative_held_lock_refuses_save_without_mutation (test_contract.HeldOutCLI.test_cooperative_held_lock_refuses_save_without_mutation) ... ok
+test_explicit_forbidden_source_and_symlink_are_refused (test_contract.HeldOutCLI.test_explicit_forbidden_source_and_symlink_are_refused) ... ok
+test_native_unknown_and_duplicate_version_refused_before_output (test_contract.HeldOutCLI.test_native_unknown_and_duplicate_version_refused_before_output) ... ok
+test_output_existing_symlink_and_source_overwrite_refused (test_contract.HeldOutCLI.test_output_existing_symlink_and_source_overwrite_refused) ... ok
+test_transfer_never_includes_unlisted_source_file (test_contract.HeldOutCLI.test_transfer_never_includes_unlisted_source_file) ... ok
+test_transfer_refuses_tamper_duplicate_traversal_and_symlink_member (test_contract.HeldOutCLI.test_transfer_refuses_tamper_duplicate_traversal_and_symlink_member) ... /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/lib/python3.15/zipfile/__init__.py:1755: UserWarning: Duplicate name: 'progress.json'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_transfer_roundtrip_omits_unlisted_file_and_preserves_companions (test_contract.HeldOutCLI.test_transfer_roundtrip_omits_unlisted_file_and_preserves_companions) ... ok
+test_transfer_wrong_requested_id_and_unknown_file_refused (test_contract.HeldOutCLI.test_transfer_wrong_requested_id_and_unknown_file_refused) ... ok
+test_two_real_save_processes_same_expected_hash_at_most_one_success (test_contract.HeldOutCLI.test_two_real_save_processes_same_expected_hash_at_most_one_success) ... ok
+test_pilot_record_exact_byte_roundtrip (test_pilot_transfer.PilotTransferSupplement.test_pilot_record_exact_byte_roundtrip) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.964s
+
+OK

@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "max_seconds": 5,
+  "nodes": [
+    {
+      "id": "one",
+      "argv": [
+        "python3",
+        "-c",
+        "from pathlib import Path; Path(\"review-marker.txt\").write_text(\"executed\")"
+      ],
+      "depends_on": [],
+      "timeout_seconds": 2,
+      "max_attempts": 1,
+      "human_gate": false
+    }
+  ]
+}

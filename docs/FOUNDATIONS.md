@@ -64,3 +64,8 @@ No material blocker or additional user decision was found. External installation
 ## v0.2.0 harness references
 
 See the [pinned file-level inspection and adoption decisions](../validation/v0.2.0/foundation-report.md). Both new guides and all companion templates are original MIT material; upstream applications and readers are not bundled.
+
+
+## v0.3.0 original local tools
+
+The [targeted source-format inspection](../validation/v0.3.0/foundation-update.md) and [independent source review](../validation/v0.3.0/source-review.json) record the pinned native-v1 data facts and scope. The bundled readers/viewer, local locks, manual transfer and bounded runner are original MIT code; no upstream AGPL reader or prompt is copied. Their contracts and limits are in [the v0.3.0 report](V0.3.0.md).

@@ -1,0 +1,8 @@
+{
+  "tests_run": 70,
+  "returncode": 0,
+  "successful": true,
+  "target": "global installed Teach-me0.3.0",
+  "test_design": "Reconciled macOS group-signal status expectation; no surviving descendant permitted; original failure preserved",
+  "native_process_access": true
+}

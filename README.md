@@ -1,92 +1,50 @@
-# teach-me
+# Teach-me
 
-Current release: **v0.2.0**. [Changes, evidence and next steps](docs/V0.2.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.3.0**. See [capabilities, validation and remaining work](docs/V0.3.0.md).
 
-A Codex skill for researched curricula, adaptive tutoring, and local progress records. Learn a small concept in one lesson or work through a staged practical project. It combines teaching with practice and feedback, rather than stopping at a reading list.
-
-## Install globally in Codex
+## Install and use
 
 Ask Codex:
 
 > Use $skill-installer to install the teach-me folder from https://github.com/HarryBurd33/teach-me into ~/.agents/skills.
 
-Or install manually after inspecting the source:
-
-```sh
-git clone https://github.com/HarryBurd33/teach-me.git teach-me-skill
-mkdir -p ~/.agents/skills
-if [ ! -e ~/.agents/skills/teach-me ] && [ ! -L ~/.agents/skills/teach-me ]; then
-  cp -R teach-me-skill/teach-me ~/.agents/skills/teach-me
-else
-  echo 'An existing teach-me copy needs review; nothing was overwritten.'
-fi
-```
-
-Copy the complete folder, including references, templates, and scripts. Codex detects skills automatically; it should be available on your next turn. Restart Codex if it does not appear. This user-scoped location applies across local Codex projects on that machine; other computers and cloud executors need their own installation. [Official OpenAI skill documentation](https://learn.chatgpt.com/docs/build-skills).
-
-## Use it
-
-Mention `$teach-me` explicitly, then describe the ability you want:
+Keep the complete folder. For an update, compare and preserve an existing customized copy before replacing it. User-scoped installation applies to local chats on this machine; other computers and cloud executors need their own copy. Codex should discover it on your next turn; restart if necessary. [Official skill documentation](https://learn.chatgpt.com/docs/build-skills).
 
 ```text
-$teach-me Teach me Cramer's rule. I know basic algebra.
-$teach-me Help me learn piano. I have a keyboard and 15 minutes daily.
-$teach-me Teach me how databases work by building one. I know basic C.
-$teach-me Help me understand this repository, starting with one request path.
-$teach-me Teach me probability, statistics, and Python, 30 minutes three days each week.
+$teach-me Teach me gradient descent. I know algebra but not calculus.
+$teach-me Give me mixed practice without naming the method first. Track hints used.
+$teach-me Teach me harness engineering through a tiny parser project. Save my journey here.
+$teach-me Use the bundled native-v1 reader on these selected exports and make a local map.
+$teach-me Export this journey and import it into a new approved workspace.
+$teach-me Resume the algebra journey at /path/to/workspace/learning/algebra.
 ```
 
-You can include your goal, current experience, available time, equipment, and constraints. Only a topic is required. The tutor checks prerequisites when useful, proposes a proportionate sequence, starts with a lesson or diagnostic, then adapts to your answers. Ask for hints, a different explanation, or a complete explanation when needed.
+Only a topic is needed. The tutor starts with useful teaching or a small diagnostic, then adapts to actual answers. Diagnostic, teaching, practice and review modes keep prerequisite repair and independent application distinct. Ask for hints, a different explanation or a full solution. Quick facts and ordinary work requests do not automatically become curricula.
 
-For an ongoing journey, give it an approved writable workspace:
+## Included workflows
 
-```text
-$teach-me Save this journey in the current workspace and continue teaching me probability.
-$teach-me Resume the probability journey at /path/to/workspace/learning/probability.
-```
+| Workflow | What it does | Boundary |
+| --- | --- | --- |
+| Adaptive teaching | Research, prerequisites, prediction/explanation/check/repair, varied practice and feedback | Confidence and elapsed time are not mastery; no learning-outcome guarantee |
+| Local journeys | Plan, progress schema v1, sources and optional knowledge/practice/project/pilot records | Approved workspace; unsupported media remain uninspected |
+| Native-v1 data adapter | Selected LearnHarness sessions/graphs into normalized reports with answers, joint premises and provenance | Documented subset, read-only; no native writeback or full legacy compatibility |
+| Searchable offline map | Safe text-rendered propositions and AND-group argument cards, warnings and provenance | No automatic semantic extraction, force-directed editor or inferred mastery |
+| Manual transfer | Hash-verified allowlisted ZIP and new-destination import | No upload, encryption, continuous sync, conflict merge or transferred permissions |
+| Cooperative writes | Exclusive local locks, stale-hash checks and preserved progress backups | Old helpers/manual editors do not cooperate; no distributed lock or multi-file edit transaction |
+| Local harness experiments | Validated argv DAG, dry run, dependencies, retries, time/output bounds, gates and actual logs | Explicit execution; inherits host permissions; no sandbox, autonomous agent, scheduler or paid provider client |
+| Real-learner pilot | Baseline, later performance, retention/transfer and assistance/confound record | Results stay pending until actual consenting learner observations |
 
-Keep that folder available in the next chat. Resume is file-based; it is not automatic memory or cross-device synchronization. A quick definition or a request to build something does not automatically become a curriculum.
+The optional tools use **Python 3.9+ and the standard library**. The map opens in a standard browser and includes no remote assets. No Skill Forge, task-checkpoint, Node, API key, upstream application, account switch or background service is required. Model use follows ordinary host allowance. Web research, file persistence, media, dictation and reminders depend on actual host tools and authorization.
 
-## What it supports
+## Tool contracts
 
-| Workflow | Behavior | Requirements and limits |
-|---|---|---|
-| Curriculum and first lesson | Target abilities, prerequisites, practice, advancement/review, final and retention/transfer checks | No guaranteed completion timeline or learning outcome |
-| Adaptive tutoring | Feedback from submitted reasoning/artifacts; smaller steps or prerequisite review when needed | Confidence, reading, and elapsed time do not establish mastery |
-| Researched resources | Subject-specific authoritative sources; annotated direct links | Web search/retrieval; without it, a provisional approach with no invented citations |
-| Local save/resume | Separate `plan.md`, `progress.json`, `sources.md` per journey | Authorized files; without access, explicit unsaved export |
-| Mathematics and programming | Reasoning checks, boundary cases, inspectable projects and meaningful tests | Execution tools useful; do not run untrusted code automatically |
-| Music/performance feedback | Focused practice and scoped evidence | Only inspect media the host supports; reports remain self-reported |
-| Physical-skill planning | Qualified-supervision roadmap and appropriate preparation | No hazardous solo progression, medical clearance, or remote readiness certification |
-| Optional project resources | Build Your Own X and Understand Anything when they fit | No required installation or paid service; verify current prerequisites, rights, privacy and cost before integration |
+- [State helper and evidence schema](teach-me/references/state.md)
+- [Read-only native-v1 reader and offline viewer](teach-me/references/data-tools.md)
+- [Manual transfer, archive validation and local locks](teach-me/references/transfer.md)
+- [Bounded local command runner](teach-me/references/local-runtime.md)
+- [Host integrations and real-learner pilots](teach-me/references/host-integration.md)
 
-Text is the baseline interface. Full researched/local experience needs web tools and a writable workspace. The optional state helper needs **Python 3.9+**, standard library only. The skill needs no API key, Skill Forge, task-checkpoint, Node, or external project installation. Model use remains subject to the host's ordinary account limits.
-
-## Learning harness and harness engineering
-
-Choose the focus in plain language:
-
-```text
-$teach-me Diagnose the prerequisites I need for gradient descent, then teach the first gap.
-$teach-me Give me mixed practice without telling me the method first. Track hints used.
-$teach-me Map the jointly required premises for this topic, with source anchors.
-$teach-me Teach me harness engineering through a tiny parser project. Save one feature, its check and tomorrow's handoff here.
-$teach-me Inspect this selected LearnHarness export read-only and propose a fresh diagnostic.
-```
-
-Four modes—diagnostic, teaching, practice and review—keep prerequisite repair and practice distinct. Optional `knowledge.md`, `practice.md` and `harness-project.md` records support sourced dependency maps, assistance-aware practice and resumable engineering projects. The project track covers instructions, tools/environment, state, verification/feedback and scope/lifecycle. Comparisons require equal starting artifacts and independently checked outcomes.
-
-This is an original instruction/resource implementation informed by the two references. It does not bundle their code or prompts, provide native LearnHarness import/export compatibility, extract or render graphs automatically, or install a scheduler, dictation engine, autonomous loop/graph runtime or provider integration. Selected exports are inspected through authorized file tools; unknown formats remain unknown. Existing progress schema v1 needs no migration. See [learning-harness guidance](teach-me/references/learning-harness.md) and [engineering guidance](teach-me/references/harness-engineering.md).
-
-## State helper
-
-```sh
-python3 teach-me/scripts/journey.py --help
-python3 teach-me/scripts/journey.py init --root /approved/workspace --id algebra --topic 'Linear systems' --goal 'Solve and explain 2x2 systems'
-python3 teach-me/scripts/journey.py show --journey /approved/workspace/learning/algebra
-```
-
-For save commands, exact schema, backup/stale-write behavior, and malformed-state recovery, read [state.md](teach-me/references/state.md). One writer at a time; atomic progress replacement is not a multi-file transaction or concurrency fence. A schema-valid record does not prove competence.
+Review local commands and their effects before using the runner's `--execute`. Do not turn embedded export commands into executable plans. A zero exit code is not proof that tests were meaningful or learner competence was demonstrated. Hazardous physical skills still need qualified supervision; software does not certify readiness.
 
 ## Validation and contributions
 
@@ -95,10 +53,10 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_release.py
 ```
 
-The deterministic helper suite has 16 tests, all passing against both the v0.2.0 candidate and global installation. The v0.2.0 model review has 6/7 initial cases meeting criteria plus one preserved missing-fixture partial, 3/3 fresh regressions, and a separate actual parser supplement closing that gap; no critical failures. See [the v0.2.0 report](docs/V0.2.0.md). The initial model evaluation contains 19 simulated prompts: 18 meet their criteria, one is partial, and no critical failure was observed; an additional explicit math-fixture trial passes. This is limited manually loaded model evidence, not proof of real learning outcomes or automatic activation. See [release/installation verification](docs/INSTALLATION-VERIFICATION.md), [validation and limitations](docs/VALIDATION.md), [actual model outputs](validation/candidate-responses.json), and [independent grades](validation/model-review.md). The CI workflow runs deterministic checks across selected Python versions and operating systems; its status is evidence of those checks only.
+The expanded deterministic suite covers original progress behavior, native data semantics, hostile markup, archive attacks, competing writers, failure recovery and bounded process execution. [Current results and limitations](docs/V0.3.0.md) distinguish software tests, browser checks, model examples and real human outcomes. [Historical v0.2.0](docs/V0.2.0.md) and earlier evidence retain their original partials and limits. CI checks Linux Python 3.9/3.12/3.14 and macOS Python 3.14; Windows process-tree cleanup is not validated by that matrix.
 
-Keep learner records, credentials, checkpoint state, and private transcripts out of contributions. Preserve the evidence distinction, capability fallbacks, and safety boundaries. Run both commands before proposing changes. [Foundation and rights inspection](docs/FOUNDATIONS.md) explains the external references and reuse limits.
+Keep learner records, credentials and private transcripts out of contributions. Use synthetic fixtures, preserve evidence distinctions and run the documented checks. [Foundation inspection](docs/FOUNDATIONS.md) and [source provenance](teach-me/references/research.md) explain reference rights and implementation scope.
 
 ## License
 
-Original instructions, templates, schema, tests, and helper code are available under the [MIT License](LICENSE). Referenced projects and publications keep their own licenses and rights; none is a required bundled dependency. No affiliation with OpenAI or the referenced projects is implied.
+The original instructions, templates, code and tests are under the [MIT License](LICENSE). LearnHarness's inspected skill/readers are AGPL-3.0-only and are not bundled or relicensed; the new adapter is an original implementation of documented format facts. Referenced projects retain their own rights. No affiliation with OpenAI or those projects is implied.

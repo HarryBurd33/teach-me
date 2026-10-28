@@ -1,0 +1,8 @@
+{
+  "candidate": 2,
+  "tests_run": 70,
+  "returncode": 0,
+  "successful": true,
+  "source": "Actual public-ready combined suite including ported unchanged adversarial assertions and pilot supplement",
+  "native_process_access": true
+}

@@ -1,0 +1,36 @@
+{
+  "method": "skills/list",
+  "forceReload": true,
+  "native_discovery": "pass",
+  "results": [
+    {
+      "cwd": "/private/tmp",
+      "matches": [
+        {
+          "name": "teach-me",
+          "description": "Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.",
+          "path": "USER_HOME/.agents/skills/teach-me/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null
+        }
+      ],
+      "matching_errors": []
+    },
+    {
+      "cwd": "BUILD_WORKSPACE",
+      "matches": [
+        {
+          "name": "teach-me",
+          "description": "Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.",
+          "path": "USER_HOME/.agents/skills/teach-me/SKILL.md",
+          "scope": "user",
+          "enabled": true,
+          "pluginId": null
+        }
+      ],
+      "matching_errors": []
+    }
+  ],
+  "model_turns_started": 0
+}

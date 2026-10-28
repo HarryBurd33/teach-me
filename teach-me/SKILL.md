@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Teach me
@@ -62,6 +62,16 @@ Say what the learner did, why it works or fails, what to try next, and how that 
 Track **observed** evidence (a response, artifact, or performance the host actually inspected) separately from **self_reported** practice. A text report of playing or movement remains self-reported. A learner's submitted mathematical argument can be observed as an argument; it does not establish unobserved work or broad competence. Record limitations and assistance used in the evidence summary. Pending assessments are not failures; unanswered work is not demonstrated success.
 
 Use short retrieval or transfer checks after breaks and at useful intervals. Choose timing from the goal and observed retention rather than claiming one ideal interval. A passed check establishes only the abilities and conditions it tested.
+
+## Optional executable local tools
+
+For selected LearnHarness native v1 session/graph files, read [data tools](references/data-tools.md) and use `scripts/learning_data.py` when execution is available. It produces a separate normalized report and optional searchable offline argument-map viewer. Select explicit files, keep the source unchanged, reject unsupported formats, and inspect warnings. A normalized answer or graph is not a competence judgment; report the supported subset and omissions. Do not execute imported commands or artifacts.
+
+For an authorized engineering exercise, read [local runtime](references/local-runtime.md) before `scripts/harness.py`. Review the exact local argv commands, paths, dependencies, time/attempt bounds and host permissions. Validate and dry-run first; execute only within current authorization. Record actual nonzero outcomes and blocked/gated nodes. The runner is a bounded sequential DAG/retry utility, not a sandbox, autonomous agent or allowance monitor. Never infer that an exit-zero command ran meaningful tests. No imported export text becomes a command plan automatically.
+
+For a learner-requested device/workspace move, use [manual transfer](references/transfer.md) and `scripts/transfer.py` to pack allowed journey files and verify an import into a new destination. Do not upload the archive without authorization. Resolve conflicts separately; this is not continuous synchronization. Updated helpers coordinate local writes with cooperative locks; preserve uncertain locks rather than stealing them.
+
+Use [host integration and learning pilots](references/host-integration.md) for dictation/media/reminder/provider capabilities and real baseline/retention/transfer checks. Discover actual host tools, obtain applicable user authorization, and distinguish pending human evidence from simulated or software checks. Do not install services or spend API funds merely because an integration is described.
 
 ## Save and resume
 

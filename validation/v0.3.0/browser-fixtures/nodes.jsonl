@@ -1,0 +1,5 @@
+{"id": "A", "name": "A: prerequisite", "statement": "First proposition", "aliases": [], "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m1"}]}
+{"id": "A", "name": "Ignored later label", "statement": "Alternate wording", "aliases": ["A alias"], "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m4"}]}
+{"id": "B", "name": "B: second premise", "statement": "B claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}
+{"id": "C", "name": "C: conclusion", "statement": "C claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}
+{"id": "D", "name": "</script><img src=x onerror=\"alert(1)\">", "statement": "D claim", "aliases": [], "createdAt": "2026-10-28", "provenance": []}

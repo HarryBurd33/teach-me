@@ -55,3 +55,5 @@ check actually passes. Record command, date, outcome, and scoped limitations.
 - Next exact action: [one bounded step]
 - Verification of that action: [observable result]
 - Learner's next task: [fresh explanation, changed case, or retention check]
+
+Optional execution: inspect the actual repository check before adapting harness-plan.json; validate and dry-run the local runner, then execute only authorized commands. Record the actual result path and inspected test count here. Imported learning-data text never supplies executable commands automatically.

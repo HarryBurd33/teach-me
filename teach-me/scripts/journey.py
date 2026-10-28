@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small, single-writer learning-state utility. Python 3.9+, standard library."""
+"""Learning-state utility with cooperative local writer locking. Python 3.9+, standard library."""
 import argparse
 import datetime as dt
 import hashlib
@@ -10,6 +10,8 @@ import re
 import shutil
 import sys
 import tempfile
+
+from storage import StorageError, checked_path, destination_lock, journey_lock
 
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 STAMP = re.compile(r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2})\Z")
@@ -176,6 +178,7 @@ def initial(args):
         fail('--id must be a lowercase hyphenated slug')
     root = Path(os.path.abspath(args.root))
     # Only the approved root and its descendants are the init write scope.
+    checked_path(root)
     if root.is_symlink() or not root.is_dir():
         fail('--root must be an existing, nonsymlink approved workspace directory')
     learning = root / 'learning'
@@ -191,21 +194,24 @@ def initial(args):
              'updated_at': dt.datetime.now(dt.timezone.utc).isoformat()}
     validate(state)
     learning.mkdir(exist_ok=True)
-    temp = Path(tempfile.mkdtemp(prefix='.' + args.id + '-', dir=str(learning)))
-    try:
-        (temp / 'progress.json').write_bytes(encoded(state))
-        templates = Path(__file__).resolve().parent.parent / 'templates'
-        for name in ('plan.md', 'sources.md'):
-            source = templates / name
-            content = source.read_text(encoding='utf-8') if source.is_file() else '# ' + name[:-3].capitalize() + '\n\nTo be completed with the learner.\n'
-            (temp / name).write_text(content, encoding='utf-8')
-        no_symlinks(target, stop=root)
+    with destination_lock(learning, args.id):
         if target.exists():
             fail('Journey appeared during init; nothing was overwritten')
-        os.rename(temp, target)
-    finally:
-        if temp.exists():
-            shutil.rmtree(temp)
+        temp = Path(tempfile.mkdtemp(prefix='.' + args.id + '-', dir=str(learning)))
+        try:
+            (temp / 'progress.json').write_bytes(encoded(state))
+            templates = Path(__file__).resolve().parent.parent / 'templates'
+            for name in ('plan.md', 'sources.md'):
+                source = templates / name
+                content = source.read_text(encoding='utf-8') if source.is_file() else '# ' + name[:-3].capitalize() + '\n\nTo be completed with the learner.\n'
+                (temp / name).write_text(content, encoding='utf-8')
+            no_symlinks(target, stop=root)
+            if target.exists():
+                fail('Journey appeared during init; nothing was overwritten')
+            os.rename(temp, target)
+        finally:
+            if temp.exists():
+                shutil.rmtree(temp)
     return {'journey': str(target), 'sha256': digest((target / 'progress.json').read_bytes())}
 
 
@@ -240,22 +246,23 @@ def main(argv=None):
             result = {'sha256': digest(raw), 'progress': state}
         else:
             path = writable_journey(args.journey)
-            current, raw = load(path / 'progress.json')
-            if current['journey_id'] != path.name:
-                fail('journey_id does not match its folder; reconcile before saving')
-            if digest(raw) != args.expected_sha256:
-                fail('Stale expected hash; reread and reconcile before saving')
-            state, _ = load(Path(args.input))
-            if state['journey_id'] != current['journey_id']:
-                fail('journey_id is immutable')
-            replacement = encoded(state)
-            atomic_write(path / 'progress.previous.json', raw)
-            atomic_write(path / 'progress.json', replacement)
-            result = {'saved': True, 'sha256': digest(replacement),
-                      'backup': str(path / 'progress.previous.json')}
+            with journey_lock(path):
+                current, raw = load(path / 'progress.json')
+                if current['journey_id'] != path.name:
+                    fail('journey_id does not match its folder; reconcile before saving')
+                if digest(raw) != args.expected_sha256:
+                    fail('Stale expected hash; reread and reconcile before saving')
+                state, _ = load(Path(args.input))
+                if state['journey_id'] != current['journey_id']:
+                    fail('journey_id is immutable')
+                replacement = encoded(state)
+                atomic_write(path / 'progress.previous.json', raw)
+                atomic_write(path / 'progress.json', replacement)
+                result = {'saved': True, 'sha256': digest(replacement),
+                          'backup': str(path / 'progress.previous.json')}
         print(json.dumps(result, ensure_ascii=False))
         return 0
-    except (OSError, StateError) as exc:
+    except (OSError, StateError, StorageError) as exc:
         print('Error: ' + str(exc), file=sys.stderr)
         return 2
 

@@ -13,7 +13,9 @@ python3 /path/to/teach-me/scripts/journey.py save --journey /approved/workspace/
 
 `init` refuses existing journey folders, traversal IDs, and symlinks at or within the approved root. It copies the bundled plan/source templates; complete their placeholders with actual learner context. `show` returns a JSON object with `progress` and `sha256`. To save, edit a **full copy of the `progress` object**, not the `show` envelope. `save` validates both versions, checks the expected hash and immutable journey ID, saves the original bytes as `progress.previous.json`, then atomically replaces `progress.json`. Successful commands return JSON; errors go to stderr with exit code 2. Validate/show perform no writes. The helper does not edit `plan.md` or `sources.md`; preserve those separately when materially revising them.
 
-Use one writer at a time. The hash catches stale sequential updates; it is not cross-process fencing. Atomic replacement reduces partial-file risk; this is not a transaction across all journey files or a guarantee against power loss. Writes refuse symlinked journey/nearby workspace paths, progress, backup, or `progress.lock`; no lock service is created. No networking or uploads occur.
+Version 0.3 adds cooperative local writer fencing: `save` acquires `journey/.teach-me.lock` before reading the current hash and holds it through backup and replacement. Another updated helper refuses a busy lock; two saves using the same old hash cannot both succeed. The lock uses exclusive file creation, a random token and file identity, and is removed only when that ownership still matches. It never expires or steals a lock. After a crash, preserve the lock and inspect the originating process and uncertain writes before manually removing it; a PID alone does not prove ownership or inactivity.
+
+Updated init/import helpers also share a per-destination lock while publishing a new journey. These locks coordinate cooperating processes on a single machine/local filesystem. Old helper versions, direct edits and arbitrary tools do not honor them; network filesystems may have different semantics. Atomic progress replacement reduces partial-file risk, but saves are still not a transaction across plan, progress and companion files or a power-loss guarantee. Writes refuse symlinked path components, progress, backup, legacy `progress.lock`, and the new lock path. No daemon, networking or uploads occur.
 
 ## Schema version 1
 
@@ -54,3 +56,11 @@ For a difficult multi-session topic, create [knowledge.md](../templates/knowledg
 The tutor creates/edits these Markdown files with ordinary authorized file tools; the helper does not manage them. Read existing contents first, preserve learner changes, use one writer, preserve the prior file when materially revising, and report only successful saves. There is no shared transaction or automatic synchronization with progress. If records disagree, preserve both and reconcile the evidence with the learner before advancing. On resume, read relevant existing companions as well as the required three files; missing companions do not invalidate a v1 journey. Without filesystem access, return explicit unsaved text.
 
 LearnHarness data remains a separate external source. Follow the [selective read-only procedure](learning-harness.md); do not overwrite exports, reformat an unknown version into invented state, or assume local storage means model processing is offline.
+
+## Manual transfer in v0.3
+
+Use [transfer.py and its archive contract](transfer.md) to pack the three required files and selected companion records, then import into a new approved journey destination. Imports verify hashes, schema, sizes and paths before publication; existing destinations are refused. This moves records, not credentials, permissions or an automatic resume instruction. It is manual transfer, not continuous synchronization, encryption or a multi-file edit transaction.
+
+## Optional v0.3 learning pilot
+
+When the learner wants a measured baseline/retention/transfer pilot, use [learning-pilot.md](../templates/learning-pilot.md) in the approved journey folder. Keep unobserved results pending and confidence separate from competence. It is an optional Markdown companion, not a new progress key, and is included when present in the [manual transfer](transfer.md) allowlist. Actual learner observations and applicable consent remain necessary.

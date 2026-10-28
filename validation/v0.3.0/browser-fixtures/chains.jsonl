@@ -1,0 +1,4 @@
+{"id": "joint", "premises": ["A", "B"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m1"}]}
+{"id": "joint-repeat", "premises": ["B", "A"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": [{"chatId": "chat_demo", "messageId": "m4"}]}
+{"id": "other", "premises": ["D"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": []}
+{"id": "gap", "premises": ["X"], "conclusion": "C", "createdAt": "2026-10-28", "provenance": []}

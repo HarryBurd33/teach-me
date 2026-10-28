@@ -1,0 +1,59 @@
+{
+  "reviewed_at": "2026-10-28T20:00:52.860918+00:00",
+  "target": "installed global Teach-me v0.3.0 harness.py",
+  "script_sha256": "a8ffdb6f768da67689fdf9237b42b059e2eb80e9a8bf811518bf1d7bcc90cb9a",
+  "test_file_sha256": "2b3d5921a083db4a137c038e6430ecbec02408d9c807829bb9191bc13fdcff5f",
+  "method": "Independent reviewer audited test-only reconciliation then ran exact named corrected test three bounded times because original installed suite exposed a native macOS permission race. Native process access was requested through normal host review; no hook/permission configuration was changed.",
+  "assertion_review": "Both permitted return paths still unconditionally wait0.65seconds and reject any delayed descendant marker. Nonzero path additionally requires cleanup_failed, directexit0 and exact uncertain node. No code change or original failure suppression.",
+  "observations": [
+    {
+      "run_status": "failed",
+      "attempt_status": "cleanup_failed",
+      "direct_exit_code": 0,
+      "uncertain_cleanup_nodes": [
+        "check"
+      ],
+      "descendant_marker_after_grace": false
+    },
+    {
+      "run_status": "failed",
+      "attempt_status": "cleanup_failed",
+      "direct_exit_code": 0,
+      "uncertain_cleanup_nodes": [
+        "check"
+      ],
+      "descendant_marker_after_grace": false
+    },
+    {
+      "run_status": "passed",
+      "attempt_status": "passed",
+      "direct_exit_code": 0,
+      "uncertain_cleanup_nodes": [],
+      "descendant_marker_after_grace": false
+    }
+  ],
+  "results": [
+    {
+      "repeat": 1,
+      "tests_run": 1,
+      "successful": true,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "repeat": 2,
+      "tests_run": 1,
+      "successful": true,
+      "failures": [],
+      "errors": []
+    },
+    {
+      "repeat": 3,
+      "tests_run": 1,
+      "successful": true,
+      "failures": [],
+      "errors": []
+    }
+  ],
+  "accepted": true
+}
