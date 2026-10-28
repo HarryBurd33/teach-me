@@ -1,0 +1,63 @@
+{
+  "component": "graph-workbench",
+  "tests": 15,
+  "unittest_result": "pass",
+  "observed_at": "2026-10-28T22:14:58.994314+00:00",
+  "final_candidate_hashes": {
+    "scripts/graph_workbench.py": "acca75ec5bcecaf7ef11966bbb873b8ffcf4893918734e6f77b949fac2c17527",
+    "references/graph-workbench.md": "b7217297f7c41b17b644233bd46e656c064b39e2360bb61f28340c50e68b878d",
+    "templates/graph-proposal.json": "81623f5e13ae7c39cb74cb57baed8a1dafe8ce0b4db6c4d6d49a677ed8100644"
+  },
+  "actual_example_actions": [
+    {
+      "argv": [
+        "graph_workbench.py",
+        "check",
+        "--source",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/fixtures/source.txt",
+        "--proposal",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/fixtures/proposal.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"version\": 1, \"source_spans_valid\": true, \"proposal_sha256\": \"a4020c276076c2ea3a06270aad1aebba96bad1b2a9c7b0e773e13109a305c855\", \"source_sha256\": \"d9baacb24cac35b75cc01732c68224d6873337596c0f4978b8e2ebff80abe534\", \"nodes\": 3, \"chains\": 1, \"unresolved_endpoint_ids\": [], \"ready_without_base\": true, \"semantic_correctness_verified\": false, \"notice\": \"Source-grounded draft/edit: exact spans and structure were checked, not semantic truth, valid inference, human endorsement or learner mastery.\"}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "graph_workbench.py",
+        "apply",
+        "--source",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/fixtures/source.txt",
+        "--proposal",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/fixtures/proposal.json",
+        "--expected-proposal-sha256",
+        "a4020c276076c2ea3a06270aad1aebba96bad1b2a9c7b0e773e13109a305c855",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/example-graph.json",
+        "--approve"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/example-graph.json\", \"sha256\": \"4c75e837faf91bd66fd6ef0629def632476e75d0e45a741d6891b253d2f6ec86\", \"source_files\": 2, \"operation\": \"apply\", \"operator_review_acknowledged\": true, \"semantic_correctness_verified\": false, \"nodes\": 3, \"chains\": 1}\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "learning_data.py",
+        "view",
+        "--input",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/example-graph.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/example-map.html"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/component-tests/graph/example-map.html\", \"sha256\": \"fe6bee967d0c5b7406133ee4c3516aa66a032c2efc80376894d9438a23eee0ff\", \"source_files\": 1}\n",
+      "stderr": ""
+    }
+  ],
+  "limits": [
+    "Exact spans and structure only; semantic truth/inference not proved",
+    "Explicit operator acknowledgement is not human consent/authentication",
+    "No model/provider client, upstream writeback, full legacy support or semantic search",
+    "Base graph must have empty sessions and unambiguous IDs; final endpoints must resolve"
+  ]
+}

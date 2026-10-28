@@ -1,6 +1,6 @@
 # Teach-me
 
-A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.3.0**. See [capabilities, validation and remaining work](docs/V0.3.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.4.0**. See [capabilities, validation and remaining work](docs/V0.4.0.md).
 
 ## Install and use
 
@@ -16,6 +16,8 @@ $teach-me Give me mixed practice without naming the method first. Track hints us
 $teach-me Teach me harness engineering through a tiny parser project. Save my journey here.
 $teach-me Use the bundled native-v1 reader on these selected exports and make a local map.
 $teach-me Export this journey and import it into a new approved workspace.
+$teach-me Draft a source-grounded map from this text, check its quotes and edit a new graph.
+$teach-me Snapshot this journey and compare its diverged copies before merging.
 $teach-me Resume the algebra journey at /path/to/workspace/learning/algebra.
 ```
 
@@ -29,6 +31,8 @@ Only a topic is needed. The tutor starts with useful teaching or a small diagnos
 | Local journeys | Plan, progress schema v1, sources and optional knowledge/practice/project/pilot records | Approved workspace; unsupported media remain uninspected |
 | Native-v1 data adapter | Selected LearnHarness sessions/graphs into normalized reports with answers, joint premises and provenance | Documented subset, read-only; no native writeback or full legacy compatibility |
 | Searchable offline map | Safe text-rendered propositions and AND-group argument cards, warnings and provenance | No automatic semantic extraction, force-directed editor or inferred mastery |
+| Source-grounded drafts and edits | Exact quote/Unicode span checks, digest-bound proposal application and explicit new graph edits | Quotes do not prove inference, truth or mastery; operator acknowledgment is not human endorsement |
+| Journey snapshots and manual merge | Immutable revisions, atomic HEAD, explicit fresh restore and three-way file comparison/resolution | Fixed archive allowlist; no live-file transaction, automatic sync or cross-file semantic validation |
 | Manual transfer | Hash-verified allowlisted ZIP and new-destination import | No upload, encryption, continuous sync, conflict merge or transferred permissions |
 | Cooperative writes | Exclusive local locks, stale-hash checks and preserved progress backups | Old helpers/manual editors do not cooperate; no distributed lock or multi-file edit transaction |
 | Local harness experiments | Validated argv DAG, dry run, dependencies, retries, time/output bounds, gates and actual logs | Explicit execution; inherits host permissions; no sandbox, autonomous agent, scheduler or paid provider client |
@@ -41,6 +45,8 @@ The optional tools use **Python 3.9+ and the standard library**. The map opens i
 - [State helper and evidence schema](teach-me/references/state.md)
 - [Read-only native-v1 reader and offline viewer](teach-me/references/data-tools.md)
 - [Manual transfer, archive validation and local locks](teach-me/references/transfer.md)
+- [Source-grounded graph workbench](teach-me/references/graph-workbench.md)
+- [Journey snapshots and three-way merge](teach-me/references/journey-versions.md)
 - [Bounded local command runner](teach-me/references/local-runtime.md)
 - [Host integrations and real-learner pilots](teach-me/references/host-integration.md)
 
@@ -53,7 +59,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_release.py
 ```
 
-The expanded deterministic suite covers original progress behavior, native data semantics, hostile markup, archive attacks, competing writers, failure recovery and bounded process execution. [Current results and limitations](docs/V0.3.0.md) distinguish software tests, browser checks, model examples and real human outcomes. [Historical v0.2.0](docs/V0.2.0.md) and earlier evidence retain their original partials and limits. CI checks Linux Python 3.9/3.12/3.14 and macOS Python 3.14; Windows process-tree cleanup is not validated by that matrix.
+The v0.4.0 deterministic suite adds quote/edit, snapshot/merge and atomic-publication failures to existing regressions. The expanded suite covers original progress behavior, native data semantics, hostile markup, archive attacks, competing writers, failure recovery and bounded process execution. [Current results and limitations](docs/V0.4.0.md) distinguish software tests, browser checks, model examples and real human outcomes. [Historical v0.3.0](docs/V0.3.0.md), [v0.2.0](docs/V0.2.0.md) and earlier evidence retain their original partials and limits. CI checks Linux Python 3.9/3.12/3.14 and macOS Python 3.14; Windows process-tree cleanup is not validated by that matrix.
 
 Keep learner records, credentials and private transcripts out of contributions. Use synthetic fixtures, preserve evidence distinctions and run the documented checks. [Foundation inspection](docs/FOUNDATIONS.md) and [source provenance](teach-me/references/research.md) explain reference rights and implementation scope.
 

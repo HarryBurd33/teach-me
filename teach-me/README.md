@@ -1,8 +1,10 @@
 # teach-me
 
-Version **0.3.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.4.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
+
+The examples below describe independent learners; their equipment and availability do not carry into another request.
 
 - “Teach me Cramer's rule; I know basic algebra.”
 - “Help me learn piano. I have a keyboard and 15 minutes daily.”
@@ -29,12 +31,16 @@ For example: `$teach-me Teach me probability. I know basic algebra and have 20 m
 
 The tutor can switch among diagnostic, teaching, practice and review modes. Optional knowledge, practice and project records sit beside existing progress files. Read [learning-harness guidance](references/learning-harness.md) and [engineering guidance](references/harness-engineering.md).
 
-Version 0.3.0 adds optional original Python 3.9+ standard-library tools:
+The optional tools use original Python 3.9+ standard-library code:
 
 - [Native-v1 data adapter and searchable offline map](references/data-tools.md): selected session/graph files, chronological learner answers, provenance and grouped premises. Supported subset only; source unchanged, no inferred mastery or automatic extraction from prose.
 - [Manual journey transfer and writer locks](references/transfer.md): allowlisted hash-verified archive, fresh-destination import, cooperative local save/init coordination. Existing progress schema v1 stays compatible; the helper now locks its writes.
 - [Bounded local harness runner](references/local-runtime.md): explicit argv plans, dry run, dependencies, retries, time/output limits and human-gated nodes. Commands inherit host access; this is not a sandbox, autonomous agent, scheduler or provider service.
 - [Host integration and real-learner pilot](references/host-integration.md): capability-aware dictation/media/reminder/provider workflow and a pending baseline/retention/transfer record. Real outcomes require actual learner participation.
+
+Version 0.4.0 adds [source-grounded graph proposals and edits](references/graph-workbench.md), [immutable journey snapshots and conflict-aware manual merging](references/journey-versions.md), and atomic JSON/HTML report publication. The tutor drafts a proposal; exact quotes and input hashes are validated, while semantic correctness remains a review judgment. Snapshots activate a stored generation through HEAD, and merges preserve originals and bind conflict choices to a report hash. Even a clean file-level merge needs review for meaning across plan/progress/source records. Snapshots contain the seven-file transfer allowlist; graph/proposal JSON and arbitrary attachments need separate handling. These are optional workflows, not a prerequisite questionnaire for ordinary lessons.
+
+Facts remain scoped to the current learner/journey. Equipment, software or time in an example is not supplied information about another learner. Unknown resources stay unknown unless a reasonable assumption is explicitly labeled.
 
 No continuous sync, distributed lock, automatic stale-lock recovery, multi-file edit transaction, native upstream writeback, bundled speech engine or guaranteed learning gain is supplied. Inspect the linked contracts before using a tool; model judgments and saved confidence never certify competence.
 

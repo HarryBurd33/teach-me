@@ -1,0 +1,20 @@
+{
+  "method": "Same synthetic source and injected half-write interruption in separate Python processes; source wrappers identical",
+  "results": [
+    {
+      "arm": "baseline",
+      "final_name_present_at_half_write": true,
+      "final_json_valid": false,
+      "source_unchanged": true,
+      "owned_writer_terminated": true
+    },
+    {
+      "arm": "candidate",
+      "final_name_present_at_half_write": false,
+      "final_json_valid": null,
+      "source_unchanged": true,
+      "owned_writer_terminated": true
+    }
+  ],
+  "benefit": "Candidate never exposes partial final report; baseline did. No general power-loss claim."
+}

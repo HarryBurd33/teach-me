@@ -1,0 +1,7 @@
+{
+  "tests_run": 125,
+  "successful": true,
+  "returncode": 0,
+  "target": "actual global Teach-mev0.4.0",
+  "native_process_access": true
+}

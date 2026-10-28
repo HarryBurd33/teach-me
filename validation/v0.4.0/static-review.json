@@ -1,0 +1,15 @@
+{
+  "reviewed_at": "2026-10-28T23:07:44.767695+00:00",
+  "candidate": 2,
+  "files": 30,
+  "candidate_manifest_sha256": "96f7c5fb3a04e86ee2e04c04ec8b5f133bcdf6fb8090e9ef0fba52abd4887993",
+  "candidate2_only_changed": [
+    "README.md",
+    "references/journey-versions.md"
+  ],
+  "code_identical_to_tested_candidate1": true,
+  "doc_gap_supplement": "Both frozen gaps explicitly clarified in README and journey-versions guide; no allowlist/code/criteria change",
+  "progressv1_domain_license_corehelpers_unchanged": true,
+  "local_links": "Conditional guides/templates inspected; parent release checker provides full repository link check",
+  "blocking_findings": []
+}

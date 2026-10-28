@@ -64,3 +64,7 @@ Use [transfer.py and its archive contract](transfer.md) to pack the three requir
 ## Optional v0.3 learning pilot
 
 When the learner wants a measured baseline/retention/transfer pilot, use [learning-pilot.md](../templates/learning-pilot.md) in the approved journey folder. Keep unobserved results pending and confidence separate from competence. It is an optional Markdown companion, not a new progress key, and is included when present in the [manual transfer](transfer.md) allowlist. Actual learner observations and applicable consent remain necessary.
+
+## Consistent snapshots and manual reconciliation
+
+The [journey versions helper](journey-versions.md) stores immutable verified archives and activates one stored generation through an atomic HEAD pointer. It can compare three archive versions and create a conflict-resolved new archive. This adds consistent snapshots and explicit merge, not simultaneous live-file edits, distributed locks or automatic synchronization. Existing progress schema v1 and read/save commands stay compatible; retain original copies and inspect conflicts before choosing a resolution.

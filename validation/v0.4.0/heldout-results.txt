@@ -1,0 +1,20 @@
+test_foreign_result_created_during_staging_is_preserved (test_atomic_publication.AtomicPublication.test_foreign_result_created_during_staging_is_preserved) ... ok
+test_link_failure_leaves_no_incomplete_output_or_source_change (test_atomic_publication.AtomicPublication.test_link_failure_leaves_no_incomplete_output_or_source_change) ... ok
+test_clean_merge_combines_only_independent_changes (test_v4_contract.V4Contract.test_clean_merge_combines_only_independent_changes) ... ok
+test_delete_vs_edit_optional_file_is_a_conflict_not_silent_loss (test_v4_contract.V4Contract.test_delete_vs_edit_optional_file_is_a_conflict_not_silent_loss) ... ok
+test_explicit_edit_is_new_safe_graph_and_stale_or_dangling_edits_refused (test_v4_contract.V4Contract.test_explicit_edit_is_new_safe_graph_and_stale_or_dangling_edits_refused) ... ok
+test_graph_duplicate_ids_unknown_deletes_and_existing_output_preserved (test_v4_contract.V4Contract.test_graph_duplicate_ids_unknown_deletes_and_existing_output_preserved) ... ok
+test_progress_conflict_requires_exact_digest_bound_choices (test_v4_contract.V4Contract.test_progress_conflict_requires_exact_digest_bound_choices) ... ok
+test_snapshot_stale_head_tamper_and_fresh_restore (test_v4_contract.V4Contract.test_snapshot_stale_head_tamper_and_fresh_restore) ... ok
+test_stale_proposal_hash_and_changed_source_refused (test_v4_contract.V4Contract.test_stale_proposal_hash_and_changed_source_refused) ... ok
+test_unicode_zero_span_grouped_premises_and_source_preservation (test_v4_contract.V4Contract.test_unicode_zero_span_grouped_premises_and_source_preservation) ... ok
+test_wrong_quote_version_and_boolean_span_are_refused (test_v4_contract.V4Contract.test_wrong_quote_version_and_boolean_span_are_refused) ... ok
+test_activation_failure_preserves_old_head_and_restore (test_v4_failure_paths.FailurePaths.test_activation_failure_preserves_old_head_and_restore) ... ok
+test_killed_report_writer_never_publishes_incomplete_final (test_v4_failure_paths.FailurePaths.test_killed_report_writer_never_publishes_incomplete_final) ... ok
+test_newer_orphan_archive_does_not_replace_committed_head (test_v4_failure_paths.FailurePaths.test_newer_orphan_archive_does_not_replace_committed_head) ... ok
+test_two_snapshot_writers_same_changed_head_one_transition (test_v4_failure_paths.FailurePaths.test_two_snapshot_writers_same_changed_head_one_transition) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 3.953s
+
+OK

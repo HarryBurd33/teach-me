@@ -1,0 +1,12 @@
+{
+  "reviewed_at": "2026-10-28T23:03:32.912048+00:00",
+  "tests": 15,
+  "returncode": 0,
+  "success": true,
+  "method": "Actual frozen independent CLI/fault/process checks; no candidate changes",
+  "limits": [
+    "Fault injections are labeled synthetic, not actual powerloss guarantees",
+    "SIGKILL fixture only proves prelink final output absent",
+    "Concurrency tests coordinate local cooperative utilities, not distributed/hostileFS actors"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "reviewed_at": "2026-10-28T23:01:29.341340+00:00",
+  "phase": "Independent graph/atomic firstpass; versions not yet inspected",
+  "files": {
+    "scripts/graph_workbench.py": "acca75ec5bcecaf7ef11966bbb873b8ffcf4893918734e6f77b949fac2c17527",
+    "references/graph-workbench.md": "b7217297f7c41b17b644233bd46e656c064b39e2360bb61f28340c50e68b878d",
+    "scripts/learning_data.py": "2ad3c5e9340f4c04bc45b613811d235eef27a05c776745bd8d5c0dbd6b6fb245",
+    "SKILL.md": "6c455f18778f9c78d263fc1e85e357d480750c1d3a1468ef61399476aa01a844"
+  },
+  "executed": {
+    "frozen_graph_cli_checks_passed": 5,
+    "atomic_fault_checks_passed": 2,
+    "actual_SIGKILL_before_publication_passed": 1
+  },
+  "baseline_comparison": "Same foreign-result fsync fault removes foreign result in v0.3.0; candidate test proves it remains. Synthetic injected fault, not arbitrary powerloss guarantee.",
+  "blocking_findings": [],
+  "notes": [
+    "Graphsourceproposal checks exactquotes/hash/structure but does not certify semantics or mastery",
+    "Operatorapproveflag not humanconsent/authentication",
+    "Atomicreportpublishescompletebytes/create-new; hardkillmayretainownedstage",
+    "Model baseline fact cases met boundaries in this context; no causal tutoring superiority inferred"
+  ]
+}

@@ -1,3 +1,7 @@
+# Current v0.4.0 installation
+
+All 30 global files match the accepted candidate. The installed 125-test suite and native enabled user-scope discovery from two directories passed on 2026-10-28. See [current release evidence](V0.4.0.md) and [hash record](../validation/v0.4.0/installation.json). Earlier records below remain historical.
+
 # Current v0.3.0 installation
 
 All 25 global files match the accepted candidate; native enabled user-scope discovery and final 70 tests passed on 2026-10-28. See [release evidence](V0.3.0.md) and [hash record](../validation/v0.3.0/installation.json). The initial macOS cleanup-test failure and independently reviewed test-only reconciliation are preserved there. Earlier records below remain historical.

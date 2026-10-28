@@ -45,3 +45,7 @@ These source observations establish the inspected workflows, not teaching effect
 ## v0.3.0 implementation scope
 
 The native-format reference above was re-inspected at the same pinned revision on 2026-10-28. The bundled data adapter and local viewer are new original MIT implementations of documented format facts; no AGPL reader/prompt source is bundled or relicensed. They support a tested native-v1 subset, not every legacy record or upstream app operation. Cooperative locks, manual transfer and the bounded local runner are also original standard-library code, independent of the referenced applications. Their executable contracts and remaining limits are in [data tools](data-tools.md), [transfer](transfer.md) and [local runtime](local-runtime.md).
+
+## v0.4.0 local foundations
+
+The workbench reuses this package's original MIT normalized graph reader/viewer and strict path/JSON checks. Journey versions reuse its original MIT archive validation and cooperative locks. No new upstream dependency, provider, model/dataset license or background runtime is introduced. Prior pinned upstream format/rights inspections remain the reference for native-v1 input; source-grounded proposal/editing and manual snapshot/merge contracts are original additions. Exact quote checks do not establish semantic truth or learning efficacy.

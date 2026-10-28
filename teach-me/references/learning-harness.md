@@ -110,3 +110,7 @@ When interpreting the inspected native v1 records:
 Report which files/excerpts were inspected, what was observed versus inferred,
 what remains pending, and the next useful teaching or practice check. These
 interpretation rules do not establish complete import compatibility.
+
+## Reviewable graph proposals and edits
+
+When a learner wants a map from source prose, use the [graph workbench](graph-workbench.md) to check a tutor-authored proposal against selected source bytes and exact quote spans. Label unverified semantics and keep grouped premises/provenance. The learner need not supply private reasoning. Explicit edits create a new validated graph with digest-bound inputs. Neither a valid quote nor the operator's apply acknowledgment establishes truth, learner endorsement or mastery.

@@ -1,0 +1,211 @@
+{
+  "method": "Actual candidate tool actions; source assertions are synthetic and not learner evidence",
+  "constructor_context": "Executor previously authored graph component; shared inherited context, not blind; exact model/effort/cost unknown",
+  "actions": [
+    {
+      "script": "graph_workbench.py",
+      "argv": [
+        "check",
+        "--source",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/reasoning.txt",
+        "--proposal",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/proposal.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"version\": 1, \"source_spans_valid\": true, \"proposal_sha256\": \"e20f70b7645d20d7a74e26370838195b894a23386400f75504ab16de987378de\", \"source_sha256\": \"33cdb4e2e471fd5b156ce1d266b0224d13db79aef1b3955b819527cf519e3c9d\", \"nodes\": 4, \"chains\": 2, \"unresolved_endpoint_ids\": [], \"ready_without_base\": true, \"semantic_correctness_verified\": false, \"notice\": \"Source-grounded draft/edit: exact spans and structure were checked, not semantic truth, valid inference, human endorsement or learner mastery.\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "graph_workbench.py",
+      "argv": [
+        "apply",
+        "--source",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/reasoning.txt",
+        "--proposal",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/proposal.json",
+        "--expected-proposal-sha256",
+        "e20f70b7645d20d7a74e26370838195b894a23386400f75504ab16de987378de",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/graph.json",
+        "--approve"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/graph.json\", \"sha256\": \"31348583e45aef30b86cc2179b2b444f0c0e444381a5a4cbc19c413454138d8d\", \"source_files\": 2, \"operation\": \"apply\", \"operator_review_acknowledged\": true, \"semantic_correctness_verified\": false, \"nodes\": 4, \"chains\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "script": "graph_workbench.py",
+      "argv": [
+        "edit",
+        "--base",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/graph.json",
+        "--patch",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/patch.json",
+        "--expected-base-sha256",
+        "31348583e45aef30b86cc2179b2b444f0c0e444381a5a4cbc19c413454138d8d",
+        "--expected-patch-sha256",
+        "06cccdd70226e68e9aded4d9fac938fdeac0ffd9639b7c3d3410b61d19c1ad0e",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/edited-graph.json",
+        "--approve"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/edited-graph.json\", \"sha256\": \"7b7eee8727c45bfff300d09aeee9f183723eab052a8a8397f8d6648f7cc3d5cc\", \"source_files\": 2, \"operation\": \"edit\", \"operator_review_acknowledged\": true, \"semantic_correctness_verified\": false, \"nodes\": 4, \"chains\": 2}\n",
+      "stderr": ""
+    },
+    {
+      "script": "learning_data.py",
+      "argv": [
+        "view",
+        "--input",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/edited-graph.json",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/map.html"
+      ],
+      "returncode": 0,
+      "stdout": "{\"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/map.html\", \"sha256\": \"efcc55183943b4e93cf3fbe7e531f11a395f7ace72ffb8a652d9630280a9c0b1\", \"source_files\": 1}\n",
+      "stderr": ""
+    },
+    {
+      "script": "transfer.py",
+      "argv": [
+        "unpack",
+        "--archive",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/base.zip",
+        "--root",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/workspace",
+        "--id",
+        "logic"
+      ],
+      "returncode": 0,
+      "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/workspace/learning/logic\", \"files\": 4, \"automatic_resume\": false}\n",
+      "stderr": ""
+    },
+    {
+      "script": "journey_versions.py",
+      "argv": [
+        "snapshot",
+        "--journey",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/workspace/learning/logic",
+        "--store",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/store",
+        "--expected-head",
+        "none"
+      ],
+      "returncode": 0,
+      "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b\", \"journey_id\": \"logic\", \"previous\": null}\n",
+      "stderr": ""
+    },
+    {
+      "script": "journey_versions.py",
+      "argv": [
+        "status",
+        "--store",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/store"
+      ],
+      "returncode": 0,
+      "stdout": "{\"initialized\": true, \"head\": {\"journey_id\": \"logic\", \"previous\": null, \"revision\": \"33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b\", \"version\": 1}, \"journey_id\": \"logic\", \"available_revisions\": [\"33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b\"], \"staging_entries\": [], \"automatic_recovery\": false}\n",
+      "stderr": ""
+    },
+    {
+      "script": "journey_versions.py",
+      "argv": [
+        "restore",
+        "--store",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/store",
+        "--revision",
+        "33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b",
+        "--root",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/restored",
+        "--id",
+        "logic"
+      ],
+      "returncode": 0,
+      "stdout": "{\"unpacked\": true, \"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/restored/learning/logic\", \"files\": 4, \"automatic_resume\": false, \"revision\": \"33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b\", \"head_changed\": false}\n",
+      "stderr": ""
+    },
+    {
+      "script": "journey_versions.py",
+      "argv": [
+        "compare",
+        "--base",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/base.zip",
+        "--local",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/local.zip",
+        "--incoming",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/incoming.zip",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/comparison.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"version\": 1, \"journey_id\": \"logic\", \"source_archives\": {\"base\": \"33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b\", \"local\": \"c045756d4e2742072ad306efdee9ff435fa6206a3222011ce171cddad7bbc9eb\", \"incoming\": \"e201d071c1af2fc6e8bc6074aa86c2fd83a9803906b5ba36cda87f0122faaa2d\"}, \"files\": {\"plan.md\": {\"base\": \"0c505a462ecde9ecd718edd18a5670a89715919196b8964cf131508e51b35608\", \"local\": \"8975f69c798fab4c0b5b4b01d9b255939e669dc4927723d3e6b93993f344b7db\", \"incoming\": \"0c505a462ecde9ecd718edd18a5670a89715919196b8964cf131508e51b35608\", \"status\": \"local-only\", \"selected\": \"local\"}, \"practice.md\": {\"base\": \"5a345545b072b2be56ddcf9a43672063c0690c4847ddd25c20ce79db8a367fa2\", \"local\": \"5a345545b072b2be56ddcf9a43672063c0690c4847ddd25c20ce79db8a367fa2\", \"incoming\": \"5a345545b072b2be56ddcf9a43672063c0690c4847ddd25c20ce79db8a367fa2\", \"status\": \"unchanged\", \"selected\": \"base\"}, \"progress.json\": {\"base\": \"513e3006751c97e063043bc505c84071be19f762852915e5e8c6aa7550de3aae\", \"local\": \"513e3006751c97e063043bc505c84071be19f762852915e5e8c6aa7550de3aae\", \"incoming\": \"513e3006751c97e063043bc505c84071be19f762852915e5e8c6aa7550de3aae\", \"status\": \"unchanged\", \"selected\": \"base\"}, \"sources.md\": {\"base\": \"9e851a2e808bdaa89d02d0510e3cc101103229eab858fdf934f374dfd45778e7\", \"local\": \"9e851a2e808bdaa89d02d0510e3cc101103229eab858fdf934f374dfd45778e7\", \"incoming\": \"d46f57fe15bbc2ad477428ba49e2030dae28b0766276e50d987228917f2ef5b7\", \"status\": \"incoming-only\", \"selected\": \"incoming\"}}, \"conflicts\": [], \"report_sha256\": \"a2183c86d423c9e55f3c7e52e77acefec05752614b6d48cc20655fbf5daee64a\"}\n",
+      "stderr": ""
+    },
+    {
+      "script": "journey_versions.py",
+      "argv": [
+        "merge",
+        "--base",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/base.zip",
+        "--local",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/local.zip",
+        "--incoming",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/review/fixtures/incoming.zip",
+        "--output",
+        "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/merged.zip"
+      ],
+      "returncode": 0,
+      "stdout": "{\"merged\": true, \"archive\": \"BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/merged.zip\", \"sha256\": \"c4e543733ccaf66290a6490cb9859e2f432f16a54ebf46035785b5534db4e006\", \"journey_id\": \"logic\", \"files\": 4, \"report_sha256\": \"a2183c86d423c9e55f3c7e52e77acefec05752614b6d48cc20655fbf5daee64a\", \"resolved_conflicts\": {}, \"automatic_resume\": false}\n",
+      "stderr": ""
+    }
+  ],
+  "selected_source_hashes_before": {
+    "reasoning.txt": "33cdb4e2e471fd5b156ce1d266b0224d13db79aef1b3955b819527cf519e3c9d",
+    "base.zip": "33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b",
+    "local.zip": "c045756d4e2742072ad306efdee9ff435fa6206a3222011ce171cddad7bbc9eb",
+    "incoming.zip": "e201d071c1af2fc6e8bc6074aa86c2fd83a9803906b5ba36cda87f0122faaa2d"
+  },
+  "selected_source_hashes_after": {
+    "reasoning.txt": "33cdb4e2e471fd5b156ce1d266b0224d13db79aef1b3955b819527cf519e3c9d",
+    "base.zip": "33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b",
+    "local.zip": "c045756d4e2742072ad306efdee9ff435fa6206a3222011ce171cddad7bbc9eb",
+    "incoming.zip": "e201d071c1af2fc6e8bc6074aa86c2fd83a9803906b5ba36cda87f0122faaa2d"
+  },
+  "journey_id": "logic",
+  "supplied_live_journey": false,
+  "derived_own_scratch_journey": "Baseline transfer unpacked provided base archive; no original journey changed",
+  "source_restore_file_hashes": {
+    "sources.md": "9e851a2e808bdaa89d02d0510e3cc101103229eab858fdf934f374dfd45778e7",
+    "plan.md": "0c505a462ecde9ecd718edd18a5670a89715919196b8964cf131508e51b35608",
+    "progress.json": "513e3006751c97e063043bc505c84071be19f762852915e5e8c6aa7550de3aae",
+    "practice.md": "5a345545b072b2be56ddcf9a43672063c0690c4847ddd25c20ce79db8a367fa2"
+  },
+  "restored_file_hashes": {
+    "sources.md": "9e851a2e808bdaa89d02d0510e3cc101103229eab858fdf934f374dfd45778e7",
+    "plan.md": "0c505a462ecde9ecd718edd18a5670a89715919196b8964cf131508e51b35608",
+    "progress.json": "513e3006751c97e063043bc505c84071be19f762852915e5e8c6aa7550de3aae",
+    "practice.md": "5a345545b072b2be56ddcf9a43672063c0690c4847ddd25c20ce79db8a367fa2"
+  },
+  "comparison_conflicts": [],
+  "merge_result": {
+    "merged": true,
+    "archive": "BUILD_WORKSPACE/.forge/teach-me-v0.4.0/execution/workflow/merged.zip",
+    "sha256": "c4e543733ccaf66290a6490cb9859e2f432f16a54ebf46035785b5534db4e006",
+    "journey_id": "logic",
+    "files": 4,
+    "report_sha256": "a2183c86d423c9e55f3c7e52e77acefec05752614b6d48cc20655fbf5daee64a",
+    "resolved_conflicts": {},
+    "automatic_resume": false
+  },
+  "merged_archive_created": true,
+  "snapshot_revision": "33dadc8579ebecebd3823279464d49502d3afad898507a52ec5a9f1c95a3b41b",
+  "browser_inspection": "not performed by this executor; HTML creation only",
+  "observed_at": "2026-10-28T23:03:26.735885+00:00",
+  "merged_selected_file_bytes_verified": {
+    "plan.md": "local",
+    "practice.md": "base",
+    "progress.json": "base",
+    "sources.md": "incoming"
+  },
+  "original_graph_preserved_after_edit": true
+}

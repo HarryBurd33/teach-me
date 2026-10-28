@@ -1,0 +1,11 @@
+# Journey versions component
+
+Inspected the actual current MIT LICENSE and existing scripts/transfer.py, storage.py and journey.py as the foundation. Reused their strict bounded archive validation, fixed seven-file allowlist, version-1 progress validation, byte-preserving archive packing, fresh-destination staged unpack and ownership-aware local locks. No external repository component, AGPL reader/prompt, dependency, provider or service was adopted.
+
+Implemented original scripts/journey_versions.py and references/journey-versions.md. The CLI supplies immutable SHA-named snapshots and an atomic HEAD pointer, explicit verified restore, deterministic three-way per-file comparison and digest-bound conflict resolutions. Inputs remain unchanged; output archives/reports are create-new. Progress conflicts stay whole-file decisions rather than invented assessment-history merges.
+
+Final component execution: 17/17 tests pass. See results.json for exact source hashes and results.txt for captured actual output. Tests include seven-file byte preservation, stale HEAD/no-op behavior, injected old/new activation failures, actual two-process snapshot competition, foreign/symlink/corrupt stores, clean and conflicting/deletion merges, stale/invalid resolution choices, differing journey IDs, duplicate/traversal archives, input-change detection and foreign publication-race preservation. Fault injection cases are labeled as in-process simulations, not actual power-loss tests. An initial test fixture reuse error was corrected without changing its stale-digest assertion.
+
+Limits: cooperative local snapshots do not make arbitrary live-file edits transactional or provide distributed synchronization. Stores cap 64 revisions/192 entries; explicit review is required for old history and interrupted staging/locks. No automatic pruning, orphan activation, stale-lock theft, encryption, authenticated signature, permission transfer, source rollback or universal power-loss claim is made. Restore never overwrites an existing journey or resumes work automatically. Metadata/hash verification cannot establish learner mastery or semantic truth.
+
+The component is frozen for parent integration and independent review. No other candidate files were changed.

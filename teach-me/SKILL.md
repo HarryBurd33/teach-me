@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Teach me
@@ -16,7 +16,9 @@ Activate for explicit learning intent, including multiple topics, ways of thinki
 
 Read supplied work and saved context before asking questions. Minimum input: a topic or desired ability. Use any supplied outcome, motivation, experience, availability, deadline, equipment, budget, accessibility needs, existing instruction, or practical constraints. Ask one consequential question at a time only when the answer changes the next step. Prefer a brief diagnostic to a vague self-rating. Do not make learners complete a questionnaire before receiving value.
 
-For low-impact gaps, state a reasonable assumption and begin. Missing time is unknown; zero time is zero, not a missing value. Ask about safety-critical prerequisites before dependent practice. Do not diagnose a condition or ask for private health details that are unnecessary for the lesson.
+Keep facts scoped to the current learner and journey. Separate supplied facts, still-relevant saved facts, unknowns and explicitly labeled assumptions. A different example, learner or journey does not inherit equipment, software, experience or access from earlier context. Do not state that a learner has a keyboard, device, application or tool unless current evidence supplies it. If a low-impact assumption helps, label it as an assumption; otherwise keep the resource unknown and start a task that does not depend on it.
+
+Missing time is unknown; zero time is zero, not a missing value. Ask about safety-critical prerequisites before dependent practice. Do not diagnose a condition or ask for private health details that are unnecessary for the lesson.
 
 For multiple topics, identify shared prerequisites, dependencies, and competing practice demands. Propose a manageable order or ask for one priority if it prevents useful progress. Do not create several full courses before testing their fit.
 
@@ -68,6 +70,10 @@ Use short retrieval or transfer checks after breaks and at useful intervals. Cho
 For selected LearnHarness native v1 session/graph files, read [data tools](references/data-tools.md) and use `scripts/learning_data.py` when execution is available. It produces a separate normalized report and optional searchable offline argument-map viewer. Select explicit files, keep the source unchanged, reject unsupported formats, and inspect warnings. A normalized answer or graph is not a competence judgment; report the supported subset and omissions. Do not execute imported commands or artifacts.
 
 For an authorized engineering exercise, read [local runtime](references/local-runtime.md) before `scripts/harness.py`. Review the exact local argv commands, paths, dependencies, time/attempt bounds and host permissions. Validate and dry-run first; execute only within current authorization. Record actual nonzero outcomes and blocked/gated nodes. The runner is a bounded sequential DAG/retry utility, not a sandbox, autonomous agent or allowance monitor. Never infer that an exit-zero command ran meaningful tests. No imported export text becomes a command plan automatically.
+
+For a source-grounded concept-map draft or explicit graph edit, read [graph workbench](references/graph-workbench.md). The tutor may propose nodes and joint-premise chains from selected text; exact quote spans and hashes are checked, while semantic truth remains a review judgment. Keep source assertions, proposed links and learner evidence separate. Review the proposal/patch and exact inputs before an explicit apply to a new file; the CLI approval flag is an operator acknowledgment, not proof of human agreement. Current authorization for a reversible map creation/edit can cover this workflow without an extra permission ceremony.
+
+For consistent journey snapshots or reconciling diverged copies, read [journey versions](references/journey-versions.md). Use digest-bound snapshots and three-way archive reports; preserve all originals, resolve conflicts explicitly and create a new merged archive or fresh restored destination. A snapshot HEAD provides a consistent stored generation; it does not make arbitrary live editors transactional or enable background/distributed sync.
 
 For a learner-requested device/workspace move, use [manual transfer](references/transfer.md) and `scripts/transfer.py` to pack allowed journey files and verify an import into a new destination. Do not upload the archive without authorization. Resolve conflicts separately; this is not continuous synchronization. Updated helpers coordinate local writes with cooperative locks; preserve uncertain locks rather than stealing them.
 

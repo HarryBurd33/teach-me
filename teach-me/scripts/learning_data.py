@@ -7,6 +7,7 @@ import math
 import os
 from pathlib import Path
 import sys
+import tempfile
 
 FORMAT = 'teach-me-learning-v1'
 LIMIT = 8 * 1024 * 1024
@@ -434,14 +435,22 @@ def publish(value, output, sources, as_html=False):
     raw = (value if as_html else json.dumps(value, ensure_ascii=False, allow_nan=False, indent=2) + '\n').encode('utf-8')
     require(len(raw) <= (OUTPUT_LIMIT if as_html else LIMIT),
             'Output exceeds size limit (8 MiB JSON / 32 MiB HTML)')
-    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL | getattr(os, 'O_NOFOLLOW', 0)
-    fd = os.open(str(path), flags, 0o600)
+    # Publish a fully written report only. A hard interruption may leave an
+    # owned staging file, but cannot expose a partial final report. Hard-link
+    # creation refuses an existing destination atomically; never unlink it on
+    # an error, since a different writer could own that name.
+    fd, staging = tempfile.mkstemp(prefix='.teach-me-report-', dir=str(path.parent))
     try:
         with os.fdopen(fd, 'wb') as handle:
             handle.write(raw); handle.flush(); os.fsync(handle.fileno())
-    except BaseException:
-        path.unlink()
-        raise
+        for original, source_raw in sources:
+            _, now = read_bytes(original)
+            require(sha(source_raw) == sha(now), 'Source changed before publication')
+        path_checked(path)
+        os.link(staging, str(path))
+    finally:
+        if os.path.exists(staging):
+            os.unlink(staging)
     return {'output': str(path), 'sha256': sha(raw), 'source_files': len(sources)}
 
 

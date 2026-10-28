@@ -1,0 +1,17 @@
+{
+  "component": "journey versions",
+  "observed_at": "2026-10-28T23:00:10.495114+00:00",
+  "tests_run": 17,
+  "successful": true,
+  "returncode": 0,
+  "hashes": {
+    "scripts/journey_versions.py": "7489123b72f8c7386b39008cd7db54b46cccc88fb841bbb77c0981920fe8543b",
+    "references/journey-versions.md": "e1f139f884cdccf2eba698d27c849308aaacb46114c4c2a3abf87f073eade2cd"
+  },
+  "method": "Executed CLI, actual competing processes and labeled in-process failure injections",
+  "limitations": [
+    "Cooperative local snapshots, not live multi-file editing transactions or distributed sync",
+    "64 revisions/192 entries and strict transfer bounds",
+    "No automatic pruning, orphan activation, lock theft, encryption, authentication or permission transfer"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "tests_run": 125,
+  "successful": true,
+  "returncode": 0,
+  "scope": "Integrated original70 + component40 + independent15; actual public-ready suite",
+  "native_process_access": true
+}

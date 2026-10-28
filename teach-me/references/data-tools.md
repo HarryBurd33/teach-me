@@ -39,9 +39,11 @@ strings are decoded in memory only. Source files are checked before/after reads
 and again before publication; hashes identify the inspected bytes. This detects
 ordinary concurrent changes, but is not an atomic multi-file snapshot, source
 lock or defense against a hostile filesystem race. Close the source app or use a
-stable export when consistency matters. A hard interruption may leave an
-incomplete newly created report; validate or recreate that report rather than
-altering the source.
+stable export when consistency matters. Reports are staged and fsynced before atomic create-if-absent publication.
+A hard interruption can leave an orphan staging file, but the final report name
+is either absent or complete. Preserve and reconcile an interrupted operation
+before retrying; no universal power-loss guarantee or hostile-filesystem defense
+is implied. A filesystem without atomic hard-link creation fails closed.
 
 ## Report contract
 
@@ -99,8 +101,10 @@ Open the generated HTML file in a supported browser. It has no external assets o
 network requests, uses text-only DOM rendering for imported labels, and searches
 claims, IDs, aliases and provenance. Each argument shows its jointly required
 premises as an **AND** group leading to its conclusion. Missing nodes and warnings
-remain visible. It is a searchable argument-card view, not a force-directed graph
-editor, semantic search engine or automatic extraction service. Session-only
+remain visible. It is a searchable argument-card view, not a force-directed graph editor or
+semantic search engine. The optional [graph workbench](graph-workbench.md) adds
+source-grounded proposal checks and explicit edits; it does not mechanically
+prove semantic relationships or learner understanding. Session-only
 reports have no graph cards; inspect their JSON for event evidence.
 
 The Python commands do not send data to a model. An agent or host may separately

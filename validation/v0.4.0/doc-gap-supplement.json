@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-10-28T23:03:55.133580+00:00",
+  "candidate1_hashes_match": true,
+  "supplement_kind": "Documentation-only clarification of known limits; no code, archive allowlist or frozen test change",
+  "requirements": [
+    "Guide states that a clean per-file merge can still produce semantic contradictions across plan/progress/sources and requires content review",
+    "Guide/README explicitly state snapshot allowlist excludes graph/proposal JSON and arbitrary attachments, requiring separately reviewed handling",
+    "No claim of automatic semantic detection, authenticated/encrypted sync or atomic live-file edits introduced"
+  ],
+  "check_method": "Independent inspect exact documentation diff and all-file hash delta; original15executed tests retained without relabeling"
+}

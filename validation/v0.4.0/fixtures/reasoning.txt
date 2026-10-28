@@ -1,0 +1,5 @@
+🙂 A is a stated condition.
+B is another stated condition.
+A and B jointly support C.
+D separately supports C.
+These are source assertions, not learner mastery.

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "source_sha256": "REPLACE-WITH-EXACT-SOURCE-SHA256",
+  "nodes": [
+    {
+      "id": "claim-a",
+      "name": "Illustrative placeholder: replace before checking",
+      "statement": "A source-grounded claim to review, not a mastery rating",
+      "evidence": {
+        "start": 0,
+        "end": 1,
+        "quote": "REPLACE-WITH-EXACT-NONEMPTY-SOURCE-SLICE"
+      }
+    }
+  ],
+  "chains": []
+}

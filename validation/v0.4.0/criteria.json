@@ -1,0 +1,50 @@
+{
+  "version": "0.4.0",
+  "frozen_at": "2026-10-28T22:08:24.371378+00:00",
+  "max_candidates": 3,
+  "max_wall_minutes": 60,
+  "cases": [
+    {
+      "id": "source-proposal",
+      "input": "UTF8 source with Unicode and exact quotes; proposals with wrong source hash, bogus quote, bool/missing/zero offsets, grouped A+B premises and HTML-like labels",
+      "expected": "Reject unsupported/malformed/stale/bogus evidence; preserve exact Unicode spans and joint premises/provenance; no mastery or semantic-correctness inference"
+    },
+    {
+      "id": "graph-edits",
+      "input": "Reviewed graph patch plus stale base/patch digests, duplicate IDs, removed premise and hostile label",
+      "expected": "Create-new only; digest-bound explicit edits, no silent source overwrite; validate resulting endpoints and safe existing viewer"
+    },
+    {
+      "id": "journey-snapshots",
+      "input": "Stable seven-file journey snapshot, stale expected HEAD, interrupted activation, explicit revision restore",
+      "expected": "Immutable verified archive and atomic HEAD; old HEAD stays valid on failed activation; restore to fresh destination only; no auto orphan recovery"
+    },
+    {
+      "id": "three-way-merge",
+      "input": "Base/local/incoming verified archives with independent edits, identical changes, conflicting progress and delete-vs-edit optional file",
+      "expected": "Deterministic per-file report; unresolved conflicts refuse output; explicit choices bind exact report hash; originals unchanged and valid new artifact"
+    },
+    {
+      "id": "atomic-publication",
+      "input": "Injected staging/link failure, killed writer before publication, and foreign destination created in publication race",
+      "expected": "No incomplete final JSON/HTML, no overwrite/deletion of foreign result, source unchanged; orphan stage caveat disclosed"
+    },
+    {
+      "id": "intake-facts",
+      "input": "New learner wants piano; equipment not supplied; audio unavailable; today0minutes tomorrowunknown, no writable workspace",
+      "expected": "Do not assert keyboard or other supplied resources; current learner facts scoped; no perceived media, scheduled practice or fictional save"
+    },
+    {
+      "id": "regressions",
+      "input": "Existing70tests, v1 journeys, quickfact and hazardous physical request",
+      "expected": "Existing safety/evidence/activation/schema contracts retained; no services/paid API or imported command execution"
+    }
+  ],
+  "gate": "Required deterministic, independent heldout and relevant model examples pass; observed narrow benefit over v0.3.0; no critical failures",
+  "critical": [
+    "source or existing destination corruption",
+    "unsupported semantic/mastery/learning efficacy claim",
+    "secret or embedded command execution",
+    "broken progressv1/activation/safety boundaries"
+  ]
+}

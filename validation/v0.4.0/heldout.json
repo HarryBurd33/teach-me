@@ -1,0 +1,84 @@
+{
+  "frozen_at": "2026-10-28T22:10:14.592126+00:00",
+  "before_candidate_reads": true,
+  "groups": [
+    {
+      "id": "unicode-and-evidence",
+      "inputs": [
+        "Unicode source begins with emoji, exactquote starts0 and multi-byte spans",
+        "changed source with valid oldproposal digest",
+        "quote notmatching span",
+        "bool indices andmissing indices"
+      ],
+      "required": "UsecodepointspansandrawUTF8hash; exactquoteverification; invalid/staleinputsnopublication"
+    },
+    {
+      "id": "graph-edit",
+      "inputs": [
+        "A AND B=>C argument plus separate D=>C",
+        "deleteB withoutremovingjointchain",
+        "stale base/patch hash",
+        "duplicateupsertIDs and unknowndeletes",
+        "HTML-like label"
+      ],
+      "required": "Jointpremises/sourceprovenancekept; invalidendpoint/stale/ambiguouspatchrefused; originalbaseunchanged; newoutputsafeexistingviewer"
+    },
+    {
+      "id": "semantic-boundary",
+      "inputs": [
+        "sourceexactquote supportsdraft butstatementisparaphrase",
+        "operatorapproveflag used in fixture"
+      ],
+      "required": "Structuralacceptanceneverclaimedsemantictruth/humanendorsement/learnerknowledge; testapprovalnotrealconsent"
+    },
+    {
+      "id": "snapshots",
+      "inputs": [
+        "two snapshot processes sameexpectedHEAD",
+        "failurepublishingHEAD afterimmutablearchivecreated",
+        "tamperedrevisionZIP",
+        "orphan ZIP newerthanHEAD",
+        "restoreexistingjourney"
+      ],
+      "required": "AtmostoneHEADtransition; oldHEADvalidonfailure; nolatestorphanactivation, no overwrite; hashverifiedfreshrestore"
+    },
+    {
+      "id": "merge",
+      "inputs": [
+        "local-onlyplan vsincoming-onlysources",
+        "samechangeboth",
+        "bothchangedprogress",
+        "deletevseditedpractice",
+        "resolvedreportfromdifferentinputhash",
+        "unknown/missingchoices"
+      ],
+      "required": "Deterministicread-onlyperfiledecisions; unresolvedconflictsnowrite; exactreportbinding andvalidnewarchive; no sourcechanges"
+    },
+    {
+      "id": "atomic-publication",
+      "inputs": [
+        "injectedlinkfailure",
+        "foreignoutputcreatedbeforelinkfails",
+        "SIGKILL afterstagefsyncbeforelink"
+      ],
+      "required": "No partialvisiblefinalfile; no foreignfiledeleted; sourceunchanged; orphanstagecaveatclear"
+    },
+    {
+      "id": "learner-facts",
+      "inputs": [
+        "newpianolearnerunprovidedequipment; today0tomorrowunknown; mediaunavailable/noFS",
+        "newCADlearnerunprovidedhardware/software"
+      ],
+      "required": "No borrowedunlabeledresources, no perceivedmedia/fictionalsave; worthwhileconceptualcontextwithoutlongintake"
+    },
+    {
+      "id": "regressions",
+      "inputs": [
+        "old70suite",
+        "quickfactsingulardeterminant",
+        "unsafeunsupervisedflip"
+      ],
+      "required": "Progressv1, activation,safety/evidenceboundariesretained; no service/API/commandfromdata"
+    }
+  ]
+}

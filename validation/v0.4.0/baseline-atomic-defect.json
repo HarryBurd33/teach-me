@@ -1,0 +1,9 @@
+{
+  "observed_at": "2026-10-28T22:14:19.022616+00:00",
+  "kind": "Actual in-process fault injection into baseline publish API; synthetic files, not a power-loss/concurrency guarantee",
+  "baseline_version": "0.3.0",
+  "injected_error": "injected staging failure after foreign destination appears",
+  "foreign_destination_preserved": false,
+  "source_unchanged": true,
+  "known_defect": "Baseline exception cleanup removes a replaced foreign destination instead of only its own stage"
+}

@@ -1,3 +1,7 @@
+# Current v0.4.0 validation
+
+See [the current release report](V0.4.0.md). Prior sections preserve historical v0.3.0 and older results, partials and limits.
+
 # Current v0.3.0 validation
 
 See [the current release report](V0.3.0.md). The following record preserves earlier v0.2.0/v0.1.0 evidence and limits.

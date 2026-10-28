@@ -20,7 +20,12 @@ REQUIRED = [
     'teach-me/references/local-runtime.md', 'teach-me/references/host-integration.md',
     'teach-me/templates/harness-plan.json', 'teach-me/templates/learning-pilot.md',
     'tests/test_learning_data.py', 'tests/test_transfer.py', 'tests/test_harness.py',
-    'docs/V0.3.0.md',
+    'docs/V0.3.0.md', 'docs/V0.4.0.md',
+    'teach-me/scripts/graph_workbench.py', 'teach-me/scripts/journey_versions.py',
+    'teach-me/references/graph-workbench.md', 'teach-me/references/journey-versions.md',
+    'teach-me/templates/graph-proposal.json', 'tests/test_graph_workbench.py',
+    'tests/test_journey_versions.py', 'tests/test_report_publication.py',
+    'tests/test_v4_contract.py', 'tests/test_v4_failure_paths.py', 'tests/test_v4_atomic.py',
     'validation/fixtures/resume-one/learning/algebra/progress.json',
     'validation/fixtures/resume-many/learning/algebra/progress.json',
     'validation/fixtures/resume-many/learning/piano/progress.json',
@@ -38,7 +43,7 @@ def check():
     skill = (ROOT / 'teach-me/SKILL.md').read_text(encoding='utf-8')
     assert skill.startswith('---\nname: teach-me\n'), 'Skill metadata/name mismatch'
     assert 'license: MIT\n' in skill.split('---', 2)[1]
-    assert 'version: "0.3.0"' in skill.split('---', 2)[1], 'Release version mismatch'
+    assert 'version: "0.4.0"' in skill.split('---', 2)[1], 'Release version mismatch'
     schema = json.loads((ROOT / 'teach-me/references/progress.schema.json').read_text())
     assert schema['$id'] == 'urn:teach-me:progress:v1'
     links = 0

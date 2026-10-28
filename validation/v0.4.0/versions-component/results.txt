@@ -1,0 +1,22 @@
+test_clean_merge_preserves_independent_changes_and_deletion (test_journey_versions.JourneyVersions.test_clean_merge_preserves_independent_changes_and_deletion) ... ok
+test_conflicting_progress_requires_digest_bound_explicit_choice (test_journey_versions.JourneyVersions.test_conflicting_progress_requires_digest_bound_explicit_choice) ... ok
+test_delete_versus_edit_is_conflict_not_silent_loss (test_journey_versions.JourneyVersions.test_delete_versus_edit_is_conflict_not_silent_loss) ... ok
+test_different_journey_id_refused_before_comparison_output (test_journey_versions.JourneyVersions.test_different_journey_id_refused_before_comparison_output) ... ok
+test_existing_outputs_and_publication_race_preserve_foreign_bytes (test_journey_versions.JourneyVersions.test_existing_outputs_and_publication_race_preserve_foreign_bytes) ... ok
+test_failed_activation_preserves_old_head_and_new_inactive_revision (test_journey_versions.JourneyVersions.test_failed_activation_preserves_old_head_and_new_inactive_revision) ... ok
+test_identical_changes_and_new_pilot_merge (test_journey_versions.JourneyVersions.test_identical_changes_and_new_pilot_merge) ... ok
+test_identical_snapshot_is_noop_and_stale_head_refused (test_journey_versions.JourneyVersions.test_identical_snapshot_is_noop_and_stale_head_refused) ... ok
+test_initial_activation_failure_has_no_invented_head (test_journey_versions.JourneyVersions.test_initial_activation_failure_has_no_invented_head) ... ok
+test_input_change_detected_before_publication (test_journey_versions.JourneyVersions.test_input_change_detected_before_publication) ... ok
+test_seven_file_snapshot_restore_and_previous (test_journey_versions.JourneyVersions.test_seven_file_snapshot_restore_and_previous) ... ok
+test_stale_report_unknown_or_missing_resolution_choices_refused (test_journey_versions.JourneyVersions.test_stale_report_unknown_or_missing_resolution_choices_refused) ... ok
+test_store_inside_journey_and_held_lock_refused (test_journey_versions.JourneyVersions.test_store_inside_journey_and_held_lock_refused) ... ok
+test_tampered_revision_and_unknown_restore_refused (test_journey_versions.JourneyVersions.test_tampered_revision_and_unknown_restore_refused) ... ok
+test_two_snapshot_processes_same_expected_head_have_one_winner (test_journey_versions.JourneyVersions.test_two_snapshot_processes_same_expected_head_have_one_winner) ... ok
+test_unknown_foreign_or_symlink_store_refused (test_journey_versions.JourneyVersions.test_unknown_foreign_or_symlink_store_refused) ... ok
+test_unsafe_duplicate_and_traversal_archive_refused (test_journey_versions.JourneyVersions.test_unsafe_duplicate_and_traversal_archive_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 3.793s
+
+OK

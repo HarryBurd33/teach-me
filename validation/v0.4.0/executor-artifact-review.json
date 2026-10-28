@@ -1,0 +1,13 @@
+{
+  "reviewed_at": "2026-10-28T23:05:24.374187+00:00",
+  "actual_executor_actions": 10,
+  "source_quotes_and_hash": "pass",
+  "joint_and_separate_arguments": "pass",
+  "immutable_snapshot_head_hash": "pass",
+  "exact_restored_core_bytes": "pass",
+  "clean_file_merge_combines_local_plan_incoming_sources": "pass",
+  "original_fixture_hashes_unchanged": "pass",
+  "returned_output_hashes_match_actual_files": "pass",
+  "semantic_truth_or_learner_gain_verified": false,
+  "browser_inspection": "not performed by reviewer; only safe HTML/source checks"
+}

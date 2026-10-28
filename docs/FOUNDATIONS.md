@@ -69,3 +69,8 @@ See the [pinned file-level inspection and adoption decisions](../validation/v0.2
 ## v0.3.0 original local tools
 
 The [targeted source-format inspection](../validation/v0.3.0/foundation-update.md) and [independent source review](../validation/v0.3.0/source-review.json) record the pinned native-v1 data facts and scope. The bundled readers/viewer, local locks, manual transfer and bounded runner are original MIT code; no upstream AGPL reader or prompt is copied. Their contracts and limits are in [the v0.3.0 report](V0.3.0.md).
+
+
+## v0.4.0 original local extensions
+
+The graph workbench and journey versions reuse this project’s MIT normalized data, safe publishing, archive and lock helpers. [Graph foundation inspection](../validation/v0.4.0/graph-component/component-report.md) and [versions foundation inspection](../validation/v0.4.0/versions-component/component-report.md) record actual reused files and scope. No new upstream dependency, model/dataset license, copied AGPL reader or paid runtime is introduced. Exact source spans do not establish semantic truth.
