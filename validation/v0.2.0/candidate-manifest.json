@@ -1,0 +1,17 @@
+{
+  "LICENSE": "6aa9441b6e7dd2623f33e3e5ba7fbe54cd207b7a8f4d1249b8a6a77f4e5ce3ad",
+  "README.md": "d08d87aa5d02662e082f1a3a7ac138248eb981cf419f718f2026b1e390b2086e",
+  "SKILL.md": "34ea616f719afcdfc567bd61cf1d6e6f2fc2572f93dab56d66dc1c83f599735e",
+  "references/domains.md": "5e687692cda5828502c04b96cf00cb2c7b3912d89f0b3bbd8e859729d0fb197f",
+  "references/harness-engineering.md": "cd573f7382bc375cdfb843cf3de2e6c0607bad05b44f31165cb62dfb453428a2",
+  "references/learning-harness.md": "49468eab055c115433f2dcf1b9d6ae3c8659af3b42c4b9e11d2872d32574b998",
+  "references/progress.schema.json": "60ceb6f4bf1add31fccd889d0f21e9e65f5401201a74db8f316c6b47ccb06431",
+  "references/research.md": "bfdfde997f05ad80147c5b5618facc5b15817ca732c5cd844cd6c328c71d0416",
+  "references/state.md": "6aeaff8b1b03980632a5a486f6dfc2dfeb377d6ba4da6232997b96f632d6ef62",
+  "scripts/journey.py": "7c9c65b5f108bc2bddbc621cd33ff5b092abb3b32e8ac4865922d9abb963a358",
+  "templates/harness-project.md": "c41009010b4a161b2b251065ad2cb6aba9b2dd0211967f64ba75c9e36610af19",
+  "templates/knowledge.md": "9fd6b5b8db05eaa45c6fd5a764b85de871304a3ca6372efdc36f2cebd78e0a57",
+  "templates/plan.md": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+  "templates/practice.md": "dba8de9ada18a9486fb17e2c7c0a4b2861d5c4a44ce3663ebd5f0d002f4c02ba",
+  "templates/sources.md": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91"
+}

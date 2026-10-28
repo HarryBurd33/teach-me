@@ -1,0 +1,46 @@
+{
+  "reviewed_at": "2026-10-28T19:14:12.862085+00:00",
+  "independent_checks": [
+    {
+      "arm": "baseline",
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_parser.TestParser.test_rejects_trailing_operator",
+        "-v"
+      ],
+      "exit_code": 1,
+      "result": "expected starter regression failure; executable check verified",
+      "test_count": 1,
+      "assertion": "ValueError not raised",
+      "source_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "source_unchanged": true
+    },
+    {
+      "arm": "candidate",
+      "argv": [
+        "python3",
+        "-B",
+        "-m",
+        "unittest",
+        "test_parser.TestParser.test_rejects_trailing_operator",
+        "-v"
+      ],
+      "exit_code": 1,
+      "result": "expected starter regression failure; executable check verified",
+      "test_count": 1,
+      "assertion": "ValueError not raised",
+      "source_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "source_unchanged": true
+    }
+  ],
+  "candidate_unchanged_since_static_review": true
+}

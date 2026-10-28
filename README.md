@@ -1,5 +1,7 @@
 # teach-me
 
+Current release: **v0.2.0**. [Changes, evidence and next steps](docs/V0.2.0.md).
+
 A Codex skill for researched curricula, adaptive tutoring, and local progress records. Learn a small concept in one lesson or work through a staged practical project. It combines teaching with practice and feedback, rather than stopping at a reading list.
 
 ## Install globally in Codex
@@ -60,6 +62,22 @@ Keep that folder available in the next chat. Resume is file-based; it is not aut
 
 Text is the baseline interface. Full researched/local experience needs web tools and a writable workspace. The optional state helper needs **Python 3.9+**, standard library only. The skill needs no API key, Skill Forge, task-checkpoint, Node, or external project installation. Model use remains subject to the host's ordinary account limits.
 
+## Learning harness and harness engineering
+
+Choose the focus in plain language:
+
+```text
+$teach-me Diagnose the prerequisites I need for gradient descent, then teach the first gap.
+$teach-me Give me mixed practice without telling me the method first. Track hints used.
+$teach-me Map the jointly required premises for this topic, with source anchors.
+$teach-me Teach me harness engineering through a tiny parser project. Save one feature, its check and tomorrow's handoff here.
+$teach-me Inspect this selected LearnHarness export read-only and propose a fresh diagnostic.
+```
+
+Four modes—diagnostic, teaching, practice and review—keep prerequisite repair and practice distinct. Optional `knowledge.md`, `practice.md` and `harness-project.md` records support sourced dependency maps, assistance-aware practice and resumable engineering projects. The project track covers instructions, tools/environment, state, verification/feedback and scope/lifecycle. Comparisons require equal starting artifacts and independently checked outcomes.
+
+This is an original instruction/resource implementation informed by the two references. It does not bundle their code or prompts, provide native LearnHarness import/export compatibility, extract or render graphs automatically, or install a scheduler, dictation engine, autonomous loop/graph runtime or provider integration. Selected exports are inspected through authorized file tools; unknown formats remain unknown. Existing progress schema v1 needs no migration. See [learning-harness guidance](teach-me/references/learning-harness.md) and [engineering guidance](teach-me/references/harness-engineering.md).
+
 ## State helper
 
 ```sh
@@ -77,7 +95,7 @@ python3 -m unittest discover -s tests -v
 python3 scripts/check_release.py
 ```
 
-The deterministic helper suite has 16 tests. The initial model evaluation contains 19 simulated prompts: 18 meet their criteria, one is partial, and no critical failure was observed; an additional explicit math-fixture trial passes. This is limited manually loaded model evidence, not proof of real learning outcomes or automatic activation. See [release/installation verification](docs/INSTALLATION-VERIFICATION.md), [validation and limitations](docs/VALIDATION.md), [actual model outputs](validation/candidate-responses.json), and [independent grades](validation/model-review.md). The CI workflow runs deterministic checks across selected Python versions and operating systems; its status is evidence of those checks only.
+The deterministic helper suite has 16 tests, all passing against both the v0.2.0 candidate and global installation. The v0.2.0 model review has 6/7 initial cases meeting criteria plus one preserved missing-fixture partial, 3/3 fresh regressions, and a separate actual parser supplement closing that gap; no critical failures. See [the v0.2.0 report](docs/V0.2.0.md). The initial model evaluation contains 19 simulated prompts: 18 meet their criteria, one is partial, and no critical failure was observed; an additional explicit math-fixture trial passes. This is limited manually loaded model evidence, not proof of real learning outcomes or automatic activation. See [release/installation verification](docs/INSTALLATION-VERIFICATION.md), [validation and limitations](docs/VALIDATION.md), [actual model outputs](validation/candidate-responses.json), and [independent grades](validation/model-review.md). The CI workflow runs deterministic checks across selected Python versions and operating systems; its status is evidence of those checks only.
 
 Keep learner records, credentials, checkpoint state, and private transcripts out of contributions. Preserve the evidence distinction, capability fallbacks, and safety boundaries. Run both commands before proposing changes. [Foundation and rights inspection](docs/FOUNDATIONS.md) explains the external references and reuse limits.
 

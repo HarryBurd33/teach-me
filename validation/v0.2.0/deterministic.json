@@ -1,0 +1,12 @@
+{
+  "candidate_helper_suite": {
+    "returncode": 0,
+    "output": "test_boolean_or_negative_minutes_fail (test_journey.JourneyCLI.test_boolean_or_negative_minutes_fail) ... ok\ntest_corrupt_state_cannot_be_silently_reset (test_journey.JourneyCLI.test_corrupt_state_cannot_be_silently_reset) ... ok\ntest_create_save_resume_and_backup (test_journey.JourneyCLI.test_create_save_resume_and_backup) ... ok\ntest_duplicate_ids_and_naive_timestamp_fail (test_journey.JourneyCLI.test_duplicate_ids_and_naive_timestamp_fail) ... ok\ntest_duplicate_json_members_are_rejected_without_writes (test_journey.JourneyCLI.test_duplicate_json_members_are_rejected_without_writes) ... ok\ntest_id_immutable_and_traversal_refused (test_journey.JourneyCLI.test_id_immutable_and_traversal_refused) ... ok\ntest_missing_field_not_treated_as_zero (test_journey.JourneyCLI.test_missing_field_not_treated_as_zero) ... ok\ntest_refuses_existing_journey (test_journey.JourneyCLI.test_refuses_existing_journey) ... ok\ntest_renamed_folder_cannot_resume_as_another_journey (test_journey.JourneyCLI.test_renamed_folder_cannot_resume_as_another_journey) ... ok\ntest_self_report_cannot_certify_and_ids_must_resolve (test_journey.JourneyCLI.test_self_report_cannot_certify_and_ids_must_resolve) ... ok\ntest_stale_save_preserves_both_files (test_journey.JourneyCLI.test_stale_save_preserves_both_files) ... ok\ntest_symlink_state_backup_or_lock_refused (test_journey.JourneyCLI.test_symlink_state_backup_or_lock_refused) ... ok\ntest_symlinked_learning_directory_refused (test_journey.JourneyCLI.test_symlinked_learning_directory_refused) ... ok\ntest_unknown_version_and_unknown_keys_fail (test_journey.JourneyCLI.test_unknown_version_and_unknown_keys_fail) ... ok\ntest_validate_is_read_only_and_missing_progress_fails (test_journey.JourneyCLI.test_validate_is_read_only_and_missing_progress_fails) ... ok\ntest_zero_null_and_empty_arrays_preserved (test_journey.JourneyCLI.test_zero_null_and_empty_arrays_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 1.647s\n\nOK\n"
+  },
+  "v1_roundtrip_with_companions": {
+    "status": "pass",
+    "old_init_new_save_old_show": true,
+    "companion_bytes_preserved": true,
+    "schema_migration": false
+  }
+}

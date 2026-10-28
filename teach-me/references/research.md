@@ -32,3 +32,12 @@ Before proposing integration, inspect current documentation and the actual avail
 ## Provenance and rights
 
 All packaged instructions, templates, schema, and helper code are original to this skill. External projects and research are references, not bundled dependencies. No upstream source was adopted, so the package's MIT license applies only to original material. Verify current root and file-level terms before future component reuse. Do not treat public availability, a repository summary, or this dated note as sufficient evidence of current licensing.
+
+## Learning-harness references (v0.2.0)
+
+Inspected on 2026-10-28 through connected GitHub source reads; no upstream application was executed or bundled.
+
+- [LearnHarness, revision 3dc8847](https://github.com/amosblomqvist/learnharness/tree/3dc88472eea41eed0d5e5f29c2f16f8d063c415b): inspected root and skill licenses, `skills/learnharness/SKILL.md` and `references/data-format.md`. Both license files are AGPLv3; the skill declares AGPL-3.0-only. Its own reader requires Python 3.10+, which is not a Teach-me dependency. Used as a reference for general diagnostic/teaching/practice methods and evidence-aware reading of selected exports. No upstream prompt, code or reader is copied or relicensed. See [our original learning guide](learning-harness.md) for format limits and privacy.
+- [WalkingLab course, revision a9342ff](https://github.com/walkinglabs/learn-harness-engineering/tree/a9342ff471f2c0e60be0c08b9f4a7c502df4e442): inspected MIT root license (copyright 2025 WalkingLab), harness-creator skill, P01/P03 project READMEs, lecture 02, P07/P08 project documentation, feature-list/evaluator templates and project tree. Used as a reference for small experiments, verification and handoff; no upstream code or substantial text is copied. P01 includes a finished reference app; P07/P08 documentation links to implementations absent at that revision. Neither a fair comparison nor a running loop follows from copying those artifacts. See [our original engineering guide](harness-engineering.md).
+
+These source observations establish the inspected workflows, not teaching effectiveness, full data compatibility or runtime support. Verify current source and rights before future component reuse. Original MIT material here remains independent of both upstream applications.

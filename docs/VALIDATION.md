@@ -1,5 +1,7 @@
 # Validation and limits
 
+Current v0.2.0 evidence and limitations are in [the release report](V0.2.0.md). The sections below preserve **historical v0.1.0** trials and their original limits; they do not describe a new full trial of v0.2.0.
+
 ## Deterministic checks
 
 The actual journey helper has 16 executed tests covering create/save/read/resume, byte-preserving backup, stale and corrupt state, zero versus unknown and missing time, strict schema/version/type checks, duplicate JSON members, evidence references and observed-versus-reported rules, immutable IDs, traversal, symlinks, and missing files. Run `python3 -m unittest discover -s tests -v` from the repository root. `scripts/check_release.py` independently checks required assets, local Markdown links, JSON syntax, and consistent root/skill MIT licenses.

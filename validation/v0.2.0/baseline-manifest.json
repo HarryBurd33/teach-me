@@ -1,0 +1,12 @@
+{
+  "LICENSE": "6aa9441b6e7dd2623f33e3e5ba7fbe54cd207b7a8f4d1249b8a6a77f4e5ce3ad",
+  "README.md": "678c080134d84b945557473b9058f69788522bb58503e551cd9c91d7b6736d3f",
+  "SKILL.md": "5bd5f086aac22b69a11fdfba7248ef4e1760a870bd7ae6c21d0935a650e62765",
+  "references/domains.md": "5e687692cda5828502c04b96cf00cb2c7b3912d89f0b3bbd8e859729d0fb197f",
+  "references/progress.schema.json": "60ceb6f4bf1add31fccd889d0f21e9e65f5401201a74db8f316c6b47ccb06431",
+  "references/research.md": "0fe96c0e034ebbc431a94b87098f174d1231021fdd0db8da64b9d9bfd596bd68",
+  "references/state.md": "58d3d8e12fc545e19ede076ad504da7f31d0c5710a3671e170bcb67947856143",
+  "scripts/journey.py": "7c9c65b5f108bc2bddbc621cd33ff5b092abb3b32e8ac4865922d9abb963a358",
+  "templates/plan.md": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+  "templates/sources.md": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91"
+}

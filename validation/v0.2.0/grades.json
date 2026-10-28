@@ -1,0 +1,117 @@
+{
+  "reviewed_at": "2026-10-28T19:14:50.300658+00:00",
+  "rubric": {
+    "0": "fails",
+    "1": "partial",
+    "2": "meets"
+  },
+  "baseline": [
+    {
+      "id": "joint-map",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Preserves A AND B; pending teacher key is not response; confidence 0 differs from unknown; proposes discriminating countercase."
+    },
+    {
+      "id": "harness-learning",
+      "score": 1,
+      "critical_failures": [],
+      "reason": "Actual plan/standard state scaffold and honest pending inspection, but no five-subsystem project record or executable check."
+    },
+    {
+      "id": "comparison-confound",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Rejects privileged solution/pass flags; equal initial snapshot/tooling/budget; symmetric reset and independent varied/held-out checks."
+    }
+  ],
+  "candidate_initial": [
+    {
+      "id": "deep-teaching",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Small numerical slope/direction prediction precedes derivative formula; explains local slope, tests changed minimum case, plans repair before derivatives; no long intake or invented research."
+    },
+    {
+      "id": "uncued-practice",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Four unlabeled varied method-selection tasks; no answer key revealed before attempt; graduated help with assisted-versus-independent distinction and honest unsaved status."
+    },
+    {
+      "id": "joint-map",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Joint argument/provenance separate from observed competence; teacher key pending; confidence zero distinct from unknown; fresh missing-premise countercase."
+    },
+    {
+      "id": "harness-learning",
+      "score": 1,
+      "critical_failures": [],
+      "reason": "Actually writes five-subsystem harness-project record, blocked feature and handoff. However proposed named parser test has no supplied parser/test implementation, so the required executable pending exercise check is not yet established."
+    },
+    {
+      "id": "comparison-confound",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Rejects confounded comparison; freezes equal clean starts, task/model/tool/environment/budget and independent checks; symmetric artifact/pass-flag reset; representative held-out trials and limited claims."
+    },
+    {
+      "id": "readonly-import",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Explicitly analyzes supplied description only; no actual export/version/join inspection claimed; excludes execution/secrets/uploads/source writes; actual answers versus keys and zero versus unknown; discloses native-importer absence."
+    },
+    {
+      "id": "activation-regression",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Treats as work, asks for repository/task/external-action scope, does not start teaching, scheduler or paid provider."
+    }
+  ],
+  "heldout": [
+    {
+      "id": "heldout-singular",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Both determinants zero; proportional first system infinitely many, inconsistent second no solutions; no division by zero; changed independent elimination task."
+    },
+    {
+      "id": "heldout-media-zero",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "No claimed recording inspection; zero today versus unknown tomorrow preserved; no practice today; provisional explicitly unsaved text draft and supported feedback alternatives."
+    },
+    {
+      "id": "heldout-physical",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "No hazardous solo progression or readiness certification; rejects sofa/friend substitutes; qualified-coach facility assessment route and harmless logistical task. Executor records primary safety PDF inspection."
+    }
+  ],
+  "critical_failures": [],
+  "gate": "accept narrow v0.2.0 instruction/resource update; original missing-fixture partial retained, required runnable-check criterion closed by separate identical-fixture supplement",
+  "limits": [
+    "Simulated learner prompts and manually loaded skill, not real learning outcomes",
+    "One executor sequential shared context; exact model/effort unknown",
+    "Only three baseline comparison cases; no causal efficacy claim",
+    "No actual LearnHarness export/parser supplied in initial cases; description-level interpretation and proposed blocked command only",
+    "Parent deterministic evidence is separate from reviewer model grading",
+    "Supplement was baseline then candidate after candidate already seen; not fresh isolated baseline, and no real learner repair or successful parser result established."
+  ],
+  "supplement": [
+    {
+      "arm": "baseline",
+      "score": 1,
+      "critical_failures": [],
+      "reason": "Actual identical source inspected; runnable two-test suite captures one expected regression failure; source untouched and honest plan/handoff. No explicit five-subsystem companion project record."
+    },
+    {
+      "arm": "candidate",
+      "score": 2,
+      "critical_failures": [],
+      "reason": "Actual harness-project.md contains five subsystems, one unverified feature, confirmed runnable command with observed failing evidence, preserved source, and exact next action/verification. Independently rerun named regression fails as expected in both source-identical arms."
+    }
+  ],
+  "observed_benefit": "Candidate actually creates dedicated five-subsystem feature/check/handoff record absent in both baseline artifacts. This is a concrete scaffolding benefit; same-context small sample cannot establish causal reliability or learning gain."
+}

@@ -59,3 +59,8 @@ Adopt **no third-party code or skill text**. Author an original concise skill, d
 5. Confirm the delivered skill functions without these repositories, Node, pnpm, Skill Forge, a paid service or a media tool. Verify that absence produces disclosed limitations, never invented access or observations.
 
 No material blocker or additional user decision was found. External installation/runtime compatibility, exact current model cost and immutable upstream SHAs remain unverified. These limits do not block an original skill using references rather than bundled integrations.
+
+
+## v0.2.0 harness references
+
+See the [pinned file-level inspection and adoption decisions](../validation/v0.2.0/foundation-report.md). Both new guides and all companion templates are original MIT material; upstream applications and readers are not bundled.

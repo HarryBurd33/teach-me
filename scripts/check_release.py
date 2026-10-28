@@ -11,6 +11,9 @@ REQUIRED = [
     'teach-me/references/state.md', 'teach-me/references/progress.schema.json',
     'teach-me/templates/plan.md', 'teach-me/templates/sources.md',
     'teach-me/scripts/journey.py', 'tests/test_journey.py', 'docs/VALIDATION.md',
+    'teach-me/references/learning-harness.md', 'teach-me/references/harness-engineering.md',
+    'teach-me/templates/knowledge.md', 'teach-me/templates/practice.md',
+    'teach-me/templates/harness-project.md', 'docs/V0.2.0.md',
     'validation/fixtures/resume-one/learning/algebra/progress.json',
     'validation/fixtures/resume-many/learning/algebra/progress.json',
     'validation/fixtures/resume-many/learning/piano/progress.json',
@@ -28,6 +31,7 @@ def check():
     skill = (ROOT / 'teach-me/SKILL.md').read_text(encoding='utf-8')
     assert skill.startswith('---\nname: teach-me\n'), 'Skill metadata/name mismatch'
     assert 'license: MIT\n' in skill.split('---', 2)[1]
+    assert 'version: "0.2.0"' in skill.split('---', 2)[1], 'Release version mismatch'
     schema = json.loads((ROOT / 'teach-me/references/progress.schema.json').read_text())
     assert schema['$id'] == 'urn:teach-me:progress:v1'
     links = 0

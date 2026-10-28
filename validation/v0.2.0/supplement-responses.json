@@ -1,0 +1,89 @@
+{
+  "recorded_at": "2026-10-28T19:13:48.004319+00:00",
+  "method": "Supplemental identical-input actual model trials; baseline then candidate in the same shared executor after candidate had previously been seen. No fresh baseline isolation; cannot support causal performance or reliability claims. Prior outputs preserved; no criteria/grades read.",
+  "cases": [
+    {
+      "arm": "baseline",
+      "input": "Teach me to engineer a harness for this tiny parser repo. I want a small local project that tests one feature and can resume tomorrow. Scaffold a learning project record in the supplied scratch journey. You may inspect and run the supplied stdlib check; leave application source unchanged because I want to implement the repair myself.",
+      "response": "I inspected parser_demo.py and test_parser.py and ran `python3 -B -m unittest -v` in the supplied repo. Two tests ran: valid addition passed, but rejection of `1+` failed because no ValueError was raised; the command exited 1. I left the application source unchanged.\n\nI created your scratch journey with a project plan, progress/source files and verification.txt containing the actual output. Our sequence is: explain the observed failure, make your own repair, rerun the same tests, then test a new malformed input and save a handoff.\n\nFirst task: look at the filtering condition in parse. Why does the trailing empty part of `1+` disappear, and what behavior should distinguish it from a legitimate operand? Explain your proposed approach before editing; I can give a hint or a complete explanation if you ask. The test failure is evidence about the starter code, not your understanding. Tomorrow\u2019s next action and exact rerun command are saved in the plan. No fix or passing result is claimed.",
+      "inspected_files": [
+        "parser_demo.py",
+        "test_parser.py"
+      ],
+      "before_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "after_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "check": {
+        "argv": [
+          "python3",
+          "-B",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "cwd": "supplement-baseline-repo",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "test_rejects_trailing_operator (test_parser.TestParser.test_rejects_trailing_operator) ... FAIL\ntest_valid_addition (test_parser.TestParser.test_valid_addition) ... ok\n\n======================================================================\nFAIL: test_rejects_trailing_operator (test_parser.TestParser.test_rejects_trailing_operator)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.2.0/execution/supplement-baseline-repo/test_parser.py\", line 9, in test_rejects_trailing_operator\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n"
+      },
+      "journey_init": {
+        "exit_code": 0,
+        "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.2.0/execution/supplement-baseline-scratch/learning/parser\", \"sha256\": \"5e97f931b638904faca7c91e2fa9e8e2f72e5b91cece1f88fbda5cf897b132b6\"}\n",
+        "stderr": ""
+      },
+      "artifacts": [
+        "supplement-baseline-scratch/learning/parser/sources.md",
+        "supplement-baseline-scratch/learning/parser/verification.txt",
+        "supplement-baseline-scratch/learning/parser/plan.md",
+        "supplement-baseline-scratch/learning/parser/progress.json"
+      ]
+    },
+    {
+      "arm": "candidate",
+      "input": "Teach me to engineer a harness for this tiny parser repo. I want a small local project that tests one feature and can resume tomorrow. Scaffold a learning project record in the supplied scratch journey. You may inspect and run the supplied stdlib check; leave application source unchanged because I want to implement the repair myself.",
+      "response": "I inspected the supplied files and ran the existing check: `python3 -B -m unittest -v` from the supplied candidate repo. It ran two tests, passed valid addition and failed trailing-operator rejection with \u201cValueError not raised\u201d; exit code 1. Application source is unchanged.\n\nYour scratch journey now includes harness-project.md and verification.txt, plus its standard plan/progress/source files. The project record covers instructions, tools/environment, state, verification/feedback and scope/lifecycle. Its single active feature is rejection of `1+` while preserving `1+2 == 3`; the exact two-test command and actual failure are recorded. The feature stays unverified until your repair passes the checks.\n\nTeaching focus: first predict why the `if part.strip()` filter removes the missing operand instead of reporting it. What invariant should distinguish a complete sum from a trailing operator? Then implement your own repair. I can provide progressively stronger hints or a complete explanation if requested, and we\u2019ll record assistance.\n\nTomorrow\u2019s handoff says to read the current files and failure output, explain the mechanism, make the repair, and rerun both named tests before a new malformed-input check. The observed test result is code evidence, not proof of learner competence. No runtime, scheduler, dependencies or service was installed, and no fair-comparison reliability or learning-gain claim is made from this shared-context trial.",
+      "inspected_files": [
+        "parser_demo.py",
+        "test_parser.py"
+      ],
+      "before_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "after_hashes": {
+        "parser_demo.py": "5de384c3a9c870cc3b02a9f4321002814ee42db861c9020b6f9e7f4adb231e22",
+        "test_parser.py": "7b9106066be3ea1cf584eefe16851c4d0a92be977403d98f8772440df65df6ae"
+      },
+      "check": {
+        "argv": [
+          "python3",
+          "-B",
+          "-m",
+          "unittest",
+          "-v"
+        ],
+        "cwd": "supplement-candidate-repo",
+        "exit_code": 1,
+        "stdout": "",
+        "stderr": "test_rejects_trailing_operator (test_parser.TestParser.test_rejects_trailing_operator) ... FAIL\ntest_valid_addition (test_parser.TestParser.test_valid_addition) ... ok\n\n======================================================================\nFAIL: test_rejects_trailing_operator (test_parser.TestParser.test_rejects_trailing_operator)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.2.0/execution/supplement-candidate-repo/test_parser.py\", line 9, in test_rejects_trailing_operator\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nFAILED (failures=1)\n"
+      },
+      "journey_init": {
+        "exit_code": 0,
+        "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.2.0/execution/supplement-candidate-scratch/learning/parser\", \"sha256\": \"66917693983bde3a2322c600a39167d1e5887340b2edcbf5299a4b997a7651b3\"}\n",
+        "stderr": ""
+      },
+      "artifacts": [
+        "supplement-candidate-scratch/learning/parser/harness-project.md",
+        "supplement-candidate-scratch/learning/parser/sources.md",
+        "supplement-candidate-scratch/learning/parser/verification.txt",
+        "supplement-candidate-scratch/learning/parser/plan.md",
+        "supplement-candidate-scratch/learning/parser/progress.json"
+      ]
+    }
+  ]
+}

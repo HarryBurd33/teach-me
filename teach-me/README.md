@@ -1,6 +1,6 @@
 # teach-me
 
-A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.2.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -18,6 +18,18 @@ Copy the entire `teach-me/` directory into `~/.agents/skills/teach-me/` for user
 Full experience: web search/page retrieval and an authorized writable workspace. Python 3.9+ is optional for the bundled state helper and uses only the standard library. Without browsing, curricula are provisional; without files, export state explicitly; without media tools, use text/self-reports and explain limits.
 
 For example: `$teach-me Teach me probability. I know basic algebra and have 20 minutes per session.` To resume, provide the saved journey folder, for example `$teach-me Resume the probability journey in /path/to/workspace/learning/probability.`
+
+## New learning-harness workflows
+
+- `$teach-me Teach me gradient descent. I know algebra but not calculus.`
+- `$teach-me Give me mixed practice without naming the method first. Record help used.`
+- `$teach-me Map the prerequisites and jointly required premises for this topic, with sources.`
+- `$teach-me Teach me harness engineering with a tiny parser project. Save one feature, its check, and tomorrow’s handoff in this workspace.`
+- `$teach-me Review this selected LearnHarness export read-only and suggest a fresh diagnostic.`
+
+The tutor can switch among diagnostic, teaching, practice and review modes. Optional knowledge, practice and project records sit beside existing progress files. Read [learning-harness guidance](references/learning-harness.md) and [engineering guidance](references/harness-engineering.md).
+
+This is an instruction and local-record workflow. It has no native LearnHarness importer, automatic graph extraction/viewer, dictation engine, scheduler, background loop, autonomous graph runtime or provider integration. Model judgments and saved confidence do not certify competence. Existing progress schema v1 and the helper are unchanged.
 
 ## Files and privacy
 

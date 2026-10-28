@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Teach me
@@ -42,6 +42,19 @@ Do not install integrations, run downloaded code, publish files, create recurrin
 
 For mental models, teach assumptions, contrasting cases, failure limits, and transfer to an unfamiliar situation. For domain-specific decisions and safety boundaries, read [domain guidance](references/domains.md).
 
+## Choose a learning mode
+
+Use the learner's request and actual attempts to choose a mode; do not make them learn commands. Say the current focus briefly when it helps. Switch modes when the evidence calls for it, rather than mixing a long lecture into every practice turn.
+
+- **Diagnostic:** probe one uncertain prerequisite with a small task. Map dependencies only as far as needed for the next useful step. A wrong answer suggests a hypothesis to check, not a permanent ability label.
+- **Teaching:** ask a small prediction, explain the mechanism with an example, check with a fresh task, and repair the specific gap before relying on it. For gradient descent without calculus, first check slope/direction using a small table or picture; introduce derivatives when the learner has that foundation.
+- **Practice:** set varied retrieval/application tasks without naming the method when method selection is part of the target. Invite an attempt, then give a cue, a focused hint, a partial example, or a solution as needed. Track help used; an assisted answer is narrower evidence than independent performance. Honor requests for a complete explanation or solution.
+- **Review:** use a short retention or transfer task after a break; compare current work with the prior evidence and update the next action. Do not infer retained competence from an old record.
+
+Read [learning harness](references/learning-harness.md) for difficult topics, prerequisite repair, optional knowledge/practice records, or selected LearnHarness exports. Preserve jointly required premises and source provenance. A map entry, stored teacher answer, confidence rating, or extraction coverage is not learner mastery. Confidence is a self-report: confirmed `0` stays zero; missing stays unknown.
+
+For an explicit request to **learn harness engineering**, read [harness engineering](references/harness-engineering.md). Start a tiny authorized project with one feature, five subsystems (instructions, tools/environment, state, verification/feedback and scope/lifecycle), an executable done check, and a next-session handoff. Use the [project record](templates/harness-project.md) when helpful. Explain comparisons with equal starting artifacts, tasks, tools, environment, budgets and checks; reset both arms symmetrically and keep reference solutions away from the attempted task. Pre-filled passing records or a finished reference app cannot establish a harness improvement. A request to build an agent without learning intent remains an ordinary work request.
+
 ## Feedback and evidence
 
 Say what the learner did, why it works or fails, what to try next, and how that attempt will be checked. Check reasoning as well as an answer or working artifact. A correct coached attempt supports a narrower claim than an independent transfer task. Attendance, reading, confidence, and elapsed time are not mastery.
@@ -60,12 +73,14 @@ Save these files at a meaningful session boundary or material plan change:
 - `progress.json`: versioned stage, assessment/evidence history, difficulties, decisions, and next action.
 - `sources.md`: direct links, relevance, limitations, and actual verification dates/status.
 
+Add optional `knowledge.md`, `practice.md`, or `harness-project.md` only when the journey benefits from them, using the linked guides and [knowledge](templates/knowledge.md), [practice](templates/practice.md), and [project](templates/harness-project.md) templates. These are human-readable companion records, not new keys in `progress.json`, a graph database, or files created by the helper. Preserve existing learner edits, minimize sensitive detail, and link actual assessment/evidence IDs when available.
+
 Use the documented [state contract and helper](references/state.md), [JSON Schema](references/progress.schema.json), and [plan](templates/plan.md)/[source](templates/sources.md) templates. The optional Python helper validates and safely replaces progress; it does not assess learning, validate citations, or synchronize devices. If Python is unavailable, follow the same contract manually, validate what you can, preserve the previous file, and report the weaker checking. Do not claim a schema check ran when it did not.
 
 On resume:
 
 1. Identify the intended journey. If several folders fit equally well, ask which one before choosing or writing.
-2. Read all three saved files, validate progress, and summarize the last verified state with its evidence limits.
+2. Read the three required files and any relevant optional records that exist, validate progress, and summarize the last verified state with its evidence limits.
 3. Reconcile newer user corrections, availability, and priorities; preserve prior evidence and record changed decisions.
 4. Use a brief retention check when useful, then continue from the next useful action. Do not restart intake or assume old performance persists unchanged.
 5. Update files at the next meaningful boundary and report the actual saved location and next action.

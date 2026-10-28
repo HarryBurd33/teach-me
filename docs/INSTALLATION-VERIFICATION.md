@@ -1,3 +1,7 @@
+# Current v0.2.0 installation
+
+The fifteen-file update, native user-scope discovery and installed 16-test suite were verified on 2026-10-28. See [current release evidence](V0.2.0.md) and [installation hashes](../validation/v0.2.0/installation.json). The record below is the preserved v0.1.0 installation history.
+
 # Release and installation verification
 
 Checked 2026-10-26 (America/Denver).

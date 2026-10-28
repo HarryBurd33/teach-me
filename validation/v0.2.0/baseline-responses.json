@@ -1,0 +1,38 @@
+{
+  "arm": "baseline",
+  "skill_version": "0.1.0",
+  "recorded_at": "2026-10-28T19:06:22.479759+00:00",
+  "method": "Actual model responses to manually loaded skill and simulated learner inputs; one executor, sequential shared context; no self-grading",
+  "model": "Inherited current model; exact host model/effort not independently observable",
+  "tools": "Filesystem and Python available; no browsing used; no verified external citations claimed",
+  "cases": [
+    {
+      "id": "joint-map",
+      "input": "Resume from a concept map: A and B jointly support C. C is listed, but its quiz is unanswered and contains a stored teacher answer. Confidence for A is 0; confidence for B is missing. Explain what you can infer and propose my next task.",
+      "response": "The map says that A and B together support C. That is a dependency claim to check, not evidence that you can explain or apply any of them. Keep the two premises together: knowing A alone would not establish C.\n\nThe unanswered quiz is still pending. Its stored teacher answer gives us a reference solution, not your response, and it cannot be recorded as demonstrated performance. Confidence 0 for A is a reported value; confidence for B is unknown. Neither establishes competence or failure.\n\nNext, explain A and B in your own words, then predict whether C still follows when A holds but B does not. Give a short reason. I\u2019ll use your actual response to decide whether to revisit a prerequisite or ask you to apply C to a new example. With no definitions or saved files supplied, this is a provisional next task; nothing has been saved."
+    },
+    {
+      "id": "harness-learning",
+      "input": "Teach me to engineer a harness for a tiny parser repo. I want a small local project that tests one feature and can resume tomorrow. Scaffold a learning project record in the supplied scratch journey.",
+      "response": "We\u2019ll learn to build a small harness by using one parser behavior as a testable target. I created a scratch journey with plan.md, progress.json and sources.md; its first task is inspection, and no test has been marked as run or passed.\n\nThe sequence is: inspect the entry point and predict an output; select one feature and add a focused check; run the repository\u2019s real test command; explain the result and save a handoff. A useful candidate is rejection of a trailing operator such as `1+`, if that fits your parser\u2019s grammar. We\u2019ll change the example after seeing the actual repository.\n\nFirst activity: find the parse function and an existing test, and tell me what `1+` should do and why. A harness combines a repeatable task, a controlled environment and a way to inspect the outcome. A passing check establishes that narrow behavior, not overall reliability.\n\nThe saved plan identifies tomorrow\u2019s next action: select or supply the parser repo and discover its test command. No dependencies, global instructions, scheduling or services were changed. No source links have been verified in this trial."
+    },
+    {
+      "id": "comparison-confound",
+      "input": "My empty baseline agent failed, but my candidate succeeded after I gave it the finished reference app and pre-filled passing checks. Can I call the harness proven?",
+      "response": "No. That comparison does not isolate the harness: the candidate received both the finished solution and passing evidence, while the baseline started empty. It shows that the candidate could use privileged inputs, not that the harness improves independent performance.\n\nRepeat with the same starting repository snapshot, task statement, tools, environment, time/usage allowance and independently defined checks. Give both arms the same legitimate documentation; remove the reference implementation and reset generated artifacts and recorded pass statuses before each run. Keep verification outside the candidate\u2019s control and inspect the actual resulting code and test output.\n\nUse several representative tasks and fresh trials, including failure cases and a task not used to design the harness. Record failures and assistance as well as successes. A successful run supports those conditions only; a structural checklist cannot prove reliability. No rerun has been performed here."
+    }
+  ],
+  "executed_actions": [
+    {
+      "command": "journey.py init --root SCRATCH --id parser --topic Harness engineering --goal ...",
+      "returncode": 0,
+      "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.2.0/execution/baseline-scratch/learning/parser\", \"sha256\": \"16f20db4b76f873ba2bfb8e308c41e18c893f57e410a5d22ce1021a405b493cb\"}\n",
+      "stderr": ""
+    },
+    {
+      "action": "Wrote baseline scratch plan.md",
+      "path": "baseline-scratch/learning/parser/plan.md",
+      "parser_tests": "not run; repository absent"
+    }
+  ]
+}
