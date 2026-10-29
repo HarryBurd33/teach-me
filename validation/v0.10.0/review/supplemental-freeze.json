@@ -1,0 +1,7 @@
+{
+  "reason": "Post-inspection independent coverage additions for different-record/field conflicts, node/chain/byte capacity and8MiBplanbound; original40 frozen tests unchanged",
+  "frozen_at": "2026-10-29T21:09:30.967566+00:00",
+  "sha256": {
+    "test_v10_supplemental.py": "121741f0f09b8adfd74fac26cf6e39fd5dc474642a4ceff3bda4a573085a19d7"
+  }
+}

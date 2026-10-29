@@ -77,3 +77,7 @@ For a completed backup followed by interrupted source removal, [snapshot recover
 Ask `$teach-me Open this concept map in the offline editor, stage changes and check the exported draft before applying it to a new graph.` The [editor](references/graph-editor.md) supports node names/statements and joint-premise relationships, preserves existing metadata and binds drafts to exact base bytes. Manual assertions are not verified truth, new source provenance or learner mastery. Larger graphs and metadata edits remain CLI workflows.
 
 Offline graph editing now includes bounded staged undo/redo and explicit pasted draft re-import. See [recovery and keyboard use](references/editor-recovery.md). Export before closing; the page stores no persistent editing state.
+
+## Same-base draft reconciliation
+
+Version0.10.0 adds conservative [draft merge plans and explicit decisions](references/draft-merge.md). Reconcile two v1 graph drafts against their exact original base, combine independent record edits, review conflicts and create a new draft for the existing editor. Full metadata and jointly required premises survive; incompatible final choices refuse. No source overwrite, background sync or semantic inference is introduced.

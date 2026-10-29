@@ -1,0 +1,35 @@
+{
+  "component": "draft_merge",
+  "version": "0.10.0",
+  "checked_at": "2026-10-29T21:10:19.030028+00:00",
+  "tests_run": 33,
+  "passed": 33,
+  "failed": 0,
+  "attempts": 1,
+  "runtime": "3.15.0",
+  "python39": "AST grammar only; runtimeCI parentgate",
+  "source_sha256": "f820c8cc7a4666f1887cf42b926bd43b8c3164625490c6768f0a2a3e11b6e02d",
+  "old_python_files_unchanged": 13,
+  "checks": [
+    "Whole-record independent and identical merge",
+    "Explicit left/right/base choices fordivergence/deleteedit/newID",
+    "Dependency promotions andincompatiblefinalrefusal",
+    "Node/chains countandUTF8draftbytecapacitypromotions",
+    "Strict JSONschema/version/hashbinding andmetadata preservation",
+    "All5source poststage rechecks",
+    "Foreign/existingoutput, publicationrace/fsyncfailurepreservation",
+    "CLI merge\u2192unchangededitorcheck"
+  ],
+  "unexecuted": [
+    "Full397oldregressions",
+    "Actualbrowser/remoteCI",
+    "Globalinstall/discovery",
+    "Publicsource/releasedownload"
+  ],
+  "limitations": [
+    "Completegraph-only samebase drafts required",
+    "Conservativefullrecord comparison; nofieldmerge",
+    "Crossbranchlogicalduplicatearguments refuse atfinalvalidation; edit source draftandregenerateplan",
+    "Source rechecks/cooperativepublishing do notfencehostilewriters or universalpowerloss"
+  ]
+}

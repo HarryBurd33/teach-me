@@ -1,0 +1,9 @@
+{
+  "frozen_at": "2026-10-29T21:09:30.455226+00:00",
+  "candidate_backend_evaluated": false,
+  "files": {
+    "candidate/teach-me/references/draft-merge.md": "729230dee82b0a60162b4b2e8759402a0cef7efc551ae26cf558982b5bbbd0fd",
+    "candidate/teach-me/templates/draft-merge-decisions.json": "6b269a2d477a5c8006335e3606c29c72a57a4be5ca264633cae39c52e4e6a558",
+    "release/browser-tests/draft-merge.spec.js": "849f1bab1687bb525618366e6504251d8275e72e980da478939ca241e35965b8"
+  }
+}

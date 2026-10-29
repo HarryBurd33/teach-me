@@ -1,0 +1,11 @@
+test_automatic_cli_guide_roundtrip (__main__.ResourceContract.test_automatic_cli_guide_roundtrip) ... ok
+test_browser_preserves_frozen_scenarios (__main__.ResourceContract.test_browser_preserves_frozen_scenarios) ... ok
+test_browser_syntax (__main__.ResourceContract.test_browser_syntax) ... ok
+test_conflict_requires_full_choice (__main__.ResourceContract.test_conflict_requires_full_choice) ... ok
+test_stale_review_and_foreign_output_preserved (__main__.ResourceContract.test_stale_review_and_foreign_output_preserved) ... ok
+test_template_and_guide_contract (__main__.ResourceContract.test_template_and_guide_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.404s
+
+OK

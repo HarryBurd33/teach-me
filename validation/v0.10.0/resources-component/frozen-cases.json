@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-10-29T21:07:37.642836+00:00",
+  "candidate_inspected": false,
+  "contract_sha256": "07c9d8692db2f3c59ef09a0477f6dcb2b307837a3bd49c291ad6ed7467542c82",
+  "cases": [
+    {
+      "id": "automatic-roundtrip",
+      "input": "Left edits claim a statement with retained metadata; right adds a joint-premise chain",
+      "expected": "No conflicts; merged v1 draft imports/exports, actual download passes check/apply; original base and both branches preserved"
+    },
+    {
+      "id": "explicit-whole-record-choice",
+      "input": "Both branches edit different fields on claim a",
+      "expected": "One both-edited conflict; explicit left choice retains the entire left record rather than combining fields; browser undo/redo and download/apply preserve that choice"
+    },
+    {
+      "id": "review-refusals",
+      "input": "Wrong plan SHA, missing conflict choice, existing foreign output",
+      "expected": "Each operation refuses without new output or changed inputs; foreign output and editor staged base remain intact"
+    }
+  ],
+  "remote_matrix": "Existing Linux Chromium/Firefox/WebKit and Windows Chromium",
+  "execution": "RemoteCI parent gate; local syntax/discovery only",
+  "forbidden": "No source overwrite, fake provenance/semantic/mastery claim, discarded prior browser tests or weakening of expectations"
+}

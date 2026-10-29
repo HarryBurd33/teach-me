@@ -1,0 +1,9 @@
+# Draft merge constructor evidence
+
+The original MIT `draft_merge.py` implements deterministic whole-record same-base planning and exact hash-bound explicit choice application. It creates an ordinary v1 draft, preserving graph metadata and all joint premises. It reuses existing validators/path guards/create-new publisher and changes none of the13 prior Python product files.
+
+33 focused constructor methods passed on the first run. They cover independent metadata-bearing edits, identical plans, left/right/base and absent-record choices, dependency promotions, node/chain count and draft-byte capacity, strict versions/choices/JSON, raw hashes, stale sources and rehashed plan tampering. Fault injection confirms all five sources are rechecked after staging; existing/foreign race outputs survive; fsync failure publishes nothing. A real CLI merge output passed the existing editor checker. Python3.9 AST grammar passed; actual execution used Python3.15. The command/log is `python3 -B merge-component/test_draft_merge.py`, captured in `pass1.log`.
+
+Full prior regressions, independent frozen review, browser/CI, global installation/discovery and released-source/asset verification remain parent gates. No learner effectiveness, authenticated review, field-level semantic merge or platform-universal durability is claimed. Two separately added IDs with duplicate logical arguments are refused at final validation; edit the source draft and regenerate a plan. An inconsistent explicit choice combination similarly refuses instead of guessing a repair.
+
+Tests use resolved synthetic temporary paths, so macOS /var aliasing does not masquerade as a product failure. The portable component wrapper honors TEACH_ME_SKILL and otherwise targets this isolated candidate. Metadata/UI/schema compatibility follows the frozen contract; the plan itself contains no paths, wall-clock timestamp or new provenance.

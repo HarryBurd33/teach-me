@@ -1,0 +1,23 @@
+[
+  {
+    "source": "merge-component/test_draft_merge.py",
+    "target": "tests/test_draft_merge.py",
+    "adaptation": "Default skill root only; assertions unchanged",
+    "original_sha256": "b8a9ad502c57deb2b5e97c36b8a8c739825f624bfde7a19cda4ab48ce8ca3110",
+    "published_test_sha256": "a4f74ce23d7e715e6b81d7b1a839fc2645994ca4dabd139b6ccb42f17ebec778"
+  },
+  {
+    "source": "review/test_v10_contract.py",
+    "target": "tests/test_v10_contract.py",
+    "adaptation": "Default skill root only; assertions unchanged",
+    "original_sha256": "6b7e8f739a268efa9082cebc11ee18bbcf620771e8745a688d1ca814ab2ae84e",
+    "published_test_sha256": "514cf15f54820782926f78f760a17aac26d962795be91049c82e20514540029a"
+  },
+  {
+    "source": "review/test_v10_supplemental.py",
+    "target": "tests/test_v10_supplemental.py",
+    "adaptation": "Default skill root only; assertions unchanged",
+    "original_sha256": "121741f0f09b8adfd74fac26cf6e39fd5dc474642a4ceff3bda4a573085a19d7",
+    "published_test_sha256": "121741f0f09b8adfd74fac26cf6e39fd5dc474642a4ceff3bda4a573085a19d7"
+  }
+]

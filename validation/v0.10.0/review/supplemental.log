@@ -1,0 +1,10 @@
+test_chain_count_capacity_promotes (__main__.AdditionalMergeCoverage.test_chain_count_capacity_promotes) ... ok
+test_different_fields_same_record_still_conflict (__main__.AdditionalMergeCoverage.test_different_fields_same_record_still_conflict) ... ok
+test_draft_byte_capacity_promotes_and_rejects_combination (__main__.AdditionalMergeCoverage.test_draft_byte_capacity_promotes_and_rejects_combination) ... ok
+test_independent_claim_edits_combine (__main__.AdditionalMergeCoverage.test_independent_claim_edits_combine) ... ok
+test_plan_byte_limit_refuses_even_rehashed (__main__.AdditionalMergeCoverage.test_plan_byte_limit_refuses_even_rehashed) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.728s
+
+OK

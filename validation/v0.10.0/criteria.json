@@ -1,0 +1,61 @@
+{
+  "version": "0.10.0",
+  "baseline_commit": "20fe7e6d24be2bdbbd0e0886acc6c5f4b29d3102",
+  "purpose": "Conservative same-base record-level merge of divergent offline graph drafts",
+  "activation": "Optional explicit graph/draft merge within learningjourney; ordinary work and quickfacts exclusions retained",
+  "files": [
+    "scripts/draft_merge.py",
+    "references/draft-merge.md",
+    "templates/draft-merge-decisions.json"
+  ],
+  "product_dependencies": "Python3.9stdlib and ownexistinggraph helpers only; no change toexisting13Pythonhelpers,3UIassets,existingformats or397tests",
+  "commands": [
+    "plan --base BASE --left LEFT --right RIGHT --output NEW_PLAN",
+    "apply --base BASE --left LEFT --right RIGHT --plan PLAN --expected-plan-sha256 SHA --decisions DECISIONS --expected-decisions-sha256 SHA --output NEW_DRAFT --approve"
+  ],
+  "inputs": "Exact originalbase bytes and2strictv1drafts against itsSHA. Base graph-only andcomplete;bothbranchesstructurallyvalid editorgraphs <=256nodes/chains. Existingbase record aliases/createdAt/provenance immutable; newrecords useblankmetadata. Read2MiBmax each source. DuplicateJSON/unknownkeys/boolfloatversions refuse. Existing sensitive/symlink/traversal exclusion unchanged.",
+  "plan_keys": [
+    "version",
+    "format",
+    "base_sha256",
+    "left_sha256",
+    "right_sha256",
+    "automatic",
+    "conflicts",
+    "notice"
+  ],
+  "plan_format": "teach-me-draft-merge-plan-v1",
+  "plan_version": 1,
+  "automatic": "Exactly nodes/chains arrays of {id,record}; complete changedrecord ornull deletion. Whole-record comparison tobase; identical edits or onebranch-only changes combine. Stable sorting. No semantic/field-level inference.",
+  "conflicts": "Array exact {kind,id,reason,base,left,right} with kind node/chain, nullable fullrecords; reason both-edited/dependency/capacity. Bothdifferentedits, deletevsedit, divergentnewID explicitchoices. Promote crossbranchmissingnode and referringchain todependencyconflicts. Ifautomaticcomposition count/draftbytes exceedsbounds, promote affectedchangedrecords tocapacityconflicts. Keepallchoices explicit; finalinvalidcombination refuses instead ofrepair.",
+  "decisions": "Exact {version:1,plan_sha256,choices:[{kind:node|chain,id,choose:left|right|base}]}; exactonechoiceforeachconflict andnoextras/duplicates. Choosing anabsentbranchrecord deliberatelydeletes/dropsit. Emptychoices forconflict-freeplan. No arbitrarycontent values. <=2MiB.",
+  "apply": "Re-readallsources; exactrawplanSHA anddecisionsSHA; decisionsplan_sha256 matchesrawplan; plan parsedcontent mustequalfresh deterministicrecomputedplan. Requireapprove. Buildnormal strictv1draft {version,base_sha256,patch}; validate allfinalgraph/editorbounds, metadata andlogicalargumentuniqueness. Create-newoutputwith all5source rechecks through existingpublisher. Never alter/deleteinput orforeignoutput. ReturnexactdraftSHAcounts/evidencelimits.",
+  "bounds": {
+    "source_bytes": 2097152,
+    "plan_bytes": 8388608,
+    "decisions_bytes": 2097152,
+    "output_draft_bytes": 2097152,
+    "nodes": 256,
+    "chains": 256
+  },
+  "notices": "Manualselection nottruth/evidence/mastery/authenticatedreview; no fieldmerge/sync/autosave/sourcewriteback/newidentityclaims. No serializedsourcepaths/timestampsinplan.",
+  "checks": [
+    "independent nodevsnode andnodevschain edits combine fullmetadata/AND; identicaledits deterministic",
+    "divergentedits anddelete/edit/newIDconflicts require completeexactchoices",
+    "crossdependencyandcapacitypromotions,invalidchoicesfinalrefuse",
+    "wrongbase/staleleft/right/planhash/decisionhash/tamperedplan refuseatomically",
+    "duplicateJSON/unknown/boolfloatversions/metadataforgery/unknownchoice/symlink/sensitivepath/bounds refuse",
+    "allsourcebytesunchanged, existingforeignoutput andpoststage sourcesrace/IOinterruption refused",
+    "baseline397regressions byteidentical andexecuted",
+    "remote4browsermatrix mergedv1draft imported/exported checked/applied withoriginalbase preserved",
+    "global49hashes/native discovery/8CIjobs/source+actualreleasedownload verified"
+  ],
+  "scope_limit": "Onecandidate45minutes, max3workers2repairpasses; meaningfulresourcechecks20percentdefault; no paidAPI/services",
+  "routing": {
+    "configured_model": "gpt-6.1-sol",
+    "configured_effort": "high",
+    "reason": "Correctness-sensitive structuralmerge, conflict dependencies and sourcepreservation need high reasoning; no justified cheaper qualified switch outweighs handoff overhead at this phase",
+    "review": "Independent frozen contracts plus browserworkflow and full regressions"
+  },
+  "frozen_at": "2026-10-29T21:05:48.312841+00:00"
+}

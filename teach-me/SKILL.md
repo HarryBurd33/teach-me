@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.9.0"
+  version: "0.10.0"
 ---
 
 # Teach me
@@ -120,3 +120,5 @@ Later response: specific feedback; the resulting progress/plan adjustment; next 
 Completion: compare the final demonstration with the agreed target, state what remains untested, schedule a retention/transfer check only as a suggested learner action, and save the current result when authorized. No background follow-up is implied.
 
 For recoverable offline graph editing, use [editor recovery](references/editor-recovery.md): export deliberate checkpoints, re-import against the exact base, and use bounded staged undo/redo. History excludes unstaged form text and disappears when the page closes. Never infer autosave or source writeback.
+
+For explicitly requested reconciliation of two offline graph drafts from the exact same base, read [draft merging](references/draft-merge.md). Produce a deterministic plan, inspect record-level conflicts, select each required side explicitly, and apply the exact reviewed plan/decisions hashes to a new v1 draft. Check and import it through the existing editor before creating a new graph. Independent changes can combine; incompatible dependencies and capacity limits require review. Preserve every original and historical metadata; merge choices establish no semantic truth, source support, authenticated review or learner mastery.

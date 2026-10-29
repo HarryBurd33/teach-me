@@ -1,0 +1,23 @@
+Listing tests:
+  [chromium] › draft-merge.spec.js:110:1 › independent claim and AND argument edits merge through actual browser download
+  [chromium] › draft-merge.spec.js:126:1 › explicit conflict choice preserves one full record and is undoable after import
+  [chromium] › draft-merge.spec.js:143:1 › review hash missing choices and foreign output refuse without changing staged work
+  [chromium] › editor.spec.js:67:1 › actual download preserves metadata and AND through CLI check/apply
+  [chromium] › editor.spec.js:86:1 › history branch reset import and atomic refusal preserve staged work
+  [chromium] › editor.spec.js:114:1 › history count is bounded and eviction is visible
+  [chromium] › editor.spec.js:124:1 › keyboard editing focus repair and 390px layout
+  [firefox] › draft-merge.spec.js:110:1 › independent claim and AND argument edits merge through actual browser download
+  [firefox] › draft-merge.spec.js:126:1 › explicit conflict choice preserves one full record and is undoable after import
+  [firefox] › draft-merge.spec.js:143:1 › review hash missing choices and foreign output refuse without changing staged work
+  [firefox] › editor.spec.js:67:1 › actual download preserves metadata and AND through CLI check/apply
+  [firefox] › editor.spec.js:86:1 › history branch reset import and atomic refusal preserve staged work
+  [firefox] › editor.spec.js:114:1 › history count is bounded and eviction is visible
+  [firefox] › editor.spec.js:124:1 › keyboard editing focus repair and 390px layout
+  [webkit] › draft-merge.spec.js:110:1 › independent claim and AND argument edits merge through actual browser download
+  [webkit] › draft-merge.spec.js:126:1 › explicit conflict choice preserves one full record and is undoable after import
+  [webkit] › draft-merge.spec.js:143:1 › review hash missing choices and foreign output refuse without changing staged work
+  [webkit] › editor.spec.js:67:1 › actual download preserves metadata and AND through CLI check/apply
+  [webkit] › editor.spec.js:86:1 › history branch reset import and atomic refusal preserve staged work
+  [webkit] › editor.spec.js:114:1 › history count is bounded and eviction is visible
+  [webkit] › editor.spec.js:124:1 › keyboard editing focus repair and 390px layout
+Total: 21 tests in 2 files

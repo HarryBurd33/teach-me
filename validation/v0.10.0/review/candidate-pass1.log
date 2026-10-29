@@ -1,0 +1,52 @@
+test_01_independent_node_chain_metadata_and (__main__.MergeContract.test_01_independent_node_chain_metadata_and) ... ok
+test_02_identical_edits_automatic (__main__.MergeContract.test_02_identical_edits_automatic) ... ok
+test_03_plan_deterministic_exact_schema (__main__.MergeContract.test_03_plan_deterministic_exact_schema) ... ok
+test_04_divergent_full_conflict_preview (__main__.MergeContract.test_04_divergent_full_conflict_preview) ... ok
+test_05_explicit_left (__main__.MergeContract.test_05_explicit_left) ... ok
+test_06_explicit_right (__main__.MergeContract.test_06_explicit_right) ... ok
+test_07_explicit_base (__main__.MergeContract.test_07_explicit_base) ... ok
+test_08_delete_edit_and_absent_choice (__main__.MergeContract.test_08_delete_edit_and_absent_choice) ... ok
+test_09_new_id_divergence_base_drops (__main__.MergeContract.test_09_new_id_divergence_base_drops) ... ok
+test_10_dependency_promotes_node_and_chain (__main__.MergeContract.test_10_dependency_promotes_node_and_chain) ... ok
+test_11_invalid_dependency_choice_refused (__main__.MergeContract.test_11_invalid_dependency_choice_refused) ... ok
+test_12_capacity_promotes_changes (__main__.MergeContract.test_12_capacity_promotes_changes) ... ok
+test_13_incompatible_capacity_choices_refused (__main__.MergeContract.test_13_incompatible_capacity_choices_refused) ... ok
+test_14_missing_choices_refused (__main__.MergeContract.test_14_missing_choices_refused) ... ok
+test_15_extra_choice_refused (__main__.MergeContract.test_15_extra_choice_refused) ... ok
+test_16_duplicate_choice_refused (__main__.MergeContract.test_16_duplicate_choice_refused) ... ok
+test_17_unknown_decision_fields_and_choice (__main__.MergeContract.test_17_unknown_decision_fields_and_choice) ... ok
+test_18_approve_required (__main__.MergeContract.test_18_approve_required) ... ok
+test_19_wrong_plan_review_hash (__main__.MergeContract.test_19_wrong_plan_review_hash) ... ok
+test_20_wrong_decision_review_hash (__main__.MergeContract.test_20_wrong_decision_review_hash) ... ok
+test_21_decision_bound_plan_hash (__main__.MergeContract.test_21_decision_bound_plan_hash) ... ok
+test_22_plan_tamper_recomputed_even_rehashed (__main__.MergeContract.test_22_plan_tamper_recomputed_even_rehashed) ... ok
+test_23_changed_base_bytes_refused (__main__.MergeContract.test_23_changed_base_bytes_refused) ... ok
+test_24_changed_left_bytes_refused (__main__.MergeContract.test_24_changed_left_bytes_refused) ... ok
+test_25_changed_right_bytes_refused (__main__.MergeContract.test_25_changed_right_bytes_refused) ... ok
+test_26_wrong_branch_base_refused (__main__.MergeContract.test_26_wrong_branch_base_refused) ... ok
+test_27_duplicate_json_members (__main__.MergeContract.test_27_duplicate_json_members) ... ok
+test_28_unknown_draft_and_patch_fields (__main__.MergeContract.test_28_unknown_draft_and_patch_fields) ... ok
+test_29_bool_float_versions (__main__.MergeContract.test_29_bool_float_versions) ... ok
+test_30_metadata_forgery_refused (__main__.MergeContract.test_30_metadata_forgery_refused) ... ok
+test_31_new_record_blank_metadata_required (__main__.MergeContract.test_31_new_record_blank_metadata_required) ... ok
+test_32_sessions_and_incomplete_base_refused (__main__.MergeContract.test_32_sessions_and_incomplete_base_refused) ... ok
+test_33_source_limit (__main__.MergeContract.test_33_source_limit) ... ok
+test_34_decisions_limit_and_version (__main__.MergeContract.test_34_decisions_limit_and_version) ... ok
+test_35_existing_outputs_preserved (__main__.MergeContract.test_35_existing_outputs_preserved) ... ok
+test_36_symlink_sensitive_traversal_refused (__main__.MergeContract.test_36_symlink_sensitive_traversal_refused) ... ok
+test_37_duplicate_logical_arguments_composed_refused (__main__.MergeContract.test_37_duplicate_logical_arguments_composed_refused) ... ok
+test_38_all_five_sources_rechecked (__main__.MergeContract.test_38_all_five_sources_rechecked) ... draft_merge: Source changed before publication
+draft_merge: Source changed before publication
+draft_merge: Source changed before publication
+draft_merge: Source changed before publication
+draft_merge: Source changed before publication
+ok
+test_39_foreign_destination_race_preserved (__main__.MergeContract.test_39_foreign_destination_race_preserved) ... draft_merge: other writer
+ok
+test_40_publication_io_failure_no_output (__main__.MergeContract.test_40_publication_io_failure_no_output) ... draft_merge: injected storage failure
+ok
+
+----------------------------------------------------------------------
+Ran 40 tests in 3.591s
+
+OK

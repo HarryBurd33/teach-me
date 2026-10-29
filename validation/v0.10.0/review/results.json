@@ -1,0 +1,42 @@
+{
+  "version": "0.10.0",
+  "checked_at": "2026-10-29T21:10:38.172669+00:00",
+  "status": "Independent frozen CLI contracts, supplementary coverage and scoped static review passed",
+  "candidate_passed": 45,
+  "original_frozen_methods": 40,
+  "post_inspection_supplementary_methods": 5,
+  "frozen_hashes_match": true,
+  "baseline": {
+    "methods_run": 40,
+    "positive_failures_from_absent_module": 31,
+    "negative_passes_from_absence": 9,
+    "security_credit": false
+  },
+  "unchanged_product_python_files": 13,
+  "unchanged_ui_assets": 3,
+  "unchanged_old_test_files": 33,
+  "source_grammar": "Python3.9 accepted by Python3.15 AST parser; not Python3.9 runtime execution",
+  "runtime": "Python3.15.0",
+  "remaining_blocking_findings": [],
+  "observed_checks": [
+    "Independent node/node and node/chain changes retain full metadata and AND premises",
+    "Same-record different-field edits remain conflicts; explicit base/left/right and null deletion semantics",
+    "Dependency, node-count, chain-count and2MiB output-byte capacity promotion plus invalid-combination refusal",
+    "Deterministic exact-key plans and exact raw plan/decisions/source binding",
+    "All5inputs changed after staging refused; foreign destination retained; fsync failure leaves no output",
+    "Strict schema/duplicate JSON/boolfloatversion/metadataforgery/sensitivepath/symlink/traversal and source/plan/decision limits refused"
+  ],
+  "parent_gates": [
+    "Full397oldregressions and integrated newmethods",
+    "Remote4browser import/download/check/apply with Windows coverage",
+    "Installedintegrity/native discovery",
+    "ExactcommitCI/source/releasedownloadverification"
+  ],
+  "limitations": [
+    "No learner or model-efficacy trial",
+    "Supplementary5methods were added after candidateinspection; original40frozenmethods retained unchanged",
+    "Graph-size/history/parser/filesystem combinations are sampled not exhaustive",
+    "IO tests are targeted deterministic injections; no hostile-writer fencing or universal power-loss durability claim",
+    "Syntax3.9 check is not runtime3.9 qualification"
+  ]
+}

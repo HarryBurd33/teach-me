@@ -1,0 +1,38 @@
+test_all_five_sources_rechecked_after_staging (__main__.DraftMerge.test_all_five_sources_rechecked_after_staging) ... ok
+test_approval_and_expected_hashes (__main__.DraftMerge.test_approval_and_expected_hashes) ... ok
+test_byte_capacity_promotes_changed_records (__main__.DraftMerge.test_byte_capacity_promotes_changed_records) ... ok
+test_capacity_promotes_chain_changes (__main__.DraftMerge.test_capacity_promotes_chain_changes) ... ok
+test_capacity_promotes_node_changes (__main__.DraftMerge.test_capacity_promotes_node_changes) ... ok
+test_cli_end_to_end_existing_editor_check (__main__.DraftMerge.test_cli_end_to_end_existing_editor_check) ... ok
+test_decisions_bind_exact_plan (__main__.DraftMerge.test_decisions_bind_exact_plan) ... ok
+test_delete_edit_conflict (__main__.DraftMerge.test_delete_edit_conflict) ... ok
+test_dependency_promotes_node_and_chain (__main__.DraftMerge.test_dependency_promotes_node_and_chain) ... ok
+test_divergent_edit_base_choice (__main__.DraftMerge.test_divergent_edit_base_choice) ... ok
+test_divergent_edit_left_choice (__main__.DraftMerge.test_divergent_edit_left_choice) ... ok
+test_divergent_edit_right_choice (__main__.DraftMerge.test_divergent_edit_right_choice) ... ok
+test_divergent_newid_base_choice_drops (__main__.DraftMerge.test_divergent_newid_base_choice_drops) ... ok
+test_duplicate_json_members_refuse (__main__.DraftMerge.test_duplicate_json_members_refuse) ... ok
+test_duplicate_or_extra_choice_refuses (__main__.DraftMerge.test_duplicate_or_extra_choice_refuses) ... ok
+test_existing_output_and_input_preserved (__main__.DraftMerge.test_existing_output_and_input_preserved) ... ok
+test_foreign_publication_race_preserved (__main__.DraftMerge.test_foreign_publication_race_preserved) ... ok
+test_fsync_failure_preserves_inputs (__main__.DraftMerge.test_fsync_failure_preserves_inputs) ... ok
+test_grammar_python39 (__main__.DraftMerge.test_grammar_python39) ... ok
+test_identical_edits_auto_and_deterministic (__main__.DraftMerge.test_identical_edits_auto_and_deterministic) ... ok
+test_incompatible_dependency_choices_refuse (__main__.DraftMerge.test_incompatible_dependency_choices_refuse) ... ok
+test_independent_metadata_and_joint_argument (__main__.DraftMerge.test_independent_metadata_and_joint_argument) ... ok
+test_logical_duplicate_combination_refuses (__main__.DraftMerge.test_logical_duplicate_combination_refuses) ... ok
+test_missing_choice_refuses (__main__.DraftMerge.test_missing_choice_refuses) ... ok
+test_noop_roundtrip (__main__.DraftMerge.test_noop_roundtrip) ... ok
+test_plan_and_decisions_versions_strict (__main__.DraftMerge.test_plan_and_decisions_versions_strict) ... ok
+test_sensitive_and_symlink_paths_refuse (__main__.DraftMerge.test_sensitive_and_symlink_paths_refuse) ... ok
+test_source_and_decision_size_limit (__main__.DraftMerge.test_source_and_decision_size_limit) ... ok
+test_source_metadata_forgery_and_new_metadata_refuse (__main__.DraftMerge.test_source_metadata_forgery_and_new_metadata_refuse) ... ok
+test_source_session_and_incomplete_base_refuse (__main__.DraftMerge.test_source_session_and_incomplete_base_refuse) ... ok
+test_source_wrong_base_duplicate_or_float_version_refuse (__main__.DraftMerge.test_source_wrong_base_duplicate_or_float_version_refuse) ... ok
+test_stale_branch_and_rehashed_tampered_plan_refuse (__main__.DraftMerge.test_stale_branch_and_rehashed_tampered_plan_refuse) ... ok
+test_unknown_choice_fields_and_arbitrary_value_refuse (__main__.DraftMerge.test_unknown_choice_fields_and_arbitrary_value_refuse) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.288s
+
+OK

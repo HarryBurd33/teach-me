@@ -1,6 +1,6 @@
 # Teach-me
 
-A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.9.0**. See [capabilities, validation and remaining work](docs/V0.9.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.10.0**. See [capabilities, validation and remaining work](docs/V0.10.0.md).
 
 ## Install and use
 
@@ -25,6 +25,7 @@ $teach-me Plan retirement of these explicit old snapshots, preserving HEAD and p
 $teach-me Import this old review receipt as historical, preserving its bytes and limits.
 $teach-me Plan recovery of this interrupted removal from the complete archive.
 $teach-me Open an offline editor for this graph; help me review and apply its draft to a new file.
+$teach-me Compare these two graph drafts from the same base, show conflicts, and create a reviewed merged draft.
 $teach-me Resume the algebra journey at /path/to/workspace/learning/algebra.
 ```
 
@@ -86,8 +87,12 @@ The original instructions, templates, code and tests are under the [MIT License]
 
 ## Offline graph editing
 
-The [offline editor](teach-me/references/graph-editor.md) stages claim and AND-argument changes, supports search/reset and exports a draft. Review and validate the hash-bound draft before explicitly applying to a new graph; the original stays preserved. Manual edits do not create verified evidence or mastery. The browser page uses no network, storage or autosave. See [v0.9.0 validation and limits](docs/V0.9.0.md).
+The [offline editor](teach-me/references/graph-editor.md) stages claim and AND-argument changes, supports search/reset and exports a draft. Review and validate the hash-bound draft before explicitly applying to a new graph; the original stays preserved. Manual edits do not create verified evidence or mastery. The browser page uses no network, storage or autosave. See [v0.10.0 validation and limits](docs/V0.10.0.md).
 
 ## Recoverable offline editing
 
 Use bounded staged undo/redo and explicitly re-import a saved draft against its original base. No-op/failed actions do not replace staged work. Export before closing: history and unsubmitted form text are not saved. See [recovery and keyboard use](teach-me/references/editor-recovery.md).
+
+## Merge divergent graph drafts
+
+The [same-base draft merger](teach-me/references/draft-merge.md) combines independent whole-record edits and exposes explicit conflicts before producing a new v1 draft. Source hashes, complete choices and final structural checks are mandatory; all original files remain preserved. See [current validation and limits](docs/V0.10.0.md).

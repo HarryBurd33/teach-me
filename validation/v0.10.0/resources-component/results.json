@@ -1,0 +1,37 @@
+{
+  "version": "0.10.0",
+  "checked_at": "2026-10-29T21:12:24.611699+00:00",
+  "component": "merge guide decisions template and remote browser integration",
+  "status": "construction and local non-browser verification passed",
+  "checks": {
+    "resource_contract_methods": 6,
+    "passed": 6,
+    "failed": 0,
+    "javascript_syntax": "pass",
+    "playwright_discovery": "21 tests in2files across3configuredprojects",
+    "expected_ci_executions": 28,
+    "new_browser_cases": 3,
+    "prior_browser_cases_unchanged": 4,
+    "frozen_new_browser_source_unchanged": true
+  },
+  "runtime": {
+    "python": "3.15.0",
+    "node": "v24.22.0",
+    "playwright": "1.64.1 existinglock"
+  },
+  "hashes": {
+    "candidate/teach-me/references/draft-merge.md": "7e164e3f3936a8e8ca9f0d0c1d20ccc467dd4948e172843d9cd21f59378ae4c6",
+    "candidate/teach-me/templates/draft-merge-decisions.json": "6b269a2d477a5c8006335e3606c29c72a57a4be5ca264633cae39c52e4e6a558",
+    "release/browser-tests/draft-merge.spec.js": "849f1bab1687bb525618366e6504251d8275e72e980da478939ca241e35965b8"
+  },
+  "browser_execution_local": false,
+  "remote_browser_gate": "Parentmust verify4CIjobs includingnewplan/merge/import/export/download/check/apply cases",
+  "guide_clarification": "Explicit duplicate-logical-argument finalrefusal requestedbyparent; initialguide retained and correctionhashes recorded; no testcriterion changed",
+  "tooling": "Private scoped npmci offline ignore-scripts used existinglock fordiscovery, no release/package/workflow/dependency edits; temporarymodules removed",
+  "boundaries": "No other product, oldbrowser, globalinstallation, publicrepository, checkpoint, ownership, policy or model writes; no subagents",
+  "limitations": [
+    "Discovery and Node syntax do not execute browser behavior or prove CSP enforcement",
+    "RemotePlaywrightWebKit is not installedSafariqualification",
+    "No reallearner, screenreader, authenticatedidentity or hostilefilesystem claim"
+  ]
+}

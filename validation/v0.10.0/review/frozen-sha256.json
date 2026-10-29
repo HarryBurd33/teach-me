@@ -1,0 +1,10 @@
+{
+  "frozen_at": "2026-10-29T21:07:52.998616+00:00",
+  "candidate_inspected": false,
+  "methods": 40,
+  "sha256": {
+    "criteria.json": "07c9d8692db2f3c59ef09a0477f6dcb2b307837a3bd49c291ad6ed7467542c82",
+    "review/test_v10_contract.py": "6b7e8f739a268efa9082cebc11ee18bbcf620771e8745a688d1ca814ab2ae84e",
+    "review/frozen-cases.json": "d769c147bb4d6ade1a396b0569f6add2799c3e43f20259f25a15b1af2c3b2678"
+  }
+}

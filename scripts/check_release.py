@@ -21,7 +21,7 @@ REQUIRED = [
     'teach-me/references/local-runtime.md', 'teach-me/references/host-integration.md',
     'teach-me/templates/harness-plan.json', 'teach-me/templates/learning-pilot.md',
     'tests/test_learning_data.py', 'tests/test_transfer.py', 'tests/test_harness.py',
-    'docs/V0.3.0.md', 'docs/V0.4.0.md', 'docs/V0.5.0.md', 'docs/V0.6.0.md', 'docs/V0.7.0.md', 'docs/V0.8.0.md', 'docs/V0.9.0.md', 'teach-me/references/editor-recovery.md', 'tests/test_v9_contract.py', 'tests/v9-contract-runner.js', 'package-lock.json', 'playwright.config.js', '.github/workflows/browser.yml',
+    'docs/V0.3.0.md', 'docs/V0.4.0.md', 'docs/V0.5.0.md', 'docs/V0.6.0.md', 'docs/V0.7.0.md', 'docs/V0.8.0.md', 'docs/V0.9.0.md', 'docs/V0.10.0.md', 'teach-me/scripts/draft_merge.py', 'teach-me/references/draft-merge.md', 'teach-me/templates/draft-merge-decisions.json', 'teach-me/references/editor-recovery.md', 'tests/test_v9_contract.py', 'tests/v9-contract-runner.js', 'package-lock.json', 'playwright.config.js', '.github/workflows/browser.yml',
     'teach-me/scripts/graph_editor.py', 'teach-me/references/graph-editor.md',
     'teach-me/assets/graph-editor.html', 'teach-me/assets/graph-editor.js', 'teach-me/assets/graph-editor.css',
     'teach-me/scripts/snapshot_recovery.py', 'teach-me/references/snapshot-recovery.md',
@@ -52,7 +52,7 @@ def check():
     skill = (ROOT / 'teach-me/SKILL.md').read_text(encoding='utf-8')
     assert skill.startswith('---\nname: teach-me\n'), 'Skill metadata/name mismatch'
     assert 'license: MIT\n' in skill.split('---', 2)[1]
-    assert 'version: "0.9.0"' in skill.split('---', 2)[1], 'Release version mismatch'
+    assert 'version: "0.10.0"' in skill.split('---', 2)[1], 'Release version mismatch'
     schema = json.loads((ROOT / 'teach-me/references/progress.schema.json').read_text())
     assert schema['$id'] == 'urn:teach-me:progress:v1'
     links = 0
@@ -106,6 +106,16 @@ def check():
         assert evidence.resolve() in item.resolve().parents
         assert hashlib.sha256(item.read_bytes()).hexdigest() == record['published_sha256'], 'Published evidence hash mismatch: ' + name
     evidence = ROOT / 'validation/v0.9.0'
+    manifest = json.loads((evidence / 'public-evidence-hashes.json').read_text())
+    assert type(manifest['version']) is int and manifest['version'] == 1
+    for name, record in manifest['files'].items():
+        relative = Path(name)
+        assert not relative.is_absolute() and '..' not in relative.parts and relative.as_posix() == name
+        item = evidence / relative
+        assert not item.is_symlink() and item.is_file()
+        assert evidence.resolve() in item.resolve().parents
+        assert hashlib.sha256(item.read_bytes()).hexdigest() == record['published_sha256'], 'Published evidence hash mismatch: ' + name
+    evidence = ROOT / 'validation/v0.10.0'
     manifest = json.loads((evidence / 'public-evidence-hashes.json').read_text())
     assert type(manifest['version']) is int and manifest['version'] == 1
     for name, record in manifest['files'].items():

@@ -1,0 +1,6 @@
+{
+  "reason": "Parent requested explicit final logical-duplicate refusal explanation; no contract/test changes",
+  "observed_at": "2026-10-29T21:10:06.832954+00:00",
+  "initial_sha256": "729230dee82b0a60162b4b2e8759402a0cef7efc551ae26cf558982b5bbbd0fd",
+  "final_sha256": "7e164e3f3936a8e8ca9f0d0c1d20ccc467dd4948e172843d9cd21f59378ae4c6"
+}
