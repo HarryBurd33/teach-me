@@ -1,0 +1,59 @@
+{
+  "spec_revision": "1.1",
+  "checked_at": "2026-10-29T00:54:10.221246+00:00",
+  "status": "independent contract/static/workflow review passed; parent browser/release/installed gates outside this review",
+  "frozen_hashes_match": {
+    "review/frozen-cases.json": true,
+    "review/test_v8_contract.py": true,
+    "criteria.json": true,
+    "criteria-correction.json": true
+  },
+  "baseline_manifest_unchanged": true,
+  "baseline_manifest_changes": [],
+  "reviewed_candidate_unchanged": true,
+  "candidate_changes": [],
+  "contract": {
+    "tests_run": 23,
+    "passed": 23,
+    "failed": 0,
+    "command": "TMPDIR=/private/tmp TEACH_ME_ROOT=.forge/teach-me-v0.8.0/candidate/teach-me python3 .forge/teach-me-v0.8.0/review/test_v8_contract.py",
+    "log": "candidate-pass1-canonical-tmp.log",
+    "initial_harness_issue": "Default macOS tempfile path traversed /var symlink, correctly refused by old and new path guards; frozen tests unchanged, canonical TMPDIR resolved execution."
+  },
+  "baseline": {
+    "tests_run": 23,
+    "failures": 6,
+    "errors": 4,
+    "interpretation": "Editor module absent: new capability positive checks fail, module-level checks error. Negative subprocess checks can pass from absence alone and provide no baseline security credit; old CLI equivalence test passes. Not a valid comparative security pass rate.",
+    "log": "baseline-canonical-tmp.log"
+  },
+  "workflow": {
+    "cases": 4,
+    "baseline_self_graded_pass": 3,
+    "candidate_self_graded_pass": 4,
+    "method": "literal responses in shared evaluator context with scenario resets; self-graded nonblind, effective model/effort unknown",
+    "efficacy_claim": false
+  },
+  "old_regressions": {
+    "files_compared": 25,
+    "byte_identical": 25,
+    "weakened_or_missing": 0,
+    "execution_of_302": "not performed by this reviewer; parent responsibility"
+  },
+  "supplemental": [
+    "No newly introduced legacy span-validation notice; exact input notice retained when present",
+    "Bundled script/style SHA256 values exactly match generated CSP"
+  ],
+  "findings": [],
+  "browser_qa_performed": false,
+  "product_edits": false,
+  "external_changes": false,
+  "agents_spawned": 0,
+  "paid_api_used": false,
+  "limitations": [
+    "Frozen chain over-limit case also has duplicate logical arguments; static source separately confirms chain cardinality enforcement.",
+    "Atomic create-new and source rechecks do not lock out arbitrary external writers after the final recheck.",
+    "Python 3.15 executed; Python 3.9 runtime not exercised by this reviewer.",
+    "Workflow output is evaluator-authored, shared-context and nonblind; no independent inference or learner outcome measured."
+  ]
+}

@@ -1,0 +1,28 @@
+test_01_metadata_preserving_node_edit (__main__.Contract.test_01_metadata_preserving_node_edit) ... ok
+test_02_joint_premise_new_chain_and_empty_timestamp (__main__.Contract.test_02_joint_premise_new_chain_and_empty_timestamp) ... ok
+test_03_new_node_manual_metadata (__main__.Contract.test_03_new_node_manual_metadata) ... ok
+test_04_stale_base_hash (__main__.Contract.test_04_stale_base_hash) ... ok
+test_05_raw_draft_hash_binding (__main__.Contract.test_05_raw_draft_hash_binding) ... ok
+test_06_approve_required (__main__.Contract.test_06_approve_required) ... ok
+test_07_exact_bundle_keys (__main__.Contract.test_07_exact_bundle_keys) ... ok
+test_08_unknown_patch_key (__main__.Contract.test_08_unknown_patch_key) ... ok
+test_09_bool_and_unsupported_versions (__main__.Contract.test_09_bool_and_unsupported_versions) ... ok
+test_10_duplicate_json_members (__main__.Contract.test_10_duplicate_json_members) ... ok
+test_11_invalid_ids_and_duplicate_premises (__main__.Contract.test_11_invalid_ids_and_duplicate_premises) ... ok
+test_12_session_data_refused (__main__.Contract.test_12_session_data_refused) ... ok
+test_13_missing_endpoint_and_referenced_delete (__main__.Contract.test_13_missing_endpoint_and_referenced_delete) ... ok
+test_14_render_unresolved_then_repair (__main__.Contract.test_14_render_unresolved_then_repair) ... ok
+test_15_record_limits (__main__.Contract.test_15_record_limits) ... ok
+test_16_byte_limits (__main__.Contract.test_16_byte_limits) ... ok
+test_17_existing_output_and_source_preserved (__main__.Contract.test_17_existing_output_and_source_preserved) ... ok
+test_18_foreign_publication_race (__main__.Contract.test_18_foreign_publication_race) ... ok
+test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) ... ok
+test_20_hostile_html_csp_and_assets (__main__.Contract.test_20_hostile_html_csp_and_assets) ... ok
+test_21_old_cli_edit_unchanged (__main__.Contract.test_21_old_cli_edit_unchanged) ... ok
+test_22_shared_pure_helper (__main__.Contract.test_22_shared_pure_helper) ... ok
+test_23_null_creation_timestamp_refused (__main__.Contract.test_23_null_creation_timestamp_refused) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.555s
+
+OK

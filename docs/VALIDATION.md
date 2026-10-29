@@ -1,3 +1,7 @@
+# Current v0.8.0 validation
+
+366 candidate and installed tests passed, plus actual synthetic browser download/check/apply. See [release report](V0.8.0.md). Historical records below retain their original limits.
+
 # Current v0.7.0 validation
 
 See [the current release report](V0.7.0.md):302 candidate/installed tests, frozen independent failures and scoped model comparisons. Historical records below retain their original results and limits.

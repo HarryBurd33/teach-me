@@ -1,0 +1,16 @@
+{
+  "manual_warning_boundary": [
+    {
+      "legacy_notice_in_base": false,
+      "legacy_notice_in_result": false,
+      "manual_notice": true
+    },
+    {
+      "legacy_notice_in_base": true,
+      "legacy_notice_in_result": true,
+      "manual_notice": true
+    }
+  ],
+  "exact_script_and_style_csp_hashes": true,
+  "method": "Executed helper boundary plus exact bundled-asset hash comparison; no browser assertion"
+}

@@ -1,0 +1,182 @@
+test_01_metadata_preserving_node_edit (__main__.Contract.test_01_metadata_preserving_node_edit) ... FAIL
+test_02_joint_premise_new_chain_and_empty_timestamp (__main__.Contract.test_02_joint_premise_new_chain_and_empty_timestamp) ... FAIL
+test_03_new_node_manual_metadata (__main__.Contract.test_03_new_node_manual_metadata) ... FAIL
+test_04_stale_base_hash (__main__.Contract.test_04_stale_base_hash) ... ok
+test_05_raw_draft_hash_binding (__main__.Contract.test_05_raw_draft_hash_binding) ... FAIL
+test_06_approve_required (__main__.Contract.test_06_approve_required) ... ok
+test_07_exact_bundle_keys (__main__.Contract.test_07_exact_bundle_keys) ... ok
+test_08_unknown_patch_key (__main__.Contract.test_08_unknown_patch_key) ... ok
+test_09_bool_and_unsupported_versions (__main__.Contract.test_09_bool_and_unsupported_versions) ... ok
+test_10_duplicate_json_members (__main__.Contract.test_10_duplicate_json_members) ... ok
+test_11_invalid_ids_and_duplicate_premises (__main__.Contract.test_11_invalid_ids_and_duplicate_premises) ... ok
+test_12_session_data_refused (__main__.Contract.test_12_session_data_refused) ... ok
+test_13_missing_endpoint_and_referenced_delete (__main__.Contract.test_13_missing_endpoint_and_referenced_delete) ... ok
+test_14_render_unresolved_then_repair (__main__.Contract.test_14_render_unresolved_then_repair) ... FAIL
+test_15_record_limits (__main__.Contract.test_15_record_limits) ... ok
+test_16_byte_limits (__main__.Contract.test_16_byte_limits) ... ok
+test_17_existing_output_and_source_preserved (__main__.Contract.test_17_existing_output_and_source_preserved) ... ok
+test_18_foreign_publication_race (__main__.Contract.test_18_foreign_publication_race) ... ERROR
+test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) ...
+  test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) (target='base.json') ... ERROR
+  test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) (target='draft.json') ... ERROR
+test_20_hostile_html_csp_and_assets (__main__.Contract.test_20_hostile_html_csp_and_assets) ... FAIL
+test_21_old_cli_edit_unchanged (__main__.Contract.test_21_old_cli_edit_unchanged) ... ok
+test_22_shared_pure_helper (__main__.Contract.test_22_shared_pure_helper) ... ERROR
+test_23_null_creation_timestamp_refused (__main__.Contract.test_23_null_creation_timestamp_refused) ... ok
+
+======================================================================
+ERROR: test_18_foreign_publication_race (__main__.Contract.test_18_foreign_publication_race)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 157, in test_18_foreign_publication_race
+    mod=self.load_module();original=mod.data.os.link
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 78, in load_module
+    mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+                                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 743, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 876, in get_code
+  File "<frozen importlib._bootstrap_external>", line 922, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py'
+
+======================================================================
+ERROR: test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) (target='base.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 170, in test_19_sources_rechecked_before_publish
+    mod=self.load_module();original=mod.data.publish
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 78, in load_module
+    mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+                                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 743, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 876, in get_code
+  File "<frozen importlib._bootstrap_external>", line 922, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py'
+
+======================================================================
+ERROR: test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) (target='draft.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 170, in test_19_sources_rechecked_before_publish
+    mod=self.load_module();original=mod.data.publish
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 78, in load_module
+    mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+                                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 743, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 876, in get_code
+  File "<frozen importlib._bootstrap_external>", line 922, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py'
+
+======================================================================
+ERROR: test_22_shared_pure_helper (__main__.Contract.test_22_shared_pure_helper)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 205, in test_22_shared_pure_helper
+    mod=self.load_module();self.assertTrue(callable(mod.workbench.edited_graph) if hasattr(mod,'workbench') else callable(__import__('graph_workbench').edited_graph))
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 78, in load_module
+    mod=importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
+                                               ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 743, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 876, in get_code
+  File "<frozen importlib._bootstrap_external>", line 922, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py'
+
+======================================================================
+FAIL: test_01_metadata_preserving_node_edit (__main__.Contract.test_01_metadata_preserving_node_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 82, in test_01_metadata_preserving_node_edit
+    raw=self.base.read_bytes(); result=json.loads(self.check().stdout); self.apply()
+                                                  ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+======================================================================
+FAIL: test_02_joint_premise_new_chain_and_empty_timestamp (__main__.Contract.test_02_joint_premise_new_chain_and_empty_timestamp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 91, in test_02_joint_premise_new_chain_and_empty_timestamp
+    self.save_draft(); self.check(); self.apply()
+                       ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+======================================================================
+FAIL: test_03_new_node_manual_metadata (__main__.Contract.test_03_new_node_manual_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 96, in test_03_new_node_manual_metadata
+    self.bundle['patch']['upsert_nodes']=[n];self.save_draft();self.check();self.apply()
+                                                               ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+======================================================================
+FAIL: test_05_raw_draft_hash_binding (__main__.Contract.test_05_raw_draft_hash_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 106, in test_05_raw_draft_hash_binding
+    self.check();self.apply(False,expected=old);self.assertFalse(self.out.exists())
+    ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+======================================================================
+FAIL: test_14_render_unresolved_then_repair (__main__.Contract.test_14_render_unresolved_then_repair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 140, in test_14_render_unresolved_then_repair
+    self.cli('render','--input',self.base,'--output',self.dir/'repair.html');self.check(False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+======================================================================
+FAIL: test_20_hostile_html_csp_and_assets (__main__.Contract.test_20_hostile_html_csp_and_assets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 182, in test_20_hostile_html_csp_and_assets
+    page=self.dir/'safe.html';self.cli('render','--input',self.base,'--output',page)
+                              ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.8.0/baseline/teach-me/scripts/graph_editor.py': [Errno 2] No such file or directory
+
+
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.702s
+
+FAILED (failures=6, errors=4)

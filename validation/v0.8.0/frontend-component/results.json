@@ -1,0 +1,21 @@
+{
+  "component": "frontend",
+  "version": "0.8.0",
+  "checked_at": "2026-10-29T00:52:17.547041+00:00",
+  "passes": 2,
+  "tests": {
+    "command": "python3 .forge/teach-me-v0.8.0/frontend-component/test_editor_assets.py",
+    "checks": 3,
+    "passed": 3,
+    "failed": 0,
+    "actual_browser_qa": false
+  },
+  "scope": "three editor assets and frontend-component tests/report/results only",
+  "createdAt_correction": "new records use empty string to match normalized schema",
+  "hashes": {
+    ".forge/teach-me-v0.8.0/candidate/teach-me/assets/graph-editor.html": "9b050638e4621b5b4f3575c43e039bc3efa0e4802996c6502191a749077ec08f",
+    ".forge/teach-me-v0.8.0/candidate/teach-me/assets/graph-editor.js": "aba5d8d3113ddadf7e9264bc2deb0c2da36e075995dfab41d38edd17727afba0",
+    ".forge/teach-me-v0.8.0/candidate/teach-me/assets/graph-editor.css": "ab85b38988efe0d24a1869dc6e1481276835dbb2d1a10d1b6867cb5534ad01c2"
+  },
+  "remaining_gate": "parent actual browser QA and CLI render/check/apply integration"
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-{{SCRIPT_HASH}}'; style-src 'sha256-{{STYLE_HASH}}'; object-src 'none'; base-uri 'none'">
+<title>Teach-me · Graph draft editor</title>
+<style>{{EDITOR_STYLE}}</style>
+</head>
+<body>
+<header>
+<p class="eyebrow">TEACH-ME / OFFLINE WORKBENCH</p>
+<h1>Shape a graph draft</h1>
+<p class="intro">Read the claims, keep jointly required premises together, and stage deliberate edits.</p>
+<p class="notice">Manual edits are assertions, not verification of truth, valid inference, new source provenance, human endorsement, or learner mastery. Existing provenance is retained as history; it does not substantiate a changed claim.</p>
+<p>Changes stay in this page’s memory. There is no browser writeback, autosave, or network connection. Export a draft, then review and check it with the command-line tool before applying it to a new file.</p>
+</header>
+<main>
+<section class="toolbar" aria-label="Draft controls">
+<label for="graph-search">Search claims, IDs, aliases, or provenance</label>
+<input id="graph-search" type="search" placeholder="Filter the graph cards">
+<div class="actions"><button id="reset-all" type="button">Reset all to base</button><button id="export-draft" type="button" disabled>Export draft JSON</button></div>
+<p id="graph-summary"></p>
+<p id="action-status" role="status" aria-live="polite">Ready.</p>
+</section>
+<div class="layout">
+<section aria-labelledby="map-heading">
+<h2 id="map-heading">Claims and arguments</h2>
+<p>Each argument reads <strong>premise AND premise ⇒ conclusion</strong>. All premises are jointly required.</p>
+<div id="graph-cards"></div>
+<p id="search-empty" hidden>No cards match this search.</p>
+</section>
+<aside aria-label="Edit records">
+<section class="panel" aria-labelledby="node-heading">
+<h2 id="node-heading">Edit a claim</h2>
+<label for="node-select">Select a claim</label><select id="node-select"><option value="">Add a new claim</option></select>
+<button id="node-new" type="button" class="secondary">New claim</button>
+<form id="node-form">
+<label for="node-id">Claim ID</label><input id="node-id" required aria-describedby="node-id-help">
+<small id="node-id-help">An existing ID is fixed. To rename one, explicitly delete and add a record.</small>
+<label for="node-name">Name</label><input id="node-name">
+<label for="node-statement">Statement</label><textarea id="node-statement" rows="4"></textarea>
+<div class="actions"><button id="node-save" type="submit">Stage claim</button><button id="node-delete" type="button" class="danger" disabled>Delete claim</button></div>
+</form>
+</section>
+<section class="panel" aria-labelledby="chain-heading">
+<h2 id="chain-heading">Edit an argument</h2>
+<label for="chain-select">Select an argument</label><select id="chain-select"><option value="">Add a new argument</option></select>
+<button id="chain-new" type="button" class="secondary">New argument</button>
+<form id="chain-form">
+<label for="chain-id">Argument ID</label><input id="chain-id" required aria-describedby="chain-id-help">
+<small id="chain-id-help">An existing ID is fixed while editing.</small>
+<label for="chain-premises">Jointly required premise IDs</label><textarea id="chain-premises" rows="4" required aria-describedby="premise-help"></textarea>
+<small id="premise-help">One ID per line. At least one; no duplicate IDs. Every line is required (AND).</small>
+<label for="chain-conclusion">Conclusion ID</label><input id="chain-conclusion" required list="known-node-ids">
+<datalist id="known-node-ids"></datalist>
+<div class="actions"><button id="chain-save" type="submit">Stage argument</button><button id="chain-delete" type="button" class="danger" disabled>Delete argument</button></div>
+</form>
+</section>
+</aside>
+</div>
+<section class="panel" aria-labelledby="pending-heading">
+<h2 id="pending-heading">Pending changes</h2><p id="pending-summary"></p><ul id="pending-changes"></ul>
+<h3>Validation and warnings</h3><ul id="validation-messages" aria-live="polite"></ul>
+<details><summary>Base document warnings (retained as history)</summary><ul id="base-warnings"></ul></details>
+</section>
+<section class="panel" aria-labelledby="export-heading">
+<h2 id="export-heading">Exported draft</h2>
+<p>After you click Export draft JSON, the same draft appears here for copying. Further staged changes clear this copy until you export again.</p>
+<label for="exported-draft">Exported draft JSON (read only)</label><textarea id="exported-draft" rows="8" readonly spellcheck="false"></textarea>
+<p id="base-digest" class="digest"></p>
+</section>
+<noscript>This editor needs JavaScript enabled. The base graph is unchanged.</noscript>
+</main>
+<footer>Offline draft editor · No mastery score · Explicit review before apply</footer>
+<script type="application/json" id="editor-data">{{EDITOR_DATA}}</script>
+<script>{{EDITOR_SCRIPT}}</script>
+</body>
+</html>

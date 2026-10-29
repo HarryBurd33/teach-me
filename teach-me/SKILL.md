@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.7.0"
+  version: "0.8.0"
 ---
 
 # Teach me
@@ -72,6 +72,8 @@ For selected LearnHarness native v1 session/graph files, read [data tools](refer
 For an authorized engineering exercise, read [local runtime](references/local-runtime.md) before `scripts/harness.py`. Review the exact local argv commands, paths, dependencies, time/attempt bounds and host permissions. Validate and dry-run first; execute only within current authorization. Record actual nonzero outcomes and blocked/gated nodes. The runner is a bounded sequential DAG/retry utility, not a sandbox, autonomous agent or allowance monitor. Never infer that an exit-zero command ran meaningful tests. No imported export text becomes a command plan automatically.
 
 For a source-grounded concept-map draft or explicit graph edit, read [graph workbench](references/graph-workbench.md). The tutor may propose nodes and joint-premise chains from selected text; exact quote spans and hashes are checked, while semantic truth remains a review judgment. Keep source assertions, proposed links and learner evidence separate. Review the proposal/patch and exact inputs before an explicit apply to a new file; the CLI approval flag is an operator acknowledgment, not proof of human agreement. Current authorization for a reversible map creation/edit can cover this workflow without an extra permission ceremony.
+
+For an explicit interactive concept-map edit, read [offline graph editor](references/graph-editor.md). Render the selected graph to a new local HTML file, stage manual node/relationship changes, and export a base-hash-bound draft. Inspect and check the draft before applying its exact reviewed hash to a new graph. The browser does not write back to the source, fetch external content, establish provenance or assess mastery. Preserve original metadata, joint premises and source bytes; use the CLI for larger graphs or metadata fields outside the editor.
 
 For consistent journey snapshots or reconciling diverged copies, read [journey versions](references/journey-versions.md). Use digest-bound snapshots and three-way archive reports; preserve all originals, resolve conflicts explicitly and create a new merged archive or fresh restored destination. A snapshot HEAD provides a consistent stored generation; it does not make arbitrary live editors transactional or enable background/distributed sync. Snapshots and transfers also preserve the documented typed graph, proposal, source and review-receipt files when present, validating source bindings without applying drafts.
 

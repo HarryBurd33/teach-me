@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "base_sha256": "b8d4705db8633cbb6a152ebe3685926b1d6a2c8bcf40c265fa451874dc8bc0e3",
+  "patch": {
+    "version": 1,
+    "delete_nodes": [],
+    "delete_chains": [],
+    "upsert_nodes": [
+      {
+        "id": "a",
+        "name": "Premise A",
+        "statement": "A was edited in the browser; both A and B are still required.",
+        "aliases": [
+          "a-alias"
+        ],
+        "createdAt": "2026-10-28T00:00:00Z",
+        "provenance": [
+          {
+            "chatId": "synthetic",
+            "messageId": "m1"
+          }
+        ]
+      },
+      {
+        "id": "e",
+        "name": "Further conclusion",
+        "statement": "A and B jointly support E.",
+        "aliases": [],
+        "createdAt": "",
+        "provenance": []
+      }
+    ],
+    "upsert_chains": [
+      {
+        "id": "c2",
+        "premises": [
+          "a",
+          "b"
+        ],
+        "conclusion": "e",
+        "createdAt": "",
+        "provenance": []
+      }
+    ]
+  }
+}

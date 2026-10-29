@@ -1,6 +1,6 @@
 # Teach-me
 
-A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.7.0**. See [capabilities, validation and remaining work](docs/V0.7.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.8.0**. See [capabilities, validation and remaining work](docs/V0.8.0.md).
 
 ## Install and use
 
@@ -24,6 +24,7 @@ $teach-me Keep a local immutable history of my consistency reviews.
 $teach-me Plan retirement of these explicit old snapshots, preserving HEAD and previous.
 $teach-me Import this old review receipt as historical, preserving its bytes and limits.
 $teach-me Plan recovery of this interrupted removal from the complete archive.
+$teach-me Open an offline editor for this graph; help me review and apply its draft to a new file.
 $teach-me Resume the algebra journey at /path/to/workspace/learning/algebra.
 ```
 
@@ -82,3 +83,7 @@ Keep learner records, credentials and private transcripts out of contributions. 
 ## License
 
 The original instructions, templates, code and tests are under the [MIT License](LICENSE). LearnHarness's inspected skill/readers are AGPL-3.0-only and are not bundled or relicensed; the new adapter is an original implementation of documented format facts. Referenced projects retain their own rights. No affiliation with OpenAI or those projects is implied.
+
+## Offline graph editing
+
+The [offline editor](teach-me/references/graph-editor.md) stages claim and AND-argument changes, supports search/reset and exports a draft. Review and validate the hash-bound draft before explicitly applying to a new graph; the original stays preserved. Manual edits do not create verified evidence or mastery. The browser page uses no network, storage or autosave. See [v0.8.0 validation and limits](docs/V0.8.0.md).

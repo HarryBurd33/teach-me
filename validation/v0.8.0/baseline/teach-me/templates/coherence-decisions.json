@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "packet_sha256": "REPLACE_WITH_CURRENT_PACKET_SHA256",
+  "reviewer_role": "tutor",
+  "decisions": [
+    {
+      "check_id": "goal-stage-next-action",
+      "result": "needs_changes",
+      "rationale": "Replace with a judgment based on the actual goal, plan, stage and next action."
+    },
+    {
+      "check_id": "evidence-scope",
+      "result": "needs_changes",
+      "rationale": "Replace with a judgment based on recorded learner attempts, evidence and help."
+    },
+    {
+      "check_id": "sources-and-claims",
+      "result": "needs_changes",
+      "rationale": "Replace with a judgment based on inspected sources, claims and provenance."
+    },
+    {
+      "check_id": "merge-consistency",
+      "result": "needs_changes",
+      "rationale": "Replace with a judgment about the combined files and any unresolved contradiction."
+    }
+  ]
+}

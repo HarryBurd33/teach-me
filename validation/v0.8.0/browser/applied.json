@@ -1,0 +1,86 @@
+{
+  "format": "teach-me-learning-v1",
+  "source_files": [
+    {
+      "name": "synthetic-notes.txt",
+      "sha256": "0a78ffa87ac7d819d7b0d2d636970135cc1b0f359334cae527230aaae9b4eb64"
+    }
+  ],
+  "sessions": [],
+  "nodes": [
+    {
+      "id": "a",
+      "name": "Premise A",
+      "statement": "A was edited in the browser; both A and B are still required.",
+      "aliases": [
+        "a-alias"
+      ],
+      "createdAt": "2026-10-28T00:00:00Z",
+      "provenance": [
+        {
+          "chatId": "synthetic",
+          "messageId": "m1"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "name": "Premise B",
+      "statement": "B holds.",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "c",
+      "name": "Conclusion C",
+      "statement": "A and B jointly support C.",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "d",
+      "name": "<img src=x onerror=alert(1)>",
+      "statement": "</script><script>alert(2)</script>",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "e",
+      "name": "Further conclusion",
+      "statement": "A and B jointly support E.",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    }
+  ],
+  "chains": [
+    {
+      "id": "c1",
+      "premises": [
+        "a",
+        "b"
+      ],
+      "conclusion": "c",
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "c2",
+      "premises": [
+        "a",
+        "b"
+      ],
+      "conclusion": "e",
+      "createdAt": "",
+      "provenance": []
+    }
+  ],
+  "warnings": [
+    "Synthetic fixture, no learner evidence.",
+    "Explicit graph edit; any changed claim/provenance is operator supplied.",
+    "Manual graph edits are operator assertions, not new source provenance. Review acknowledgment does not authenticate human consent or verify semantic truth, valid inference, evidence, or learner mastery."
+  ]
+}

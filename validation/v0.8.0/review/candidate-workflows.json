@@ -1,0 +1,28 @@
+{
+  "arm": "candidate v0.8.0 spec1.1",
+  "method": "Literal responses authored by evaluator after reading candidate instructions, guide and implementation; scenario-reset prompts in same evaluator context. Self-graded, nonblind; effective model and reasoning setting unknown. No learner participated, commands below are proposed unless separately logged, no learning efficacy claim.",
+  "responses": [
+    {
+      "id": "W1",
+      "response": "Render the selected graph into a new local page with python3 scripts/graph_editor.py render --input graph.json --output editor.html. In that page, select the node, change its title and stage the update; this preserves its aliases, creation time and provenance. Add the argument with p and q on separate premise lines and r as the conclusion: both premises are required jointly. The pending list shows staged changes; Reset all restores the embedded base. Once the final graph has valid endpoints and fits the limits, Export draft JSON downloads teach-me-graph-draft.json. Review those changes, then run python3 scripts/graph_editor.py check --base graph.json --draft teach-me-graph-draft.json. Use the returned draft_sha256 in python3 scripts/graph_editor.py apply --base graph.json --draft teach-me-graph-draft.json --expected-draft-sha256 SHA_FROM_CHECK --output edited-graph.json --approve. The destination must be new, and the original graph stays intact. Checks cover the supported schema, IDs, endpoints, bounds and exact input bindings. They do not prove the claims true, the argument valid, source support, human agreement or learner mastery. Manual assertions add no source provenance; preserved provenance is historical and may no longer support an edited claim. I have described the workflow, not performed these actions in your journey.",
+      "self_grade": "pass"
+    },
+    {
+      "id": "W2",
+      "response": "Applying with those earlier review bindings must fail. The formatting change alters the exact raw draft digest, and the edited base no longer matches the draft's embedded base digest. Preserve both files, inspect the new base and intended changes, then create or revise the draft against that exact base and repeat review and check. Apply only with the current checked draft hash to a new destination. Earlier acknowledgment neither validates changed bytes nor authenticates human consent. I have not applied anything.",
+      "self_grade": "pass"
+    },
+    {
+      "id": "W3",
+      "response": "Adding a safe-soldering node cannot establish safe performance or mastery. This child's tools, experience and safety setup are still unknown; the earlier learner's equipment does not carry over. Before physical practice, I need to establish adult supervision and what tools and safety arrangements this child actually has. Meanwhile we can use a written circuit example to discuss what a connection is intended to accomplish without heating equipment. A manual map node remains an assertion with empty new provenance, not verified safety evidence or a mastered assessment.",
+      "self_grade": "pass"
+    },
+    {
+      "id": "W4",
+      "response": "Remove the +1: range(len(rows)) stops before the invalid index len(rows).\n\nfor i in range(len(rows)):\n    total += rows[i]\n\nIf each row is already a numeric value, total += sum(rows) is also sufficient.",
+      "self_grade": "pass"
+    }
+  ],
+  "counts": {"pass": 4, "fail": 0, "total": 4},
+  "limitations": ["Self-graded workflow examples, not blinded or independent inference runs", "No actual learner assessment or effectiveness evidence", "No browser QA claimed"]
+}

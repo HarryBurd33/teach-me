@@ -236,13 +236,9 @@ def validate_patch(value):
     return value
 
 
-def edit(args):
-    base_path, base_raw, base = read_graph(args.base)
-    patch_path, patch_raw, patch = data.source(args.patch)
+def edited_graph(base, patch):
+    """Return a checked edited copy; callers own file reads/review/publication."""
     validate_patch(patch)
-    require_review(args, data.sha(patch_raw), 'patch')
-    data.require(digest(args.expected_base_sha256, 'expected base SHA256') == data.sha(base_raw),
-                 'Base changed since review')
     graph = copy.deepcopy(base)
     for field, deleted, upserted in [('nodes', 'delete_nodes', 'upsert_nodes'),
                                     ('chains', 'delete_chains', 'upsert_chains')]:
@@ -256,6 +252,17 @@ def edit(args):
     data.union(graph['warnings'], [WARNING, 'Explicit graph edit; any changed claim/provenance is operator supplied.'])
     validate_graph(graph)
     mark_resolved_endpoint_history(graph)
+    return graph
+
+
+def edit(args):
+    base_path, base_raw, base = read_graph(args.base)
+    patch_path, patch_raw, patch = data.source(args.patch)
+    validate_patch(patch)
+    require_review(args, data.sha(patch_raw), 'patch')
+    data.require(digest(args.expected_base_sha256, 'expected base SHA256') == data.sha(base_raw),
+                 'Base changed since review')
+    graph = edited_graph(base, patch)
     result = data.publish(graph, args.output, [(base_path, base_raw), (patch_path, patch_raw)])
     result.update(operation='edit', operator_review_acknowledged=True,
                   semantic_correctness_verified=False, nodes=len(graph['nodes']), chains=len(graph['chains']))

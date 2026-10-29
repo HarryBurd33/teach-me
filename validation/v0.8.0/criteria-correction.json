@@ -1,0 +1,9 @@
+{
+  "spec_revision": "1.1",
+  "reason": "Baseline normalizedgraph formatrequirescreatedAtstring andacceptsemptystring asunknown. Proposednull default wouldbreakoldvalidatorsandtransfer.",
+  "old_default": "newnode/chain createdAt:null",
+  "final_rule": "newnode/chain createdAt:\"\"; preserveexistingcreatedAt/aliases/provenanceexactly; no validator/schemaexceptions",
+  "evidence": "learning_data.validate_document calls text(createdAt,empty=True), requiringstring",
+  "frozen_expectation": "newrecorddraftpassesunchangednormalized/workbenchvalidators; nullcreatedAtrejects",
+  "recorded_at": "2026-10-29T00:49:35.496515+00:00"
+}

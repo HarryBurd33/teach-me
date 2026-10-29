@@ -1,0 +1,381 @@
+{
+  "version": 1,
+  "scope": "Original and path-redacted published UTF8 hashes. Only synthetic browser data; no browser inventory or account telemetry. Two baseline logs have trailing whitespace removed for Git patch hygiene; original hashes remain.",
+  "files": {
+    "criteria.json": {
+      "original_sha256": "e7a9354dce8dafc6b16c8847e1adfbdb362f244923bd7b8c98ad7958144ac8d6",
+      "published_sha256": "e7a9354dce8dafc6b16c8847e1adfbdb362f244923bd7b8c98ad7958144ac8d6",
+      "content_changed": false
+    },
+    "criteria-correction.json": {
+      "original_sha256": "89a911132044bc459b6093b11eeff9f825fbbfebce564f6d172c1bc8db28586c",
+      "published_sha256": "89a911132044bc459b6093b11eeff9f825fbbfebce564f6d172c1bc8db28586c",
+      "content_changed": false
+    },
+    "candidate-manifest.json": {
+      "original_sha256": "af1be12a2dcaeaba936dcbaa7a1ea4e1e073f1ffba9abdaebeaebc24bbf63c00",
+      "published_sha256": "af1be12a2dcaeaba936dcbaa7a1ea4e1e073f1ffba9abdaebeaebc24bbf63c00",
+      "content_changed": false
+    },
+    "test-porting.json": {
+      "original_sha256": "54e3aad8fc9060d7d5c4b737dd1b4186b1cd2bb320caf97aa6b980d88ff1d82d",
+      "published_sha256": "54e3aad8fc9060d7d5c4b737dd1b4186b1cd2bb320caf97aa6b980d88ff1d82d",
+      "content_changed": false
+    },
+    "combined-tests.json": {
+      "original_sha256": "b92f4350116567266115f6789daaed6053c774d83e3837785aa594e5af0233e6",
+      "published_sha256": "b92f4350116567266115f6789daaed6053c774d83e3837785aa594e5af0233e6",
+      "content_changed": false
+    },
+    "combined-tests.txt": {
+      "original_sha256": "0acbe099fbbf6166d311f43ff6891ef5a630cc1cddda038a2207ad4b15d7c271",
+      "published_sha256": "0acbe099fbbf6166d311f43ff6891ef5a630cc1cddda038a2207ad4b15d7c271",
+      "content_changed": false
+    },
+    "installed-tests.json": {
+      "original_sha256": "6fb1ef7250af535384bc045a3a4dd3c622118d1161e8db980bf602ff4d84cd33",
+      "published_sha256": "6fb1ef7250af535384bc045a3a4dd3c622118d1161e8db980bf602ff4d84cd33",
+      "content_changed": false
+    },
+    "installed-tests.txt": {
+      "original_sha256": "d746e6d70383a258c1c8038c3088ccfdf961dd29057fe13cddd8cc63135e3a0a",
+      "published_sha256": "d746e6d70383a258c1c8038c3088ccfdf961dd29057fe13cddd8cc63135e3a0a",
+      "content_changed": false
+    },
+    "native-discovery.json": {
+      "original_sha256": "966fa2f9168bbe0bfcf84ffa01b88341a1f441a5b12f8150a2032d85a7616f90",
+      "published_sha256": "0f47aaab6c541a4152c537fe8c60861dcf48e536539166a8adb95dc85cc64ff6",
+      "content_changed": true
+    },
+    "backend-component/report.md": {
+      "original_sha256": "3b0f566a6b31499c9ed1343d1073d587c6897376171bc0abfa31606240436b92",
+      "published_sha256": "3b0f566a6b31499c9ed1343d1073d587c6897376171bc0abfa31606240436b92",
+      "content_changed": false
+    },
+    "backend-component/results.json": {
+      "original_sha256": "84935518dd45b54d0166b7c80f82c3adaa266b79aeaaae9bf4620668b1438450",
+      "published_sha256": "84935518dd45b54d0166b7c80f82c3adaa266b79aeaaae9bf4620668b1438450",
+      "content_changed": false
+    },
+    "backend-component/test_graph_editor.py": {
+      "original_sha256": "a6f5c336b8c81ae4645cae536a645e9b3dc8278c70f7deb89e8374d1694e6b7b",
+      "published_sha256": "a6f5c336b8c81ae4645cae536a645e9b3dc8278c70f7deb89e8374d1694e6b7b",
+      "content_changed": false
+    },
+    "frontend-component/report.md": {
+      "original_sha256": "2f6165f46f9e5c470cb3e37a341a3645871f0b47f75bcdc492b34ceb8f96704e",
+      "published_sha256": "2f6165f46f9e5c470cb3e37a341a3645871f0b47f75bcdc492b34ceb8f96704e",
+      "content_changed": false
+    },
+    "frontend-component/results.json": {
+      "original_sha256": "554547f545417b6acef04f36225ade4b3f69c13cb6c16e5c6d446489b81d7d94",
+      "published_sha256": "554547f545417b6acef04f36225ade4b3f69c13cb6c16e5c6d446489b81d7d94",
+      "content_changed": false
+    },
+    "frontend-component/test_editor_assets.py": {
+      "original_sha256": "56380ec2ace5e24a22b0ab249d1e7bef02a2ba8d2e13ed8522f41a5339f97f70",
+      "published_sha256": "56380ec2ace5e24a22b0ab249d1e7bef02a2ba8d2e13ed8522f41a5339f97f70",
+      "content_changed": false
+    },
+    "review/candidate-workflows.json": {
+      "original_sha256": "4b92e75e9f85eb08820835a45f01df40123b40e8d7c67a30918285f077c1f752",
+      "published_sha256": "4b92e75e9f85eb08820835a45f01df40123b40e8d7c67a30918285f077c1f752",
+      "content_changed": false
+    },
+    "review/old-regression-integrity.json": {
+      "original_sha256": "83333a1d809e7b7a4beac5dde8fc289e0e0c2fd370efecf339559f7f584441f8",
+      "published_sha256": "83333a1d809e7b7a4beac5dde8fc289e0e0c2fd370efecf339559f7f584441f8",
+      "content_changed": false
+    },
+    "review/test_v8_contract.py": {
+      "original_sha256": "3606e28f5c5d728faf78cfba8cd22eeb249d0e1d312836280e7f27377cf2770d",
+      "published_sha256": "3606e28f5c5d728faf78cfba8cd22eeb249d0e1d312836280e7f27377cf2770d",
+      "content_changed": false
+    },
+    "review/baseline-cli.log": {
+      "original_sha256": "0271509fed955f0772e2b92362f8a6ec65752a2a9a0ffd6f7ac52589b23a3147",
+      "published_sha256": "fd785d74864c80e8444c8c293bd59098d46d871f170a000f0236e2e20acb4922",
+      "content_changed": true
+    },
+    "review/candidate-reviewed-manifest.json": {
+      "original_sha256": "4b1dc3cf771c663e5c64582939e79049b5b63b584dfe5132f65d1e7559b5145a",
+      "published_sha256": "4b1dc3cf771c663e5c64582939e79049b5b63b584dfe5132f65d1e7559b5145a",
+      "content_changed": false
+    },
+    "review/report.md": {
+      "original_sha256": "135a63aa2555ca3c9b81fd83dfb9f30771efb3e3e696e31f38952602849a5101",
+      "published_sha256": "135a63aa2555ca3c9b81fd83dfb9f30771efb3e3e696e31f38952602849a5101",
+      "content_changed": false
+    },
+    "review/results.json": {
+      "original_sha256": "d7c952f8eb6f0efe03390af320dbacc6d5f522f572267da91187b00fe23b37aa",
+      "published_sha256": "d7c952f8eb6f0efe03390af320dbacc6d5f522f572267da91187b00fe23b37aa",
+      "content_changed": false
+    },
+    "review/frozen-sha256.json": {
+      "original_sha256": "d3c5689b79c5ac7320ae8440c3001d499d7fa59e551d98da8ef4ec2664628be5",
+      "published_sha256": "d3c5689b79c5ac7320ae8440c3001d499d7fa59e551d98da8ef4ec2664628be5",
+      "content_changed": false
+    },
+    "review/candidate-pass1-canonical-tmp.log": {
+      "original_sha256": "8a6ad3cb6176567d86189fab4520960c0f8fcdf7e4e8ca690ee5966af8672589",
+      "published_sha256": "8a6ad3cb6176567d86189fab4520960c0f8fcdf7e4e8ca690ee5966af8672589",
+      "content_changed": false
+    },
+    "review/candidate-pass1.log": {
+      "original_sha256": "ebcace53b6fd69b5062828614b3b0c464e7c61b4a24706688e76af1636714a70",
+      "published_sha256": "74caf30dac042aae7a04ed760d789c9b55585eeb55555aa7d3b341cf16bf7fef",
+      "content_changed": true
+    },
+    "review/frozen-cases.json": {
+      "original_sha256": "5b06874469a1f893cd306b07dcfb66cadc191d6607549f0980307ffe37414b8d",
+      "published_sha256": "5b06874469a1f893cd306b07dcfb66cadc191d6607549f0980307ffe37414b8d",
+      "content_changed": false
+    },
+    "review/baseline-workflows.json": {
+      "original_sha256": "2cf9bde40abb10a0bab2387b3c3d51caa1efe32b696d3fd15228bef2522d97ef",
+      "published_sha256": "2cf9bde40abb10a0bab2387b3c3d51caa1efe32b696d3fd15228bef2522d97ef",
+      "content_changed": false
+    },
+    "review/baseline-canonical-tmp.log": {
+      "original_sha256": "0aa792aa116734a77f39fed76b9b43e312c640d00563fb52338059e2c73bc6f4",
+      "published_sha256": "0c8370c319d5a940c3d9e7869aa636fa7ccd7d2ac3e6bef091888758122aea15",
+      "content_changed": true
+    },
+    "review/supplemental-observations.json": {
+      "original_sha256": "adb40ea8d34fd954ab69f438db2fe9da27a910177d25efaaf22f43f3b2b1dee2",
+      "published_sha256": "adb40ea8d34fd954ab69f438db2fe9da27a910177d25efaaf22f43f3b2b1dee2",
+      "content_changed": false
+    },
+    "browser/base.json": {
+      "original_sha256": "b8d4705db8633cbb6a152ebe3685926b1d6a2c8bcf40c265fa451874dc8bc0e3",
+      "published_sha256": "b8d4705db8633cbb6a152ebe3685926b1d6a2c8bcf40c265fa451874dc8bc0e3",
+      "content_changed": false
+    },
+    "browser/downloaded-draft.json": {
+      "original_sha256": "e490df82ef94563329680c10447b928a682093612ba80dfeac0170f10ca684a9",
+      "published_sha256": "e490df82ef94563329680c10447b928a682093612ba80dfeac0170f10ca684a9",
+      "content_changed": false
+    },
+    "browser/applied.json": {
+      "original_sha256": "0dab720e803d363a92cb62e9559d4be9daf6749cb61972385117b20e78d8bb36",
+      "published_sha256": "0dab720e803d363a92cb62e9559d4be9daf6749cb61972385117b20e78d8bb36",
+      "content_changed": false
+    },
+    "browser/results.json": {
+      "original_sha256": "9ab850bba8b6bb5840a2421412275aabd8052ad674ffd663234e0567b1f61cbd",
+      "published_sha256": "9ab850bba8b6bb5840a2421412275aabd8052ad674ffd663234e0567b1f61cbd",
+      "content_changed": false
+    },
+    "browser/check-result.json": {
+      "original_sha256": "241d2d59dde1e663b9a4222ff3d3474f1cbbe7af41397adfdd6751137e9e5ba9",
+      "published_sha256": "241d2d59dde1e663b9a4222ff3d3474f1cbbe7af41397adfdd6751137e9e5ba9",
+      "content_changed": false
+    },
+    "browser/apply-result.json": {
+      "original_sha256": "3bff89cefe75989d4f476c349d472f8a19418658a558140a2b5c579a208d320b",
+      "published_sha256": "297832a3b95afb7059df60bed1cb8808bd70a8f9a1134c1d292853d808e76e80",
+      "content_changed": true
+    },
+    "baseline/teach-me/LICENSE": {
+      "original_sha256": "6aa9441b6e7dd2623f33e3e5ba7fbe54cd207b7a8f4d1249b8a6a77f4e5ce3ad",
+      "published_sha256": "6aa9441b6e7dd2623f33e3e5ba7fbe54cd207b7a8f4d1249b8a6a77f4e5ce3ad",
+      "content_changed": false
+    },
+    "baseline/teach-me/README.md": {
+      "original_sha256": "a2e682c5611aa2552e9e5143a741c1c3830d05149567398b86a2c580cc2f1baf",
+      "published_sha256": "a2e682c5611aa2552e9e5143a741c1c3830d05149567398b86a2c580cc2f1baf",
+      "content_changed": false
+    },
+    "baseline/teach-me/SKILL.md": {
+      "original_sha256": "4414d9162375d6c84146864393b198fd60c58f2e4b89ddfd52a3026bf3bdad3e",
+      "published_sha256": "4414d9162375d6c84146864393b198fd60c58f2e4b89ddfd52a3026bf3bdad3e",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/harness-engineering.md": {
+      "original_sha256": "bfd84c43a5e6fae011e11b5583d508a08dff83be8fc4ea03cdfb68b54c68119c",
+      "published_sha256": "bfd84c43a5e6fae011e11b5583d508a08dff83be8fc4ea03cdfb68b54c68119c",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/transfer.md": {
+      "original_sha256": "c8a40742a2638f08dfdd076e1c8d74fca73809cfe20491c3bfd45f5fc2c1dd13",
+      "published_sha256": "c8a40742a2638f08dfdd076e1c8d74fca73809cfe20491c3bfd45f5fc2c1dd13",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/snapshot-maintenance.md": {
+      "original_sha256": "5d1aa2287787e7c0a1da6862ff8241dded24451564efe6c5a1a9cb40bca27830",
+      "published_sha256": "5d1aa2287787e7c0a1da6862ff8241dded24451564efe6c5a1a9cb40bca27830",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/state.md": {
+      "original_sha256": "e5372c6294f6f108ae0c996370248bf957c8be3ecdae9c408c5af544c01fe45e",
+      "published_sha256": "e5372c6294f6f108ae0c996370248bf957c8be3ecdae9c408c5af544c01fe45e",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/data-tools.md": {
+      "original_sha256": "19e52d1a9a775aec9d7471e22e3bffbf2dca17f718d686f2244858516c9d140a",
+      "published_sha256": "19e52d1a9a775aec9d7471e22e3bffbf2dca17f718d686f2244858516c9d140a",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/review-history.md": {
+      "original_sha256": "fb94c3acca7fae9ed75657f45af4b35f32f3feb4aa8ce8e993965ecfaa624f27",
+      "published_sha256": "fb94c3acca7fae9ed75657f45af4b35f32f3feb4aa8ce8e993965ecfaa624f27",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/progress.schema.json": {
+      "original_sha256": "60ceb6f4bf1add31fccd889d0f21e9e65f5401201a74db8f316c6b47ccb06431",
+      "published_sha256": "60ceb6f4bf1add31fccd889d0f21e9e65f5401201a74db8f316c6b47ccb06431",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/research.md": {
+      "original_sha256": "b56b1fadc8ed829a91dee03ff8e8d203aa296ce7f546b9fbf9bb40b71b3a9ee0",
+      "published_sha256": "b56b1fadc8ed829a91dee03ff8e8d203aa296ce7f546b9fbf9bb40b71b3a9ee0",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/learning-harness.md": {
+      "original_sha256": "12a0f03995c3e20e47b884807e585e3c082fb4759fe8524e0ab7f7d31d708aac",
+      "published_sha256": "12a0f03995c3e20e47b884807e585e3c082fb4759fe8524e0ab7f7d31d708aac",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/graph-workbench.md": {
+      "original_sha256": "b7217297f7c41b17b644233bd46e656c064b39e2360bb61f28340c50e68b878d",
+      "published_sha256": "b7217297f7c41b17b644233bd46e656c064b39e2360bb61f28340c50e68b878d",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/journey-versions.md": {
+      "original_sha256": "0fd0d05b91094977a2311ee57415e8c472773c3fb9418b2d9d6872c9a4450d43",
+      "published_sha256": "0fd0d05b91094977a2311ee57415e8c472773c3fb9418b2d9d6872c9a4450d43",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/snapshot-recovery.md": {
+      "original_sha256": "e94e8a37b960f7fa1db4b3f146020f8d8050f4f7e4bd97cdfa6f7218ce83f374",
+      "published_sha256": "e94e8a37b960f7fa1db4b3f146020f8d8050f4f7e4bd97cdfa6f7218ce83f374",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/coherence-review.md": {
+      "original_sha256": "68484f604a33f1e0cc5745026bd768aac775ccfc899948cc8a376dd254c21dce",
+      "published_sha256": "68484f604a33f1e0cc5745026bd768aac775ccfc899948cc8a376dd254c21dce",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/host-integration.md": {
+      "original_sha256": "72a762e73074c312841228d73b5ecbd2feb862fd7f3a92abaeba822154a6730e",
+      "published_sha256": "72a762e73074c312841228d73b5ecbd2feb862fd7f3a92abaeba822154a6730e",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/domains.md": {
+      "original_sha256": "5e687692cda5828502c04b96cf00cb2c7b3912d89f0b3bbd8e859729d0fb197f",
+      "published_sha256": "5e687692cda5828502c04b96cf00cb2c7b3912d89f0b3bbd8e859729d0fb197f",
+      "content_changed": false
+    },
+    "baseline/teach-me/references/local-runtime.md": {
+      "original_sha256": "43bdada6e8107bef1985f7137ae2bbdeab03ca1e11174e68a41f37477ebf06a0",
+      "published_sha256": "43bdada6e8107bef1985f7137ae2bbdeab03ca1e11174e68a41f37477ebf06a0",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/snapshot_maintenance.py": {
+      "original_sha256": "8dd17b843f5064d03d600f5f407885fb9e0d9fb02401cb1fe1b8c9c2e7146cb4",
+      "published_sha256": "8dd17b843f5064d03d600f5f407885fb9e0d9fb02401cb1fe1b8c9c2e7146cb4",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/harness.py": {
+      "original_sha256": "a8ffdb6f768da67689fdf9237b42b059e2eb80e9a8bf811518bf1d7bcc90cb9a",
+      "published_sha256": "a8ffdb6f768da67689fdf9237b42b059e2eb80e9a8bf811518bf1d7bcc90cb9a",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/coherence_review.py": {
+      "original_sha256": "805b9a0de453b47d391c699e1c09a2ad6614d00dbc46425af1e065f87f6b71ec",
+      "published_sha256": "805b9a0de453b47d391c699e1c09a2ad6614d00dbc46425af1e065f87f6b71ec",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/transfer.py": {
+      "original_sha256": "4c1aeddae5456f62f610cafa6962a5e2527f2f5f7aba7f376d89c6d1e4a9e187",
+      "published_sha256": "4c1aeddae5456f62f610cafa6962a5e2527f2f5f7aba7f376d89c6d1e4a9e187",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/snapshot_recovery.py": {
+      "original_sha256": "95bbff88007b02a1effc4e47931dbb5f00defabe3064f4037099ed2fa780eb6b",
+      "published_sha256": "95bbff88007b02a1effc4e47931dbb5f00defabe3064f4037099ed2fa780eb6b",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/journey.py": {
+      "original_sha256": "72223d04c2bbcb25bd88f7576effcf75759d6ea12e47b395783e8e32ebf93431",
+      "published_sha256": "72223d04c2bbcb25bd88f7576effcf75759d6ea12e47b395783e8e32ebf93431",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/storage.py": {
+      "original_sha256": "d35d2073c00c3a9b7c5ae9a2b2c9ddcf10b439ef47803edfa50d285a9b3118c0",
+      "published_sha256": "d35d2073c00c3a9b7c5ae9a2b2c9ddcf10b439ef47803edfa50d285a9b3118c0",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/journey_assets.py": {
+      "original_sha256": "4832c4d5142e8528facc5e0fb84c7b7218a54cdfbe128e91b3b18e3a157d41ce",
+      "published_sha256": "4832c4d5142e8528facc5e0fb84c7b7218a54cdfbe128e91b3b18e3a157d41ce",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/review_history.py": {
+      "original_sha256": "79998f06c6ec64aa9bff16bf13e554f4714279539ca8ac45aad5e7986194b91e",
+      "published_sha256": "79998f06c6ec64aa9bff16bf13e554f4714279539ca8ac45aad5e7986194b91e",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/learning_data.py": {
+      "original_sha256": "2ad3c5e9340f4c04bc45b613811d235eef27a05c776745bd8d5c0dbd6b6fb245",
+      "published_sha256": "2ad3c5e9340f4c04bc45b613811d235eef27a05c776745bd8d5c0dbd6b6fb245",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/graph_workbench.py": {
+      "original_sha256": "acca75ec5bcecaf7ef11966bbb873b8ffcf4893918734e6f77b949fac2c17527",
+      "published_sha256": "acca75ec5bcecaf7ef11966bbb873b8ffcf4893918734e6f77b949fac2c17527",
+      "content_changed": false
+    },
+    "baseline/teach-me/scripts/journey_versions.py": {
+      "original_sha256": "7489123b72f8c7386b39008cd7db54b46cccc88fb841bbb77c0981920fe8543b",
+      "published_sha256": "7489123b72f8c7386b39008cd7db54b46cccc88fb841bbb77c0981920fe8543b",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/harness-project.md": {
+      "original_sha256": "4e378f390dbaa204cf6c0bd9ab0b7bd15157bd0223a3fe6199d9cd9e679878c4",
+      "published_sha256": "4e378f390dbaa204cf6c0bd9ab0b7bd15157bd0223a3fe6199d9cd9e679878c4",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/sources.md": {
+      "original_sha256": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91",
+      "published_sha256": "aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/knowledge.md": {
+      "original_sha256": "9fd6b5b8db05eaa45c6fd5a764b85de871304a3ca6372efdc36f2cebd78e0a57",
+      "published_sha256": "9fd6b5b8db05eaa45c6fd5a764b85de871304a3ca6372efdc36f2cebd78e0a57",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/coherence-decisions.json": {
+      "original_sha256": "e6aa65f4213da4a698faa252263951c284822cb9e114894a7fc8d77e645e7505",
+      "published_sha256": "e6aa65f4213da4a698faa252263951c284822cb9e114894a7fc8d77e645e7505",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/harness-plan.json": {
+      "original_sha256": "be4113b5b92f608d7fb8cd39be2980fd1f01b661e93649322fbed54af251fd92",
+      "published_sha256": "be4113b5b92f608d7fb8cd39be2980fd1f01b661e93649322fbed54af251fd92",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/learning-pilot.md": {
+      "original_sha256": "a82b2c5ec582787595b8cfc5ed97f132c1a23f226922e1105ffeed9a35429d50",
+      "published_sha256": "a82b2c5ec582787595b8cfc5ed97f132c1a23f226922e1105ffeed9a35429d50",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/graph-proposal.json": {
+      "original_sha256": "81623f5e13ae7c39cb74cb57baed8a1dafe8ce0b4db6c4d6d49a677ed8100644",
+      "published_sha256": "81623f5e13ae7c39cb74cb57baed8a1dafe8ce0b4db6c4d6d49a677ed8100644",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/plan.md": {
+      "original_sha256": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+      "published_sha256": "e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6",
+      "content_changed": false
+    },
+    "baseline/teach-me/templates/practice.md": {
+      "original_sha256": "dba8de9ada18a9486fb17e2c7c0a4b2861d5c4a44ce3663ebd5f0d002f4c02ba",
+      "published_sha256": "dba8de9ada18a9486fb17e2c7c0a4b2861d5c4a44ce3663ebd5f0d002f4c02ba",
+      "content_changed": false
+    }
+  }
+}

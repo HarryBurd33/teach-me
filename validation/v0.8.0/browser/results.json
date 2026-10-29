@@ -1,0 +1,22 @@
+{
+  "browser": "Chrome actual UI on confined loopback single synthetic page",
+  "status": "pass",
+  "claims_edited": 1,
+  "claims_added": 1,
+  "and_arguments_added": 1,
+  "referenced_delete": "refused no cascade",
+  "search": "pass",
+  "reset": "pass",
+  "xss_label": "literal zero img elements no dialog observed",
+  "console_errors_warnings": [],
+  "blob_download": "actual Downloads file verified and applied",
+  "download_sha256": "e490df82ef94563329680c10447b928a682093612ba80dfeac0170f10ca684a9",
+  "base_unchanged": true,
+  "metadata_preserved": true,
+  "environment_limits": [
+    "file URL blocked by browser policy; used confined memory-only HTTP preview",
+    "download event timed out despite actual file landing in Downloads",
+    "read-only DOM evaluation does not expose performance network tracing"
+  ],
+  "network_verification": "Static bundled-asset/CSP assertions, not browser network trace"
+}

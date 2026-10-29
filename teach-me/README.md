@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.7.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.8.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -71,3 +71,7 @@ Ask `$teach-me Plan which explicitly selected old snapshots can be archived, pre
 The [history helper](references/review-history.md) can explicitly import an old receipt with its exact hash, journey ID, expected tip and a reason. Imported entries carry a historical label and cannot establish current readiness. Original bytes remain extractable; existing current append format v1 stays unchanged. History stores containing v2 imports require an updated reader.
 
 For a completed backup followed by interrupted source removal, [snapshot recovery](references/snapshot-recovery.md) creates a fresh plan bound to current store and archive bytes. It protects current HEAD/previous and requires explicit apply. Incomplete archives, stale locks and staging still require inspection; no automatic cleanup or background recovery is added.
+
+## Offline graph editor
+
+Ask `$teach-me Open this concept map in the offline editor, stage changes and check the exported draft before applying it to a new graph.` The [editor](references/graph-editor.md) supports node names/statements and joint-premise relationships, preserves existing metadata and binds drafts to exact base bytes. Manual assertions are not verified truth, new source provenance or learner mastery. Larger graphs and metadata edits remain CLI workflows.

@@ -1,0 +1,153 @@
+test_01_metadata_preserving_node_edit (__main__.Contract.test_01_metadata_preserving_node_edit) ... FAIL
+test_02_joint_premise_new_chain_and_empty_timestamp (__main__.Contract.test_02_joint_premise_new_chain_and_empty_timestamp) ... FAIL
+test_03_new_node_manual_metadata (__main__.Contract.test_03_new_node_manual_metadata) ... FAIL
+test_04_stale_base_hash (__main__.Contract.test_04_stale_base_hash) ... ok
+test_05_raw_draft_hash_binding (__main__.Contract.test_05_raw_draft_hash_binding) ... FAIL
+test_06_approve_required (__main__.Contract.test_06_approve_required) ... ok
+test_07_exact_bundle_keys (__main__.Contract.test_07_exact_bundle_keys) ... ok
+test_08_unknown_patch_key (__main__.Contract.test_08_unknown_patch_key) ... ok
+test_09_bool_and_unsupported_versions (__main__.Contract.test_09_bool_and_unsupported_versions) ... ok
+test_10_duplicate_json_members (__main__.Contract.test_10_duplicate_json_members) ... ok
+test_11_invalid_ids_and_duplicate_premises (__main__.Contract.test_11_invalid_ids_and_duplicate_premises) ... ok
+test_12_session_data_refused (__main__.Contract.test_12_session_data_refused) ... ok
+test_13_missing_endpoint_and_referenced_delete (__main__.Contract.test_13_missing_endpoint_and_referenced_delete) ... ok
+test_14_render_unresolved_then_repair (__main__.Contract.test_14_render_unresolved_then_repair) ... FAIL
+test_15_record_limits (__main__.Contract.test_15_record_limits) ... ok
+test_16_byte_limits (__main__.Contract.test_16_byte_limits) ... ok
+test_17_existing_output_and_source_preserved (__main__.Contract.test_17_existing_output_and_source_preserved) ... ok
+test_18_foreign_publication_race (__main__.Contract.test_18_foreign_publication_race) ... ERROR
+test_19_sources_rechecked_before_publish (__main__.Contract.test_19_sources_rechecked_before_publish) ... ok
+test_20_hostile_html_csp_and_assets (__main__.Contract.test_20_hostile_html_csp_and_assets) ... FAIL
+test_21_old_cli_edit_unchanged (__main__.Contract.test_21_old_cli_edit_unchanged) ... FAIL
+test_22_shared_pure_helper (__main__.Contract.test_22_shared_pure_helper) ... ok
+test_23_null_creation_timestamp_refused (__main__.Contract.test_23_null_creation_timestamp_refused) ... ok
+
+======================================================================
+ERROR: test_18_foreign_publication_race (__main__.Contract.test_18_foreign_publication_race)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 164, in test_18_foreign_publication_race
+    self.assertEqual(self.out.read_bytes(),b'FOREIGN-RACE')
+                     ~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py", line 976, in read_bytes
+    with self.open(mode='rb', buffering=0) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py", line 970, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/3v/7_77q_317yd2rk8nsx45vf_m0000gn/T/tmpgzq665nc/new.json'
+
+======================================================================
+FAIL: test_01_metadata_preserving_node_edit (__main__.Contract.test_01_metadata_preserving_node_edit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 82, in test_01_metadata_preserving_node_edit
+    raw=self.base.read_bytes(); result=json.loads(self.check().stdout); self.apply()
+                                                  ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_02_joint_premise_new_chain_and_empty_timestamp (__main__.Contract.test_02_joint_premise_new_chain_and_empty_timestamp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 91, in test_02_joint_premise_new_chain_and_empty_timestamp
+    self.save_draft(); self.check(); self.apply()
+                       ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_03_new_node_manual_metadata (__main__.Contract.test_03_new_node_manual_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 96, in test_03_new_node_manual_metadata
+    self.bundle['patch']['upsert_nodes']=[n];self.save_draft();self.check();self.apply()
+                                                               ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_05_raw_draft_hash_binding (__main__.Contract.test_05_raw_draft_hash_binding)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 106, in test_05_raw_draft_hash_binding
+    self.check();self.apply(False,expected=old);self.assertFalse(self.out.exists())
+    ~~~~~~~~~~^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 68, in check
+    def check(self,ok=True): return self.cli('check','--base',self.base,'--draft',self.draft,ok=ok)
+                                    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_14_render_unresolved_then_repair (__main__.Contract.test_14_render_unresolved_then_repair)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 140, in test_14_render_unresolved_then_repair
+    self.cli('render','--input',self.base,'--output',self.dir/'repair.html');self.check(False)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_20_hostile_html_csp_and_assets (__main__.Contract.test_20_hostile_html_csp_and_assets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 182, in test_20_hostile_html_csp_and_assets
+    page=self.dir/'safe.html';self.cli('render','--input',self.base,'--output',page)
+                              ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_editor: Symlinked paths are excluded
+
+
+
+======================================================================
+FAIL: test_21_old_cli_edit_unchanged (__main__.Contract.test_21_old_cli_edit_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 201, in test_21_old_cli_edit_unchanged
+    self.cli('edit','--base',self.base,'--patch',p,'--expected-base-sha256',digest(self.base.read_bytes()),'--expected-patch-sha256',digest(p.read_bytes()),'--output',out,'--approve',script=root/'scripts'/'graph_workbench.py')
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.8.0/review/test_v8_contract.py", line 65, in cli
+    if ok: self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout)
+           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : graph_workbench: Symlinked paths are excluded
+
+
+
+----------------------------------------------------------------------
+Ran 23 tests in 1.267s
+
+FAILED (failures=7, errors=1)

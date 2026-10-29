@@ -1,0 +1,17 @@
+[
+  {
+    "source": "backend-component/test_graph_editor.py",
+    "target": "test_v8_graph_editor.py",
+    "adaptation": "Portable root selection only; test assertions unchanged"
+  },
+  {
+    "source": "frontend-component/test_editor_assets.py",
+    "target": "test_v8_editor_assets.py",
+    "adaptation": "Portable root selection only; test assertions unchanged"
+  },
+  {
+    "source": "review/test_v8_contract.py",
+    "target": "test_v8_contract.py",
+    "adaptation": "Portable root selection only; test assertions unchanged"
+  }
+]

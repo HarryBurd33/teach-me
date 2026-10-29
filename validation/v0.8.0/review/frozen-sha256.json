@@ -1,0 +1,11 @@
+{
+  "spec_revision": "1.1",
+  "frozen_at": "2026-10-29T00:50:52.916714+00:00",
+  "candidate_inspected": false,
+  "sha256": {
+    "review/frozen-cases.json": "5b06874469a1f893cd306b07dcfb66cadc191d6607549f0980307ffe37414b8d",
+    "review/test_v8_contract.py": "3606e28f5c5d728faf78cfba8cd22eeb249d0e1d312836280e7f27377cf2770d",
+    "criteria.json": "e7a9354dce8dafc6b16c8847e1adfbdb362f244923bd7b8c98ad7958144ac8d6",
+    "criteria-correction.json": "89a911132044bc459b6093b11eeff9f825fbbfebce564f6d172c1bc8db28586c"
+  }
+}

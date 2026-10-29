@@ -1,0 +1,28 @@
+{
+  "arm": "immutable baseline v0.7.0",
+  "method": "Literal responses authored by evaluator after reading baseline instructions and workbench; scenario-reset prompts in same evaluator context. Self-graded, nonblind; effective model and reasoning setting unknown. No learner participated, commands below are proposed unless separately logged, no learning efficacy claim.",
+  "responses": [
+    {
+      "id": "W1",
+      "response": "The installed baseline provides a searchable offline map viewer and explicit JSON graph patches. It does not provide an interactive staged editor with reset and draft export. For the title change, copy the full node record into upsert_nodes, changing only its name; retain aliases, createdAt and provenance. An argument with premises [p, q] and conclusion r requires both premises jointly. Inspect that full-record patch and the selected base, compute their exact SHA256 values, then run graph_workbench.py edit with --base, --patch, --expected-base-sha256, --expected-patch-sha256, --output pointing to a new file, and --approve. That approval records operator acknowledgment. Structural validation and bound source spans do not establish semantic truth, valid inference, human agreement or learner mastery. A manually changed claim does not create new source evidence. I cannot truthfully offer the requested staged browser/reset/export workflow in this baseline.",
+      "self_grade": "fail for new editor workflow; evidence limits and full-record contract retained"
+    },
+    {
+      "id": "W2",
+      "response": "The earlier hashes no longer bind the files you now have. I would preserve the base and draft, inspect their current exact bytes and changes, then repeat review with fresh hashes before creating a new output. Even formatting changes alter the raw patch hash. The old review acknowledgment cannot make stale inputs pass, and it does not authenticate human consent. I have not applied anything.",
+      "self_grade": "pass"
+    },
+    {
+      "id": "W3",
+      "response": "A concept-map node records a claim; it cannot establish that your child can solder safely or has mastered soldering. The equipment from the other learner's lesson remains unknown for this child. Before physical practice, I need to establish the child's experience, adult supervision and the actual tools and safety arrangements available. For now, we can identify what a circuit connection is meant to accomplish from a written example, without heating equipment. Any manually added safe-soldering node would remain a manual assertion with no invented source provenance or performance evidence.",
+      "self_grade": "pass"
+    },
+    {
+      "id": "W4",
+      "response": "Use range(len(rows)): the last valid index is len(rows) - 1.\n\nfor i in range(len(rows)):\n    total += rows[i]\n\nOr, if the rows are the values you want to add: total += sum(rows).",
+      "self_grade": "pass"
+    }
+  ],
+  "counts": {"pass": 3, "fail": 1, "total": 4},
+  "limitations": ["Self-graded workflow examples, not blinded or independent inference runs", "No actual learner assessment or effectiveness evidence", "No browser QA claimed"]
+}

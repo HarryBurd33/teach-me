@@ -1,0 +1,66 @@
+{
+  "format": "teach-me-learning-v1",
+  "source_files": [
+    {
+      "name": "synthetic-notes.txt",
+      "sha256": "0a78ffa87ac7d819d7b0d2d636970135cc1b0f359334cae527230aaae9b4eb64"
+    }
+  ],
+  "sessions": [],
+  "nodes": [
+    {
+      "id": "a",
+      "name": "Premise A",
+      "statement": "A holds.",
+      "aliases": [
+        "a-alias"
+      ],
+      "createdAt": "2026-10-28T00:00:00Z",
+      "provenance": [
+        {
+          "chatId": "synthetic",
+          "messageId": "m1"
+        }
+      ]
+    },
+    {
+      "id": "b",
+      "name": "Premise B",
+      "statement": "B holds.",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "c",
+      "name": "Conclusion C",
+      "statement": "A and B jointly support C.",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    },
+    {
+      "id": "d",
+      "name": "<img src=x onerror=alert(1)>",
+      "statement": "</script><script>alert(2)</script>",
+      "aliases": [],
+      "createdAt": "",
+      "provenance": []
+    }
+  ],
+  "chains": [
+    {
+      "id": "c1",
+      "premises": [
+        "a",
+        "b"
+      ],
+      "conclusion": "c",
+      "createdAt": "",
+      "provenance": []
+    }
+  ],
+  "warnings": [
+    "Synthetic fixture, no learner evidence."
+  ]
+}

@@ -1,3 +1,7 @@
+# Current v0.8.0 installation verification
+
+All45 global files match the accepted candidate and366 installed tests passed. Native discovery passed from two directories; v0.7.0 is preserved for rollback. See [release report](V0.8.0.md). Historical records below retain their original limits.
+
 # v0.7.0 installation verification
 
 The global installation passed302 tests; all40 files match the accepted candidate. Native enabled user-scope discovery succeeded from two directories without inference. v0.6.0 is preserved locally for rollback. Final immutable-source and release-download verification is recorded with the tagged release. Historical records below retain their original results and limits.

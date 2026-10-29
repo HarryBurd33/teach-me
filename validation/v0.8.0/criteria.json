@@ -1,0 +1,97 @@
+{
+  "version": "0.8.0",
+  "baseline_commit": "ea6116c5d503e89ade25c1ac3301821ae4bb72e0",
+  "purpose": "Offline interactive graph edit drafts with digest-bound checked apply",
+  "activation": "Optional conceptmap editing in learningjourney or explicit graphwork request; preserve ordinarywork exclusions",
+  "delivery": [
+    "globaluserscope withrollback",
+    "existingpublicMITGitHub/tag/release/ZIP"
+  ],
+  "constraints": [
+    "Python3.9stdlib plus offlinebrowserHTML/CSS/JS",
+    "noAPIspend/service/runtime dependency",
+    "no semantictruth/provenance/mastery/authentication inference",
+    "no automatic source writeback or arbitrary command execution",
+    "progressv1,transferv1/v2 unchanged",
+    "onecandidate30min3workers2passes each"
+  ],
+  "backend": {
+    "module": "scripts/graph_editor.py",
+    "guide": "references/graph-editor.md",
+    "old_helper": "scripts/graph_workbench.py mayextract pure edited_graph(base,patch) fromexistingedit; preserveoldCLI behavior andall302regressions",
+    "commands": [
+      "render --input GRAPH --output NEW.html",
+      "check --base GRAPH --draft DRAFT",
+      "apply --base GRAPH --draft DRAFT --expected-draft-sha256 SHA --output NEW.json --approve"
+    ],
+    "input": "existinggraph-only teach-me-learning-v1, preservefullrecords/source_files/warnings; rejectsessiondata; initialunresolvedendpoints mayrenderwithwarning, finaldraftmustresolve",
+    "draft_keys": [
+      "version",
+      "base_sha256",
+      "patch"
+    ],
+    "version": 1,
+    "patch_keys": [
+      "version",
+      "delete_nodes",
+      "delete_chains",
+      "upsert_nodes",
+      "upsert_chains"
+    ],
+    "patch": "existingworkbenchfullrecordpatchcontract, noextra metadata; applypurehelper validatesfinalgraphandwarnings",
+    "bounds": {
+      "base_bytes": 2097152,
+      "draft_bytes": 2097152,
+      "nodes": 256,
+      "chains": 256,
+      "html_bytes": 33554432
+    },
+    "apply": "exactrawdraftSHAreviewbinding plusbaseSHA embeddedindraft; rejectstale/malformedunknownfields/duplicates/boolversion; requireapprove; data.publish create-new outputrechecksbase+draftsources andpreservesforeignoutputs",
+    "semantics": "operatorreviewacknowledgment only, noauthenticatedhumanconsent; UImanualassertionsnotnewsourceprovenance"
+  },
+  "frontend": {
+    "files": [
+      "assets/graph-editor.html",
+      "assets/graph-editor.js",
+      "assets/graph-editor.css"
+    ],
+    "template_markers": [
+      "{{EDITOR_DATA}}",
+      "{{EDITOR_SCRIPT}}",
+      "{{EDITOR_STYLE}}",
+      "{{SCRIPT_HASH}}",
+      "{{STYLE_HASH}}"
+    ],
+    "embedded_data": {
+      "version": 1,
+      "base_sha256": "SHA of exactselectedinputbytes",
+      "graph": "full validatednormalizedgraph"
+    },
+    "draft_export": "UTF8prettyJSON {version:1,base_sha256,patch}; Blobdownload teach-me-graph-draft.json, <=2MiB; no directapply/writeback",
+    "forms": "Select/add/update/delete nodes (id,name,statement) and chains (id,premiseIDs,conclusionID); existing IDs immutable via edit, delete/add explicit; existing aliases/createdAt/provenance preserved. New nodes aliases:[],createdAt:null,provenance:[] andnewchains createdAt:null,provenance:[]",
+    "joint_premises": "Preserve all jointly requiredpremises, nonemptyuniqueIDs; no implicitOR",
+    "delete": "Referencednode deletion refuses; no automaticcascade",
+    "draft_state": "stage mutations in memory, resetall tobase, showpendingchanges/validation; exportdisabled untilfinalendpoints valid andlimits satisfied; startingunresolvedgraph mayrepairgradually",
+    "display": "Searchablecard/list controls with clearlabels, perrecordfields andmanualedit/evidencelimits. TextContent/noinnerHTML foruntrustedvalues; no alertinjectedmarkup. No force-directedlayout/semanticsearch claim",
+    "csp": "default-src none; script-src hash of bundledinlineJS; style-src hash of bundledinlineCSS; object-src none/base-uri none; no unsafe-eval,network,fetch or externalassets; embeddingescapes< andotherHTMLscriptbreakoutchars",
+    "no_writes": "Onlyexplicitdownload; no localStorage/autosave/service worker/providercalls"
+  },
+  "checks": [
+    "exactdraftschema and fullrecord metadata-preserving edits",
+    "jointpremise chain creation and delete-reference refusal in browser",
+    "base/draft SHA mismatch staleversion malformedIDs/sessiondata/bounds refuse",
+    "hostile labels and script closing payload inert, staticCSP/noexternalassets",
+    "actualbrowser stage/reset/export then CLIcheck/apply newgraph, originalbase unchanged",
+    "existingoutput/foreignreplacement/sourcechangeduringpublication refused atomically",
+    "all302priorregressions unchanged plusnewcomponent/frozenchecks",
+    "independentstatic/modelworkflow review; no learnergain claim",
+    "installedsuite/nativediscovery/4exactcommitCI/pinnedsource andactualreleasedownload hashes"
+  ],
+  "routing": {
+    "assignment": "inherited currentmodel/effort unknown; noqualifiedconfiguredrouter orpaidfallback",
+    "review": "independentfrozencases plusparentactualbrowserQA beforeadoption",
+    "workers": 3,
+    "api_usd": null
+  },
+  "frozen_at": "2026-10-29T00:47:33.676292+00:00"
+}
