@@ -1,0 +1,84 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/workspace",
+      "--id",
+      "heldout",
+      "--topic",
+      "Evidence",
+      "--goal",
+      "Test optional maintenance safely"
+    ],
+    "returncode": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/workspace/learning/heldout\", \"sha256\": \"041e0dc865b0cb71907090308cc099f8b598e7e02d64e8327cc43b9126595a25\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/workspace/learning/heldout",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/baseline-packet.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"041e0dc865b0cb71907090308cc099f8b598e7e02d64e8327cc43b9126595a25\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Test optional maintenance safely\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"9e51c0e6effb3a6897844d271ba0694b6b9e0fd6430963ff0faaec4db9a98827\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/workspace/learning/heldout",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/baseline-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/baseline-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/baseline-receipt.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"041e0dc865b0cb71907090308cc099f8b598e7e02d64e8327cc43b9126595a25\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"9e51c0e6effb3a6897844d271ba0694b6b9e0fd6430963ff0faaec4db9a98827\", \"reviewer_role\": \"tutor\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-29T00:10:39.279254+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-baseline/baseline-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "none",
+      "--expected-receipt-sha256",
+      "b03a4af2ba38f7328d308c65a935ab6a4c2fd4e2e9662776c77f643e4730fc83",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "usage: review_history.py [-h] {append,status,extract} ...\nreview_history.py: error: argument command: invalid choice: 'import' (choose from 'append', 'status', 'extract')\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/snapshot_recovery.py",
+      "--help"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/snapshot_recovery.py': [Errno 2] No such file or directory\n"
+  }
+]

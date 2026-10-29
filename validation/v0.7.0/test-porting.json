@@ -1,0 +1,11 @@
+{
+  "frozen_groups": 20,
+  "assertions": "unchanged helper bodies and AST-extracted original check expressions",
+  "adaptations": [
+    "Portable TEACH_ME_SKILL defaults",
+    "Each frozen group gets fresh disposable fixture root",
+    "Original helper source retained with target set to current skill",
+    "Fault wrapper source/assertions unchanged"
+  ],
+  "baseline_fixture_modules": "journey/coherence/versions/transfer unchanged"
+}

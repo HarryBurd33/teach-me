@@ -24,6 +24,10 @@ DIRECTORY_LIMIT = 192
 RECEIPT_LIMIT = 2 * 1024 * 1024
 ENTRY_KEYS = {'version', 'journey_id', 'sequence', 'previous',
               'receipt_sha256', 'receipt_base64'}
+IMPORT_KEYS = ENTRY_KEYS | {'origin', 'origin_note'}
+REASON_LIMIT = 4096
+HISTORICAL_ORIGIN = 'historical_import'
+CURRENT_ORIGIN = 'current_checked_append'
 NAME = re.compile(r'([0-9]{6})-([0-9a-f]{64})\.json\Z')
 
 
@@ -50,7 +54,17 @@ def receipt(raw):
 
 
 def entry(value):
-    review.version(value, ENTRY_KEYS, 'history entry')
+    if not isinstance(value, dict) or type(value.get('version')) is not int:
+        fail('History entry version must be an exact integer 1 or 2')
+    if value['version'] == 1:
+        review.exact(value, ENTRY_KEYS, 'history entry v1')
+    elif value['version'] == 2:
+        review.exact(value, IMPORT_KEYS, 'history entry v2')
+        if value['origin'] != HISTORICAL_ORIGIN:
+            fail('History entry v2 origin must be historical_import')
+        reason(value['origin_note'])
+    else:
+        fail('History entry supported versions are integer 1 and 2')
     review.identity(value['journey_id'])
     if type(value['sequence']) is not int or not 1 <= value['sequence'] <= MAX_ENTRIES:
         fail('History sequence must be an exact integer from 1 through 64')
@@ -72,6 +86,12 @@ def entry(value):
     if value_receipt['journey_id'] != value['journey_id']:
         fail('Embedded receipt journey identity differs')
     return raw, value_receipt
+
+
+def reason(value):
+    if not isinstance(value, str) or not value.strip() or len(value) > REASON_LIMIT:
+        fail('Historical import reason must be nonblank text of at most 4096 characters')
+    return value
 
 
 def read_store(store):
@@ -110,7 +130,10 @@ def read_store(store):
         if int(match.group(1)) != value['sequence']:
             fail('History filename and sequence differ')
         records.append({'sha256': sha, 'filename': path.name, 'entry': value,
-                        'receipt': receipt_raw, 'resume_ready': value_receipt['resume_ready']})
+                        'receipt': receipt_raw,
+                        'resume_ready': (value_receipt['resume_ready']
+                                         if value['version'] == 1 else False),
+                        'receipt_resume_ready': value_receipt['resume_ready']})
     previous, ident = None, None
     for sequence, record in enumerate(records, 1):
         value = record['entry']
@@ -130,9 +153,15 @@ def report(records, stages):
             'entries': [{'sha256': r['sha256'], 'filename': r['filename'],
                          'sequence': r['entry']['sequence'],
                          'receipt_sha256': r['entry']['receipt_sha256'],
-                         'resume_ready': r['resume_ready']} for r in records],
+                         'resume_ready': r['resume_ready'],
+                         'receipt_resume_ready': r['receipt_resume_ready'],
+                         'origin': (CURRENT_ORIGIN if r['entry']['version'] == 1
+                                    else HISTORICAL_ORIGIN),
+                         **({'origin_note': r['entry']['origin_note']}
+                            if r['entry']['version'] == 2 else {})} for r in records],
             'staging_entries': stages, 'receipt_freshness_checked': False,
-            'semantic_correctness_verified': False, 'automatic_recovery': False}
+            'semantic_correctness_verified': False, 'automatic_recovery': False,
+            'origin_authenticated': False}
 
 
 def status(store):
@@ -227,6 +256,66 @@ def append(store, journey_path, receipt_path, expected_tip):
             'semantic_correctness_verified': False}
 
 
+def import_receipt(store, receipt_path, journey_id, expected_tip,
+                   expected_receipt_sha256, origin_note):
+    """Record exact historical bytes, without reading any current journey."""
+    store, receipt_path = directory(store), checked_path(receipt_path)
+    review.identity(journey_id)
+    reason(origin_note)
+    review.check_digest(expected_receipt_sha256, 'expected-receipt-sha256')
+    if expected_tip != 'none':
+        review.check_digest(expected_tip, 'expected-tip')
+    with file_lock(store, LOCK):
+        records, stages, fingerprint, total, count = read_store(store)
+        if stages:
+            fail('History has staging entries; preserve and reconcile before importing')
+        actual_tip = records[-1]['sha256'] if records else 'none'
+        if expected_tip != actual_tip:
+            fail('Stale expected tip; inspect history before importing')
+        if len(records) >= MAX_ENTRIES:
+            fail('History has 64 entries; use a new history store explicitly')
+        if count + 2 > DIRECTORY_LIMIT:
+            fail('History directory lacks room for staging and publication')
+        raw_receipt = review.read_regular(receipt_path, RECEIPT_LIMIT)
+        if review.digest(raw_receipt) != expected_receipt_sha256:
+            fail('Receipt bytes differ from expected-receipt-sha256')
+        value_receipt = receipt(raw_receipt)
+        if value_receipt['journey_id'] != journey_id:
+            fail('Receipt belongs to another journey identity')
+        if records and records[0]['entry']['journey_id'] != journey_id:
+            fail('History belongs to another journey identity')
+        value = {'version': 2, 'journey_id': journey_id,
+                 'sequence': len(records) + 1,
+                 'previous': None if not records else actual_tip,
+                 'receipt_sha256': expected_receipt_sha256,
+                 'receipt_base64': base64.b64encode(raw_receipt).decode('ascii'),
+                 'origin': HISTORICAL_ORIGIN, 'origin_note': origin_note}
+        raw = versions.encoded(value)
+        if len(raw) > ENTRY_LIMIT or total + len(raw) > TOTAL_LIMIT:
+            fail('History entry or total byte limit would be exceeded')
+        sha = review.digest(raw)
+        output = checked_path(store / ('%06d-%s.json' % (value['sequence'], sha)))
+        temporary, identity = stage(store, raw)
+        try:
+            if review.read_regular(receipt_path, RECEIPT_LIMIT) != raw_receipt:
+                fail('Receipt bytes changed while importing')
+            _, now_stages, now_fingerprint, _, _ = read_store(store)
+            expected = dict(fingerprint)
+            expected[temporary.name] = sha
+            if now_stages != [temporary.name] or now_fingerprint != expected:
+                fail('History or staging bytes changed before publication')
+            checked_path(output)
+            os.link(str(temporary), str(output))
+        finally:
+            remove_owned(temporary, identity)
+    return {'imported': True, 'entry': sha, 'sequence': value['sequence'],
+            'journey_id': journey_id, 'receipt_sha256': expected_receipt_sha256,
+            'origin': HISTORICAL_ORIGIN, 'origin_note': origin_note,
+            'resume_ready': False, 'receipt_resume_ready': value_receipt['resume_ready'],
+            'receipt_freshness_checked': False, 'origin_authenticated': False,
+            'semantic_correctness_verified': False}
+
+
 def extract(store, entry_sha, output):
     store, output = directory(store), checked_path(output)
     review.check_digest(entry_sha, 'entry')
@@ -259,6 +348,11 @@ def main(argv=None):
     p = commands.add_parser('append')
     p.add_argument('--store', required=True); p.add_argument('--journey', required=True)
     p.add_argument('--receipt', required=True); p.add_argument('--expected-tip', required=True)
+    p = commands.add_parser('import')
+    p.add_argument('--store', required=True); p.add_argument('--receipt', required=True)
+    p.add_argument('--id', required=True); p.add_argument('--expected-tip', required=True)
+    p.add_argument('--expected-receipt-sha256', required=True)
+    p.add_argument('--reason', required=True)
     p = commands.add_parser('status'); p.add_argument('--store', required=True)
     p = commands.add_parser('extract')
     p.add_argument('--store', required=True); p.add_argument('--entry', required=True)
@@ -267,6 +361,9 @@ def main(argv=None):
     try:
         if args.command == 'append':
             result = append(args.store, args.journey, args.receipt, args.expected_tip)
+        elif args.command == 'import':
+            result = import_receipt(args.store, args.receipt, args.id, args.expected_tip,
+                                    args.expected_receipt_sha256, args.reason)
         elif args.command == 'status':
             result = status(args.store)
         else:

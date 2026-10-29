@@ -1,0 +1,92 @@
+{
+  "version": "0.7.0",
+  "baseline_commit": "85ce6689442177f6a0eb1b90c488391b48ba7833",
+  "purpose": "Truthfully labeled historical receipt import and verified recovery of interrupted snapshot removals",
+  "activation": "Optional tools within existing learningjourney; preserve ordinarywork/nonlearning exclusions",
+  "delivery": [
+    "globaluserscope skill withrollback",
+    "existingpublicMITGitHub source/tag/release/ZIP"
+  ],
+  "constraints": [
+    "Python3.9+ stdlib",
+    "noAPIspend/services/reallearnerstoremutation",
+    "nohumanidentity/truth/mastery claim",
+    "noautomaticreplay/locktheft/stagecleanup",
+    "progressv1 andjourneytransferformatsv1/v2 unchanged",
+    "allartifactpaths canonicalrelative toworkspace"
+  ],
+  "history": {
+    "module": "scripts/review_history.py",
+    "guide": "references/review-history.md",
+    "legacy": "Existing append continueswriting exact six-key version1 entries; existingv1receipts and mixedchains readable; no rewriting oldentries",
+    "command": "import --store DIR --receipt FILE --id JOURNEY --expected-tip SHA|none --expected-receipt-sha256 SHA --reason NOTE",
+    "entry_v2_keys": [
+      "version",
+      "journey_id",
+      "sequence",
+      "previous",
+      "receipt_sha256",
+      "receipt_base64",
+      "origin",
+      "origin_note"
+    ],
+    "origin": "historical_import only",
+    "origin_note": "required nonblankreason <=4096Unicodecharacters",
+    "import": "No currentjourney read orfreshness claim; strict existingreceipt shape, sameexplicitid/storeidentity, exactprovidedreceiptdigest,expectedtip,chain/size/path/lock/stage limits andcreate-new publication; recheckreceipt/store/stagebeforelink",
+    "status": "Everyentry origin current_checked_append(v1) orhistorical_import(v2); historical entries resume_ready:false,receipt_resume_ready retainsoriginalreceiptflag; v1existing resume_ready behaviorunchanged; store freshnessfalse; noauthenticatedorigin claim",
+    "extract": "Exactreceiptbytes retained, includingwhitespace; sameextractCLI handlesv1/v2",
+    "compatibility": "Oldv0.6historyreadersrejectv2entries; update receivingcopy; journeyZIPunchanged",
+    "bounds": "Reuseexisting64entry/3MiBentry/2MiBreceipt/64MiBstore/192directorylimits"
+  },
+  "recovery": {
+    "module": "scripts/snapshot_recovery.py",
+    "guide": "references/snapshot-recovery.md",
+    "commands": [
+      "plan --store DIR --archive COMPLETE_ARCHIVE_DIR --output NEW.json",
+      "apply --store DIR --archive COMPLETE_ARCHIVE_DIR --plan PLAN --expected-plan-sha256 SHA --approve"
+    ],
+    "plan_keys": [
+      "version",
+      "journey_id",
+      "original_plan_sha256",
+      "store_sha256",
+      "archive_sha256",
+      "head",
+      "protected",
+      "remaining",
+      "already_absent",
+      "plan_sha256"
+    ],
+    "version": 1,
+    "canonical": "Reuse versions.encoded sortedcompactUTF8finalnewline; planhash excludesself",
+    "store_sha256": "Same canonicalmapalgorithm asmaintenance: HEAD.json rawSHA plus allrevisionZIPname->rawSHA; validateinitializedstore first; rejectstorestages/unknown/corrupt/foreignidentity",
+    "archive": "Disjointfromstoreinbothancestrydirections; requiredirectoryleaf originalplanSHA; strictcanonical archive-manifest.json exact{version:1,plan,files}; originalmaintenanceplanvalid; files exactlyoriginalselectedSHA.zip entries, eachrecord{sha256,size} validbounded andmatchingname; verifyallcopiedZIPs/hashes/sizes/innerjourneyid; noforeignmembers/symlinks; selectedtotal<=64MiB",
+    "archive_sha256": "canonicalmap archive-manifest.json->rawSHA plus eachselectedZIPname->rawSHA",
+    "remaining": "alloriginalselected revisionspresentincurrentstore, sorted; rejectintersectionwithcurrentHEAD/previous; already_absent iscomplement, noassertionwho/whyremoved; newcurrentunselectedrevisionsallowed",
+    "plan": "Bindbothcurrentstoreandarchive; outputcreate-newoutsideboth; nochanges; emptyremaining permitsverifiednoop",
+    "apply": "Requires exactexpectedinternalplanhash and --approve; holdexistingstorelock then archiveparent maintenance lock; recomputecurrentclosedplan andverifycompletebackupbefore anynewunlink; protectcurrentHEAD/previous bytes; reverifyarchive/protectedrefs beforeeachremoval; preservearchive andsourcesonprevalidationfailure",
+    "failure": "Afterpartialfailure createfreshrecoveryplan fromobservedstate; oldplanstale/refused,neverautomaticreplay. Completearchive nevermodified/deleted. No cleanup/rebuilding ofincompletearchive orabandonedlocks/stages",
+    "existingmodules": "Reusemaintenance validators/versions/transfer/storage; do not modify snapshot_maintenance.py orjourney_versions.py"
+  },
+  "checks": [
+    "historicalold/stalereceipt exactbyteimport/extract; originalreadytrue remains historicalnotready",
+    "wrongreceiptSHA/staletip/id/blankreason/malformedv2/forgedorigin/base64/chain/locks/stages refuse nohistorymutation",
+    "mixedv1/v2chain andcontinuedcurrentappend retainoldbytes andv1format",
+    "existingv0.6baseline rejects historicalimport/recovery natively; demonstrate newcapabilities, no efficacyclaim",
+    "partialmaintenance removal ->freshrecoveryplan ->finishselectedremaining,backuprestorable/HEADpreviousunchanged",
+    "tampered/incompletearchive,staleplan/expecteddigest,nowprotectedselected,foreignidentity/unknownarchivefile refuse withoutnewremoval",
+    "alreadycompletedrecovery verifiednoop; repeatedinterruption needsfreshplan",
+    "all238unchangedregressions plusnewcomponent/frozenfaultchecks; independentstatic/modelworkflowreview",
+    "installedsuite,nativeuserscope,4exactcommitCIjobs,pinnedsourceandactualreleaseassetdigests/memberhashes"
+  ],
+  "routing": {
+    "model_effort": "inherited unknown; no qualifiedconfiguredrouter orpaidfallback",
+    "review": "independentfrozencases andstatic/modelworkflowgate beforeadoption",
+    "workers": 3,
+    "attempts_per_component": 2,
+    "wall_minutes": 30,
+    "api_usd": null
+  },
+  "guard": "Default20 stays; no prearmedgrant. Earlier explicit user authorization permits supported ten grant onlyafterverifiedstop/preservation/freshreview; no exhaustionbypass inferred",
+  "frozen_at": "2026-10-29T00:08:00.310895+00:00"
+}

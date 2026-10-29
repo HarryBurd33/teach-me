@@ -1,3 +1,7 @@
+# Current v0.7.0 validation
+
+See [the current release report](V0.7.0.md):302 candidate/installed tests, frozen independent failures and scoped model comparisons. Historical records below retain their original results and limits.
+
 # Current v0.6.0 validation
 
 See [the current release report](V0.6.0.md):238 candidate/installed tests, independent failure review and scoped workflow examples. Historical records below retain their original results and limits.

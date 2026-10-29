@@ -1,0 +1,96 @@
+{
+  "arm": "candidate",
+  "skill": "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me",
+  "frozen_cases_sha256": "de3d44864c1a577f811da810e2a143efbbee10de59841453481932965cd380f3",
+  "runner_sha256": "7d0fb6a68748eba6ee998f34257beb38c2984774ba3eb6516adc55b4989ae784",
+  "passed": 8,
+  "total": 10,
+  "results": [
+    {
+      "id": "H01",
+      "passed": true,
+      "details": {
+        "tip": "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+        "sequence": 1,
+        "journey_id": "heldout",
+        "entries": [
+          {
+            "sha256": "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+            "filename": "000001-06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8.json",
+            "sequence": 1,
+            "receipt_sha256": "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+            "resume_ready": false,
+            "receipt_resume_ready": true,
+            "origin": "historical_import",
+            "origin_note": "Imported old operator judgment; no current freshness approval."
+          }
+        ],
+        "staging_entries": [],
+        "receipt_freshness_checked": false,
+        "semantic_correctness_verified": false,
+        "automatic_recovery": false,
+        "origin_authenticated": false
+      }
+    },
+    {
+      "id": "H02",
+      "passed": true,
+      "details": "Error: Receipt bytes differ from expected-receipt-sha256"
+    },
+    {
+      "id": "H03",
+      "passed": true,
+      "details": "Error: Stale expected tip; inspect history before importing"
+    },
+    {
+      "id": "H04",
+      "passed": true,
+      "details": "Error: Receipt belongs to another journey identity"
+    },
+    {
+      "id": "H05",
+      "passed": true,
+      "details": [
+        "Error: Historical import reason must be nonblank text of at most 4096 characters",
+        "Error: Historical import reason must be nonblank text of at most 4096 characters"
+      ]
+    },
+    {
+      "id": "H06",
+      "passed": true,
+      "details": "Error: History entry v2 origin must be historical_import"
+    },
+    {
+      "id": "H07",
+      "passed": false,
+      "error": "[Errno 17] File exists: 'BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/malformed-6'",
+      "traceback": "Traceback (most recent call last):\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 12, in check\n    try: details=fn(); results.append(dict(id=name,passed=True,details=details))\n                 ~~^^\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 148, in <lambda>\n    check('H06',lambda:mutate_entry('origin','current_checked_append'));check('H07',lambda:[mutate_entry('receipt_base64','!!'),mutate_entry('origin_note','',True),mutate_entry('previous','f'*64),mutate_entry('foreign','key')]);check('H08',mixed);check('H09',hist_locks)\n                                                                                                                                ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 61, in mutate_entry\n    s=newdir('malformed-'+str(len(results))); shutil.copytree(HS,s,dirs_exist_ok=True); p=next(s.glob('*.json')); v=json.loads(p.read_bytes())\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 37, in newdir\n    def newdir(name):p=WORK/name;p.mkdir();return p\n                                 ~~~~~~~^^\n  File \"/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/lib/python3.15/pathlib/__init__.py\", line 1210, in mkdir\n    os.mkdir(self, mode)\n    ~~~~~~~~^^^^^^^^^^^^\nFileExistsError: [Errno 17] File exists: 'BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/malformed-6'\n"
+    },
+    {
+      "id": "H08",
+      "passed": true,
+      "details": {
+        "versions": [
+          1,
+          2,
+          1
+        ],
+        "old_raw_unchanged": true
+      }
+    },
+    {
+      "id": "H09",
+      "passed": true,
+      "details": [
+        "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/hist-lock-0/.teach-me-review-history.lock",
+        "Error: History has staging entries; preserve and reconcile before importing"
+      ]
+    },
+    {
+      "id": "R01",
+      "passed": false,
+      "error": "",
+      "traceback": "Traceback (most recent call last):\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 12, in check\n    try: details=fn(); results.append(dict(id=name,passed=True,details=details))\n                 ~~^^\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 99, in recovery_finish\n    recovery_fixture();p,s,a=clone('recovery-finish');b=protected(s);arc=tree(a);v=rplan(p,s,a)\n    ~~~~~~~~~~~~~~~~^^\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/run_heldouts.py\", line 90, in recovery_fixture\n    archive=ar/v['plan_sha256']; assert archive.is_dir();assert len(list(store.glob('*.zip')))==5\n                                        ~~~~~~~~~~~~~~^^\nAssertionError\n"
+    }
+  ]
+}

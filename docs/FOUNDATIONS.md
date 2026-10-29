@@ -82,3 +82,7 @@ Typed asset transport and hash-bound consistency review extend this repository�
 ## v0.6.0 original extension
 
 The review-history and snapshot-maintenance tools extend this repository’s MIT receipt, storage and snapshot validators using Python standard-library code. Prior pinned foundation findings remain applicable. No upstream prompt, reader or AGPL implementation is bundled. Hash chains record local integrity, not authenticated identity or semantic truth.
+
+## v0.7.0 original extension
+
+Historical import and verified interrupted-removal recovery extend this repository’s MIT modules using Python standard-library code. Prior pinned foundation findings remain applicable; no new upstream implementation or prompt is bundled. Historical labels and byte verification do not authenticate identity, prove source claims or establish learner mastery.

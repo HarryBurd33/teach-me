@@ -1,3 +1,7 @@
+# v0.7.0 installation verification
+
+The global installation passed302 tests; all40 files match the accepted candidate. Native enabled user-scope discovery succeeded from two directories without inference. v0.6.0 is preserved locally for rollback. Final immutable-source and release-download verification is recorded with the tagged release. Historical records below retain their original results and limits.
+
 # v0.6.0 installation verification
 
 The rollback-preserving update passed238 tests against the global skill. All38 files match the reviewed candidate; native enabled user-scope discovery passed from two directories without a model turn. Discovery does not establish automatic selection. Final immutable-source and release-download checks are recorded with the tagged release. Historical records below retain their original results and limits.

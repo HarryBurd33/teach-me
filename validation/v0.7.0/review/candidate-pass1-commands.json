@@ -1,0 +1,612 @@
+[
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history-workspace",
+      "--id",
+      "heldout",
+      "--topic",
+      "Evidence",
+      "--goal",
+      "Test optional maintenance safely"
+    ],
+    "returncode": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history-workspace/learning/heldout\", \"sha256\": \"0150bbf6e4f399331918dd48274146ea1a8c14623ce5d28fa6a76dbda9c6f3d3\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history-workspace/learning/heldout",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-packet.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"0150bbf6e4f399331918dd48274146ea1a8c14623ce5d28fa6a76dbda9c6f3d3\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Test optional maintenance safely\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"911d4d03fd3cb2e4e123fc7040e11c6af505d1f813904f525dc3054866bd0f3f\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history-workspace/learning/heldout",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"0150bbf6e4f399331918dd48274146ea1a8c14623ce5d28fa6a76dbda9c6f3d3\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"911d4d03fd3cb2e4e123fc7040e11c6af505d1f813904f525dc3054866bd0f3f\", \"reviewer_role\": \"tutor\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-29T00:11:24.013274+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "none",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 0,
+    "stdout": "{\"imported\": true, \"entry\": \"06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8\", \"sequence\": 1, \"journey_id\": \"heldout\", \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\", \"origin\": \"historical_import\", \"origin_note\": \"Imported old operator judgment; no current freshness approval.\", \"resume_ready\": false, \"receipt_resume_ready\": true, \"receipt_freshness_checked\": false, \"origin_authenticated\": false, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history"
+    ],
+    "returncode": 0,
+    "stdout": "{\"tip\": \"06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8\", \"sequence\": 1, \"journey_id\": \"heldout\", \"entries\": [{\"sha256\": \"06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8\", \"filename\": \"000001-06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8.json\", \"sequence\": 1, \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\", \"resume_ready\": false, \"receipt_resume_ready\": true, \"origin\": \"historical_import\", \"origin_note\": \"Imported old operator judgment; no current freshness approval.\"}], \"staging_entries\": [], \"receipt_freshness_checked\": false, \"semantic_correctness_verified\": false, \"automatic_recovery\": false, \"origin_authenticated\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--entry",
+      "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/extracted.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/extracted.json\", \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+      "--expected-receipt-sha256",
+      "0000000000000000000000000000000000000000000000000000000000000000",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Receipt bytes differ from expected-receipt-sha256\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "0000000000000000000000000000000000000000000000000000000000000000",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Stale expected tip; inspect history before importing\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "wrong",
+      "--expected-tip",
+      "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Receipt belongs to another journey identity\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "  "
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Historical import reason must be nonblank text of at most 4096 characters\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/history",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "06475b3694727675bd89a7660274e5b22cde78395bce41cee6c76ed0f68aada8",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Historical import reason must be nonblank text of at most 4096 characters\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/malformed-5"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: History entry v2 origin must be historical_import\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/malformed-6"
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: receipt_base64 must be canonical base64 text\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace",
+      "--id",
+      "heldout",
+      "--topic",
+      "Evidence",
+      "--goal",
+      "Test optional maintenance safely"
+    ],
+    "returncode": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace/learning/heldout\", \"sha256\": \"079786c0d1dbbc5ee51ac64683749b1d966baa8f42181fb654827581a84a7c75\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/coherence_review.py",
+      "prepare",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace/learning/heldout",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-packet.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"079786c0d1dbbc5ee51ac64683749b1d966baa8f42181fb654827581a84a7c75\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"checks\": [{\"check_id\": \"goal-stage-next-action\", \"question\": \"Do the plan, current stage and next action agree with the learner goal and constraints?\"}, {\"check_id\": \"evidence-scope\", \"question\": \"Are assessment claims supported by the recorded attempts and evidence, with help and self-report distinguished?\"}, {\"check_id\": \"sources-and-claims\", \"question\": \"Do the source notes, knowledge claims and graph/proposal agree, with uncertainty and provenance preserved?\"}, {\"check_id\": \"merge-consistency\", \"question\": \"Do the combined files make sense together after any merge, restore or edit, with contradictions and missing information resolved?\"}], \"summary\": {\"goal\": \"Test optional maintenance safely\", \"current_stage\": \"baseline\", \"next_action\": \"Establish the baseline and first useful practice task.\", \"assessment_count\": 0, \"evidence_count\": 0, \"typed_files\": [], \"warnings\": [], \"semantic_correctness_verified\": false}, \"packet_sha256\": \"0b621d7c77bc27a7d18a4dae3ccd32214121d914e8ddea8b1a57d249c3f3c189\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/coherence_review.py",
+      "record",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace/learning/heldout",
+      "--packet",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-packet.json",
+      "--decisions",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-decisions.json",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-receipt.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"version\": 1, \"journey_id\": \"heldout\", \"files\": {\"plan.md\": {\"sha256\": \"e38359778d191983ab0a82a50645b191316b88375ed13603df90d74fbc0419c6\", \"size\": 1147}, \"progress.json\": {\"sha256\": \"079786c0d1dbbc5ee51ac64683749b1d966baa8f42181fb654827581a84a7c75\", \"size\": 453}, \"sources.md\": {\"sha256\": \"aa82799992427beeb62016ec36584790e1e072ebd9f0ad04e639890ca7c3af91\", \"size\": 563}}, \"packet_sha256\": \"0b621d7c77bc27a7d18a4dae3ccd32214121d914e8ddea8b1a57d249c3f3c189\", \"reviewer_role\": \"tutor\", \"decisions\": [{\"check_id\": \"goal-stage-next-action\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"evidence-scope\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"sources-and-claims\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}, {\"check_id\": \"merge-consistency\", \"rationale\": \"Inspected fixture evidence is internally consistent.\", \"result\": \"consistent\"}], \"recorded_at\": \"2026-10-29T00:11:24.539582+00:00\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace/learning/heldout",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-receipt.json",
+      "--expected-tip",
+      "none"
+    ],
+    "returncode": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279\", \"sequence\": 1, \"journey_id\": \"heldout\", \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 0,
+    "stdout": "{\"imported\": true, \"entry\": \"c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253\", \"sequence\": 2, \"journey_id\": \"heldout\", \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\", \"origin\": \"historical_import\", \"origin_note\": \"Imported old operator judgment; no current freshness approval.\", \"resume_ready\": false, \"receipt_resume_ready\": true, \"receipt_freshness_checked\": false, \"origin_authenticated\": false, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed"
+    ],
+    "returncode": 0,
+    "stdout": "{\"tip\": \"c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253\", \"sequence\": 2, \"journey_id\": \"heldout\", \"entries\": [{\"sha256\": \"d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279\", \"filename\": \"000001-d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279.json\", \"sequence\": 1, \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\", \"resume_ready\": true, \"receipt_resume_ready\": true, \"origin\": \"current_checked_append\"}, {\"sha256\": \"c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253\", \"filename\": \"000002-c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253.json\", \"sequence\": 2, \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\", \"resume_ready\": false, \"receipt_resume_ready\": true, \"origin\": \"historical_import\", \"origin_note\": \"Imported old operator judgment; no current freshness approval.\"}], \"staging_entries\": [], \"receipt_freshness_checked\": false, \"semantic_correctness_verified\": false, \"automatic_recovery\": false, \"origin_authenticated\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "append",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-workspace/learning/heldout",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-current-receipt.json",
+      "--expected-tip",
+      "c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253"
+    ],
+    "returncode": 0,
+    "stdout": "{\"appended\": true, \"entry\": \"24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5\", \"sequence\": 3, \"journey_id\": \"heldout\", \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\", \"resume_ready\": true, \"semantic_correctness_verified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "status",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed"
+    ],
+    "returncode": 0,
+    "stdout": "{\"tip\": \"24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5\", \"sequence\": 3, \"journey_id\": \"heldout\", \"entries\": [{\"sha256\": \"d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279\", \"filename\": \"000001-d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279.json\", \"sequence\": 1, \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\", \"resume_ready\": true, \"receipt_resume_ready\": true, \"origin\": \"current_checked_append\"}, {\"sha256\": \"c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253\", \"filename\": \"000002-c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253.json\", \"sequence\": 2, \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\", \"resume_ready\": false, \"receipt_resume_ready\": true, \"origin\": \"historical_import\", \"origin_note\": \"Imported old operator judgment; no current freshness approval.\"}, {\"sha256\": \"24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5\", \"filename\": \"000003-24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5.json\", \"sequence\": 3, \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\", \"resume_ready\": true, \"receipt_resume_ready\": true, \"origin\": \"current_checked_append\"}], \"staging_entries\": [], \"receipt_freshness_checked\": false, \"semantic_correctness_verified\": false, \"automatic_recovery\": false, \"origin_authenticated\": false}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--entry",
+      "d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-1.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"d32f98b8395a0dd4935f662373e36d78694ec70c7c46a46b54cb4cd676308279\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-1.json\", \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--entry",
+      "c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-2.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"c1b0dfe331b7d52b101c1972a08f9616805375e1382f46ec13cf66f40ec10253\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-2.json\", \"receipt_sha256\": \"8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "extract",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed",
+      "--entry",
+      "24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-3.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"extracted\": true, \"entry\": \"24c07afb19420a15646a0f1db2fb1e9d92775343b1d89ac6aa4c610b7922b6d5\", \"output\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/mixed-out-3.json\", \"receipt_sha256\": \"3f048bdd654b09e44b356b03d0fe9cc31300b161cfe82bc42b9d4d029c9d6c59\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/hist-lock-0",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "none",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/hist-lock-0/.teach-me-review-history.lock\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py",
+      "import",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/hist-lock-1",
+      "--receipt",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/old-receipt.json",
+      "--id",
+      "heldout",
+      "--expected-tip",
+      "none",
+      "--expected-receipt-sha256",
+      "8a347c99633a511f1477a51b8c8d3bffe9c16a6ed164b597e93f17f5613f13c1",
+      "--reason",
+      "Imported old operator judgment; no current freshness approval."
+    ],
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "Error: History has staging entries; preserve and reconcile before importing\n"
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey.py",
+      "init",
+      "--root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace",
+      "--id",
+      "heldout",
+      "--topic",
+      "Evidence",
+      "--goal",
+      "Test optional maintenance safely"
+    ],
+    "returncode": 0,
+    "stdout": "{\"journey\": \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout\", \"sha256\": \"c66fa27d2264c4179d922cb51aa9e5c7d656ebe5a98150b4c8bbf7fb32a42537\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "none"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"514f84bf5b052e96b8146c4e63d8c9816cd9417c9e881ca63f1b22671859d65c\", \"journey_id\": \"heldout\", \"previous\": null}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "514f84bf5b052e96b8146c4e63d8c9816cd9417c9e881ca63f1b22671859d65c"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"2c97b9eec25d909061c9c90fbcceb706acb7441481e54e2cda1518582010fbfb\", \"journey_id\": \"heldout\", \"previous\": \"514f84bf5b052e96b8146c4e63d8c9816cd9417c9e881ca63f1b22671859d65c\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "2c97b9eec25d909061c9c90fbcceb706acb7441481e54e2cda1518582010fbfb"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"114260cfd40ba42625c832a61311b54b9bb993700a72abc77f51ae49f7897617\", \"journey_id\": \"heldout\", \"previous\": \"2c97b9eec25d909061c9c90fbcceb706acb7441481e54e2cda1518582010fbfb\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "114260cfd40ba42625c832a61311b54b9bb993700a72abc77f51ae49f7897617"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"180ab515a336be3a8394f18528004a2955f228c9d85a09909e221ae2f343aff1\", \"journey_id\": \"heldout\", \"previous\": \"114260cfd40ba42625c832a61311b54b9bb993700a72abc77f51ae49f7897617\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "180ab515a336be3a8394f18528004a2955f228c9d85a09909e221ae2f343aff1"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"4eacd9365d207d616d77d78164d6d2af85496a4939eb1e2dad132ab4e90e413b\", \"journey_id\": \"heldout\", \"previous\": \"180ab515a336be3a8394f18528004a2955f228c9d85a09909e221ae2f343aff1\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/journey_versions.py",
+      "snapshot",
+      "--journey",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/workspace/learning/heldout",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--expected-head",
+      "4eacd9365d207d616d77d78164d6d2af85496a4939eb1e2dad132ab4e90e413b"
+    ],
+    "returncode": 0,
+    "stdout": "{\"snapshot\": true, \"unchanged\": false, \"revision\": \"9af63905123f051cf415ece1b4363ef5dd052a7312aded47ca4cef9ef53ab39b\", \"journey_id\": \"heldout\", \"previous\": \"4eacd9365d207d616d77d78164d6d2af85496a4939eb1e2dad132ab4e90e413b\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "/opt/homebrew/opt/python@3.15/bin/python3.15",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/snapshot_maintenance.py",
+      "plan",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--revisions",
+      "514f84bf5b052e96b8146c4e63d8c9816cd9417c9e881ca63f1b22671859d65c",
+      "2c97b9eec25d909061c9c90fbcceb706acb7441481e54e2cda1518582010fbfb",
+      "114260cfd40ba42625c832a61311b54b9bb993700a72abc77f51ae49f7897617",
+      "180ab515a336be3a8394f18528004a2955f228c9d85a09909e221ae2f343aff1",
+      "--output",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/retire.json"
+    ],
+    "returncode": 0,
+    "stdout": "{\"head\": {\"journey_id\": \"heldout\", \"previous\": \"4eacd9365d207d616d77d78164d6d2af85496a4939eb1e2dad132ab4e90e413b\", \"revision\": \"9af63905123f051cf415ece1b4363ef5dd052a7312aded47ca4cef9ef53ab39b\", \"version\": 1}, \"journey_id\": \"heldout\", \"plan_sha256\": \"628cfa6a9b5e0b3b1a1d388bbba45dd68f870da132e5bdb02634b755c360b5f6\", \"protected\": [\"4eacd9365d207d616d77d78164d6d2af85496a4939eb1e2dad132ab4e90e413b\", \"9af63905123f051cf415ece1b4363ef5dd052a7312aded47ca4cef9ef53ab39b\"], \"revisions\": [\"114260cfd40ba42625c832a61311b54b9bb993700a72abc77f51ae49f7897617\", \"180ab515a336be3a8394f18528004a2955f228c9d85a09909e221ae2f343aff1\", \"2c97b9eec25d909061c9c90fbcceb706acb7441481e54e2cda1518582010fbfb\", \"514f84bf5b052e96b8146c4e63d8c9816cd9417c9e881ca63f1b22671859d65c\"], \"store_sha256\": \"0336f4e5370526f19a8e395014597334366e6d66ac455c357098d5a0e92a46ef\", \"version\": 1}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "fault-wrapper",
+      "snapshot_maintenance.py",
+      "apply",
+      "--store",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/store",
+      "--plan",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/retire.json",
+      "--archive-root",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate/recovery-base/archives",
+      "--expected-plan-sha256",
+      "628cfa6a9b5e0b3b1a1d388bbba45dd68f870da132e5bdb02634b755c360b5f6",
+      "--approve"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 10, in <module>\n    runpy.run_path(sys.argv[0],run_name='__main__')\n    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen runpy>\", line 292, in run_path\n  File \"<frozen runpy>\", line 97, in _run_module_code\n  File \"<frozen runpy>\", line 87, in _run_code\n  File \"BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me/scripts/snapshot_maintenance.py\", line 13, in <module>\n    import journey_versions as versions\nModuleNotFoundError: No module named 'journey_versions'\n"
+  }
+]

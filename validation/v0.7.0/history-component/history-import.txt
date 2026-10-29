@@ -1,0 +1,32 @@
+test_actual_64_entry_mixed_chain_limit (__main__.HistoricalImportTests.test_actual_64_entry_mixed_chain_limit) ... ok
+test_actual_receipt_limit_and_nonregular_source (__main__.HistoricalImportTests.test_actual_receipt_limit_and_nonregular_source) ... ok
+test_actual_stage_and_directory_limits_preserve_files (__main__.HistoricalImportTests.test_actual_stage_and_directory_limits_preserve_files) ... ok
+test_blank_type_and_overlong_reason_refused (__main__.HistoricalImportTests.test_blank_type_and_overlong_reason_refused) ... ok
+test_cli_all_six_arguments_required (__main__.HistoricalImportTests.test_cli_all_six_arguments_required) ... ok
+test_cli_import_and_extract_exact_receipt_bytes (__main__.HistoricalImportTests.test_cli_import_and_extract_exact_receipt_bytes) ... ok
+test_embedded_receipt_closed_schema_bool_version_and_ready_consistency (__main__.HistoricalImportTests.test_embedded_receipt_closed_schema_bool_version_and_ready_consistency) ... ok
+test_entry_total_and_directory_reservation_limits (__main__.HistoricalImportTests.test_entry_total_and_directory_reservation_limits) ... ok
+test_extract_existing_file_and_symlink_preserved (__main__.HistoricalImportTests.test_extract_existing_file_and_symlink_preserved) ... ok
+test_foreign_output_at_import_publication_preserved (__main__.HistoricalImportTests.test_foreign_output_at_import_publication_preserved) ... ok
+test_foreign_store_identity (__main__.HistoricalImportTests.test_foreign_store_identity) ... ok
+test_link_failure_no_publication (__main__.HistoricalImportTests.test_link_failure_no_publication) ... ok
+test_lock_and_stage_preserved (__main__.HistoricalImportTests.test_lock_and_stage_preserved) ... ok
+test_mixed_chain_retains_bytes_and_current_append_exact_v1 (__main__.HistoricalImportTests.test_mixed_chain_retains_bytes_and_current_append_exact_v1) ... ok
+test_old_stale_whitespace_exact_bytes_and_no_current_journey_read (__main__.HistoricalImportTests.test_old_stale_whitespace_exact_bytes_and_no_current_journey_read) ... ok
+test_ready_and_needs_changes_are_both_historical_and_not_ready (__main__.HistoricalImportTests.test_ready_and_needs_changes_are_both_historical_and_not_ready) ... ok
+test_receipt_change_during_stage_prevents_publication (__main__.HistoricalImportTests.test_receipt_change_during_stage_prevents_publication) ... ok
+test_stage_change_during_import_prevents_publication (__main__.HistoricalImportTests.test_stage_change_during_import_prevents_publication) ... ok
+test_store_change_during_import_prevents_new_entry_preserves_foreign (__main__.HistoricalImportTests.test_store_change_during_import_prevents_new_entry_preserves_foreign) ... ok
+test_symlink_store_receipt_and_unknown_store_file_refused (__main__.HistoricalImportTests.test_symlink_store_receipt_and_unknown_store_file_refused) ... ok
+test_unicode_reason_4096_characters_preserved (__main__.HistoricalImportTests.test_unicode_reason_4096_characters_preserved) ... ok
+test_utf16_duplicate_receipt_keys_and_nonfinite_refused (__main__.HistoricalImportTests.test_utf16_duplicate_receipt_keys_and_nonfinite_refused) ... ok
+test_v2_bad_base64_receipt_digest_and_identity (__main__.HistoricalImportTests.test_v2_bad_base64_receipt_digest_and_identity) ... ok
+test_v2_rejects_forged_origin_versions_and_unknown_keys (__main__.HistoricalImportTests.test_v2_rejects_forged_origin_versions_and_unknown_keys) ... ok
+test_wrong_digest_and_invalid_digest (__main__.HistoricalImportTests.test_wrong_digest_and_invalid_digest) ... ok
+test_wrong_or_invalid_explicit_id (__main__.HistoricalImportTests.test_wrong_or_invalid_explicit_id) ... ok
+test_wrong_tip_and_invalid_tip (__main__.HistoricalImportTests.test_wrong_tip_and_invalid_tip) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.796s
+
+OK

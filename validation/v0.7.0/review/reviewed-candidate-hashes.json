@@ -1,0 +1,7 @@
+{
+  "scripts/review_history.py": "79998f06c6ec64aa9bff16bf13e554f4714279539ca8ac45aad5e7986194b91e",
+  "scripts/snapshot_recovery.py": "95bbff88007b02a1effc4e47931dbb5f00defabe3064f4037099ed2fa780eb6b",
+  "SKILL.md": "4414d9162375d6c84146864393b198fd60c58f2e4b89ddfd52a3026bf3bdad3e",
+  "references/review-history.md": "fb94c3acca7fae9ed75657f45af4b35f32f3feb4aa8ce8e993965ecfaa624f27",
+  "references/snapshot-recovery.md": "e94e8a37b960f7fa1db4b3f146020f8d8050f4f7e4bd97cdfa6f7218ce83f374"
+}

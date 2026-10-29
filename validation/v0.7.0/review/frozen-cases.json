@@ -1,0 +1,168 @@
+{
+  "cases": [
+    {
+      "expectation": "Import old receipt with resume_ready true, preserve exact raw bytes including whitespace and retain flag only as receipt_resume_ready; entry historical resume_ready false and store freshness false.",
+      "group": "history",
+      "id": "H01",
+      "name": "historical stale ready receipt"
+    },
+    {
+      "expectation": "Refuse wrong expected receipt SHA with zero history mutation.",
+      "group": "history",
+      "id": "H02",
+      "name": "wrong receipt digest"
+    },
+    {
+      "expectation": "Refuse incorrect expected tip with zero history mutation.",
+      "group": "history",
+      "id": "H03",
+      "name": "stale tip"
+    },
+    {
+      "expectation": "Refuse receipt/import identity mismatch with zero history mutation.",
+      "group": "history",
+      "id": "H04",
+      "name": "wrong journey identity"
+    },
+    {
+      "expectation": "Refuse blank and >4096 Unicode reasons without mutation.",
+      "group": "history",
+      "id": "H05",
+      "name": "blank and oversized reasons"
+    },
+    {
+      "expectation": "Reader rejects v2 entry with forged current origin even when entry filename digest recomputed.",
+      "group": "history",
+      "id": "H06",
+      "name": "forged version 2 origin"
+    },
+    {
+      "expectation": "Reader rejects extra/missing keys, invalid base64, malformed chain without accepting partial prefix as valid store.",
+      "group": "history",
+      "id": "H07",
+      "name": "malformed v2 and base64"
+    },
+    {
+      "expectation": "v1 append then v2 import then current v1 append keeps old bytes unchanged, links chain, v1 exact six keys, extracts both exact original raw receipts.",
+      "group": "history",
+      "id": "H08",
+      "name": "mixed chain exact extract"
+    },
+    {
+      "expectation": "Import refuses active lock or abandoned stage, no cleanup/mutation.",
+      "group": "history",
+      "id": "H09",
+      "name": "locks and stages"
+    },
+    {
+      "expectation": "Inject removal failure after one selected unlink in ordinary maintenance, generate fresh recovery plan with remaining/complement, finish, restore backup ZIP via existing versions tooling; HEAD and previous bytes unchanged.",
+      "group": "recovery",
+      "id": "R01",
+      "name": "interrupted maintenance"
+    },
+    {
+      "expectation": "Corrupted copied ZIP or altered manifest refused before new unlink.",
+      "group": "recovery",
+      "id": "R02",
+      "name": "tampered archive bytes"
+    },
+    {
+      "expectation": "Missing selected ZIP or incomplete/staging archive refused without reconstruction or cleanup.",
+      "group": "recovery",
+      "id": "R03",
+      "name": "incomplete archive"
+    },
+    {
+      "expectation": "Selected revision now HEAD or previous is refused, preserving protected bytes.",
+      "group": "recovery",
+      "id": "R04",
+      "name": "current protected revision"
+    },
+    {
+      "expectation": "Current store changed after plan; apply refuses before new unlink.",
+      "group": "recovery",
+      "id": "R05",
+      "name": "stale recovery plan"
+    },
+    {
+      "expectation": "Refuse wrong expected hash and missing approval before unlink.",
+      "group": "recovery",
+      "id": "R06",
+      "name": "wrong expected plan hash"
+    },
+    {
+      "expectation": "Unknown file in either tree refuses without removal or cleanup.",
+      "group": "recovery",
+      "id": "R07",
+      "name": "unknown archive or store file"
+    },
+    {
+      "expectation": "Valid ZIP from different journey refused before unlink.",
+      "group": "recovery",
+      "id": "R08",
+      "name": "foreign archive identity"
+    },
+    {
+      "expectation": "Inject failure after one new recovery unlink; old plan now stale; fresh plan can finish, complete archive unchanged.",
+      "group": "recovery",
+      "id": "R09",
+      "name": "repeated partial recovery fault"
+    },
+    {
+      "expectation": "Already completed original selection produces empty remaining and full already_absent, apply verified no-op; modified archive still refused.",
+      "group": "recovery",
+      "id": "R10",
+      "name": "empty verified noop"
+    },
+    {
+      "expectation": "Archive within store, store within archive, store lock and archive-parent maintenance lock refuse with no cleanup.",
+      "group": "recovery",
+      "id": "R11",
+      "name": "archive/store ancestry and locks"
+    },
+    {
+      "expectation": "Respond to supplied old ready receipt; optional import with exact explicit reason/digest/tip and state history is not current resume approval.",
+      "group": "workflow",
+      "id": "M01",
+      "name": "historical import without freshness promotion"
+    },
+    {
+      "expectation": "For interrupted removal use validated complete archive and fresh explicit plan/apply; incomplete archive or abandoned locks require inspection/manual reconciliation, never recreate/delete/replay.",
+      "group": "workflow",
+      "id": "M02",
+      "name": "complete backup recovery vs incomplete and locks"
+    },
+    {
+      "expectation": "Ordinary edit request with incidental learning vocabulary must not create journey/store or activate teaching workflow.",
+      "group": "workflow",
+      "id": "M03",
+      "name": "ordinary work nonactivation"
+    },
+    {
+      "expectation": "Unknown time/resources or learner self-report does not become verified mastery/readiness; safety concerns constrain activity without diagnosis/truth claims.",
+      "group": "workflow",
+      "id": "M04",
+      "name": "unknown resources self-report safety"
+    }
+  ],
+  "constraints": [
+    "Never inspect candidate before parent readiness",
+    "Never relax checks after implementation inspection",
+    "Only review/ writable",
+    "Two candidate passes maximum; 30 minutes",
+    "No learner efficacy claim"
+  ],
+  "criteria_sha256": "537925e208027e94c6e8f8911c25e288e18e48707b22f0515f3b334d59c9743a",
+  "evaluator": "independent delegated context; inherited model/effort unknown; no new agents/API/services",
+  "fault_groups_frozen_before_implementation_inspection": [
+    "historical receipt digest/tip/id/reason/schema/origin/base64/chain/locks/stages",
+    "archive completeness/integrity/identity/unknown/path/locks",
+    "protected current HEAD and previous",
+    "plan binding/approval/staleness",
+    "partial unlink after first success, repeated fault, empty verified noop"
+  ],
+  "fault_injection_policy": "Resolve actual unlink/link injection points only after parent readiness; throw after one completed selected unlink and before next selected unlink, preserving actual filesystem partial state. No code-under-test weakening.",
+  "frozen_at": "2026-10-29T00:09:20.887034+00:00",
+  "model_method": "Four literal scenario prompts, baseline and candidate skill instructions separately; same evaluator both arms, nonblind self-generation/grading, fresh delegated context relative to implementation author, model/settings unknown. Report capability evidence only.",
+  "schema_version": 1
+}

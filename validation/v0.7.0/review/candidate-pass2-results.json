@@ -1,0 +1,221 @@
+{
+  "arm": "candidate-pass2",
+  "skill": "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/candidate/teach-me",
+  "frozen_cases_sha256": "de3d44864c1a577f811da810e2a143efbbee10de59841453481932965cd380f3",
+  "runner_sha256": "c8317bee3b5bf093bf87f9038941dc1bdd2afef395cda5688035256707733f5a",
+  "passed": 20,
+  "total": 20,
+  "results": [
+    {
+      "id": "H01",
+      "passed": true,
+      "details": {
+        "tip": "79b5b397551605a1446adf3e4a526837bebf7058b056a5a1f22f03461f022a1d",
+        "sequence": 1,
+        "journey_id": "heldout",
+        "entries": [
+          {
+            "sha256": "79b5b397551605a1446adf3e4a526837bebf7058b056a5a1f22f03461f022a1d",
+            "filename": "000001-79b5b397551605a1446adf3e4a526837bebf7058b056a5a1f22f03461f022a1d.json",
+            "sequence": 1,
+            "receipt_sha256": "6ae51293b3d08f1d6a0bb62097469ff2ca1814893bbf9cdf001cc8a5b38e21b1",
+            "resume_ready": false,
+            "receipt_resume_ready": true,
+            "origin": "historical_import",
+            "origin_note": "Imported old operator judgment; no current freshness approval."
+          }
+        ],
+        "staging_entries": [],
+        "receipt_freshness_checked": false,
+        "semantic_correctness_verified": false,
+        "automatic_recovery": false,
+        "origin_authenticated": false
+      }
+    },
+    {
+      "id": "H02",
+      "passed": true,
+      "details": "Error: Receipt bytes differ from expected-receipt-sha256"
+    },
+    {
+      "id": "H03",
+      "passed": true,
+      "details": "Error: Stale expected tip; inspect history before importing"
+    },
+    {
+      "id": "H04",
+      "passed": true,
+      "details": "Error: Receipt belongs to another journey identity"
+    },
+    {
+      "id": "H05",
+      "passed": true,
+      "details": [
+        "Error: Historical import reason must be nonblank text of at most 4096 characters",
+        "Error: Historical import reason must be nonblank text of at most 4096 characters"
+      ]
+    },
+    {
+      "id": "H06",
+      "passed": true,
+      "details": "Error: History entry v2 origin must be historical_import"
+    },
+    {
+      "id": "H07",
+      "passed": true,
+      "details": [
+        "Error: receipt_base64 must be canonical base64 text",
+        "Error: history entry v2: keys must match exactly: journey_id, origin, origin_note, previous, receipt_base64, receipt_sha256, sequence, version",
+        "Error: History sequence or previous hash chain is broken",
+        "Error: history entry v2: keys must match exactly: journey_id, origin, origin_note, previous, receipt_base64, receipt_sha256, sequence, version"
+      ]
+    },
+    {
+      "id": "H08",
+      "passed": true,
+      "details": {
+        "versions": [
+          1,
+          2,
+          1
+        ],
+        "old_raw_unchanged": true
+      }
+    },
+    {
+      "id": "H09",
+      "passed": true,
+      "details": [
+        "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate-pass2/hist-lock-0/.teach-me-review-history.lock",
+        "Error: History has staging entries; preserve and reconcile before importing"
+      ]
+    },
+    {
+      "id": "R01",
+      "passed": true,
+      "details": {
+        "restored": true,
+        "protected_unchanged": true,
+        "archive_unchanged": true
+      }
+    },
+    {
+      "id": "R02",
+      "passed": true,
+      "details": [
+        "Error: Archived revision verification failed: 5ccb615af831af8c2d547ef69c284a546413047482d5e26dc32103ad80936005.zip",
+        "Error: Malformed archive manifest"
+      ]
+    },
+    {
+      "id": "R03",
+      "passed": true,
+      "details": [
+        "Error: Complete archive has unexpected or missing entries",
+        "Error: [Errno 2] No such file or directory: 'BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate-pass2/incomplete-manifest/archives/f25cc310c7295664a6d91c515fcb789ccfa6301dc8f660335e3f12c6147df6aa/archive-manifest.json'"
+      ]
+    },
+    {
+      "id": "R04",
+      "passed": true,
+      "details": [
+        "Error: Current HEAD and previous revisions are protected",
+        "Error: Current HEAD and previous revisions are protected"
+      ]
+    },
+    {
+      "id": "R05",
+      "passed": true,
+      "details": "Error: Store or archive changed; create and review a fresh recovery plan"
+    },
+    {
+      "id": "R06",
+      "passed": true,
+      "details": [
+        "Error: Expected plan SHA256 does not match the reviewed recovery plan",
+        "Error: Applying a reviewed recovery plan requires --approve"
+      ]
+    },
+    {
+      "id": "R07",
+      "passed": true,
+      "details": [
+        "Error: Unknown store entry; preserve and reconcile: unknown",
+        "Error: Complete archive has unexpected or missing entries"
+      ]
+    },
+    {
+      "id": "R08",
+      "passed": true,
+      "details": "Error: Archive revision hash or inner journey identity differs"
+    },
+    {
+      "id": "R09",
+      "passed": true,
+      "details": {
+        "already_absent": [
+          "12f17c0869430e8be41d56f43c4ef03a2b2b3cd999eedaf1325ca683e2b9b578",
+          "5ccb615af831af8c2d547ef69c284a546413047482d5e26dc32103ad80936005"
+        ],
+        "archive_sha256": "6a2f03a71108ad65d384c7006394fe3da3a4618b5c56890ab1da493c8aef1e1d",
+        "head": {
+          "journey_id": "heldout",
+          "previous": "2dfd75c2d8be3db5e2e467a7ac7f1431d5b8cf002209d082bcddd8b5a7cefa8e",
+          "revision": "23332994988caadc92f206ae1a01753d202a959b6ccda680b4954448eb2fca86",
+          "version": 1
+        },
+        "journey_id": "heldout",
+        "original_plan_sha256": "f25cc310c7295664a6d91c515fcb789ccfa6301dc8f660335e3f12c6147df6aa",
+        "plan_sha256": "e3fc60b4123df050d1ad04f1655fa80718c370931b6f2f9627ec29b213dcc31f",
+        "protected": [
+          "23332994988caadc92f206ae1a01753d202a959b6ccda680b4954448eb2fca86",
+          "2dfd75c2d8be3db5e2e467a7ac7f1431d5b8cf002209d082bcddd8b5a7cefa8e"
+        ],
+        "remaining": [
+          "70547d8be03c2b0d285398220b4ea58aabee81eb870f4fab6396cc5f11df8b28",
+          "7b821c9dcf39f7918e0706297fea4cdafbdb5062c75cacc4312779e93ed1b1eb"
+        ],
+        "store_sha256": "e110799a5f82fba7c0c0bd93472d3db12c290c185c3baad8434d15d1aa4928fd",
+        "version": 1
+      }
+    },
+    {
+      "id": "R10",
+      "passed": true,
+      "details": {
+        "already_absent": [
+          "12f17c0869430e8be41d56f43c4ef03a2b2b3cd999eedaf1325ca683e2b9b578",
+          "5ccb615af831af8c2d547ef69c284a546413047482d5e26dc32103ad80936005",
+          "70547d8be03c2b0d285398220b4ea58aabee81eb870f4fab6396cc5f11df8b28",
+          "7b821c9dcf39f7918e0706297fea4cdafbdb5062c75cacc4312779e93ed1b1eb"
+        ],
+        "archive_sha256": "6a2f03a71108ad65d384c7006394fe3da3a4618b5c56890ab1da493c8aef1e1d",
+        "head": {
+          "journey_id": "heldout",
+          "previous": "2dfd75c2d8be3db5e2e467a7ac7f1431d5b8cf002209d082bcddd8b5a7cefa8e",
+          "revision": "23332994988caadc92f206ae1a01753d202a959b6ccda680b4954448eb2fca86",
+          "version": 1
+        },
+        "journey_id": "heldout",
+        "original_plan_sha256": "f25cc310c7295664a6d91c515fcb789ccfa6301dc8f660335e3f12c6147df6aa",
+        "plan_sha256": "060692a36a50e67001b99c5ce24157aa70cceb12150435eea59a22e05854bf95",
+        "protected": [
+          "23332994988caadc92f206ae1a01753d202a959b6ccda680b4954448eb2fca86",
+          "2dfd75c2d8be3db5e2e467a7ac7f1431d5b8cf002209d082bcddd8b5a7cefa8e"
+        ],
+        "remaining": [],
+        "store_sha256": "73bfe97a4e61faa4c231c48e4975242c8137f4fdb00c42c81793a4c89e5a71b6",
+        "version": 1
+      }
+    },
+    {
+      "id": "R11",
+      "passed": true,
+      "details": [
+        "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate-pass2/locks-store/store/.teach-me-store.lock",
+        "Error: Writer lock exists; reconcile its owner before retrying: BUILD_WORKSPACE/.forge/teach-me-v0.7.0/review/fixtures-candidate-pass2/locks-archive/archives/.teach-me-snapshot-maintenance.lock",
+        "Error: Paths must be disjoint in both ancestry directions"
+      ]
+    }
+  ]
+}

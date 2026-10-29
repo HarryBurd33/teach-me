@@ -1,0 +1,31 @@
+test_actual_64_entry_limit (__main__.HistoryTests.test_actual_64_entry_limit) ... ok
+test_base64_strict_and_noncanonical_padding_bits (__main__.HistoryTests.test_base64_strict_and_noncanonical_padding_bits) ... ok
+test_chain_break_and_duplicate_sequence (__main__.HistoryTests.test_chain_break_and_duplicate_sequence) ... ok
+test_cli_requires_expected_tip (__main__.HistoryTests.test_cli_requires_expected_tip) ... ok
+test_cross_journey_receipt_and_initialized_history (__main__.HistoryTests.test_cross_journey_receipt_and_initialized_history) ... ok
+test_duplicate_json_keys_and_noncanonical_entry_bytes (__main__.HistoryTests.test_duplicate_json_keys_and_noncanonical_entry_bytes) ... ok
+test_empty_status (__main__.HistoryTests.test_empty_status) ... ok
+test_entry_hash_corruption (__main__.HistoryTests.test_entry_hash_corruption) ... ok
+test_exact_two_entry_whitespace_extraction_and_cli (__main__.HistoryTests.test_exact_two_entry_whitespace_extraction_and_cli) ... ok
+test_extract_create_new_output_and_unknown_entry (__main__.HistoryTests.test_extract_create_new_output_and_unknown_entry) ... ok
+test_history_and_journey_locks_preserved (__main__.HistoryTests.test_history_and_journey_locks_preserved) ... ok
+test_history_raw_change_during_extraction (__main__.HistoryTests.test_history_raw_change_during_extraction) ... ok
+test_invalid_expected_digest (__main__.HistoryTests.test_invalid_expected_digest) ... ok
+test_needs_changes_is_recordable_without_promotion (__main__.HistoryTests.test_needs_changes_is_recordable_without_promotion) ... ok
+test_orphan_stage_report_refusal_and_nonregular (__main__.HistoryTests.test_orphan_stage_report_refusal_and_nonregular) ... ok
+test_publication_failure_and_foreign_output_preserved (__main__.HistoryTests.test_publication_failure_and_foreign_output_preserved) ... ok
+test_receipt_digest_identity_and_strict_schema (__main__.HistoryTests.test_receipt_digest_identity_and_strict_schema) ... ok
+test_receipt_entry_and_directory_actual_size_bounds (__main__.HistoryTests.test_receipt_entry_and_directory_actual_size_bounds) ... ok
+test_receipt_raw_change_and_content_change_during_staging (__main__.HistoryTests.test_receipt_raw_change_and_content_change_during_staging) ... ok
+test_stale_receipt_content (__main__.HistoryTests.test_stale_receipt_content) ... ok
+test_stale_receipt_packet_digest (__main__.HistoryTests.test_stale_receipt_packet_digest) ... ok
+test_stale_tip (__main__.HistoryTests.test_stale_tip) ... ok
+test_store_inside_journey_and_uninitialized_journey (__main__.HistoryTests.test_store_inside_journey_and_uninitialized_journey) ... ok
+test_strict_entry_keys_versions_and_sequence (__main__.HistoryTests.test_strict_entry_keys_versions_and_sequence) ... ok
+test_symlink_paths_preserved (__main__.HistoryTests.test_symlink_paths_preserved) ... ok
+test_total_limit_read_and_append_boundary (__main__.HistoryTests.test_total_limit_read_and_append_boundary) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.405s
+
+OK

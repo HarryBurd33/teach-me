@@ -1,0 +1,39 @@
+{
+  "component": "historical_review_import",
+  "version": "0.7.0",
+  "executed_at": "2026-10-29T00:10:49.768853+00:00",
+  "scope": "Candidate-only history module, guide, and component tests; no adoption/publication.",
+  "passes_used": 1,
+  "tests": 53,
+  "failures": 0,
+  "results": [
+    {
+      "name": "history-import",
+      "test": ".forge/teach-me-v0.7.0/history-component/test_history_import.py",
+      "tests": 27,
+      "exit_code": 0,
+      "passed": true,
+      "log": ".forge/teach-me-v0.7.0/history-component/history-import.txt",
+      "test_sha256": "e7b0fe03dc61b8f006a6e88e4c9b15141498209d8f2499d455d350f3cf57d6fc"
+    },
+    {
+      "name": "history-v0.6-unchanged",
+      "test": ".forge/teach-me-v0.6.0/history-component/test_review_history.py",
+      "tests": 26,
+      "exit_code": 0,
+      "passed": true,
+      "log": ".forge/teach-me-v0.7.0/history-component/history-v0.6-unchanged.txt",
+      "test_sha256": "292afefc6cd0592530341f040c9f4ec1c8d08bf550f016f4bce5dac12d4357f6"
+    }
+  ],
+  "source_sha256": {
+    ".forge/teach-me-v0.7.0/candidate/teach-me/scripts/review_history.py": "79998f06c6ec64aa9bff16bf13e554f4714279539ca8ac45aad5e7986194b91e",
+    ".forge/teach-me-v0.7.0/candidate/teach-me/references/review-history.md": "fb94c3acca7fae9ed75657f45af4b35f32f3feb4aa8ce8e993965ecfaa624f27",
+    ".forge/teach-me-v0.7.0/history-component/test_history_import.py": "e7b0fe03dc61b8f006a6e88e4c9b15141498209d8f2499d455d350f3cf57d6fc",
+    ".forge/teach-me-v0.7.0/criteria.json": "537925e208027e94c6e8f8911c25e288e18e48707b22f0515f3b334d59c9743a"
+  },
+  "limitations": [
+    "Full 238-test regression suite and independent frozen review owned by parent.",
+    "No claims of reviewer authentication, freshness, efficacy, or external permission."
+  ]
+}

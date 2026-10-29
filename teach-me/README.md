@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.6.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.7.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -65,3 +65,9 @@ After reconciling divergent journeys, ask: `$teach-me Review this journey for co
 Ask `$teach-me Keep an immutable local history of these consistency reviews.` The [history helper](references/review-history.md) stores exact receipt bytes in a validated hash chain with expected-tip appends. Historical reviews can become stale; hashes do not authenticate identity or semantic truth. This optional store is separate from the journey ZIP.
 
 Ask `$teach-me Plan which explicitly selected old snapshots can be archived, preserving HEAD and its previous revision.` [Snapshot maintenance](references/snapshot-maintenance.md) verifies a complete archive before any selected source removal. It has no automatic retention policy or background process. Archive/history stores need their own reviewed private transport.
+
+## Historical receipts and interrupted removals
+
+The [history helper](references/review-history.md) can explicitly import an old receipt with its exact hash, journey ID, expected tip and a reason. Imported entries carry a historical label and cannot establish current readiness. Original bytes remain extractable; existing current append format v1 stays unchanged. History stores containing v2 imports require an updated reader.
+
+For a completed backup followed by interrupted source removal, [snapshot recovery](references/snapshot-recovery.md) creates a fresh plan bound to current store and archive bytes. It protects current HEAD/previous and requires explicit apply. Incomplete archives, stale locks and staging still require inspection; no automatic cleanup or background recovery is added.

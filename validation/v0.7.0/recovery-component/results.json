@@ -1,0 +1,39 @@
+{
+  "artifacts": {
+    "candidate/teach-me/references/snapshot-recovery.md": "e94e8a37b960f7fa1db4b3f146020f8d8050f4f7e4bd97cdfa6f7218ce83f374",
+    "candidate/teach-me/scripts/snapshot_recovery.py": "95bbff88007b02a1effc4e47931dbb5f00defabe3064f4037099ed2fa780eb6b",
+    "recovery-component/test_snapshot_recovery.py": "eb115a1314d3807c36e06153e639161011e2e937796ead13e0e1599802228d2b"
+  },
+  "command": "python3 -B .forge/teach-me-v0.7.0/recovery-component/test_snapshot_recovery.py",
+  "component": "snapshot-recovery",
+  "criteria": "criteria.json",
+  "passes": [
+    {
+      "cause": "Test expected StorageError for malformed ZIP; reused versions.read_store raises zipfile.BadZipFile. CLI already catches this exception.",
+      "errors": 1,
+      "failures": 0,
+      "pass": 1,
+      "tests": 17
+    },
+    {
+      "duration_seconds": 2.099,
+      "errors": 0,
+      "failures": 0,
+      "pass": 2,
+      "status": "passed",
+      "tests": 17
+    }
+  ],
+  "python": "3.15.0",
+  "scope": "Synthetic temporary stores only; no canonical/global/learner-store writes or API spend. Independent frozen review and full regressions belong to parent.",
+  "unchanged_modules": {
+    "journey_versions.py": {
+      "byte_identical_to_baseline": true,
+      "sha256": "7489123b72f8c7386b39008cd7db54b46cccc88fb841bbb77c0981920fe8543b"
+    },
+    "snapshot_maintenance.py": {
+      "byte_identical_to_baseline": true,
+      "sha256": "8dd17b843f5064d03d600f5f407885fb9e0d9fb02401cb1fe1b8c9c2e7146cb4"
+    }
+  }
+}

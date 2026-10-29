@@ -73,3 +73,7 @@ These are bounded cooperative local-filesystem safeguards. Uncooperative editors
 hostile path replacement and arbitrary interruption or power loss are outside the
 guarantee. The helper does not provide authenticated history or prove learning,
 semantic correctness or mastery.
+
+## Recover a removal from a complete archive
+
+If copying and publication completed but selected source removal was interrupted, use [snapshot recovery](snapshot-recovery.md) to validate the complete archive and prepare a new plan against the current store. The original plan remains immutable history; never replay it blindly. Recovery does not rebuild incomplete archives or delete locks/stages.

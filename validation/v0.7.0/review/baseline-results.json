@@ -1,0 +1,20 @@
+{
+  "arm": "baseline",
+  "skill": "BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me",
+  "frozen_cases_sha256": "de3d44864c1a577f811da810e2a143efbbee10de59841453481932965cd380f3",
+  "runner_sha256": "7d0fb6a68748eba6ee998f34257beb38c2984774ba3eb6516adc55b4989ae784",
+  "passed": 2,
+  "total": 2,
+  "results": [
+    {
+      "id": "baseline-history-import-unsupported",
+      "passed": true,
+      "details": "usage: review_history.py [-h] {append,status,extract} ...\nreview_history.py: error: argument command: invalid choice: 'import' (choose from 'append', 'status', 'extract')"
+    },
+    {
+      "id": "baseline-recovery-unsupported",
+      "passed": true,
+      "details": "/opt/homebrew/Cellar/python@3.15/3.15.0/Frameworks/Python.framework/Versions/3.15/Resources/Python.app/Contents/MacOS/Python: can't open file 'BUILD_WORKSPACE/.forge/teach-me-v0.7.0/baseline/teach-me/scripts/snapshot_recovery.py': [Errno 2] No such file or directory"
+    }
+  ]
+}
