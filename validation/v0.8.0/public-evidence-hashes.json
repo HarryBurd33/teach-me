@@ -19,8 +19,9 @@
     },
     "test-porting.json": {
       "original_sha256": "54e3aad8fc9060d7d5c4b737dd1b4186b1cd2bb320caf97aa6b980d88ff1d82d",
-      "published_sha256": "54e3aad8fc9060d7d5c4b737dd1b4186b1cd2bb320caf97aa6b980d88ff1d82d",
-      "content_changed": false
+      "published_sha256": "a7b650f028777089bce7ab9b5c67959c47f1e7aee2cd8dbffa70481822cb42ec",
+      "content_changed": true,
+      "note": "Updated adapter record after macOS CI failure; frozen originals unchanged"
     },
     "combined-tests.json": {
       "original_sha256": "b92f4350116567266115f6789daaed6053c774d83e3837785aa594e5af0233e6",
@@ -375,6 +376,22 @@
     "baseline/teach-me/templates/practice.md": {
       "original_sha256": "dba8de9ada18a9486fb17e2c7c0a4b2861d5c4a44ce3663ebd5f0d002f4c02ba",
       "published_sha256": "dba8de9ada18a9486fb17e2c7c0a4b2861d5c4a44ce3663ebd5f0d002f4c02ba",
+      "content_changed": false
+    },
+    "first-ci.json": {
+      "original_sha256": "c9548b6f0f57abd215196487b34740e3d615cd01e200a5b5607787512b24f1d1",
+      "published_sha256": "c9548b6f0f57abd215196487b34740e3d615cd01e200a5b5607787512b24f1d1",
+      "content_changed": false
+    },
+    "ci-macos-first.log": {
+      "original_sha256": "057afa544a2a9cff57ed3df2bf926f1d8308e582b2a3747122820504c17fd60e",
+      "published_sha256": "9231a0868bd5ba73a687adc21581750cca44733bda1a8558428333556bd8dfb4",
+      "content_changed": true,
+      "note": "CI runner path redacted and trailing whitespace normalized"
+    },
+    "canonical-fixture-installed-tests.txt": {
+      "original_sha256": "96e658eefdd54965ee0df94f9713add681bbc666a850f092ad5d5312b66644a2",
+      "published_sha256": "96e658eefdd54965ee0df94f9713add681bbc666a850f092ad5d5312b66644a2",
       "content_changed": false
     }
   }

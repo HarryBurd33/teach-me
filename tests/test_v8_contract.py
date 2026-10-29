@@ -53,7 +53,7 @@ class Tags(html.parser.HTMLParser):
 class Contract(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory(); self.addCleanup(self.tmp.cleanup)
-        self.dir=Path(self.tmp.name); self.base=self.dir/'base.json'; self.draft=self.dir/'draft.json'
+        self.dir=Path(self.tmp.name).resolve(); self.base=self.dir/'base.json'; self.draft=self.dir/'draft.json'
         self.out=self.dir/'new.json'; self.graph=base_graph(); self.write(self.base,self.graph)
         self.bundle={'version':1,'base_sha256':digest(self.base.read_bytes()),'patch':patch()}
         self.save_draft()

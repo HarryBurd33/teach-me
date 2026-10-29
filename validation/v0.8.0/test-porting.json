@@ -12,6 +12,6 @@
   {
     "source": "review/test_v8_contract.py",
     "target": "test_v8_contract.py",
-    "adaptation": "Portable root selection only; test assertions unchanged"
+    "adaptation": "Portable skill/baseline root selection plus canonical fixture directory to avoid macOS /var symlink; all test assertions unchanged"
   }
 ]

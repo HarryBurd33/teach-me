@@ -1,0 +1,8 @@
+{
+  "run_id": 40797760043,
+  "commit": "74d1f60068507f9abed199d9e5924e5c18c556f7",
+  "linux_jobs": 3,
+  "linux": "success",
+  "macos": "7failures1error from independent fixture unresolved /var symlink",
+  "repair": "Portable adapter canonicalizes fixture directory, unchanged test assertions and product bytes"
+}
