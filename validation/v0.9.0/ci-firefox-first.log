@@ -1,0 +1,54 @@
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	﻿2026-10-29T06:13:48.0308864Z ##[group]Run npm run test:browser -- --project=firefox
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0309315Z ^[[36;1mnpm run test:browser -- --project=firefox^[[0m
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0330587Z shell: /usr/bin/bash -e {0}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0331036Z env:
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0331230Z   PYTHON: python
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0331528Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0331969Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0332401Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0332787Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0333171Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0333556Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.0333880Z ##[endgroup]
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.1388702Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.1389815Z > teach-me-browser-verification@0.9.0 test:browser
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.1390755Z > playwright test --project=firefox
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.1391288Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.8441940Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.8442524Z Running 4 tests using 1 worker
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:48.8443842Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:51.4676551Z {"project":"firefox","platform":"linux","browser_version":"157.0","document_transport":"file","synthetic_data":true}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:52.3509631Z {"roundtrip":"download-check-apply","base_preserved":true,"metadata_preserved":true}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:52.4288876Z   ✓  1 [firefox] › browser-tests/editor.spec.js:66:1 › actual download preserves metadata and AND through CLI check/apply (2.3s)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:52.8776613Z {"project":"firefox","platform":"linux","browser_version":"157.0","document_transport":"file","synthetic_data":true}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:58.8806269Z   ✓  2 [firefox] › browser-tests/editor.spec.js:85:1 › history branch reset import and atomic refusal preserve staged work (6.4s)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:13:59.3478247Z {"project":"firefox","platform":"linux","browser_version":"157.0","document_transport":"file","synthetic_data":true}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:03.2687718Z   ✓  3 [firefox] › browser-tests/editor.spec.js:113:1 › history count is bounded and eviction is visible (4.4s)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:03.7411568Z {"project":"firefox","platform":"linux","browser_version":"157.0","document_transport":"file","synthetic_data":true}
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.6844697Z   ✘  4 [firefox] › browser-tests/editor.spec.js:123:1 › keyboard editing focus repair and 390px layout (2.1s)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7183620Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7188061Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7199233Z   1) [firefox] › browser-tests/editor.spec.js:123:1 › keyboard editing focus repair and 390px layout
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7200357Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7200795Z     Error: Keyboard could not reach target: import-draft-text
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7201296Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7201597Z       61 |     await page.keyboard.press('Tab');
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7202194Z       62 |   }
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7203051Z     > 63 |   throw new Error('Keyboard could not reach target: ' + await target.getAttribute('id'));
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7204026Z          |         ^
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7204439Z       64 | }
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7204789Z       65 |
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7205680Z       66 | test('actual download preserves metadata and AND through CLI check/apply', async ({page}) => {
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7207074Z         at tabTo (CI_RUNNER_HOME/work/teach-me/teach-me/browser-tests/editor.spec.js:63:9)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7208264Z         at CI_RUNNER_HOME/work/teach-me/teach-me/browser-tests/editor.spec.js:136:3
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7208881Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7210053Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7211393Z     test-results/editor-keyboard-editing-focus-repair-and-390px-layout-firefox/test-failed-1.png
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7212920Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7213408Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7214255Z     Error Context: test-results/editor-keyboard-editing-focus-repair-and-390px-layout-firefox/error-context.md
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7215759Z
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7215941Z   1 failed
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7217032Z     [firefox] › browser-tests/editor.spec.js:123:1 › keyboard editing focus repair and 390px layout
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7218296Z   3 passed (17.0s)
+browser (ubuntu-latest, firefox)	Run npm run test:browser -- --project=firefox	2026-10-29T06:14:05.7522512Z ##[error]Process completed with exit code 1.

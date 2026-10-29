@@ -1,0 +1,457 @@
+{
+  "config": {
+    "argv": [
+      "/usr/local/bin/node",
+      "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/node_modules/.bin/playwright",
+      "test",
+      "--list"
+    ],
+    "configFile": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/playwright.config.js",
+    "rootDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 240000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      },
+      {
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "chromium",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "snapshotDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "acceptDownloads": true,
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "firefox",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "snapshotDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "acceptDownloads": true,
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:157.0) Gecko/20100101 Firefox/157.0",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "firefox"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "firefox"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "name": "webkit",
+        "testDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "snapshotDir": "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/release/browser-tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 45000,
+        "use": {
+          "acceptDownloads": true,
+          "trace": "off",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.2 Safari/605.1.15",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1792,
+            "height": 1120
+          },
+          "deviceScaleFactor": 2,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "webkit"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "webkit"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "browser-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "editor.spec.js",
+      "file": "editor.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "actual download preserves metadata and AND through CLI check/apply",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-a28ce067f3b1fb772f60",
+          "file": "editor.spec.js",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "history branch reset import and atomic refusal preserve staged work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-d7aad4773acbb4a0b542",
+          "file": "editor.spec.js",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "history count is bounded and eviction is visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-a1b66e2cceec3cd6f1e4",
+          "file": "editor.spec.js",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "keyboard editing focus repair and 390px layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-39ceddc04ace5a0a54e2",
+          "file": "editor.spec.js",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "actual download preserves metadata and AND through CLI check/apply",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-5750f3d776cfcbbe56d3",
+          "file": "editor.spec.js",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "history branch reset import and atomic refusal preserve staged work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-ed3363330ab571817192",
+          "file": "editor.spec.js",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "history count is bounded and eviction is visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-25d2dfc5969bd216843a",
+          "file": "editor.spec.js",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "keyboard editing focus repair and 390px layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-0b5d787df0b91b69616e",
+          "file": "editor.spec.js",
+          "line": 123,
+          "column": 1
+        },
+        {
+          "title": "actual download preserves metadata and AND through CLI check/apply",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-f5b7cf1e1a88ff425b37",
+          "file": "editor.spec.js",
+          "line": 66,
+          "column": 1
+        },
+        {
+          "title": "history branch reset import and atomic refusal preserve staged work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-62cc54bf856b3f608967",
+          "file": "editor.spec.js",
+          "line": 85,
+          "column": 1
+        },
+        {
+          "title": "history count is bounded and eviction is visible",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-050c9a58169b4083739d",
+          "file": "editor.spec.js",
+          "line": 113,
+          "column": 1
+        },
+        {
+          "title": "keyboard editing focus repair and 390px layout",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "1789dd38e4d700e8271e-2cb7853ea11be16abf5f",
+          "file": "editor.spec.js",
+          "line": 123,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-29T06:07:14.958Z",
+    "duration": 32.778999999999996,
+    "expected": 0,
+    "skipped": 12,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

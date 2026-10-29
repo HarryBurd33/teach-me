@@ -1,0 +1,7 @@
+{
+  "initial_python_run": 40827910492,
+  "initial_browser_run": 40827910496,
+  "python": "All397 passed in4jobs; releasechecker failed because ignored .log evidence not added",
+  "browser": "3jobs4casespassed, Firefox3passed1keyboardhelperfailure",
+  "repair": "Add exact sanitized manifest-listed evidence files; keyboard helper uses Shift+Tab for earlier DOM target to avoid exiting document via browser chrome. Product46files unchanged; all assertions remain."
+}

@@ -58,7 +58,8 @@ async function importText(page, text) {
 async function tabTo(page, target) {
   for (let i = 0; i < 100; i++) {
     if (await target.evaluate(element => element === element.ownerDocument.activeElement)) return;
-    await page.keyboard.press('Tab');
+    const backwards = await target.evaluate(element => { const active = element.ownerDocument.activeElement; return active && active !== element.ownerDocument.body && !!(element.compareDocumentPosition(active) & 4); });
+    await page.keyboard.press(backwards ? 'Shift+Tab' : 'Tab');
   }
   throw new Error('Keyboard could not reach target: ' + await target.getAttribute('id'));
 }

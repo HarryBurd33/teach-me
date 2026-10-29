@@ -1,0 +1,19 @@
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	﻿2026-10-29T06:14:33.4317261Z ##[group]Run python scripts/check_release.py
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4317747Z ^[[36;1mpython scripts/check_release.py^[[0m
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4339097Z shell: /usr/bin/bash -e {0}
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4339411Z env:
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4339749Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4340318Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4341129Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4341620Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4342131Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4342634Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.4343057Z ##[endgroup]
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5945101Z Traceback (most recent call last):
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5955573Z   File "CI_RUNNER_HOME/work/teach-me/teach-me/scripts/check_release.py", line 123, in <module>
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5957043Z     check()
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5957888Z   File "CI_RUNNER_HOME/work/teach-me/teach-me/scripts/check_release.py", line 115, in check
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5958782Z     assert not item.is_symlink() and item.is_file()
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5959350Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.5959836Z AssertionError
+deterministic (ubuntu-latest, 3.12)	Run python scripts/check_release.py	2026-10-29T06:14:33.6023967Z ##[error]Process completed with exit code 1.
