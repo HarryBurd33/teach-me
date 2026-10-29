@@ -1,0 +1,1 @@
+{"tests":12,"failures":4,"cause":"selftest fixture JavaScript text helper name collision in three cases and unescaped newline in one; product assertions not reached in those four","repair":"raw JavaScript case literals and block scope; no production fix from these fixture errors"}

@@ -1,0 +1,7 @@
+{
+  "source": "review/test_v9_contract.py plus contract-runner.js",
+  "adaptation": "Portable default skill root and renamed adjacent runner only; all17 frozen assertions unchanged",
+  "old_tests": "All28 testfiles fromv0.8 unchanged",
+  "supplemental": "Observedversion-token failure regression: wrapperroot only",
+  "construction": "13methods useportableASSETS and existingunchangedv8DOMadapter source; assertions unchanged"
+}

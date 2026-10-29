@@ -1,0 +1,10 @@
+{
+  "candidate_inspected": false,
+  "frozen_at": "2026-10-29T06:06:03.048717+00:00",
+  "sha256": {
+    "review/contract-runner.js": "9ec715b9cddccb90fca1340b99ca44aa9e3c63fa922a105aa1b424baa76402ce",
+    "review/test_v9_contract.py": "884ca949c6682e9f23ff019ae748aa5000efa1ed150c8f0ed3a5ec38325e5d88",
+    "review/frozen-cases.json": "36636fd8dd85995be457f372a32f645ed51a3e8be09aec97cede45f45701044b",
+    "criteria.json": "a4f50a416e9141c0b875ae623874fe5bdd0a03bf0adc418b14422fbcb5ee44cc"
+  }
+}

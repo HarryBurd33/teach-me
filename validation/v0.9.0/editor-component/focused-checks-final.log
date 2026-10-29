@@ -1,0 +1,18 @@
+test_blank_newmetadata_and_fullschema (__main__.HistoryTests.test_blank_newmetadata_and_fullschema) ... ok
+test_branch_and_noop (__main__.HistoryTests.test_branch_and_noop) ... ok
+test_dangling_and_duplicate_logical_import (__main__.HistoryTests.test_dangling_and_duplicate_logical_import) ... ok
+test_focus_error_delete_selection (__main__.HistoryTests.test_focus_error_delete_selection) ... ok
+test_history_byte_bound (__main__.HistoryTests.test_history_byte_bound) ... ok
+test_history_twenty_steps (__main__.HistoryTests.test_history_twenty_steps) ... ok
+test_import_reset_undo_redo (__main__.HistoryTests.test_import_reset_undo_redo) ... ok
+test_import_uses_original_base_and_inert_text (__main__.HistoryTests.test_import_uses_original_base_and_inert_text) ... ok
+test_metadata_forgery_and_unknown_delete (__main__.HistoryTests.test_metadata_forgery_and_unknown_delete) ... ok
+test_refusals_preserve_export_history_graph (__main__.HistoryTests.test_refusals_preserve_export_history_graph) ... ok
+test_size_depth_duplicate_decoded_key (__main__.HistoryTests.test_size_depth_duplicate_decoded_key) ... ok
+test_undo_redo_metadata_and (__main__.HistoryTests.test_undo_redo_metadata_and) ... ok
+test_version_lexical_integer (__main__.HistoryTests.test_version_lexical_integer) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.405s
+
+OK

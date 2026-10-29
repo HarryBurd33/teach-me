@@ -1,0 +1,22 @@
+test_failed_mutation_preserves (__main__.FrozenContract.test_failed_mutation_preserves) ... ok
+test_focus_controls_and_hostile_text (__main__.FrozenContract.test_focus_controls_and_hostile_text) ... ok
+test_history_byte_bound (__main__.FrozenContract.test_history_byte_bound) ... ok
+test_history_exact_metadata (__main__.FrozenContract.test_history_exact_metadata) ... ok
+test_history_step_bound (__main__.FrozenContract.test_history_step_bound) ... ok
+test_import_replaces_from_base_and_undo (__main__.FrozenContract.test_import_replaces_from_base_and_undo) ... ok
+test_import_roundtrip_and_joint (__main__.FrozenContract.test_import_roundtrip_and_joint) ... ok
+test_redo_branch_and_noop (__main__.FrozenContract.test_redo_branch_and_noop) ... ok
+test_reject_bad_shapes_ids_endpoints (__main__.FrozenContract.test_reject_bad_shapes_ids_endpoints) ... ok
+test_reject_duplicate_members (__main__.FrozenContract.test_reject_duplicate_members) ... ok
+test_reject_malformed (__main__.FrozenContract.test_reject_malformed) ... ok
+test_reject_metadata (__main__.FrozenContract.test_reject_metadata) ... ok
+test_reject_nested_duplicate_members (__main__.FrozenContract.test_reject_nested_duplicate_members) ... ok
+test_reject_size_and_depth (__main__.FrozenContract.test_reject_size_and_depth) ... ok
+test_reject_unknown_and_bool (__main__.FrozenContract.test_reject_unknown_and_bool) ... ok
+test_reject_wrong_base (__main__.FrozenContract.test_reject_wrong_base) ... ok
+test_reset_undo_redo (__main__.FrozenContract.test_reset_undo_redo) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.574s
+
+OK

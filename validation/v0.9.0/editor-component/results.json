@@ -1,0 +1,33 @@
+{
+  "component": "editor-frontend",
+  "version": "0.9.0",
+  "checked_at": "2026-10-29T06:10:04.746487+00:00",
+  "construction_passes": 2,
+  "old_frontend_checks": {
+    "run": 3,
+    "passed": 3,
+    "log": "previous-checks-final.log"
+  },
+  "focused_new_methods": {
+    "run": 13,
+    "passed": 13,
+    "log": "focused-checks-final.log"
+  },
+  "node": "v24.22.0",
+  "hashes": {
+    "graph-editor.css": "34fd178c86eb6d51232ba15416f1cc84c1ab2031c9b6ddf725256398e746fb45",
+    "graph-editor.html": "aba6b4701797d71a237909dbfad62217cd4d87b06b753f626164e57f835ad7ad",
+    "graph-editor.js": "38e91e5a52c041d1c93cf833f8cc8b2e43b95dbcf3e9db09d5b98d53bd6877e2"
+  },
+  "repairs": [
+    "Selftest fixture had3 text-helper namecollisions and1 unescapednewline; rawliteral/blockscope corrected without product assertion changes",
+    "Independent supplemental review caught lexical version1.0/1e0 parsedas1 inJS butrefused byPython; strictJSON nowrequires literalinteger1 for version"
+  ],
+  "browser_qa": false,
+  "remaining_parent_gates": [
+    "frozenreview rerun",
+    "actualbrowser/remoteCI",
+    "fullregression/installedsuite",
+    "package/source/releaseverification"
+  ]
+}

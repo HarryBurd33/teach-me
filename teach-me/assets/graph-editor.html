@@ -19,9 +19,17 @@
 <section class="toolbar" aria-label="Draft controls">
 <label for="graph-search">Search claims, IDs, aliases, or provenance</label>
 <input id="graph-search" type="search" placeholder="Filter the graph cards">
-<div class="actions"><button id="reset-all" type="button">Reset all to base</button><button id="export-draft" type="button" disabled>Export draft JSON</button></div>
+<div class="actions"><button id="undo-draft" type="button" class="secondary" disabled>Undo staged change</button><button id="redo-draft" type="button" class="secondary" disabled>Redo staged change</button><button id="reset-all" type="button">Reset all to base</button><button id="export-draft" type="button" disabled>Export draft JSON</button></div>
 <p id="graph-summary"></p>
+<p id="history-summary" aria-live="polite"></p>
 <p id="action-status" role="status" aria-live="polite">Ready.</p>
+</section>
+<section class="panel" aria-labelledby="import-heading">
+<h2 id="import-heading">Resume from an exported draft</h2>
+<p>Reopen the same saved editor, paste your exported JSON, then import explicitly. A valid draft replaces the staged graph and is undoable. Refused imports keep your current work. Import does not apply changes to a file.</p>
+<label for="import-draft-text">Draft JSON to import</label><textarea id="import-draft-text" rows="6" spellcheck="false" aria-describedby="import-help"></textarea>
+<small id="import-help">Exact original base required. Limit: 2 MiB, 64 nesting levels. Duplicate or unknown fields and changed metadata are refused. Keep the saved HTML, base graph and exported draft together. Closing this page loses in-memory history and unsaved form text.</small>
+<div class="actions"><button id="import-draft" type="button" class="secondary">Import draft JSON</button></div>
 </section>
 <div class="layout">
 <section aria-labelledby="map-heading">

@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.8.0"
+  version: "0.9.0"
 ---
 
 # Teach me
@@ -118,3 +118,5 @@ Initial response: concise goal/baseline; appropriately sized curriculum with pra
 Later response: specific feedback; the resulting progress/plan adjustment; next practice task with a success check; actual save status at meaningful boundaries. If a prerequisite or safety answer is essential, give useful independent context while waiting and do not start dependent practice.
 
 Completion: compare the final demonstration with the agreed target, state what remains untested, schedule a retention/transfer check only as a suggested learner action, and save the current result when authorized. No background follow-up is implied.
+
+For recoverable offline graph editing, use [editor recovery](references/editor-recovery.md): export deliberate checkpoints, re-import against the exact base, and use bounded staged undo/redo. History excludes unstaged form text and disappears when the page closes. Never infer autosave or source writeback.

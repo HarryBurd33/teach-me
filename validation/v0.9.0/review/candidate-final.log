@@ -1,0 +1,23 @@
+test_failed_mutation_preserves (test_v9_contract.FrozenContract.test_failed_mutation_preserves) ... ok
+test_focus_controls_and_hostile_text (test_v9_contract.FrozenContract.test_focus_controls_and_hostile_text) ... ok
+test_history_byte_bound (test_v9_contract.FrozenContract.test_history_byte_bound) ... ok
+test_history_exact_metadata (test_v9_contract.FrozenContract.test_history_exact_metadata) ... ok
+test_history_step_bound (test_v9_contract.FrozenContract.test_history_step_bound) ... ok
+test_import_replaces_from_base_and_undo (test_v9_contract.FrozenContract.test_import_replaces_from_base_and_undo) ... ok
+test_import_roundtrip_and_joint (test_v9_contract.FrozenContract.test_import_roundtrip_and_joint) ... ok
+test_redo_branch_and_noop (test_v9_contract.FrozenContract.test_redo_branch_and_noop) ... ok
+test_reject_bad_shapes_ids_endpoints (test_v9_contract.FrozenContract.test_reject_bad_shapes_ids_endpoints) ... ok
+test_reject_duplicate_members (test_v9_contract.FrozenContract.test_reject_duplicate_members) ... ok
+test_reject_malformed (test_v9_contract.FrozenContract.test_reject_malformed) ... ok
+test_reject_metadata (test_v9_contract.FrozenContract.test_reject_metadata) ... ok
+test_reject_nested_duplicate_members (test_v9_contract.FrozenContract.test_reject_nested_duplicate_members) ... ok
+test_reject_size_and_depth (test_v9_contract.FrozenContract.test_reject_size_and_depth) ... ok
+test_reject_unknown_and_bool (test_v9_contract.FrozenContract.test_reject_unknown_and_bool) ... ok
+test_reject_wrong_base (test_v9_contract.FrozenContract.test_reject_wrong_base) ... ok
+test_reset_undo_redo (test_v9_contract.FrozenContract.test_reset_undo_redo) ... ok
+test_float_or_exponent_version_tokens_preserve_current_work (test_v9_numeric_versions.NumericVersions.test_float_or_exponent_version_tokens_preserve_current_work) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.583s
+
+OK

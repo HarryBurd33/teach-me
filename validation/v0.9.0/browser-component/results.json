@@ -1,0 +1,44 @@
+{
+  "component": "remoteCI-browser-acceptance",
+  "version": "0.9.0",
+  "checked_at": "2026-10-29T06:08:16.230633+00:00",
+  "status": "construction and syntax/discovery pass; remote browser execution pending",
+  "tests_authored": 4,
+  "projects_discovered": 3,
+  "tests_discovered": 12,
+  "ci_matrix_jobs": 4,
+  "expected_remote_test_executions": 16,
+  "dependency": {
+    "name": "@playwright/test",
+    "version": "1.64.1",
+    "source": "official npm registry npm view @playwright/test version",
+    "lockfile": true,
+    "npm_ci_ignore_scripts": "pass"
+  },
+  "checks": {
+    "javascript_syntax": "pass",
+    "test_discovery": "pass",
+    "frozen_hashes": "pass",
+    "actual_browser_execution": "not run locally; parent GitHub CI gate"
+  },
+  "setup_node": {
+    "upstream": "https://github.com/actions/setup-node.git",
+    "tag": "v6",
+    "verified_commit": "249970729cb0ef3589644e2896645e5dc5ba9c38",
+    "method": "git ls-remote official upstream"
+  },
+  "privacy": "synthetic fixture only; owned tempdirs deleted; fileURL, no arbitrary directory HTTP service",
+  "limitations": [
+    "Remote CI not executed by constructor",
+    "LinuxWebKit does not establish Safari qualification",
+    "Windows suite qualifies only defined graph editor/CLI roundtrip, not entire skill or hostile filesystem behavior",
+    "No screenreader or real learner outcome measurement"
+  ],
+  "frozen": {
+    "package.json": "3bb4fe7187d8208d8cb77feb0c462a80c1633a2420eee2fba74ff0b2fd9ac6ba",
+    "package-lock.json": "5f5617d39f2509805c766838521724b392e32bb5b11251bed82409c17dd9dd4f",
+    "playwright.config.js": "bc3eb3bf254c41f7bebdfcaa6314033fbcb0d88486526f3ad6d8d1dfc47f162f",
+    "browser-tests/editor.spec.js": "b6a2567e6dda919d05bd4b2d01e6799d44b09a19cc21409554421e9cb906fd9e",
+    ".github/workflows/browser.yml": "24c6e64c4d415b409c8222d75fdb9cd39f17dc3293875a1b77ac9c340f7fa15d"
+  }
+}

@@ -1,0 +1,81 @@
+node:assert:152
+  throw new AssertionError(obj);
+  ^
+
+AssertionError [ERR_ASSERTION]: Refusal changed exported copy
++ actual - expected
+
++ ''
+- '{\n' +
+-   '  "version": 1,\n' +
+-   '  "base_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",\n' +
+-   '  "patch": {\n' +
+-   '    "version": 1,\n' +
+-   '    "delete_nodes": [],\n' +
+-   '    "delete_chains": [],\n' +
+-   '    "upsert_nodes": [\n' +
+-   '      {\n' +
+-   '        "id": "a",\n' +
+-   '        "name": "Current work",\n' +
+-   '        "statement": "Claim a",\n' +
+-   '        "aliases": [\n' +
+-   '          "historical"\n' +
+-   '        ],\n' +
+-   '        "createdAt": "2024-01-01",\n' +
+-   '        "provenance": [\n' +
+-   '          {\n' +
+-   '            "chatId": "old",\n' +
+-   '            "messageId": "p"\n' +
+-   '          }\n' +
+-   '        ]\n' +
+-   '      }\n' +
+-   '    ],\n' +
+-   '    "upsert_chains": []\n' +
+-   '  }\n' +
+-   '}\n'
+
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/supplemental-number-runner.js:58:27)
+    at cases.reject_noninteger_version_tokens (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/supplemental-number-runner.js:80:50)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/supplemental-number-runner.js:81:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '',
+  expected: '{\n' +
+    '  "version": 1,\n' +
+    '  "base_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",\n' +
+    '  "patch": {\n' +
+    '    "version": 1,\n' +
+    '    "delete_nodes": [],\n' +
+    '    "delete_chains": [],\n' +
+    '    "upsert_nodes": [\n' +
+    '      {\n' +
+    '        "id": "a",\n' +
+    '        "name": "Current work",\n' +
+    '        "statement": "Claim a",\n' +
+    '        "aliases": [\n' +
+    '          "historical"\n' +
+    '        ],\n' +
+    '        "createdAt": "2024-01-01",\n' +
+    '        "provenance": [\n' +
+    '          {\n' +
+    '            "chatId": "old",\n' +
+    '            "messageId": "p"\n' +
+    '          }\n' +
+    '        ]\n' +
+    '      }\n' +
+    '    ],\n' +
+    '    "upsert_chains": []\n' +
+    '  }\n' +
+    '}\n',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.22.0

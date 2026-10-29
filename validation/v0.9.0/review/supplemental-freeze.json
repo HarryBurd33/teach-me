@@ -1,0 +1,7 @@
+{
+  "reason": "Observed lexical float/exponent version acceptance differs from existing Python contract; supplement frozen before repair evaluation; original17frozenchecks unchanged",
+  "sha256": {
+    "supplemental-number-runner.js": "4dde448f4a1c290ad1c64a9e3edb973f8dd806e332b8cc4b5eb1f352b35d1e65",
+    "test_v9_numeric_versions.py": "60c85f494c660b2b746fba0cdd5e58945bcb3aeeb6c27e0ea052e5e9d20d43fc"
+  }
+}

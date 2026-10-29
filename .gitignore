@@ -4,3 +4,9 @@ __pycache__/
 .checkpoint/
 .forge/
 /learning/
+
+# Developer browser test outputs
+node_modules/
+test-results/
+playwright-report/
+browser-results.json

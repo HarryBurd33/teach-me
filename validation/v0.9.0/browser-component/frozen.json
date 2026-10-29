@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-10-29T06:06:45.593428+00:00",
+  "candidate_inspected": false,
+  "files": {
+    "package.json": "3bb4fe7187d8208d8cb77feb0c462a80c1633a2420eee2fba74ff0b2fd9ac6ba",
+    "package-lock.json": "5f5617d39f2509805c766838521724b392e32bb5b11251bed82409c17dd9dd4f",
+    "playwright.config.js": "bc3eb3bf254c41f7bebdfcaa6314033fbcb0d88486526f3ad6d8d1dfc47f162f",
+    "browser-tests/editor.spec.js": "b6a2567e6dda919d05bd4b2d01e6799d44b09a19cc21409554421e9cb906fd9e",
+    ".github/workflows/browser.yml": "24c6e64c4d415b409c8222d75fdb9cd39f17dc3293875a1b77ac9c340f7fa15d"
+  },
+  "checks": [
+    "actual download check apply metadata and AND",
+    "history branch reset import atomic refusal",
+    "20step history eviction",
+    "keyboard focus and390px layout",
+    "fileURL and nooutboundrequests"
+  ],
+  "matrix": [
+    "LinuxChromium",
+    "LinuxFirefox",
+    "LinuxWebKit",
+    "WindowsChromium"
+  ],
+  "test_count_per_project": 4,
+  "browser_execution": "unexecuted locally; remoteCI intended; syntax checks only"
+}

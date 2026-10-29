@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.8.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.9.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -75,3 +75,5 @@ For a completed backup followed by interrupted source removal, [snapshot recover
 ## Offline graph editor
 
 Ask `$teach-me Open this concept map in the offline editor, stage changes and check the exported draft before applying it to a new graph.` The [editor](references/graph-editor.md) supports node names/statements and joint-premise relationships, preserves existing metadata and binds drafts to exact base bytes. Manual assertions are not verified truth, new source provenance or learner mastery. Larger graphs and metadata edits remain CLI workflows.
+
+Offline graph editing now includes bounded staged undo/redo and explicit pasted draft re-import. See [recovery and keyboard use](references/editor-recovery.md). Export before closing; the page stores no persistent editing state.

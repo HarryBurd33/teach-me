@@ -1,0 +1,23 @@
+{
+  "frozen_at": "2026-10-29T06:06:03.048538+00:00",
+  "candidate_inspected": false,
+  "cases": [
+    "history exact records and metadata AND",
+    "redo branch and noop",
+    "failed edit preserves graph history exported copy",
+    "reset undo redo",
+    "import originalbase replaces staged with undo",
+    "roundtrip joint premises",
+    "malformed",
+    "duplicate top and nested JSON members",
+    "wrongbase",
+    "unknown fields boolversion",
+    "base metadata and new provenance",
+    "record shape ID duplicate overlap deletes missing endpoints",
+    "2MiB and nesting",
+    "20step eviction",
+    "8MiB bound with >1MiB snapshot",
+    "focus new selection invalid deletion and literal labels"
+  ],
+  "limits": "DOM adapter cannot prove browser keyboard/layout/CSP/download; parent browserCI gates"
+}

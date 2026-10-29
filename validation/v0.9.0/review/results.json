@@ -1,0 +1,42 @@
+{
+  "version": "0.9.0",
+  "checked_at": "2026-10-29T06:09:29.735968+00:00",
+  "status": "independent contracts and scoped static review passed",
+  "frozen_methods": 17,
+  "supplemental_observed_failure_regression": 1,
+  "candidate_passed": 18,
+  "baseline_frozen_failures": 17,
+  "baseline_interpretation": "Required history/import controls absent; capability discrimination only, no negative security passcredit",
+  "frozen_hashes": "all match",
+  "old_regression_files": 28,
+  "old_regression_files_unchanged": 28,
+  "product_python_files_unchanged": 13,
+  "first_findings": [
+    {
+      "issue": "UI accepted lexical1.0/1e0 version while Python refused floats",
+      "initial_result": "Supplemental assertion failed and current export changed",
+      "repair": "StrictJSON verifies version numeric1 token is literal1",
+      "final_result": "All6 top/patch float/exponent spellings refused withgraph/history/export preserved"
+    }
+  ],
+  "remaining_findings": [],
+  "runtime": {
+    "node": "v24.22.0",
+    "python": "3.15.0"
+  },
+  "browser_qa": false,
+  "learner_efficacy_measured": false,
+  "model_workflows": "Skipped optional shared-context examples toconservequota; no model efficacy claim",
+  "parent_gates": [
+    "fullprior366 regressions",
+    "actualbrowser/CIkeyboardlayoutCSPnetworkdownloadapply",
+    "installedintegrity/native discovery",
+    "publicCIandrelease-download"
+  ],
+  "limitations": [
+    "DOM adapter cannot establish actualbrowserkeyboardfocusbehavior layout orCSP enforcement",
+    "History bytecheck uses >1MiB snapshot examples, not exhaustiveUnicode/graph distributions",
+    "No screenreader/accessibility userstudy",
+    "StrictJSON version parity checked for observed lexical spellings; no proof overallJSON grammar"
+  ]
+}

@@ -1,0 +1,13 @@
+# v0.9 editor construction
+
+Implemented only the three candidate editor assets. The page now has explicit undo/redo buttons, a readable history count and serialized-byte budget, and a labeled pasted-draft import. A graph mutation records one snapshot; reset and import are undoable. No-op import/edits add no history. New edits discard redo. Total undo+redo snapshots are bounded to20 entries and8MiB, with eviction reported. History excludes unsaved form text and persists only in page memory.
+
+Import uses a bounded recursive JSON reader with duplicate decoded-key rejection, finite-number checks,64-level nesting and2MiB UTF8 size. It validates the exact draft/patch/fullrecord fields, literal integer version1, base digest, unique IDs, known deletions, no delete/upsert overlap, valid endpoint and logical-argument structure, existing metadata preservation and blank new metadata. It builds from the embedded original base, validates privately, then replaces staged work. Refusals preserve graph, history and exported text and focus the pasted input. Existing metadata field order also survives export/re-import. No network, storage, autosave, source writes or global keyboard interception was added.
+
+Claim selection focuses the editable name; argument selection focuses premises; form errors focus the relevant field; successful deletion focuses the new-record ID. History navigation focuses search and reset retains a usable reset control. Added responsive minimum-width protection and readable history/import styling; this is not screen-reader or universal accessibility qualification.
+
+All3 prior frontend checks pass unchanged. All13 new focused Node DOM-adapter methods pass, including exact metadata/AND restoration, branch/no-op behavior, import/reset/undo/redo, malformed and wrong-base atomic refusals, metadata forgery, duplicate/unknown/deep/oversized/nonliteral versions,20-step and8MiB bounds, focus, dangling/duplicate arguments and inert markup.
+
+Initial selftest fixture errors (three name collisions and one raw newline) are recorded separately; their product assertions had not executed. Independent review found the lexical floating-point version issue and prompted the small parser repair, with its own original evidence retained by the reviewer. Construction used two product passes; original frozen criteria remain unchanged. The constructor helper is private one-shot build history, not an idempotent user tool.
+
+Actual browser interaction, frozen independent rerun, the complete prior regression suite, global installation and release checks belong to parent acceptance. No Python product code, documentation, checkpoints, global skills or external repository was changed by this worker. No subagents or paid API were used.

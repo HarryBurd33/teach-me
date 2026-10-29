@@ -1,6 +1,6 @@
 # Teach-me
 
-A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.8.0**. See [capabilities, validation and remaining work](docs/V0.8.0.md).
+A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.9.0**. See [capabilities, validation and remaining work](docs/V0.9.0.md).
 
 ## Install and use
 
@@ -86,4 +86,8 @@ The original instructions, templates, code and tests are under the [MIT License]
 
 ## Offline graph editing
 
-The [offline editor](teach-me/references/graph-editor.md) stages claim and AND-argument changes, supports search/reset and exports a draft. Review and validate the hash-bound draft before explicitly applying to a new graph; the original stays preserved. Manual edits do not create verified evidence or mastery. The browser page uses no network, storage or autosave. See [v0.8.0 validation and limits](docs/V0.8.0.md).
+The [offline editor](teach-me/references/graph-editor.md) stages claim and AND-argument changes, supports search/reset and exports a draft. Review and validate the hash-bound draft before explicitly applying to a new graph; the original stays preserved. Manual edits do not create verified evidence or mastery. The browser page uses no network, storage or autosave. See [v0.9.0 validation and limits](docs/V0.9.0.md).
+
+## Recoverable offline editing
+
+Use bounded staged undo/redo and explicitly re-import a saved draft against its original base. No-op/failed actions do not replace staged work. Export before closing: history and unsubmitted form text are not saved. See [recovery and keyboard use](teach-me/references/editor-recovery.md).

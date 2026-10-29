@@ -1,0 +1,19 @@
+{
+  "status": "pass",
+  "browser": "Chrome actual macOS viaCUA",
+  "transport": "Confined loopback one in-memory synthetic HTML no filesystem routes",
+  "checks": [
+    "edit withmetadataandANDdisplay",
+    "undo restoresbase",
+    "redo restoresedit",
+    "reset then explicitimport restoresdraft",
+    "importundo/redo",
+    "lexical1.0 refused preservingexport",
+    "invalidimportfocusesdrafttextarea",
+    "hostiletextliteral zeroimg",
+    "noerror/warninglogs"
+  ],
+  "download_check_apply": "RemoteCI gate; local v0.9 smoke did not repeat CLIapply",
+  "screenreader": "not tested",
+  "preview": "Agenttabclosed serverterminated aftercheck"
+}

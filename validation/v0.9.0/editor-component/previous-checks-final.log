@@ -1,0 +1,8 @@
+test_dom_adapter_interactions (__main__.AssetTests.test_dom_adapter_interactions) ... ok
+test_javascript_syntax (__main__.AssetTests.test_javascript_syntax) ... ok
+test_template_security_and_accessibility_contract (__main__.AssetTests.test_template_security_and_accessibility_contract) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.054s
+
+OK

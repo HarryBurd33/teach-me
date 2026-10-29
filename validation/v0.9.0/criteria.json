@@ -1,0 +1,41 @@
+{
+  "version": "0.9.0",
+  "baseline_commit": "b1bb377b4ccfad6ea312e222f6cf6b8bdad97a9b",
+  "frozen_at": "2026-10-29T06:03:53.507822+00:00",
+  "purpose": "Recoverable offline graph editing and keyboard/browser acceptance",
+  "draft_schema": "unchanged exact {version:1,base_sha256,patch}; exact five existing patch keys",
+  "history": {
+    "steps": 20,
+    "serialized_bytes": 8388608,
+    "scope": "staged graph only, no unsaved form text; reset and valid import undoable; no-op nothistory; new successful edit clearsredo; invalid edit/import preserves current history, graph and exported copy"
+  },
+  "import": "Explicit paste into labeled textarea then import button. UTF8 <=2MiB strict JSON including duplicate-key/depth refusal; exact base digest; exact patch and normalized record schemas; apply to originalbase notcurrentstaged; structural validity and all existing bounds; preserve base metadata; newrecord metadata blank; refuse atomically and no source writes",
+  "keyboard": "native controls, visiblefocus, no global shortcut interception of textediting; focus to useful editable field/newform afterselection/deletion; import error focuses pasted draft, formerror focusesinvalidfield, reset/undo keepsusablefocus; status aria-live; responsive390px nohorizontaloverflow",
+  "preservation": "old366tests unchanged, productPythonCLI/schema unchanged; no network/storage/autosave/identity/learninggainclaims",
+  "construction_files": [
+    "assets/graph-editor.html",
+    "assets/graph-editor.js",
+    "assets/graph-editor.css"
+  ],
+  "browser_tests": "dev-only pinnedPlaywright lock; remoteCI Chromium Firefox WebKitLinux plusWindowsChromium andlocalCUAChrome; test keyboard, undo/redo/import/refusal/exportdownloadCLIapply,390px, fileURL on remote browsers, nooutboundrequests; do notclaim Safari or screenreader qualification",
+  "recovery_guidance": "exportbeforeclose, saved HTML re-openbase then explicitimport; stale/wrongbasepreservework; incompletearchivesmanualpreservation; rollbackv0.8",
+  "checks": [
+    "v8editundo redo exactmetadataandAND",
+    "edit undo newedit clearsredo",
+    "failedmutation nohistory/exportchange",
+    "20step8MiB bounds, eviction announced",
+    "validdraftimportundo redo afterreset",
+    "malformedduplicateunknownwrongbaseoversizedrecordmetadata endpointrefused atomically",
+    "hostilemarkup literal withCSP/nooutbound",
+    "keyboard selection error deletion reset andimportfocus",
+    "browserdownload checkapply exactbasepreserved",
+    "366 old regressions and newcontracts, nativeuserdiscovery, globalhashes, CI/source/releasedownload"
+  ],
+  "routing": {
+    "model": "current inherited unverified",
+    "workers": 3,
+    "review": "independent frozen tests and static review plus parent integrations",
+    "api_budget": null
+  },
+  "limits": "onecandidate two bounded repairpasses perworker 35minutes resourceguard10 takesprecedence"
+}

@@ -1,3 +1,7 @@
+# Current v0.9.0 verification
+
+397 candidate and installed checks passed;46 matching skill files and two-directory native discovery. See [current report](V0.9.0.md). Historical results below retain their original scope.
+
 # Current v0.8.0 installation verification
 
 All45 global files match the accepted candidate and366 installed tests passed. Native discovery passed from two directories; v0.7.0 is preserved for rollback. See [release report](V0.8.0.md). Historical records below retain their original limits.

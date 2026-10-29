@@ -1,0 +1,592 @@
+test_failed_mutation_preserves (__main__.FrozenContract.test_failed_mutation_preserves) ... FAIL
+test_focus_controls_and_hostile_text (__main__.FrozenContract.test_focus_controls_and_hostile_text) ... FAIL
+test_history_byte_bound (__main__.FrozenContract.test_history_byte_bound) ... FAIL
+test_history_exact_metadata (__main__.FrozenContract.test_history_exact_metadata) ... FAIL
+test_history_step_bound (__main__.FrozenContract.test_history_step_bound) ... FAIL
+test_import_replaces_from_base_and_undo (__main__.FrozenContract.test_import_replaces_from_base_and_undo) ... FAIL
+test_import_roundtrip_and_joint (__main__.FrozenContract.test_import_roundtrip_and_joint) ... FAIL
+test_redo_branch_and_noop (__main__.FrozenContract.test_redo_branch_and_noop) ... FAIL
+test_reject_bad_shapes_ids_endpoints (__main__.FrozenContract.test_reject_bad_shapes_ids_endpoints) ... FAIL
+test_reject_duplicate_members (__main__.FrozenContract.test_reject_duplicate_members) ... FAIL
+test_reject_malformed (__main__.FrozenContract.test_reject_malformed) ... FAIL
+test_reject_metadata (__main__.FrozenContract.test_reject_metadata) ... FAIL
+test_reject_nested_duplicate_members (__main__.FrozenContract.test_reject_nested_duplicate_members) ... FAIL
+test_reject_size_and_depth (__main__.FrozenContract.test_reject_size_and_depth) ... FAIL
+test_reject_unknown_and_bool (__main__.FrozenContract.test_reject_unknown_and_bool) ... FAIL
+test_reject_wrong_base (__main__.FrozenContract.test_reject_wrong_base) ... FAIL
+test_reset_undo_redo (__main__.FrozenContract.test_reset_undo_redo) ... FAIL
+
+======================================================================
+FAIL: test_failed_mutation_preserves (__main__.FrozenContract.test_failed_mutation_preserves)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.failed_mutation_preserves (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:64:128)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_focus_controls_and_hostile_text (__main__.FrozenContract.test_focus_controls_and_hostile_text)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:78
+ focus_controls_and_hostile_text(){const ui=open();ui.select('node','a');assert.equal(ui.doc.activeElement.id,'node-name');ui.fire('node-new');assert.equal(ui.doc.activeElement.id,'node-id');ui.el('node-id').value=' bad ';ui.fire('node-form','submit');assert.equal(ui.doc.activeElement.id,'node-id');ui.addNode('unreferenced','<img src=x onerror=alert(1)>');ui.fire('node-delete');assert.equal(ui.doc.activeElement.id,'node-id');assert.equal(ui.el('node-id').readOnly,false);assert.ok(!script.includes('innerHTML'));assert.ok(!script.includes('localStorage'));assert.ok(!script.includes('fetch('));assert.match(html,/aria-live="polite"/);},
+                                                                                                           ^
+
+TypeError: Cannot read properties of null (reading 'id')
+    at Object.focus_controls_and_hostile_text (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:78:108)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_history_byte_bound (__main__.FrozenContract.test_history_byte_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control undo-draft
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.history_byte_bound (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:77:176)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_history_exact_metadata (__main__.FrozenContract.test_history_exact_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control undo-draft
+    at el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.fire (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:36:32)
+    at Object.history_exact_metadata (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:62:315)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_history_step_bound (__main__.FrozenContract.test_history_step_bound)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control undo-draft
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.history_step_bound (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:76:106)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_import_replaces_from_base_and_undo (__main__.FrozenContract.test_import_replaces_from_base_and_undo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control import-draft-text
+    at el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at importRaw (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:41:24)
+    at Object.importDraft (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:42:23)
+    at Object.import_replaces_from_base_and_undo (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:66:74)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_import_roundtrip_and_joint (__main__.FrozenContract.test_import_roundtrip_and_joint)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control import-draft-text
+    at el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at importRaw (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:41:24)
+    at Object.importDraft (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:42:23)
+    at Object.import_roundtrip_and_joint (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:67:234)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_redo_branch_and_noop (__main__.FrozenContract.test_redo_branch_and_noop)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control undo-draft
+    at el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.fire (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:36:32)
+    at Object.redo_branch_and_noop (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:63:82)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_bad_shapes_ids_endpoints (__main__.FrozenContract.test_reject_bad_shapes_ids_endpoints)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_bad_shapes_ids_endpoints (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:74:406)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_duplicate_members (__main__.FrozenContract.test_reject_duplicate_members)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_duplicate_members (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:69:29)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_malformed (__main__.FrozenContract.test_reject_malformed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_malformed (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:68:21)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_metadata (__main__.FrozenContract.test_reject_metadata)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_metadata (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:73:138)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_nested_duplicate_members (__main__.FrozenContract.test_reject_nested_duplicate_members)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_nested_duplicate_members (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:70:56)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_size_and_depth (__main__.FrozenContract.test_reject_size_and_depth)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_size_and_depth (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:75:26)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_unknown_and_bool (__main__.FrozenContract.test_reject_unknown_and_bool)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_unknown_and_bool (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:72:146)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reject_wrong_base (__main__.FrozenContract.test_reject_wrong_base)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control history-summary
+    at Object.el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at refusal (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:57:120)
+    at Object.reject_wrong_base (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:71:71)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+======================================================================
+FAIL: test_reset_undo_redo (__main__.FrozenContract.test_reset_undo_redo)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/test_v9_contract.py", line 15, in run
+    self.assertEqual(r.returncode, 0, r.stdout + '\n' + r.stderr)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 :
+node:internal/assert/utils:77
+    throw err;
+    ^
+
+AssertionError [ERR_ASSERTION]: Missing control undo-draft
+    at el (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:35:23)
+    at Object.fire (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:36:32)
+    at Object.reset_undo_redo (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:65:142)
+    at Object.<anonymous> (BUILD_WORKSPACE/.forge/teach-me-v0.9.0/review/contract-runner.js:80:68)
+    at Module._compile (node:internal/modules/cjs/loader:1929:14)
+    at Object..js (node:internal/modules/cjs/loader:2060:10)
+    at Module.load (node:internal/modules/cjs/loader:1651:32)
+    at Module._load (node:internal/modules/cjs/loader:1443:12)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.22.0
+
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.430s
+
+FAILED (failures=17)
