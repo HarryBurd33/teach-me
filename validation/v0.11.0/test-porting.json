@@ -1,0 +1,22 @@
+{
+  "cause": "Two newly ported tests retained private candidate/teach-me default; local TEACH_ME_SKILL override masked this",
+  "repair": "Only default root changed to public teach-me directory; all function/class AST and frozen original evidence unchanged",
+  "first_python_ci": 41007216726,
+  "first_browser_ci": 41007216980,
+  "browser_cases_passed": 40,
+  "product_changed": false,
+  "changes": [
+    {
+      "file": "tests/test_draft_merge_check.py",
+      "before_sha256": "29912be33fa3c7411936620c9e8bb45de79ec30f8f1673e65d5967a74c4a572d",
+      "after_sha256": "9223af63e7501d875c25337629a4db168476945415a62fe8e0609eef839ae40b",
+      "function_class_AST_unchanged": true
+    },
+    {
+      "file": "tests/test_v11_contract.py",
+      "before_sha256": "a70b95de7b999c8b74f344aa0226a8433d8e53aef77773d699890ce9c693fc42",
+      "after_sha256": "3e1bc154a5831598668ad70b1b45f751bfae8e44460e81c3e8d757254054a7bc",
+      "function_class_AST_unchanged": true
+    }
+  ]
+}

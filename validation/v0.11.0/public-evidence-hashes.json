@@ -81,6 +81,24 @@
       "published_sha256": "53e0de20562aba7639bebf5a76c12d06e7cd74fe5c3af7cd2f9c83dea34d13e0",
       "redacted": true,
       "normalization": "Trailing whitespace removed from published log; original evidence retained unchanged"
+    },
+    "test-porting.json": {
+      "original_sha256": "7d26e47755cf8b92d2186f43405c14d15a56ee77a8b5f25ae5bedcbc19a91b68",
+      "published_sha256": "7d26e47755cf8b92d2186f43405c14d15a56ee77a8b5f25ae5bedcbc19a91b68",
+      "redacted": false,
+      "normalization": "Published copy strips trailing whitespace and local paths; original retained"
+    },
+    "python-ci-first.json": {
+      "original_sha256": "338db38b3c7df4765a6195978893d299a51ed38baf24f2ad9d27b2f1a70f7eff",
+      "published_sha256": "338db38b3c7df4765a6195978893d299a51ed38baf24f2ad9d27b2f1a70f7eff",
+      "redacted": false,
+      "normalization": "Published copy strips trailing whitespace and local paths; original retained"
+    },
+    "python-ci-first-failures.log": {
+      "original_sha256": "023e3e2e4549ae38b5de3aa1211fa0087f47cd7ada9ebc5f8a35390e1d9b6116",
+      "published_sha256": "f5b467ddbc8238acba7023ac6f2a5dace5f98b571e580d21087904ed54c01ef1",
+      "redacted": true,
+      "normalization": "Published copy strips trailing whitespace and local paths; original retained"
     }
   }
 }

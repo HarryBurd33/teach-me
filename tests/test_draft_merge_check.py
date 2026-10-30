@@ -14,7 +14,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from unittest import mock
 
 sys.dont_write_bytecode = True
-SKILL = Path(os.environ.get('TEACH_ME_SKILL', str(Path(__file__).resolve().parents[1] / 'candidate' / 'teach-me'))).resolve()
+SKILL = Path(os.environ.get('TEACH_ME_SKILL', str(Path(__file__).resolve().parents[1] / 'teach-me'))).resolve()
 sys.path.insert(0, str(SKILL / 'scripts'))
 check = importlib.import_module('draft_merge_check')
 merge = check.merge

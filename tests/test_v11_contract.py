@@ -14,7 +14,7 @@ import sys
 import tempfile
 import unittest
 
-SKILL = Path(os.environ.get('TEACH_ME_SKILL', Path(__file__).resolve().parents[1] / 'candidate' / 'teach-me')).resolve()
+SKILL = Path(os.environ.get('TEACH_ME_SKILL', Path(__file__).resolve().parents[1] / 'teach-me')).resolve()
 CHECKER = SKILL / 'scripts' / 'draft_merge_check.py'
 MERGER = SKILL / 'scripts' / 'draft_merge.py'
 ENV = dict(os.environ, PYTHONDONTWRITEBYTECODE='1')
