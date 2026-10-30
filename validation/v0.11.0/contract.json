@@ -1,0 +1,56 @@
+{
+  "version": "0.11.0",
+  "command": "python3 scripts/draft_merge_check.py check --base BASE --left LEFT --right RIGHT --plan PLAN --expected-plan-sha256 HASH --decisions DECISIONS --expected-decisions-sha256 HASH",
+  "success": {
+    "version": 1,
+    "operation": "check",
+    "format": "teach-me-draft-merge-check-v1",
+    "applicable": true,
+    "plan_sha256": "reviewed raw plan hash",
+    "decisions_sha256": "reviewed raw decisions hash",
+    "draft_sha256": "exact prospective encoded v1 draft bytes SHA256",
+    "draft_bytes": "int",
+    "nodes": "int",
+    "chains": "int",
+    "conflicts_resolved": "int",
+    "changes": {
+      "delete_nodes": [
+        "sorted IDs"
+      ],
+      "delete_chains": [
+        "sorted IDs"
+      ],
+      "upsert_nodes": [
+        "sorted IDs"
+      ],
+      "upsert_chains": [
+        "sorted IDs"
+      ]
+    },
+    "semantic_correctness_verified": false,
+    "notice": "bounded structural check, not authorization or guarantee future apply"
+  },
+  "failure": "exit2 stderr with useful existing validation reason, no success JSON",
+  "constraints": [
+    "No output or approve option; no write or publisher; Python3.9 stdlib",
+    "Reuse existing plan/source/decisions/graph validators; old helper bytes unchanged",
+    "Raw plan and decisions expected hashes mandatory; recomputed plan equality",
+    "Re-read all5 sources and compare bytes at end before successful report",
+    "Same existing bounds2MiB drafts/decisions8MiBplan256records",
+    "No full graph or source paths in successful output; deterministic sortedchangedIDs",
+    "No dedup or semantic repair; apply unchanged and independently revalidates"
+  ],
+  "checks": [
+    "valid plan/choices exact draftdigest equals actual apply output",
+    "missing/extra/duplicate choices refuse",
+    "duplicate logical argument refuses",
+    "missing endpoint selected choice refuses",
+    "stale plan/decisions/base/branch refuse",
+    "source race at final reread refuses",
+    "no source mutations or new files on success/failure",
+    "metadata/AND premises retained through apply",
+    "all475 prior tests preserved; actualbrowsermatrix remainsgreen"
+  ],
+  "candidate_limit": 3,
+  "review": "Independent frozen contract tests before candidate inspection; parent Astra/xhigh integration review"
+}

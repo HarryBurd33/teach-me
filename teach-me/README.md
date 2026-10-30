@@ -1,6 +1,6 @@
 # teach-me
 
-Version **0.9.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
+Version **0.11.0**. A portable, text-first learning skill for researched curricula, adaptive tutoring, and local save/resume. Start with a topic; receive a proportionate plan and a first useful lesson or diagnostic. It supports concepts, mental models, programming, music, and coach-supported physical-skill planning.
 
 ## Use
 
@@ -81,3 +81,5 @@ Offline graph editing now includes bounded staged undo/redo and explicit pasted 
 ## Same-base draft reconciliation
 
 Version0.10.0 adds conservative [draft merge plans and explicit decisions](references/draft-merge.md). Reconcile two v1 graph drafts against their exact original base, combine independent record edits, review conflicts and create a new draft for the existing editor. Full metadata and jointly required premises survive; incompatible final choices refuse. No source overwrite, background sync or semantic inference is introduced.
+
+Version 0.11.0 adds [read-only merge preflight](references/draft-merge-check.md): check the selected combination before writing a draft, inspect changed IDs and the exact prospective draft hash, then use the existing reviewed apply. It detects invalid choices without saving a draft.

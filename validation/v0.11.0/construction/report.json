@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "candidate_implementation_attempts": 1,
+  "construction_test_runs": [
+    {
+      "run": 1,
+      "tests": 22,
+      "passed": false,
+      "failures": 20,
+      "errors": 4,
+      "cause": "Constructor fixture used macOS symlinked temp path; resolved paths to exercise validators."
+    },
+    {
+      "run": 2,
+      "tests": 22,
+      "passed": false,
+      "failures": 1,
+      "errors": 0,
+      "cause": "Oversize fixture selected base-side records after capacity conflicts; selected both independent changes explicitly."
+    },
+    {
+      "run": 3,
+      "tests": 22,
+      "passed": true,
+      "failures": 0,
+      "errors": 0,
+      "elapsed_seconds": 0.178
+    }
+  ],
+  "command": "TEACH_ME_SKILL=\"$PWD/.forge/teach-me-v0.11.0/candidate/teach-me\" python3 -B .forge/teach-me-v0.11.0/construction/test_draft_merge_check.py",
+  "python39_syntax_parse": true,
+  "baseline_helper_comparison": [
+    {
+      "file": "coherence_review.py",
+      "unchanged": true
+    },
+    {
+      "file": "draft_merge.py",
+      "unchanged": true
+    },
+    {
+      "file": "graph_editor.py",
+      "unchanged": true
+    },
+    {
+      "file": "graph_workbench.py",
+      "unchanged": true
+    },
+    {
+      "file": "harness.py",
+      "unchanged": true
+    },
+    {
+      "file": "journey.py",
+      "unchanged": true
+    },
+    {
+      "file": "journey_assets.py",
+      "unchanged": true
+    },
+    {
+      "file": "journey_versions.py",
+      "unchanged": true
+    },
+    {
+      "file": "learning_data.py",
+      "unchanged": true
+    },
+    {
+      "file": "review_history.py",
+      "unchanged": true
+    },
+    {
+      "file": "snapshot_maintenance.py",
+      "unchanged": true
+    },
+    {
+      "file": "snapshot_recovery.py",
+      "unchanged": true
+    },
+    {
+      "file": "storage.py",
+      "unchanged": true
+    },
+    {
+      "file": "transfer.py",
+      "unchanged": true
+    }
+  ],
+  "all_existing_helpers_byte_identical": true,
+  "checker_sha256": "e632a2ddc812ee5f31641ea39d2b6a16d64e6e59e417351cd714bff2f93661a7",
+  "checks": [
+    "exact apply digest/byte parity",
+    "metadata and AND premises preserved",
+    "all five source mutations refused",
+    "final all-five rereads",
+    "missing/extra/duplicate choices",
+    "strict duplicate argument rejection",
+    "stale raw hashes and drafts",
+    "forged recomputed plan",
+    "invalid schemas/duplicate JSON/nonfinite values",
+    "path exclusions",
+    "missing endpoint and duplicate logical argument apply parity",
+    "256 record cap",
+    "2 MiB and 8 MiB input limits",
+    "exact encoded draft size boundary",
+    "oversized combined draft",
+    "no publisher call",
+    "no new fixture files on success/failure",
+    "standalone python -B invocation"
+  ],
+  "prior_suite_and_browser_matrix": "Not run by constructor; parent owns integration review.",
+  "review_tests_inspected": false,
+  "files_written": [
+    "candidate/teach-me/scripts/draft_merge_check.py",
+    "construction/test_draft_merge_check.py",
+    "construction/report.json"
+  ]
+}

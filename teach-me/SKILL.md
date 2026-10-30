@@ -3,7 +3,7 @@ name: teach-me
 description: Teach a topic, mental model, or practical skill through a researched, proportionate curriculum, interactive practice, evidence-based feedback, and local progress files. Use for explicit learning intent (teach me, help me learn, design a curriculum) and for practice or resume within an established learning journey. Do not impose a curriculum on quick factual questions or requests to perform work without learning intent.
 license: MIT
 metadata:
-  version: "0.10.0"
+  version: "0.11.0"
 ---
 
 # Teach me
@@ -122,3 +122,5 @@ Completion: compare the final demonstration with the agreed target, state what r
 For recoverable offline graph editing, use [editor recovery](references/editor-recovery.md): export deliberate checkpoints, re-import against the exact base, and use bounded staged undo/redo. History excludes unstaged form text and disappears when the page closes. Never infer autosave or source writeback.
 
 For explicitly requested reconciliation of two offline graph drafts from the exact same base, read [draft merging](references/draft-merge.md). Produce a deterministic plan, inspect record-level conflicts, select each required side explicitly, and apply the exact reviewed plan/decisions hashes to a new v1 draft. Check and import it through the existing editor before creating a new graph. Independent changes can combine; incompatible dependencies and capacity limits require review. Preserve every original and historical metadata; merge choices establish no semantic truth, source support, authenticated review or learner mastery.
+
+Before producing a merged graph draft, use the [read-only merge preflight](references/draft-merge-check.md) with the exact reviewed plan and decision hashes. It checks the selected combination and reports the prospective draft digest without creating a file. A passing check is structural evidence at that moment; apply still requires explicit review and revalidates all sources.

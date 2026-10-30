@@ -1,0 +1,7 @@
+{
+  "guide_contract": "pass",
+  "old_helpers": 14,
+  "old_editor_assets": 3,
+  "old_tests": "byte-identical",
+  "source": "Direct comparisons plus explicit documented contract fields"
+}

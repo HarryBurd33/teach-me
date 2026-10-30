@@ -1,3 +1,7 @@
+# Current v0.11.0 verification
+
+512 candidate/installed checks and 51 matching skill files; native discovery in two directories and rollback v0.10 verified. [Current report](V0.11.0.md) and [roadmap](ROADMAP.md). Actual remote CI/download results appear in the tagged release notes. Historical results below retain their original scope.
+
 # Current v0.10.0 verification
 
 475 candidate/global checks passed;49 matching skill files, rollbackv0.9.0 and two-directory native discovery verified. See [current report](V0.10.0.md). Historical results below retain their original scope.

@@ -1,0 +1,26 @@
+{
+  "reviewed_at": "2026-10-30T05:08:05.991176+00:00",
+  "candidate_checker_sha256": "e632a2ddc812ee5f31641ea39d2b6a16d64e6e59e417351cd714bff2f93661a7",
+  "frozen_test_sha256": "a70b95de7b999c8b74f344aa0226a8433d8e53aef77773d699890ce9c693fc42",
+  "frozen_manifest_sha256": "07dc1dbc24c3ddab908ca3be251426bf56c3f79bd7b58d0f932a50d981a9cafd",
+  "frozen_inventory_unchanged": true,
+  "actual_test_methods": 15,
+  "manifest_count_correction": "Frozen metadata says 16; discovery ran 15. Frozen bytes preserved; no test was removed or weakened.",
+  "candidate": {
+    "passes": 15,
+    "failures": 0,
+    "seconds": 3.171,
+    "review_passes_used": 1
+  },
+  "baseline": {
+    "test_methods": 15,
+    "failure_instances": 35,
+    "classification": "Feature absent; no negative-case/security credit"
+  },
+  "actionable_findings": [],
+  "limitations": [
+    "Prior 475 regression suite and actual browser matrix remain parent integration responsibilities.",
+    "Race tests cover each source changing after resolved_graph returns, not hostile-writer exclusion or universal concurrent filesystem guarantees.",
+    "No broad new semantic-correctness or authorization claim."
+  ]
+}

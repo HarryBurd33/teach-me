@@ -7,6 +7,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
+    'docs/V0.11.0.md', 'docs/ROADMAP.md', 'teach-me/scripts/draft_merge_check.py', 'teach-me/references/draft-merge-check.md', 'tests/test_draft_merge_check.py', 'tests/test_v11_contract.py', 'browser-tests/draft-merge-preflight.spec.js',
     'README.md', 'LICENSE', 'teach-me/SKILL.md', 'teach-me/LICENSE',
     'teach-me/references/domains.md', 'teach-me/references/research.md',
     'teach-me/references/state.md', 'teach-me/references/progress.schema.json',
@@ -52,7 +53,7 @@ def check():
     skill = (ROOT / 'teach-me/SKILL.md').read_text(encoding='utf-8')
     assert skill.startswith('---\nname: teach-me\n'), 'Skill metadata/name mismatch'
     assert 'license: MIT\n' in skill.split('---', 2)[1]
-    assert 'version: "0.10.0"' in skill.split('---', 2)[1], 'Release version mismatch'
+    assert 'version: "0.11.0"' in skill.split('---', 2)[1], 'Release version mismatch'
     schema = json.loads((ROOT / 'teach-me/references/progress.schema.json').read_text())
     assert schema['$id'] == 'urn:teach-me:progress:v1'
     links = 0
@@ -116,6 +117,16 @@ def check():
         assert evidence.resolve() in item.resolve().parents
         assert hashlib.sha256(item.read_bytes()).hexdigest() == record['published_sha256'], 'Published evidence hash mismatch: ' + name
     evidence = ROOT / 'validation/v0.10.0'
+    manifest = json.loads((evidence / 'public-evidence-hashes.json').read_text())
+    assert type(manifest['version']) is int and manifest['version'] == 1
+    for name, record in manifest['files'].items():
+        relative = Path(name)
+        assert not relative.is_absolute() and '..' not in relative.parts and relative.as_posix() == name
+        item = evidence / relative
+        assert not item.is_symlink() and item.is_file()
+        assert evidence.resolve() in item.resolve().parents
+        assert hashlib.sha256(item.read_bytes()).hexdigest() == record['published_sha256'], 'Published evidence hash mismatch: ' + name
+    evidence = ROOT / 'validation/v0.11.0'
     manifest = json.loads((evidence / 'public-evidence-hashes.json').read_text())
     assert type(manifest['version']) is int and manifest['version'] == 1
     for name, record in manifest['files'].items():

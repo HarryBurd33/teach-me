@@ -1,0 +1,460 @@
+test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) ...
+  test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (option='--expected-plan-sha256') ... FAIL
+  test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (option='--expected-decisions-sha256') ... FAIL
+  test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (extras=['--approve']) ... FAIL
+  test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (extras=['--output', PosixPath('/private/var/folders/3v/7_77q_317yd2rk8nsx45vf_m0000gn/T/teach-me-v11-review-wdpxla4z/unwanted.json')]) ... FAIL
+test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) ... FAIL
+test_decisions_must_bind_exact_plan (__main__.MergeCheckContract.test_decisions_must_bind_exact_plan) ... FAIL
+test_duplicate_json_members_refuse (__main__.MergeCheckContract.test_duplicate_json_members_refuse) ... FAIL
+test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) ...
+  test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='base') ... FAIL
+  test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='left') ... FAIL
+  test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='right') ... FAIL
+test_final_record_capacity_choice_refuses (__main__.MergeCheckContract.test_final_record_capacity_choice_refuses) ... FAIL
+test_final_reread_refuses_changes_to_each_of_five_sources (__main__.MergeCheckContract.test_final_reread_refuses_changes_to_each_of_five_sources) ... FAIL
+test_forged_plan_with_matching_raw_hash_still_refuses (__main__.MergeCheckContract.test_forged_plan_with_matching_raw_hash_still_refuses) ... FAIL
+test_incompatible_selected_endpoint_is_refused (__main__.MergeCheckContract.test_incompatible_selected_endpoint_is_refused) ... FAIL
+test_independent_logical_duplicates_are_refused (__main__.MergeCheckContract.test_independent_logical_duplicates_are_refused) ... FAIL
+test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) ...
+  test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='base') ... FAIL
+  test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='left') ... FAIL
+  test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='right') ... FAIL
+  test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='decisions') ... FAIL
+  test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='plan') ... FAIL
+test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) ...
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': True, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]}) ... FAIL
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1.0, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]}) ... FAIL
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 2, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]}) ... FAIL
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}], 'extra': 1}) ... FAIL
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'merge'}]}) ... FAIL
+  test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'graph', 'id': 'a', 'choose': 'left'}]}) ... FAIL
+test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) ...
+  test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='every conflict') ... FAIL
+  test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='duplicate') ... FAIL
+  test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='not a required conflict') ... FAIL
+test_positive_exact_digest_metadata_and_joint_premises (__main__.MergeCheckContract.test_positive_exact_digest_metadata_and_joint_premises) ... FAIL
+test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) ...
+  test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) (name='plan') ... FAIL
+  test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) (name='decisions') ... FAIL
+test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) ...
+  test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='base') ... FAIL
+  test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='left') ... FAIL
+  test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='right') ... FAIL
+
+======================================================================
+FAIL: test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (option='--expected-plan-sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 244, in test_cli_requires_hashes_and_rejects_output_or_approve
+    self.refusal(self.check(args), 'required')
+                 ~~~~~~~~~~^^^^^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (option='--expected-decisions-sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 244, in test_cli_requires_hashes_and_rejects_output_or_approve
+    self.refusal(self.check(args), 'required')
+                 ~~~~~~~~~~^^^^^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (extras=['--approve'])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 247, in test_cli_requires_hashes_and_rejects_output_or_approve
+    self.refusal(self.check(self.args() + extras), 'unrecognized arguments')
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) (extras=['--output', PosixPath('/private/var/folders/3v/7_77q_317yd2rk8nsx45vf_m0000gn/T/teach-me-v11-review-wdpxla4z/unwanted.json')])
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 247, in test_cli_requires_hashes_and_rejects_output_or_approve
+    self.refusal(self.check(self.args() + extras), 'unrecognized arguments')
+                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 250, in test_cli_requires_hashes_and_rejects_output_or_approve
+    self.refusal(self.check(args), 'sha256')
+                 ~~~~~~~~~~^^^^^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_decisions_must_bind_exact_plan (__main__.MergeCheckContract.test_decisions_must_bind_exact_plan)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 205, in test_decisions_must_bind_exact_plan
+    self.refusal(self.check(), 'another plan')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_duplicate_json_members_refuse (__main__.MergeCheckContract.test_duplicate_json_members_refuse)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 222, in test_duplicate_json_members_refuse
+    self.paths['decisions'].write_bytes(raw); self.refresh_hashes(); self.refusal(self.check(), 'duplicate json member')
+                                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='base')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 156, in test_each_whole_record_conflict_choice_matches_apply
+    r = self.check(); self.assertEqual(r.returncode, 0, r.stderr)
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='left')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 156, in test_each_whole_record_conflict_choice_matches_apply
+    r = self.check(); self.assertEqual(r.returncode, 0, r.stderr)
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) (side='right')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 156, in test_each_whole_record_conflict_choice_matches_apply
+    r = self.check(); self.assertEqual(r.returncode, 0, r.stderr)
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_final_record_capacity_choice_refuses (__main__.MergeCheckContract.test_final_record_capacity_choice_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 238, in test_final_record_capacity_choice_refuses
+    self.refusal(self.check(), '256')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_final_reread_refuses_changes_to_each_of_five_sources (__main__.MergeCheckContract.test_final_reread_refuses_changes_to_each_of_five_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 253, in test_final_reread_refuses_changes_to_each_of_five_sources
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: race refusals receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: race refusals receive no credit
+
+======================================================================
+FAIL: test_forged_plan_with_matching_raw_hash_still_refuses (__main__.MergeCheckContract.test_forged_plan_with_matching_raw_hash_still_refuses)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 201, in test_forged_plan_with_matching_raw_hash_still_refuses
+    self.refusal(self.check(), 'current source drafts')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_incompatible_selected_endpoint_is_refused (__main__.MergeCheckContract.test_incompatible_selected_endpoint_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 176, in test_incompatible_selected_endpoint_is_refused
+    self.refresh_hashes(); self.refusal(self.check(), 'unresolved endpoints')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_independent_logical_duplicates_are_refused (__main__.MergeCheckContract.test_independent_logical_duplicates_are_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 181, in test_independent_logical_duplicates_are_refused
+    self.refusal(self.check(), 'duplicate logical argument')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='base')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 229, in test_input_byte_bounds
+    self.refresh_hashes(); self.refusal(self.check(), str(limit) + ' mib')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='left')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 229, in test_input_byte_bounds
+    self.refresh_hashes(); self.refusal(self.check(), str(limit) + ' mib')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='right')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 229, in test_input_byte_bounds
+    self.refresh_hashes(); self.refusal(self.check(), str(limit) + ' mib')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='decisions')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 229, in test_input_byte_bounds
+    self.refresh_hashes(); self.refusal(self.check(), str(limit) + ' mib')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) (name='plan')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 229, in test_input_byte_bounds
+    self.refresh_hashes(); self.refusal(self.check(), str(limit) + ' mib')
+                                        ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': True, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1.0, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 2, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'left'}], 'extra': 1})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'node', 'id': 'a', 'choose': 'merge'}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) (v={'version': 1, 'plan_sha256': 'd703937fcdeef322cb31b0171fec8f092a090a3a1734f57d22c42e57f2b2e59f', 'choices': [{'kind': 'graph', 'id': 'a', 'choose': 'left'}]})
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 218, in test_malformed_choices_and_exact_decision_schema
+    self.put('decisions', v); self.refresh_hashes(); self.refusal(self.check(), reason)
+                                                                  ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='every conflict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 168, in test_missing_extra_duplicate_choices
+    self.refusal(self.check(), reason)
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='duplicate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 168, in test_missing_extra_duplicate_choices
+    self.refusal(self.check(), reason)
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) (reason='not a required conflict')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 168, in test_missing_extra_duplicate_choices
+    self.refusal(self.check(), reason)
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_positive_exact_digest_metadata_and_joint_premises (__main__.MergeCheckContract.test_positive_exact_digest_metadata_and_joint_premises)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 116, in test_positive_exact_digest_metadata_and_joint_premises
+    result = self.check()
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) (name='plan')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 187, in test_reviewed_plan_and_decisions_raw_hashes
+    self.refusal(self.check(), name + '.*changed since review')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) (name='decisions')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 187, in test_reviewed_plan_and_decisions_raw_hashes
+    self.refusal(self.check(), name + '.*changed since review')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='base')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 194, in test_reviewed_sources_are_current_exact_bytes
+    self.refusal(self.check(), 'base sha256|current source drafts')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='left')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 194, in test_reviewed_sources_are_current_exact_bytes
+    self.refusal(self.check(), 'base sha256|current source drafts')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+======================================================================
+FAIL: test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) (name='right')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<private-build>/review/test_v11_contract.py", line 194, in test_reviewed_sources_are_current_exact_bytes
+    self.refusal(self.check(), 'base sha256|current source drafts')
+                 ~~~~~~~~~~^^
+  File "<private-build>/review/test_v11_contract.py", line 96, in check
+    self.assertTrue(CHECKER.is_file(), 'FEATURE ABSENT: no read-only merge checker; negative cases receive no credit')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : FEATURE ABSENT: no read-only merge checker; negative cases receive no credit
+
+----------------------------------------------------------------------
+Ran 15 tests in 1.150s
+
+FAILED (failures=35)

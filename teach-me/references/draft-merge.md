@@ -50,6 +50,10 @@ Review the decision file, then obtain its exact SHA256:
 python3 -c "import hashlib; print(hashlib.sha256(open('merge-decisions.json','rb').read()).hexdigest())"
 ~~~
 
+## Check before creating a draft
+
+Use [read-only merge preflight](draft-merge-check.md) to test the reviewed combination first. It creates no output file and reports the exact prospective draft hash, byte size, record counts and changed IDs. Invalid combinations refuse with the same underlying validation rules. Passing preflight does not waive apply review or source revalidation.
+
 ## Produce a new draft
 
 Use the exact current plan and decision digests:

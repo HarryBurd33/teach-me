@@ -1,0 +1,20 @@
+test_cli_requires_hashes_and_rejects_output_or_approve (__main__.MergeCheckContract.test_cli_requires_hashes_and_rejects_output_or_approve) ... ok
+test_decisions_must_bind_exact_plan (__main__.MergeCheckContract.test_decisions_must_bind_exact_plan) ... ok
+test_duplicate_json_members_refuse (__main__.MergeCheckContract.test_duplicate_json_members_refuse) ... ok
+test_each_whole_record_conflict_choice_matches_apply (__main__.MergeCheckContract.test_each_whole_record_conflict_choice_matches_apply) ... ok
+test_final_record_capacity_choice_refuses (__main__.MergeCheckContract.test_final_record_capacity_choice_refuses) ... ok
+test_final_reread_refuses_changes_to_each_of_five_sources (__main__.MergeCheckContract.test_final_reread_refuses_changes_to_each_of_five_sources) ... ok
+test_forged_plan_with_matching_raw_hash_still_refuses (__main__.MergeCheckContract.test_forged_plan_with_matching_raw_hash_still_refuses) ... ok
+test_incompatible_selected_endpoint_is_refused (__main__.MergeCheckContract.test_incompatible_selected_endpoint_is_refused) ... ok
+test_independent_logical_duplicates_are_refused (__main__.MergeCheckContract.test_independent_logical_duplicates_are_refused) ... ok
+test_input_byte_bounds (__main__.MergeCheckContract.test_input_byte_bounds) ... ok
+test_malformed_choices_and_exact_decision_schema (__main__.MergeCheckContract.test_malformed_choices_and_exact_decision_schema) ... ok
+test_missing_extra_duplicate_choices (__main__.MergeCheckContract.test_missing_extra_duplicate_choices) ... ok
+test_positive_exact_digest_metadata_and_joint_premises (__main__.MergeCheckContract.test_positive_exact_digest_metadata_and_joint_premises) ... ok
+test_reviewed_plan_and_decisions_raw_hashes (__main__.MergeCheckContract.test_reviewed_plan_and_decisions_raw_hashes) ... ok
+test_reviewed_sources_are_current_exact_bytes (__main__.MergeCheckContract.test_reviewed_sources_are_current_exact_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 3.171s
+
+OK

@@ -1,3 +1,11 @@
+# Teach-me v0.11.0
+
+This release adds [read-only merge preflight](teach-me/references/draft-merge-check.md). Check reviewed choices before creating a merged draft; inspect the exact prospective draft hash, size, counts and changed IDs. Incompatible combinations refuse without writing output. Apply retains independent review and validation.
+
+[Current release report](docs/V0.11.0.md) · [Limitations roadmap](docs/ROADMAP.md) · [Install and use](teach-me/README.md).
+
+The version sections below preserve historical capabilities and evidence.
+
 # Teach-me
 
 A portable Codex learning skill with researched teaching, practice, local records and optional executable tools. Current release: **v0.10.0**. See [capabilities, validation and remaining work](docs/V0.10.0.md).

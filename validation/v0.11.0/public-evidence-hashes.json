@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "files": {
+    "contract.json": {
+      "original_sha256": "853ac39bb4f764d59efebf704470d6e31ada9b55d0f6c5913fa6b31f0173600c",
+      "published_sha256": "853ac39bb4f764d59efebf704470d6e31ada9b55d0f6c5913fa6b31f0173600c",
+      "redacted": false
+    },
+    "candidate-manifest.json": {
+      "original_sha256": "4d398df1c8fd2674becbcf2956712502bee648602a95ea372a271514d05d804d",
+      "published_sha256": "4d398df1c8fd2674becbcf2956712502bee648602a95ea372a271514d05d804d",
+      "redacted": false
+    },
+    "resource-integrity.json": {
+      "original_sha256": "3140457da1a91c374f5fdcc642f0f118bb1aef0f600f233f7ef95443968ad442",
+      "published_sha256": "3140457da1a91c374f5fdcc642f0f118bb1aef0f600f233f7ef95443968ad442",
+      "redacted": false
+    },
+    "combined-tests.json": {
+      "original_sha256": "9fffde65e9193de90a27e06088146c71dbbdd103907de60f8a242063677c4f54",
+      "published_sha256": "9fffde65e9193de90a27e06088146c71dbbdd103907de60f8a242063677c4f54",
+      "redacted": false
+    },
+    "combined-tests.txt": {
+      "original_sha256": "4dc1c66dfde667f957d9592387c80b2b070cbc75c7a562fd21dc74d322560b61",
+      "published_sha256": "4dc1c66dfde667f957d9592387c80b2b070cbc75c7a562fd21dc74d322560b61",
+      "redacted": false
+    },
+    "installed-tests.json": {
+      "original_sha256": "493dd6d27d7cf44df4984d76ad78a15f120a004f697c77bbfdab715771c473f2",
+      "published_sha256": "493dd6d27d7cf44df4984d76ad78a15f120a004f697c77bbfdab715771c473f2",
+      "redacted": false
+    },
+    "installed-tests.txt": {
+      "original_sha256": "90d1e1e0d9acbc1f85ebe9024306f9aa982a1608e633c0cb226aefd57cfb1f19",
+      "published_sha256": "90d1e1e0d9acbc1f85ebe9024306f9aa982a1608e633c0cb226aefd57cfb1f19",
+      "redacted": false
+    },
+    "native-discovery.json": {
+      "original_sha256": "cf150bf2e3a354a77f9c8d84467fbae704ddd1a95a9a5bf910f97752701bfa34",
+      "published_sha256": "fb0cf65e259bc636f34b499cf4c4bdb590702ffb9147e6d70de67270db014202",
+      "redacted": true
+    },
+    "construction/report.json": {
+      "original_sha256": "34869496deafe635010801dc2003d926dd72979e15a7c73eb356aad0b5af4db7",
+      "published_sha256": "34869496deafe635010801dc2003d926dd72979e15a7c73eb356aad0b5af4db7",
+      "redacted": false
+    },
+    "construction/test_draft_merge_check.py": {
+      "original_sha256": "29912be33fa3c7411936620c9e8bb45de79ec30f8f1673e65d5967a74c4a572d",
+      "published_sha256": "29912be33fa3c7411936620c9e8bb45de79ec30f8f1673e65d5967a74c4a572d",
+      "redacted": false
+    },
+    "review/results.json": {
+      "original_sha256": "526dabdb74eb30aea1548c668c52da7d75a96585f73ba2ff7d13d5b5ba4a638b",
+      "published_sha256": "526dabdb74eb30aea1548c668c52da7d75a96585f73ba2ff7d13d5b5ba4a638b",
+      "redacted": false
+    },
+    "review/REPORT.md": {
+      "original_sha256": "737658dafb7f07736ff86837a1fdec049c0ff96f8ba0e5beb5886ec72c803c99",
+      "published_sha256": "737658dafb7f07736ff86837a1fdec049c0ff96f8ba0e5beb5886ec72c803c99",
+      "redacted": false
+    },
+    "review/frozen.json": {
+      "original_sha256": "07dc1dbc24c3ddab908ca3be251426bf56c3f79bd7b58d0f932a50d981a9cafd",
+      "published_sha256": "07dc1dbc24c3ddab908ca3be251426bf56c3f79bd7b58d0f932a50d981a9cafd",
+      "redacted": false
+    },
+    "review/test_v11_contract.py": {
+      "original_sha256": "a70b95de7b999c8b74f344aa0226a8433d8e53aef77773d699890ce9c693fc42",
+      "published_sha256": "a70b95de7b999c8b74f344aa0226a8433d8e53aef77773d699890ce9c693fc42",
+      "redacted": false
+    },
+    "review/candidate-pass1.log": {
+      "original_sha256": "da6f2a2ad6f36d7c6f8992113201f000dfcc907c736a0828a12a01b7c2fe0072",
+      "published_sha256": "da6f2a2ad6f36d7c6f8992113201f000dfcc907c736a0828a12a01b7c2fe0072",
+      "redacted": false
+    },
+    "review/baseline-tests.log": {
+      "original_sha256": "c861ee9eb3d8c1c70444a9b53a2908e573099bb71218e15c9d17af0eb030a301",
+      "published_sha256": "53e0de20562aba7639bebf5a76c12d06e7cd74fe5c3af7cd2f9c83dea34d13e0",
+      "redacted": true,
+      "normalization": "Trailing whitespace removed from published log; original evidence retained unchanged"
+    }
+  }
+}

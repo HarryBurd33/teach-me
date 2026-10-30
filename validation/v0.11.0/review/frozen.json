@@ -1,0 +1,35 @@
+{
+  "frozen_at": "2026-10-30T05:06:47.401319+00:00",
+  "candidate_inspected": false,
+  "criteria": [
+    "Exact read-only successful preview schema/digest equals unchanged apply output",
+    "Unicode and old metadata and all AND premises preserved",
+    "Every conflict has exactly one whole-record selection",
+    "Final combination rejects missing endpoints, logical duplicates and capacity excess",
+    "Raw reviewed plan/decisions hashes and recomputed plan equality are mandatory",
+    "All five sources changed after resolution must fail final reread",
+    "No product files or input mutation on success/failure under Python -B",
+    "Existing byte limits and closed CLI/schema refusals",
+    "Missing baseline module earns no negative/security credit"
+  ],
+  "hashes": {
+    "contract.json": "853ac39bb4f764d59efebf704470d6e31ada9b55d0f6c5913fa6b31f0173600c",
+    "review/test_v11_contract.py": "a70b95de7b999c8b74f344aa0226a8433d8e53aef77773d699890ce9c693fc42",
+    "baseline/teach-me/scripts/coherence_review.py": "805b9a0de453b47d391c699e1c09a2ad6614d00dbc46425af1e065f87f6b71ec",
+    "baseline/teach-me/scripts/draft_merge.py": "f820c8cc7a4666f1887cf42b926bd43b8c3164625490c6768f0a2a3e11b6e02d",
+    "baseline/teach-me/scripts/graph_editor.py": "b4dda4c35c6bf71122be35e573a54442b0847aec5872cabf340159042d1dbcba",
+    "baseline/teach-me/scripts/graph_workbench.py": "3a1ba877ecf22423d69dcafde6a8176acaa40f14f7fb4aa173463839327664e5",
+    "baseline/teach-me/scripts/harness.py": "a8ffdb6f768da67689fdf9237b42b059e2eb80e9a8bf811518bf1d7bcc90cb9a",
+    "baseline/teach-me/scripts/journey.py": "72223d04c2bbcb25bd88f7576effcf75759d6ea12e47b395783e8e32ebf93431",
+    "baseline/teach-me/scripts/journey_assets.py": "4832c4d5142e8528facc5e0fb84c7b7218a54cdfbe128e91b3b18e3a157d41ce",
+    "baseline/teach-me/scripts/journey_versions.py": "7489123b72f8c7386b39008cd7db54b46cccc88fb841bbb77c0981920fe8543b",
+    "baseline/teach-me/scripts/learning_data.py": "2ad3c5e9340f4c04bc45b613811d235eef27a05c776745bd8d5c0dbd6b6fb245",
+    "baseline/teach-me/scripts/review_history.py": "79998f06c6ec64aa9bff16bf13e554f4714279539ca8ac45aad5e7986194b91e",
+    "baseline/teach-me/scripts/snapshot_maintenance.py": "8dd17b843f5064d03d600f5f407885fb9e0d9fb02401cb1fe1b8c9c2e7146cb4",
+    "baseline/teach-me/scripts/snapshot_recovery.py": "95bbff88007b02a1effc4e47931dbb5f00defabe3064f4037099ed2fa780eb6b",
+    "baseline/teach-me/scripts/storage.py": "d35d2073c00c3a9b7c5ae9a2b2c9ddcf10b439ef47803edfa50d285a9b3118c0",
+    "baseline/teach-me/scripts/transfer.py": "4c1aeddae5456f62f610cafa6962a5e2527f2f5f7aba7f376d89c6d1e4a9e187"
+  },
+  "case_count": 16,
+  "review_limit": "2 candidate review passes; 12 minutes; no candidate edits"
+}
